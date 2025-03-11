@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react'
 import React, { useState, useEffect, useRef } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import NodeBackground from './NodeBackground'
+import NodeBackground from 'animated-network-background'
 
 const Layout = ({ children }) => {
   const [isFooterVisible, setIsFooterVisible] = useState(false);

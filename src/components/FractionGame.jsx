@@ -9,29 +9,43 @@ const FractionGame = () => {
   const [useDecimal, setUseDecimal] = useState(false);
   const svgRef = useRef(null);
 
+  const denominators = [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
+
   const createFraction = () => {
     // Create a fraction with a denominator between 1 and 25
     const denominator = Math.floor(Math.random() * 20) + 1;
     // Create a numerator between 1 and the denominator
     const numerator = Math.floor(Math.random() * (denominator - 1) + 1);
-    return [numerator, denominator];
+    const gcd = (a, b) => b ? gcd(b, a % b) : a;
+    const divisor = gcd(numerator, denominator);  
+    return [numerator/divisor, denominator/divisor];
   };
 
   const formatFraction = (fraction) => {
     if (useDecimal) {
       // Display as decimal with 2 decimal places
       return fraction.toFixed(2);
+    } else if (fraction > 0.98) {
+      return '1';
+    } else if (fraction < 0.02) {
+      return '0';
     } else {
-      // Convert to fraction with denominator up to 25
-      // Find the best approximation with denominator <= 25
-      const denominator = 25;
-      const numerator = Math.round(fraction * denominator);
-      
+      // Convert to fraction with denominator up to 50
+      // Find the best approximation with denominator <= 50
+      const fractions = denominators.map(denominator => {
+        const numerator = Math.round(fraction * denominator);
+        return {numerator, denominator};
+      });
+
+      const bestFraction = fractions.reduce((best, current) => {
+        return (Math.abs(current.numerator/current.denominator - fraction) < Math.abs(best.numerator/best.denominator - fraction) ? current : best);
+      });
+        
       // Simplify the fraction using GCD
       const gcd = (a, b) => b ? gcd(b, a % b) : a;
-      const divisor = gcd(numerator, denominator);
+      const divisor = gcd(bestFraction.numerator, bestFraction.denominator);
       
-      return `${numerator/divisor}/${denominator/divisor}`;
+      return `${bestFraction.numerator/divisor}/${bestFraction.denominator/divisor}`;
     }
   };
 
@@ -51,7 +65,8 @@ const FractionGame = () => {
     return {
       width,
       height,
-      fillWidth
+      fillWidth,
+      targetWidth: width * targetFraction[0] / targetFraction[1]
     };
   };
 
@@ -140,6 +155,7 @@ const FractionGame = () => {
           <div className="text-lg space-y-2 text-center">
             <div>{useDecimal ? `Target Fraction: ${formatFraction(targetFraction[0] / targetFraction[1])}` : `Target Fraction: ${targetFraction[0]} / ${targetFraction[1]}`}</div>
             <div>{showScore ? `Your Fraction: ${formatFraction(currentFraction)} — ${score}` : 'Drag the handle to match the target fraction'}</div>
+            {/* <div>Your Fraction: {formatFraction(currentFraction)} ({currentFraction})</div> */}
           </div>
           
           <svg
@@ -181,6 +197,17 @@ const FractionGame = () => {
               cursor="ew-resize"
               onMouseDown={handleMouseDown}
             />
+
+            {/* Target fraction */}
+            {showScore && (
+              <rect
+                x={dimensions.targetWidth + 18}
+                y="60"
+                width="4"
+                height={dimensions.height + 80}
+                fill="green"
+              />
+            )}
           </svg>
 
           <div className="flex gap-4 items-center">

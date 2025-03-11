@@ -163,7 +163,7 @@ const AngleGame = () => {
             ref={svgRef}
             width="300"
             height="300"
-            className="border border-gray-200 rounded"
+            className="border border-gray-200 rounded bg-gray-100"
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}

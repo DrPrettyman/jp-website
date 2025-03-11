@@ -5,7 +5,7 @@ import FractionGame from '../../components/FractionGame'
 
 import { Gamepad2 } from 'lucide-react';
 
-const DigraphExplorerProject = () => {
+const EducationalGames = () => {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
@@ -24,9 +24,13 @@ const DigraphExplorerProject = () => {
               to help teach my students.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <AngleGame />
-              <FractionGame />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center max-w-4xl mx-auto">
+              <div className="flex flex-col items-center justify-center">
+                <AngleGame />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <FractionGame />
+              </div>
             </div>
           </div>
         </div>
@@ -35,4 +39,4 @@ const DigraphExplorerProject = () => {
   )
 }
 
-export default DigraphExplorerProject
+export default EducationalGames

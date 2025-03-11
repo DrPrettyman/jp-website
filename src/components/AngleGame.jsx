@@ -47,6 +47,7 @@ const AngleGame = () => {
     const centerX = 150;
     const centerY = 150;
     const lineLength = 100;
+    const targetLineLength = 40;
 
     // Fixed line (horizontal)
     const fixedEndX = centerX + lineLength;
@@ -56,13 +57,25 @@ const AngleGame = () => {
     const movableEndX = centerX + lineLength * Math.cos(currentAngle);
     const movableEndY = centerY - lineLength * Math.sin(currentAngle);
 
+    // Horizontal line (target)
+    const targetHorizontalEndX = centerX + targetLineLength;
+    const targetHorizontalEndY = centerY;
+
+    // Target line
+    const targetEndX = centerX + targetLineLength * Math.cos(targetAngle);
+    const targetEndY = centerY - targetLineLength * Math.sin(targetAngle);
+
     return {
       centerX,
       centerY,
       fixedEndX,
       fixedEndY,
       movableEndX,
-      movableEndY
+      movableEndY,
+      targetHorizontalEndX,
+      targetHorizontalEndY,
+      targetEndX,
+      targetEndY
     };
   };
 
@@ -187,7 +200,31 @@ const AngleGame = () => {
               stroke="blue"
               strokeWidth="2"
             />
-            
+
+            {/* Target horizontal line */}
+            {showScore && (
+              <line
+                x1={points.centerX}
+                y1={points.centerY}
+                x2={points.targetHorizontalEndX}
+                y2={points.targetHorizontalEndY}
+                stroke="green"
+                strokeWidth="2"
+              />
+            )}
+
+            {/* Target line */}
+            {showScore && (
+              <line
+                x1={points.centerX}
+                y1={points.centerY}
+                x2={points.targetEndX}
+                y2={points.targetEndY}
+                stroke="green"
+                strokeWidth="2"
+              />
+            )}
+
             {/* Angle arc */}
             <path
               d={(() => {
@@ -211,6 +248,32 @@ const AngleGame = () => {
               stroke="blue"
               strokeWidth="1"
             />
+
+            {/* Target Angle arc */}
+            {showScore && (
+              <path
+                d={(() => {
+                  const radius = 40;
+                  const startX = points.centerX + radius;
+                  const startY = points.centerY;
+                  const endX = points.centerX + radius * Math.cos(targetAngle);
+                  const endY = points.centerY - radius * Math.sin(targetAngle);
+                  const normalizedDegrees = normalizeAngle(targetAngle);
+                  const largeArcFlag = normalizedDegrees > 180 ? 1 : 0;
+                  
+                  return `
+                    M ${points.centerX} ${points.centerY}
+                    L ${startX} ${startY}
+                    A ${radius} ${radius} 0 ${largeArcFlag} 0 ${endX} ${endY}
+                    L ${points.centerX} ${points.centerY}
+                    Z
+                  `;
+                })()}
+                fill="rgba(0, 255, 0, 0.1)"
+                stroke="green"
+                strokeWidth="1"
+              />
+            )}
             
             {/* Draggable dot */}
             <circle

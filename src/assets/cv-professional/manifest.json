@@ -1,0 +1,57 @@
+[
+    {
+      "title": "Data Scientist",
+      "company": "Macaroni Software",
+      "address": "https://www.macaroni.works",
+      "duration": "November 2023 — December 2024 (1 year)",
+      "headline": "Building innovative data science solutions for SEO productivity",
+      "logo": "/company_logo/macaroni.jpeg",
+      "entryId": "macaroni"
+    },
+    {
+      "title": "Data Scientist / Full Stack Developer",
+      "company": "Blink SEO",
+      "duration": "November 2021 — December 2024 (3 years)",
+      "headline": "Revolutionizing SEO data engineering with innovative software",
+      "address": "https://blinkseo.co.uk",
+      "logo": "/company_logo/blink.jpeg",
+      "entryId": "blink"
+    },
+    {
+      "title": "Data Science Researcher",
+      "company": "National Physical Laboratory",
+      "duration": "September 2015 — February 2021 (5½ years)",
+      "headline": "Ph.D. research industrial collaboration: Tipping points in dynamical systems",
+      "address": "https://www.npl.co.uk",
+      "logo": "/company_logo/npl.jpeg",
+      "entryId": "npl"
+    },
+    {
+      "title": "Associate Lecturer",
+      "company": "Sheffield Hallam University",
+      "duration": "September 2017 — July 2019 (2 years)",
+      "address": "https://www.shu.ac.uk",
+      "headline": "Teaching Mathematics and Computer Science at Undergraduate and Masters level",
+      "logo": "/company_logo/shu.jpeg",
+      "entryId": "shu"
+    },
+    {
+      "title": "Informatics Developer",
+      "company": "UK Met Office",
+      "duration": "June — August 2017 (3 month internship)",
+      "address": "https://www.metoffice.gov.uk/research/foundation/informatics-lab/index",
+      "headline": "Creating a solution for the integration of amateur weather data",
+      "logo": "/company_logo/met_office.jpeg",
+      "entryId": "met-office"
+    },
+    {
+      "title": "Trainee Teacher",
+      "company": "Bristol University",
+      "duration": "September 2013 — April 2014 (7 months)",
+      "address": "https://www.bristol.ac.uk",
+      "headline": "PGCE in Secondary Mathematics with placements in state and private schools.",
+      "details": "bristol",
+      "logo": "/company_logo/bristol.jpg",
+      "entryId": "bristol"
+    }
+]

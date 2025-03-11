@@ -1,0 +1,31 @@
+[
+    {
+      "title": "Ph.D. Mathematics",
+      "company": "University of Reading",
+      "address": "https://www.reading.ac.uk",
+      "headline": "Research in Dynamical Systems and Tipping Points, in collaboration with the National Physical Laboratory",
+      "logo": "/company_logo/reading.png",
+      "transparent": true,
+      "entryId": "phd-reading"
+    },
+    {
+      "title": "MRes. Mathematics",
+      "grade": "Distinction",
+      "company": "Imperial College London",
+      "address": "https://www.imperial.ac.uk",
+      "headline": "Mathematics of Planet Earth CDT, with a focus on Probability, Statistics, and Computational Mathematics",
+      "logo": "/company_logo/icl.svg.png",
+      "transparent": true,
+      "entryId": "mres-imperial"
+    },
+    {
+      "title": "MA Mathematics",
+      "grade": "First Class Honours",
+      "company": "University of Edinburgh",
+      "address": "https://www.ed.ac.uk",
+      "headline": "Focus on Pure Mathematics and Mathematics Education",
+      "logo": "/company_logo/edinburgh.png",
+      "transparent": true,
+      "entryId": "ma-edinburgh"
+    }
+]

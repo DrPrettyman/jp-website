@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blink SEO Work Details</title>
+</head>
+
+<body>
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            I started at Blink as the only technical team member at a small SEO agency with the brief "use data to improve our processes". 
+            I quickly realised that the SEO team was spending most of their time on data engineering by hand: 
+            pulling data from various sources (Google Analytics, Shopify, etc., and site crawls using ScreamingFrog), then cleaning it and analysing it all in spreadsheets.
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            I created a python backend wrapping several web APIs to automate the data engineering process, 
+            including the PyGoogalytics library to pull data from Google Analytics, Search Console and Google Ads.
+            These data are cleaned and streamed to a Big Query database with a schema I designed to standardise the data and 
+            several views and procedures to make it easier to query.
+            I also created a (<em>PostgreSQL</em>-based) job-queue system to manage asynchronous tasks, ensuring that data imports, 
+            analysis, and ML-assisted recommendations could be processed efficiently, and a user-friendly front-end
+            in Looker Studio which I later migrated to Retool.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="images/data_diagram.png" alt="Flow diagram showing manual data engineering pasting csv exports into Excel" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="images/data_diagram2.png" alt="Flow diagram showing automated data engineering" style="width:100%">
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            I then began adding ML features into the backend to provide actionable insights to the SEO team. 
+            This meant frequent consultation with the team to understand their processes and needs with continual feedback and deployment.
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            The system was successful in speeding up the SEO process by over 20&times; and the management team decided to 
+            market it as a SaaS product to other SEO agencies and, eventually, ecommerce businesses: Macaroni Software.
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <h2>Key achievements:</h2>
+        <ul>
+            <li>I delivered Macaroni Software, allowing SEO teams to deliver 
+                <a href="https://www.linkedin.com/posts/sam-wright-17b6ab6_shopify-seo-activity-7170336529146441729-JGDn?utm_source=combined_share_message&utm_medium=member_desktop">a year's-worth of work in a single month</a>.</li>
+            
+            <li>I wrote the <a href="https://pypi.org/project/pygoogalytics/">PyGoogalytics</a> open-source library to manage data ingestion from Google Analytics,
+                Search Console and Google Ads, wrapping several API calls in one library and standardising the data
+                (see <a href="https://www.linkedin.com/posts/sam-wright-17b6ab6_github-blink-seopygoogalytics-activity-7234957676437274624-ipnf/">mention on LinkedIn</a>).</li>
+            
+            <li>I implemented several ML features to provide actionable recommendations for the SEO team, including:
+                <ul>
+                    <li>Keyword clustering using <em>ScikitLearn</em> and <em>NLTK</em>, combined with 
+                        quantitative data (clicks, impressions, etc.), to identify content gaps and opportunities.</li>
+                    <li>LLM integration (<em>huggingface</em>) to generate ready-to-go suggestions for new content.</li>
+                    <li>Automated site taxonomy suggestions using clustering and classification algorithms (<em>ScikitLearn</em>).</li>
+                </ul>
+            </li>
+
+            <li>Quantitative data are used for various visualisations in the app, powered by <em>Plotly</em>.</li>
+
+            <li>Client onboarding, data imports, data analysis tasks and ML-assisted recommendations can be triggered 
+                in the app and run asynchronously in the backend using a (<em>PostgreSQL</em>-based) job-queue system which I wrote for this purpose.</li>
+        </ul>
+    </div>
+
+    
+    <div style="margin-bottom: 20px" class="justified">
+        <h2>Other Responsibilities:</h2>
+        <ul>
+            <li>Presenting to the team and stakeholders on the progress of Macaroni and the insights it has generated.</li>
+
+            <li>Besides conceiving of and working on Macaroni, I also did frequent, 
+                one-off data tasks for the SEO delivery and management teams including 
+                data engineering, content generation, and providing analyses and 
+                visualisations for clients and investors.</li>
+        </ul>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <h2>Technologies:</h2>
+        <p>
+            Python, SQL, Pandas, Machine Learning, NLP, ScikitLearn, NLTK, Huggingface, Plotly, 
+            Web Scraping,
+            Looker, Retool, JavaScript, Unix, Linux, Bash,
+            CGP Products, Compute Engine, Big Query, PostgreSQL, Docker, Git, 
+            Google Analytics, Google Search Console, Google Ads, Shopify API.
+        </p>
+    </div>
+
+</body>
+</html>

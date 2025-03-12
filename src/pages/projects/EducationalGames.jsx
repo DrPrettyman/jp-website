@@ -19,12 +19,12 @@ const EducationalGames = () => {
           
           <div className="text-gray-700 dark:text-white">
 
-            <p className="mb-4 text-justify">
+            <p className="mb-8 text-justify">
               While I was training to be a teacher (before changing career and embarking on a Ph.D.) I made a few educational games 
               to help teach my students.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full mb-8">
               <div className="flex flex-col items-center justify-center">
                 <AngleGame />
               </div>
@@ -32,6 +32,7 @@ const EducationalGames = () => {
                 <FractionGame />
               </div>
             </div>
+
           </div>
         </div>
       </div>

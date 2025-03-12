@@ -135,7 +135,9 @@ const FractionGame = () => {
     
     // Score from based on the difference
     let score;
-    if (difference <= 0.02) {
+    if (difference <= 0.005) {
+      score = 'Perfect!';
+    } else if (difference <= 0.02) {
       score = 'Awesome!';
     } else if (difference <= 0.05) {
       score = 'Excellent!';

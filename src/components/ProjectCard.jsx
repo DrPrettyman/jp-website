@@ -10,6 +10,8 @@ const ProjectCard = ({
     image,
     transparent = false
 }) => {
+    const linkTarget = link?.startsWith('http') ? '_blank' : undefined;
+    const linkRel = link?.startsWith('http') ? 'noopener noreferrer' : undefined;
     return (
         <div className="bg-blue-50 dark:bg-gray-600 shadow rounded-lg p-4 flex flex-col justify-between h-full">
             <div>
@@ -18,8 +20,8 @@ const ProjectCard = ({
                     <div className="w-20 h-20 flex-shrink-0 mr-4">
                         <a 
                             href={link} 
-                            target={link?.startsWith('http') ? '_blank' : undefined}
-                            rel={link?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            target={linkTarget}
+                            rel={linkRel}
                         >
                             <img 
                                 src={image} 
@@ -31,8 +33,8 @@ const ProjectCard = ({
                     <div>
                         <a 
                             href={link} 
-                            target={link?.startsWith('http') ? '_blank' : undefined}
-                            rel={link?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            target={linkTarget}
+                            rel={linkRel}
                         >
                             <h2 className="text-xl font-bold text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-300 hover:underline mb-1">
                                 {title}

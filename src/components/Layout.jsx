@@ -1,6 +1,6 @@
 // Layout.jsx
 
-import { ChevronDown } from 'lucide-react'
+import { ChevronsDown } from 'lucide-react'
 import React, { useState, useEffect, useRef } from 'react'
 import Header from './Header'
 import Footer from './Footer'
@@ -43,8 +43,8 @@ const Layout = ({ children }) => {
       
       {/* ChevronDown icon - fixed at bottom center */}
       <div className={`fixed bottom-8 right-8 transform -translate-x-1/2 transition-opacity duration-300 ${isFooterVisible ? 'opacity-0' : 'opacity-100'}`}>
-        <ChevronDown 
-          className="h-10 w-10 text-gray-700 cursor-pointer" 
+        <ChevronsDown 
+          className="h-10 w-10 text-gray-700 dark:text-gray-300 cursor-pointer" 
           onClick={() => window.scrollBy({ top: 300, behavior: 'smooth' })}
         />
       </div>

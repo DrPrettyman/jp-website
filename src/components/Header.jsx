@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Menu, Mail, Linkedin, GraduationCap, Briefcase, Home, Star, FolderGit2, FileDown, FileText, BookOpen } from 'lucide-react'
+import { Menu, Mail, Linkedin, Github, GraduationCap, Briefcase, Home, Star, FolderGit2, FileDown, FileText, BookOpen } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import DarkModeToggle from './DarkModeToggle'
 
@@ -53,6 +53,15 @@ const Header = () => {
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">LinkedIn</span>
+              </a>
+              <a 
+                href="https://github.com/DrPrettyman" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                <Github className="h-5 w-5" />
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">GitHub</span>
               </a>
               <a 
                 href="/documents/JoshuaPrettymanCV.pdf" 

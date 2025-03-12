@@ -113,17 +113,17 @@ const AngleGame = () => {
     // Take the smaller angle between the difference and its complement
     difference = Math.min(difference, 360 - difference);
     
-    // Score from 0-100% based on the difference
-    // 0° difference = 100%, 180° difference = 0%
-    const scorePercent = Math.max(0, 100 - (difference / 180 * 100));
+    // Score based on the difference
     let score;
-    if (scorePercent >= 95) {
+    if (difference == 0){
+      score = 'Perfection!';
+    } else if (difference <= 5) {
       score = 'Awesome!';
-    } else if (scorePercent >= 90) {
+    } else if (difference <= 10) {
       score = 'Excellent!';
-    } else if (scorePercent >= 80) {
+    } else if (difference <= 20) {
       score = 'Good!';
-    } else if (scorePercent >= 70) {
+    } else if (difference <= 30) {
       score = 'OK';
     } else {
       score = 'Not great...';
@@ -296,7 +296,7 @@ const AngleGame = () => {
             </button>
             <button 
               onClick={handleReset} 
-              className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100"
+              className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 hover:dark:text-gray-800"
             >
               New Game
             </button>

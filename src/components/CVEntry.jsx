@@ -4,8 +4,8 @@ import Modal from './Modal'
 import { Calendar, Trophy, User, MapPin } from 'lucide-react'
 
 // Import all HTML files from the work-entries directory
-const cvEntriesAcademic = import.meta.glob('../assets/cv-academic/*.html');
-const cvEntriesProfessional = import.meta.glob('../assets/cv-professional/*.html');
+const cvEntriesAcademic = import.meta.glob('../assets/cv-academic/*.shtml');
+const cvEntriesProfessional = import.meta.glob('../assets/cv-professional/*.shtml');
 
 const CVEntry = ({ 
     title,
@@ -30,8 +30,8 @@ const CVEntry = ({
                 setIsLoading(true);
                 setError(null);
                 
-                const pathProfessional = `../assets/cv-professional/${entryId}.html`;
-                const pathAcademic = `../assets/cv-academic/${entryId}.html`;
+                const pathProfessional = `../assets/cv-professional/${entryId}.shtml`;
+                const pathAcademic = `../assets/cv-academic/${entryId}.shtml`;
                 console.log('Attempting to load:', `${pathAcademic} or ${pathProfessional}`);
                 console.log('Available paths:', Object.keys(cvEntriesAcademic));
                 console.log('Available paths:', Object.keys(cvEntriesProfessional));

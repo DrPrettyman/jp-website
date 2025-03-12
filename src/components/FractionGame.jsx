@@ -11,14 +11,43 @@ const FractionGame = () => {
 
   const denominators = [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60];
 
+  function gcd(a, b) {
+    while (b !== 0) {
+      const temp = b;
+      b = a % b;
+      a = temp;
+    }
+    return a;
+  }
+
+  function findCoprimeNumbers(n) {
+    if (n <= 0) {
+      throw new Error("Input must be a positive integer");
+    }
+    
+    const coprimes = [];
+    
+    for (let i = 1; i <= n; i++) {
+      if (gcd(i, n) === 1) {
+        coprimes.push(i);
+      }
+    }
+    
+    return coprimes;
+  }
+
+  function getRandomElement(array) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  }
+
   const createFraction = () => {
-    // Create a fraction with a denominator between 1 and 25
-    const denominator = Math.floor(Math.random() * 20) + 1;
+    // Create a fraction with a denominator between 3 and 25
+    const denominator = Math.floor(Math.random() * 23 + 3);
     // Create a numerator between 1 and the denominator
-    const numerator = Math.floor(Math.random() * (denominator - 1) + 1);
-    const gcd = (a, b) => b ? gcd(b, a % b) : a;
-    const divisor = gcd(numerator, denominator);  
-    return [numerator/divisor, denominator/divisor];
+    const coprimeNumbers = findCoprimeNumbers(denominator);
+    const coprimeNumerator = getRandomElement(coprimeNumbers);
+    return [coprimeNumerator, denominator];
   };
 
   const formatFraction = (fraction) => {
@@ -104,17 +133,15 @@ const FractionGame = () => {
     // Calculate the absolute difference
     const difference = Math.abs(targetFraction[0] / targetFraction[1] - currentFraction);
     
-    // Score from 0-100% based on the difference
-    // 0 difference = 100%, 1.0 difference = 0%
-    const scorePercent = Math.max(0, 100 - (difference * 100));
+    // Score from based on the difference
     let score;
-    if (scorePercent >= 95) {
+    if (difference <= 0.02) {
       score = 'Awesome!';
-    } else if (scorePercent >= 90) {
+    } else if (difference <= 0.05) {
       score = 'Excellent!';
-    } else if (scorePercent >= 80) {
+    } else if (difference <= 0.10) {
       score = 'Good!';
-    } else if (scorePercent >= 70) {
+    } else if (difference <= 0.20) {
       score = 'OK';
     } else {
       score = 'Not great...';
@@ -220,7 +247,7 @@ const FractionGame = () => {
             </button>
             <button 
               onClick={handleReset} 
-              className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100"
+              className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 hover:dark:text-gray-800"
             >
               New Game
             </button>

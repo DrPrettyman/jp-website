@@ -18,9 +18,8 @@ const ProjectCard = ({
                     <div className="w-20 h-20 flex-shrink-0 mr-4">
                         <a 
                             href={link} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="text-black font-bold hover:underline"
+                            target={link?.startsWith('http') ? '_blank' : undefined}
+                            rel={link?.startsWith('http') ? 'noopener noreferrer' : undefined}
                         >
                             <img 
                                 src={image} 
@@ -32,13 +31,12 @@ const ProjectCard = ({
                     <div>
                         <a 
                             href={link} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="text-black font-bold hover:underline"
+                            target={link?.startsWith('http') ? '_blank' : undefined}
+                            rel={link?.startsWith('http') ? 'noopener noreferrer' : undefined}
                         >
-                        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                            {title}
-                        </h2>
+                            <h2 className="text-xl font-bold text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-300 hover:underline mb-1">
+                                {title}
+                            </h2>
                         </a>
                         { date && (
                             <div className="flex items-center text-gray-700 dark:text-white mb-2">

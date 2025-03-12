@@ -65,7 +65,7 @@ const Projects = () => {
             />
             {/* Educational Games */}
             <ProjectCard
-              title="Educational Games"
+              title="PrettyMath Games"
               date="2013"
               tags={["JavaScript", "React"]}
               description="A series of games I made during my time teaching Maths to High School students."

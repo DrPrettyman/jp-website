@@ -1,9 +1,8 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import AngleGame from '../../components/AngleGame'
-import FractionGame from '../../components/FractionGame'
 
-import { Gamepad2 } from 'lucide-react';
+import { Gamepad2, Github } from 'lucide-react';
+import { AngleEstimationGame, FractionEstimationGame } from 'prettymath-games';
 
 const EducationalGames = () => {
   return (
@@ -13,23 +12,32 @@ const EducationalGames = () => {
           <div className="flex items-center text-gray-900 dark:text-white mb-4">
             <Gamepad2 className="h-8 w-8 mr-2" />
             <h1 className="text-4xl font-bold">
-              Educational Games
+              PrettyMath Games
             </h1>
+            <div className="text-sm font-bold flex items-center ml-auto hover:text-blue-500">
+              <a href="https://github.com/drprettyman/prettymath-games" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="flex items-center">
+                <Github className="mr-1" /> View on GitHub
+              </a>
+            </div>
           </div>
           
           <div className="text-gray-700 dark:text-white">
 
             <p className="mb-8 text-justify">
               While I was training to be a teacher (before changing career and embarking on a Ph.D.) I made a few educational games 
-              to help teach my students.
+              to help teach my students. I've recently re-made these games in React to show my children as a fun project. 
+              I've done two so far but may add more in the future.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full mb-4">
               <div className="flex flex-col items-center justify-center">
-                <AngleGame />
+                <AngleEstimationGame />
               </div>
               <div className="flex flex-col items-center justify-center">
-                <FractionGame />
+                <FractionEstimationGame />
               </div>
             </div>
 

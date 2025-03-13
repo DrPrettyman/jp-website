@@ -15,15 +15,15 @@ const EducationalGames = () => {
             <h1 className="text-4xl font-bold">
               PrettyMath Games
             </h1>
-            <div className="text-sm font-bold flex items-center ml-auto hover:text-blue-500">
+            <div className="font-bold flex items-center ml-auto">
             <a 
                 href="https://github.com/DrPrettyman/prettymath-games" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="relative group text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 <LiaGithub className="h-10 w-10" />
-                <span className="absolute top-1/2 -left-28 -translate-y-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">View on GitHub</span>
+                <span className="absolute top-1/2 -left-28 -translate-y-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">View on GitHub</span>
               </a>
             </div>
           </div>
@@ -36,7 +36,7 @@ const EducationalGames = () => {
               I've done two so far but may add more in the future.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full mb-4 text-gray-700 dark:text-grey-700">
               <div className="flex flex-col items-center justify-center">
                 <AngleEstimationGame />
               </div>

@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 
-import { Gamepad2, Github } from 'lucide-react';
+import { Gamepad2 } from 'lucide-react';
+import { LiaGithub } from "react-icons/lia";
 import { AngleEstimationGame, FractionEstimationGame } from 'prettymath-games';
 
 const EducationalGames = () => {
@@ -15,11 +16,14 @@ const EducationalGames = () => {
               PrettyMath Games
             </h1>
             <div className="text-sm font-bold flex items-center ml-auto hover:text-blue-500">
-              <a href="https://github.com/drprettyman/prettymath-games" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="flex items-center">
-                <Github className="mr-1" /> View on GitHub
+            <a 
+                href="https://github.com/DrPrettyman/prettymath-games" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                <LiaGithub className="h-10 w-10" />
+                <span className="absolute top-1/2 -left-28 -translate-y-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">View on GitHub</span>
               </a>
             </div>
           </div>

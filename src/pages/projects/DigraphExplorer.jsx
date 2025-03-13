@@ -51,7 +51,7 @@ const DigraphExplorerProject = () => {
             <img src="/images/digraph_creata_screenshot.png" alt="Digraph Explorer Console" className="mb-8 px-6 mx-auto block" />
 
             <p className="mb-4 text-justify">
-              In fact, if you have a Windows PC you can have a look at the original program which is just a .exe file [<a href="/documents/digraph_creata.exe" download className="text-blue-600 hover:text-blue-800 underline">download</a>].
+              In fact, if you have a Windows PC you can have a look at the original program which is just a .exe file [<a href="/documents/digraph_creata.exe" download className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 underline">download</a>].
             </p>
 
           </div>

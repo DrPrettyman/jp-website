@@ -346,7 +346,7 @@ const GraphBuilder = () => {
         {/* Right Column - Data */}
         <div className="bg-white p-6 rounded-lg shadow">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold">Path Counts by Path Length</h3>
+            <h3 className="text-lg font-semibold text-gray-700">Path Counts by Path Length</h3>
             <div className="flex gap-2">
               {/* Download CSV Button */}
               <button

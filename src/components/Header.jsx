@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
-import { Menu, Mail, Linkedin, Github, GraduationCap, Briefcase, Home, Star, FolderGit2, FileDown, FileText, BookOpen } from 'lucide-react'
+import { Menu, GraduationCap, Briefcase, Home, FolderGit2, BookOpen } from 'lucide-react'
+
+import { TbMail, TbFileSmile } from "react-icons/tb";
+import { FaLinkedin } from "react-icons/fa";
+import { LuGithub } from "react-icons/lu";
+
 import { Link, useLocation } from 'react-router-dom'
 import DarkModeToggle from './DarkModeToggle'
 
@@ -10,7 +15,7 @@ const Header = () => {
   const isActive = (path) => location.pathname === path
 
   const getButtonClasses = (path) => {
-    return `px-4 py-2 rounded-lg ${
+    return `${path === '/' ? 'px-2' : 'px-4'} py-2 rounded-lg ${
       isActive(path)
         ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
         : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
@@ -31,18 +36,18 @@ const Header = () => {
               Dr Joshua Prettyman
             </Link>
             <div className="flex space-x-2">
-              <Link 
+              {/* <Link 
                 to="/" 
                 className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 <Home className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Home</span>
-              </Link>
+              </Link> */}
               <a 
                 href="mailto:your.email@example.com" 
                 className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                <Mail className="h-5 w-5" />
+                <TbMail className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Email</span>
               </a>
               <a 
@@ -51,7 +56,7 @@ const Header = () => {
                 rel="noopener noreferrer" 
                 className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                <Linkedin className="h-5 w-5" />
+                <FaLinkedin className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">LinkedIn</span>
               </a>
               <a 
@@ -60,7 +65,7 @@ const Header = () => {
                 rel="noopener noreferrer" 
                 className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                <Github className="h-5 w-5" />
+                <LuGithub className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">GitHub</span>
               </a>
               <a 
@@ -69,7 +74,7 @@ const Header = () => {
                 rel="noopener noreferrer" 
                 className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                <FileText className="h-5 w-5" />
+                <TbFileSmile className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">PDF CV</span>
               </a>
               {/* <a 
@@ -113,7 +118,7 @@ const Header = () => {
               </div>
             </Link>
 
-            <Link 
+            {/* <Link 
               to="/blog" 
               className={getButtonClasses('/blog')}
             >
@@ -121,7 +126,15 @@ const Header = () => {
                 <BookOpen className="h-4 w-4 mr-1" />
                 <span className="whitespace-nowrap">Blog</span>
               </div>
+            </Link> */}
+
+            <Link 
+              to="/" 
+              className={getButtonClasses('/')}
+            >
+                <Home className="h-5 w-5" />
             </Link>
+
             <DarkModeToggle />
           </nav>
 

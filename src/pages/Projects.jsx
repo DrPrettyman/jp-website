@@ -69,7 +69,7 @@ const Projects = () => {
               date="2013"
               tags={["JavaScript", "React"]}
               description="A series of games I made during my time teaching Maths to High School students."
-              link="/projects/educational-games"
+              link="/projects/prettymath"
               image="/images/angle-game-screenshot.png"
             />
             {/* Digraph Explorer */}

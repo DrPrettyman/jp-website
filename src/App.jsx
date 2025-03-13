@@ -17,7 +17,7 @@ function App() {
         <Route path="/professional" element={<Work />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/digraph-explorer" element={<DigraphExplorerProject />} />
-        <Route path="/projects/educational-games" element={<EducationalGamesProject />} />
+        <Route path="/projects/prettymath" element={<EducationalGamesProject />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/blog/tag/:tag" element={<Blog />} />

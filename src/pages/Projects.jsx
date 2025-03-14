@@ -22,8 +22,8 @@ const Projects = () => {
             <ProjectCard
               title="TAORG"
               date="2025"
-              tags={["JavaScript", "React", "Next.js", "Fun"]}
-              description="The Animal Opposite Rhyming Game is a game I've been playing with my children for years. I decided to make a wordle-style web app based on it."
+              tags={["JavaScript", "React", "App", "Fun"]}
+              description="The Animal Opposite Rhyming Game is a game I've been playing with my children for years. I decided to make a wordle-style web app based on it. Have a go!"
               link="https://taorg.app"
               image="/images/taorg-screenshot.png"
             />
@@ -32,17 +32,17 @@ const Projects = () => {
               title="Macaroni"
               date="2023"
               tags={["Python", "SQL", "ML", "GCP"]}
-              description="SaaS product for SEO productivity. Developed whilst working at Blink SEO."
+              description="SaaS product for SEO productivity incorporating ML features. I developed the backend (Python), database (BigQuery) and prototype frontend (Retool) whilst working at Blink SEO."
               link="/projects/macaroni"
               image="/images/macaroni.jpeg"
             />
             {/* JobMaster */}
             <ProjectCard
-              title="Job Master"
+              title="JobMaster"
               date="2022"
               tags={["Python", "SQL", "PostgreSQL", "Workflow"]}
-              description="A Python package for standardising and exporting Google Analytics, Google Ads, and Search Console data as a Pandas DataFrame."
-              link="https://pypi.org/project/pygoogalytics/"
+              description="A job-queue system for triggering backend Python tasks from a web application. Created whilst working at Blink SEO to fill a need for a scalable and reliable system with a flexible API."
+              link="https://github.com/DrPrettyman/jobmaster"
               image="/images/jobmaster.png"
             />
             {/* PyGoogalytics */}
@@ -50,7 +50,7 @@ const Projects = () => {
               title="PyGoogalytics"
               date="2022"
               tags={["Python", "Pandas", "Data"]}
-              description="A Python package for standardising and exporting Google Analytics, Google Ads, and Search Console data as a Pandas DataFrame."
+              description="A Python package for standardising and exporting Google Analytics, Google Ads, and Search Console data as a Pandas DataFrame, ready for analysis or storage. Created whilst working at Blink SEO."
               link="https://pypi.org/project/pygoogalytics/"
               image="/images/pygoogalytics.svg"
             />

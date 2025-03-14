@@ -22,7 +22,7 @@ const Projects = () => {
             <ProjectCard
               title="TAORG"
               date="2025"
-              tags={["JavaScript", "React", "Next.js", "Tailwind"]}
+              tags={["JavaScript", "React", "Next.js", "Fun"]}
               description="The Animal Opposite Rhyming Game is a game I've been playing with my children for years. I decided to make a wordle-style web app based on it."
               link="https://taorg.app"
               image="/images/taorg-screenshot.png"
@@ -35,6 +35,15 @@ const Projects = () => {
               description="SaaS product for SEO productivity. Developed whilst working at Blink SEO."
               link="/projects/macaroni"
               image="/images/macaroni.jpeg"
+            />
+            {/* JobMaster */}
+            <ProjectCard
+              title="Job Master"
+              date="2022"
+              tags={["Python", "SQL", "PostgreSQL", "Workflow"]}
+              description="A Python package for standardising and exporting Google Analytics, Google Ads, and Search Console data as a Pandas DataFrame."
+              link="https://pypi.org/project/pygoogalytics/"
+              image="/images/jobmaster.png"
             />
             {/* PyGoogalytics */}
             <ProjectCard
@@ -49,7 +58,7 @@ const Projects = () => {
             <ProjectCard
               title="Tipping Points"
               date="2019"
-              tags={["MatLab", "Python"]}
+              tags={["MatLab", "Python", "Research"]}
               description="Code for my Ph.D. research. Explore tipping points in a system of coupled non-linear differential equations."
               link="/projects/tipping-points"
               image="/images/indicators.pdf"
@@ -58,7 +67,7 @@ const Projects = () => {
             <ProjectCard
               title="Adaptive Mesh"
               date="2015"
-              tags={["C++", "Numerical Methods"]}
+              tags={["C++", "Numerical Methods", "Research"]}
               description="MRes. research."
               link="/projects/adaptive-mesh"
               image="/images/ring_phi.pdf"
@@ -67,7 +76,7 @@ const Projects = () => {
             <ProjectCard
               title="PrettyMath Games"
               date="2013"
-              tags={["JavaScript", "React"]}
+              tags={["JavaScript", "React", "Educational"]}
               description="A series of games I made during my time teaching Maths to High School students."
               link="/projects/prettymath"
               image="/images/angle-game-screenshot.png"
@@ -76,7 +85,7 @@ const Projects = () => {
             <ProjectCard
               title="Digraph Explorer"
               date="2012"
-              tags={["JavaScript", "React"]}
+              tags={["JavaScript", "React", "Educational"]}
               description="A tool for my undergraduate dissertation. Explore directed graphs and calculate the number of paths through them."
               link="/projects/digraph-explorer"
               image="/images/digraph.png"

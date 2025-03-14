@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import CVEntry from '../components/CVEntry'
 import Publication from '../components/Publication'
 import educationData from '../assets/cv-academic/manifest.json';
-import publicationsData from '../assets/publications/manifest.json';
+import publicationsData from '../assets/cv-academic/publications.json';
 import { GraduationCap, BookOpen } from 'lucide-react'
 
 const Education = () => {

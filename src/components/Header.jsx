@@ -44,7 +44,7 @@ const Header = () => {
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Home</span>
               </Link> */}
               <a 
-                href="mailto:your.email@example.com" 
+                href="mailto:joshua@prettyman.me" 
                 className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 <TbMail className="h-5 w-5" />
@@ -77,12 +77,6 @@ const Header = () => {
                 <TbFileSmile className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">PDF CV</span>
               </a>
-              {/* <a 
-                href="mailto:your.email@example.com" 
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <img src={cvIcon} alt="CV Icon" className="h-5 w-5" />
-              </a> */}
             </div>
           </div>
           

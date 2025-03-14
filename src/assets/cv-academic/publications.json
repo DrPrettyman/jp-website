@@ -8,9 +8,9 @@
         "transparent": true,
         "entryId": "erl-paper",
         "authors": [
-            "J Prettyman",
-            "V Livina",
-            "T Kuna"
+            "J. Prettyman",
+            "V. Livina",
+            "T. Kuna"
         ],
         "abstract": "Many dynamical systems experience sudden shifts in behaviour known as tipping points or critical transitions, often preceded by the 'critical slowing down' (CSD) phenomenon whereby the recovery times of a system increase as the tipping point is approached. Many attempts have been made to find a tipping point indicator: a proxy for CSD, such that a change in the indicator acts as an early warning signal.\n\nSeveral generic tipping point indicators have been suggested, these include the power spectrum (PS) scaling exponent whose use as an indicator has previously been justified by its relationship to the well-established detrended fluctuation analysis (DFA) exponent. In this paper we justify the use of the PS indicator analytically, by considering a mathematical formulation of the CSD phenomenon.\n\nWe assess the usefulness of estimating the PS scaling exponent in a tipping point context when the PS does not exhibit power-law scaling, or changes over time. In addition we show that this method is robust against trends and oscillations in the time series, making it a good candidate for studying resilience of systems with periodic oscillations which are observed in ecology and geophysics."
     },
@@ -23,7 +23,7 @@
         "transparent": true,
         "entryId": "phd-thesis",
         "authors": [
-            "J Prettyman"
+            "J. Prettyman"
         ],
         "abstract": "Tipping events in dynamical systems have been studied across many applications, often by measuring changes in variance or autocorrelation in a one-dimensional time series. In this thesis, existing techniques in tipping point analysis are reviewed and a novel method, the Power Spectrum indicator, is introduced. The use of this novel technique is justified by a study of the scaling behaviour of the AR(1) process which is used to model the critical slowing down phenomenon in dynamical systems exhibiting tipping behaviour.\n\nMethods for detecting early warning signals of tipping events in multi-dimensional systems are also reviewed and expanded and these techniques are applied to a variety of dynamical systems. An analytical justification of the use of dimension-reduction by empirical orthogonal functions, in the context of early warning signals, is provided. One-dimensional techniques, including the novel Power Spectrum indicator are also extended to spatially separated time series over a 2D field.\n\nThe challenge of predicting an approaching tropical cyclone by a tipping-point analysis of the sea-level pressure time series is used as the primary example, and an analytical model of a moving cyclone is also developed in order to test predictions.\n\nWe show that the one-dimensional power spectrum indicator may be used following dimension-reduction, or over a 2D field. We also show the validity of our moving cyclone model with respect to tipping-point indicators."
     },
@@ -36,9 +36,9 @@
         "transparent": true,
         "entryId": "chaos-paper",
         "authors": [
-            "J Prettyman",
-            "V Livina",
-            "T Kuna"
+            "J. Prettyman",
+            "V. Livina",
+            "T. Kuna"
         ],
         "abstract": "Tipping events in dynamical systems have been studied across many applications, often by measuring changes in variance or autocorrelation in a one-dimensional time series.\n\nIn this paper, methods for detecting early warning signals of tipping events in multidimensional systems are reviewed and expanded. An analytical justification of the use of dimension-reduction by empirical orthogonal functions, in the context of early warning signals, is provided and the one-dimensional techniques are also extended to spatially separated time series over a 2D field.\n\nThe challenge of predicting an approaching tropical cyclone by a tipping-point analysis of the sea-level pressure series is used as the primary example, and an analytical model of a moving cyclone is also developed in order to test predictions.\n\nWe show that the one-dimensional power spectrum indicator may be used following dimension-reduction or over a 2D field. We also show the validity of our moving cyclone model with respect to tipping-point indicators."
     },
@@ -51,9 +51,9 @@
         "transparent": true,
         "entryId": "epl-paper",
         "authors": [
-            "J Prettyman",
-            "V Livina",
-            "T Kuna"
+            "J. Prettyman",
+            "V. Livina",
+            "T. Kuna"
         ],
         "abstract": "Tipping events in dynamical systems have been studied in many contexts, often modelled by the decay of critical modes, system states which are tending towards bifurcation, characterised by increased return times to stable equilibria.\n\nTemporal scaling properties of time series data can be used to detect the presence of a critical mode by estimating the decay rate, and indicators of changes in these properties may therefore be used to provide an early warning signal (EWS) for an impending tipping event.\n\nThe lag-1 autocorrelation function (ACF(1)) indicator and the detrended fluctuation analysis (DFA) indicator have previously been used in such a way; in this paper we introduce a novel scaling indicator based on the decay rate of the power spectrum (PS).\n\nWe compare the ACF(1), DFA- and PS-indicators using artificial data; data from a model which includes a bifurcation point; and sea-level pressure data along the paths of 14 tropical cyclones.\n\nBy using the PS-indicator with such data, we show that the new indicator may be used to provide an EWS in a context where the ACF(1)- and DFA-indicators fail."
     },
@@ -66,7 +66,7 @@
         "transparent": true,
         "entryId": "mres-dissertation",
         "authors": [
-            "J Prettyman"
+            "J. Prettyman"
         ],
         "abstract": "In this report we consider an adaptivity method based on the equidistribution problem, which makes use of solutions to the Monge-Amp\u00e8re equation. This Monge-Amp\u00e8re (MA) approach is an example of a location-based r-adaptive method, where the locations of mesh points are determined by an equation (typically a non-linear differential equation) governing how the mesh point density moves. This is as opposed to fully Lagrangian methods where individual mesh points are advected with the solutions of the underlying equations. For a discus- sion of location-based and Lagrangian methods."
     },
@@ -79,10 +79,10 @@
         "transparent": true,
         "entryId": "ma-dissertation",
         "authors": [
-            "T Bridge",
-            "E Cumberlege",
-            "H Peaker",
-            "J Prettyman"
+            "T. Bridge",
+            "E. Cumberlege",
+            "H. Peaker",
+            "J. Prettyman"
         ],
         "abstract": "Throughout this report we will be illustrating different patterns of growth by considering a particular problem in graph theory. Namely, whether we can explicitly determine the growth of the number of paths of any given length for a given digraph. We will focus on digraphs that contain loops, a form that we will later see arises when considering certain problems in the field of non-commutative algebra, and analyse methods for counting paths of any given length.\n\nIt will be shown that the functions counting paths within digraphs of our considered form are quasipolynomial and we will analyse how the quasiperiod for functions associated to similar digraphs are related.\n\nIn this report, we propose and develop a classification system for categorising the quasiperiods associated to an infinite family of graphs by considering a finite subset of its members."
     }

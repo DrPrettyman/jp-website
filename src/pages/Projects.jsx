@@ -18,6 +18,15 @@ const Projects = () => {
             Projects are fun!
           </p> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Comtrade */}
+            <ProjectCard
+              title="Wine exports/imports visualisation"
+              date="2025"
+              tags={["Plotly", "Tableau", "Python", "DataViz"]}
+              description="A data viz project to create an interactive world map showing wine imports and exports. Can also map other traded commodities using the UN's Comtrade data."
+              link="projects/wine-exports-viz"
+              image="/images/taorg-screenshot.png"
+            />
             {/* TAORG */}
             <ProjectCard
               title="TAORG"

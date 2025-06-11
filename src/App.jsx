@@ -3,11 +3,13 @@ import Home from './pages/Home'
 import Education from './pages/Education'
 import Work from './pages/Work'
 import Projects from './pages/Projects'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
+
 import DigraphExplorerProject from './pages/projects/DigraphExplorer'
 import EducationalGamesProject from './pages/projects/EducationalGames'
 import ComtradeProject from './pages/projects/Comtrade'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
+
 
 function App() {
   return (

@@ -5,6 +5,7 @@ import Work from './pages/Work'
 import Projects from './pages/Projects'
 import DigraphExplorerProject from './pages/projects/DigraphExplorer'
 import EducationalGamesProject from './pages/projects/EducationalGames'
+import ComtradeProject from './pages/projects/Comtrade'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/digraph-explorer" element={<DigraphExplorerProject />} />
         <Route path="/projects/prettymath" element={<EducationalGamesProject />} />
+        <Route path="/projects/wine-exports-viz" element={<ComtradeProject />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/blog/tag/:tag" element={<Blog />} />

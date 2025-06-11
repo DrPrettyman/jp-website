@@ -6,10 +6,11 @@
 </head>
 
 <body>
-    <div style="margin-bottom: 20px" class="justified">
+<div style="margin-bottom: 20px" class="justified">
     <p>
-        I was fortunate to have the time and opportunity, during my Ph.D. research, to take on a summer internship at the Met Office Informatics Lab.
-        I chose to take on a project that sought to quantify the viability of using amateur weather station data to improve the accuracy of the Met Office's weather forecasts.
+        I was fortunate to have the time and opportunity, during my Ph.D. research, to take on a summer internship at the Met Office including a series of seminars, tours and workshops followed by an 8-week project.
+        I chose to take on a project offered by the Met Office Informatics Lab that sought to quantify the viability of using amateur weather station data to improve the accuracy of the Met Office's weather forecasts.
+        This was an individual project with guidance and support from the Informatics Lab team; progress was shared with the team and other interns at twice-weekly standups.
     </p>
 </div>
 
@@ -30,21 +31,22 @@
 <div style="margin-bottom: 20px" class="indented">
     <ul>
         <li>Assessing the reliability and coverage of the amateur data.</li>
-        <li>Comparing the amateur observations to official (but interpolated) observations from the same time.</li>
+        <li>Comparing the amateur observations to official interpolated observations from the same time.</li>
     </ul>
 </div>
 
 <div style="margin-bottom: 20px" class="justified">
     <p>
-        I was, unfortunately, unable to complete the project in the time available, 
-        but I was able to identify a number of issues with the amateur data and 
-        show that it is not yet ready for use in the Met Office's weather models.
+        This lead to a huge number of possible questions and I wish I'd had more time to explore them all.
+        I was able to identify a number of issues with the amateur data and 
+        show that it is not yet ready for use in the Met Office's weather models, and leave behind some 
+        suggestions for future work.
     </p>
 </div>
 
     
 <h2>Technologies & Skills:</h2>
-    <div style="margin-bottom: 20px" class="justified">
+<div style="margin-bottom: 20px" class="justified">
     Python, JavaScript, web APIs, Data Mining, time series analysis, data cleaning, data engineering.
 </div>
 

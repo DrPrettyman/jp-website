@@ -1,4 +1,5 @@
 import { LiaGithub } from "react-icons/lia";
+import { DiGithubFull } from "react-icons/di";
 
 const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl }) => {
   return (
@@ -7,12 +8,12 @@ const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl
         <div className="text-gray-900 dark:text-white mb-6">
           {/* Mobile layout */}
           <div className="sm:hidden">
-            <div className="grid grid-cols-3 items-center mb-4">
-              <Icon className="h-8 w-8 justify-self-start" />
-              <h1 className="text-4xl font-bold text-center">
+            <div className="relative mb-4">
+              <Icon className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-8" />
+              <h1 className="text-4xl font-bold text-center px-12">
                 {title}
               </h1>
-              <Icon className="h-8 w-8 justify-self-end" />
+              <Icon className="absolute right-0 top-1/2 -translate-y-1/2 h-8 w-8" />
             </div>
             {githubUrl && (
               <div className="flex justify-center">
@@ -20,10 +21,9 @@ const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl
                   href={githubUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="relative group text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="flex items-center text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-white transition-colors text-lg font-medium"
                 >
-                  <LiaGithub className="h-10 w-10" />
-                  <span className="absolute top-1/2 -left-28 -translate-y-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">View on GitHub</span>
+                  View on <DiGithubFull className="h-12 w-12 mx-1" />
                 </a>
               </div>
             )}

@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="bg-gray-200/65 dark:bg-gray-800 rounded-lg px-8 py-8 mb-4">
+        <div className="bg-gray-200/65 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Image container */}
             <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">

@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
-import Layout from '../components/Layout'
-import CVEntry from '../components/CVEntry'
-import Publication from '../components/Publication'
+import React, { useEffect } from 'react';
+import Layout from '../components/Layout';
+import CVEntry from '../components/CVEntry';
+import Publication from '../components/Publication';
+import ContentBlock from '../components/ContentBlock';
 import educationData from '../assets/cv-academic/manifest.json';
 import publicationsData from '../assets/cv-academic/publications.json';
-import { GraduationCap, BookOpen } from 'lucide-react'
+import { GraduationCap, BookOpen } from 'lucide-react';
 
 const Education = () => {
 
@@ -22,14 +23,9 @@ const Education = () => {
   return (
     <Layout>
       {/* Academic Background */}
-      <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="bg-gray-200/65 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
-          <div className="flex items-center text-gray-900 dark:text-white mb-4">
-            <GraduationCap className="h-8 w-8 mr-2" />
-            <h1 className="text-4xl font-bold">
-              Academic Background
-            </h1>
-          </div>
+      <ContentBlock title="Academic Background" icon={GraduationCap}>
+
+          {/* Intro text */}
           <p className="text-justify text-gray-700 dark:text-white mb-8">
             At Edinburgh I studied Pure Mathematics but switched to more applied mathematics at the <em>Mathematics of Planet Earth</em> Centre for Doctoral Training. 
             My Masters taught courses covered Probability, Statistics, Computational Mathematics, and 
@@ -38,7 +34,7 @@ const Education = () => {
             You can find a pdf-format CV <a href="/documents/JoshuaPrettymanCV.pdf" className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 underline" target="_blank" rel="noopener noreferrer">here</a>.
           </p>
 
-          {/* Grid of work entries */}
+          {/* Grid of acedemic acheivements */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {educationData.map((entry) => (
               <CVEntry
@@ -54,18 +50,12 @@ const Education = () => {
               />
             ))}
           </div>
-        </div>
-      </div>
+      </ContentBlock>
 
       {/* Publications */}
-      <div className="max-w-7xl mx-auto py-2 sm:px-6 lg:px-8">
-        <div className="bg-gray-200/65 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
-          <div className="flex items-center text-gray-900 dark:text-white mb-4">
-            <BookOpen className="h-8 w-8 mr-2" />
-            <h1 className="text-4xl font-bold">
-              Publications
-            </h1>
-          </div>
+      <ContentBlock title="Publications" icon={BookOpen}>
+        
+          {/* Intro text */}
           <p className="text-justify text-gray-700 dark:text-white mb-8">
             Throughout my academic career I have been fortunate enough to present my research 
             at several international conferences and workshops, and publish a number of papers 
@@ -90,8 +80,8 @@ const Education = () => {
               />
             ))}
           </div>
-        </div>
-      </div>   
+
+      </ContentBlock>
     </Layout>
   )
 }

@@ -103,7 +103,7 @@ const ComtradeProject = () => {
               Plotly
             </p>
 
-            <div className="my-6">
+            <div className="my-6 bg-white rounded-lg">
               {/* <iframe 
                 src="/documents/comtrade_wine_2023.html" 
                 width="100%" 

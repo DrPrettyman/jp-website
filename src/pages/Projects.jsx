@@ -14,7 +14,7 @@ const Projects = () => {
             <ProjectCard
               title="Wine exports/imports visualisation"
               date="2025"
-              tags={["Plotly", "Tableau", "Python", "DataViz"]}
+              tags={["Plotly", "Tableau", "Python", "DataViz", "Web Scraping"]}
               description="A data viz project to create an interactive world map showing wine imports and exports. Can also map other traded commodities using the UN's Comtrade data."
               link="projects/wine-exports-viz"
               image="/images/comtrade-screenshot.png"
@@ -50,7 +50,7 @@ const Projects = () => {
             <ProjectCard
               title="PyGoogalytics"
               date="2022"
-              tags={["Python", "Pandas", "Data"]}
+              tags={["Python", "Pandas", "Data", "APIs"]}
               description="A Python package for standardising and exporting Google Analytics, Google Ads, and Search Console data as a Pandas DataFrame, ready for analysis or storage. Created whilst working at Blink SEO."
               link="https://pypi.org/project/pygoogalytics/"
               image="/images/pygoogalytics.svg"
@@ -59,7 +59,7 @@ const Projects = () => {
             <ProjectCard
               title="Tipping Points"
               date="2019"
-              tags={["MatLab", "Python", "Research"]}
+              tags={["MatLab", "Python", "Research", "Time Series"]}
               description="Code for my Ph.D. research. Explore tipping points in a system of coupled non-linear differential equations."
               link="/projects/tipping-points"
               image="/images/indicators.pdf"
@@ -77,7 +77,7 @@ const Projects = () => {
             <ProjectCard
               title="PrettyMath Games"
               date="2013"
-              tags={["JavaScript", "React", "Educational"]}
+              tags={["JavaScript", "React", "Education"]}
               description="A series of games I made during my time teaching Maths to High School students."
               link="/projects/prettymath"
               image="/images/angle-game-screenshot.png"
@@ -86,7 +86,7 @@ const Projects = () => {
             <ProjectCard
               title="Digraph Explorer"
               date="2012"
-              tags={["JavaScript", "React", "Educational"]}
+              tags={["JavaScript", "React", "Education", "Graph Theory"]}
               description="A tool for my undergraduate dissertation. Explore directed graphs and calculate the number of paths through them."
               link="/projects/digraph-explorer"
               image="/images/digraph.png"

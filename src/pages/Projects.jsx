@@ -17,7 +17,7 @@ const Projects = () => {
               tags={["Plotly", "Tableau", "Python", "DataViz"]}
               description="A data viz project to create an interactive world map showing wine imports and exports. Can also map other traded commodities using the UN's Comtrade data."
               link="projects/wine-exports-viz"
-              image="/images/taorg-screenshot.png"
+              image="/images/comtrade-screenshot.png"
             />
             {/* TAORG */}
             <ProjectCard

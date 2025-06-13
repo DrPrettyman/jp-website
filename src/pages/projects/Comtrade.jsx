@@ -7,7 +7,7 @@ import { LiaGithub } from "react-icons/lia";
 const ComtradeProject = () => {
   return (
     <Layout>
-      <ContentBlock title="Wine Trade Data" icon={Wine} githubUrl="https://github.com/DrPrettyman/comtrade">
+      <ContentBlock title="Wine Trade Data" icon={Wine} githubUrl="https://github.com/DrPrettyman/comtrade" maxWidth='4xl'>
           
           <div className="text-gray-700 dark:text-white">
 
@@ -78,18 +78,14 @@ const ComtradeProject = () => {
             <h3 className="text-lg mb-4 font-bold">Plotly</h3>
 
             <p className="mb-4 text-justify">
-              So 
+              Getting the whole thing to work with plotly was pretty straightforward: using a graph-objects figure, add the two choropleth traces (one for exports, one for imports) 
+              then add all the flow traces. Python Plotly's in-built buttons are enough to switch between "export" and "import" views but getting the correct flow lines to show up 
+              when a country is clicked requires some javascript. The final visualisation is below. Admittedly, it doesn't display so well on mobile but this is really a 
+              limitation of using the natural earth projection; it would be interesting to see more people using a more vertical map projection, now that the majority of online video 
+              is portrait thanks to smartphones. Maybe our grandchilden will become accustomed to seeing a "tall" world map projection!
             </p>
 
             <div className="my-6 bg-white rounded-lg">
-              {/* <iframe 
-                src="/documents/comtrade_wine_2023.html" 
-                width="100%" 
-                height="600" 
-                style={{ border: 'none', borderRadius: '8px' }}
-                title="Wine Trade Visualization"
-              /> */}
-
               <iframe 
               src="/documents/comtrade_wine_2023.html" 
               width="100%" 
@@ -115,6 +111,17 @@ const ComtradeProject = () => {
             />
 
             </div>
+
+            <p className="mb-4 text-justify">
+              You can open this visualisation <a href="/documents/comtrade_wine_2023.html" >directly in full-screen</a> if it is difficult to use, especially on mobile.               
+            </p>
+
+            <p className="mb-8 text-justify">
+              A final remark on Plotly vs. Tableau: the choropleth map in Tableau simply used the ISO-alpha3 codes (e.g. "FRA" for France) and plotted the correct locations. This is the same 
+              in Plotly. However, in order to create the trade-route lines, I had to map all of these to latitudes and longitudes before exporting the data and then connecting it to Tableau.
+              Plotly is able to use the ISO codes and plots the points right in the center of each country. I don't know why Tableau can't do this but I'm pretty sure it can't. The examples 
+              provide in the help sections used only latitude and longitude. 
+            </p>
 
             <p className="mb-4 text-justify"></p>
             <h2 className="text-2xl mb-4 font-bold">What's the point of low-code?</h2>

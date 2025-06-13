@@ -1,21 +1,15 @@
-import React from 'react'
-import Layout from '../../components/Layout'
-import GraphBuilder from '../../components/GraphBuilder'
-import { Waypoints } from 'lucide-react'
+import React from 'react';
+import Layout from '../../components/Layout';
+import GraphBuilder from '../../components/GraphBuilder';
+import ContentBlock from '../../components/ContentBlock';
+import { Waypoints } from 'lucide-react';
 
 import { Circle, Share2 } from 'lucide-react';
 
 const DigraphExplorerProject = () => {
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="bg-gray-200/65 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4">
-          <div className="flex items-center text-gray-900 dark:text-white mb-4">
-            <Waypoints className="h-8 w-8 mr-2" />
-            <h1 className="text-4xl font-bold">
-              Digraph Explorer
-            </h1>
-          </div>
+      <ContentBlock title="Digraph Explorer" icon={Waypoints} maxWidth='7xl'>
           
           <div className="text-gray-700 dark:text-white">
 
@@ -55,8 +49,8 @@ const DigraphExplorerProject = () => {
             </p>
 
           </div>
-        </div>
-      </div>
+
+      </ContentBlock>
     </Layout>
   )
 }

@@ -14,7 +14,7 @@ const Projects = () => {
             <ProjectCard
               title="Wine exports/imports visualisation"
               date="2025"
-              tags={["Plotly", "Tableau", "Python", "DataViz", "Web Scraping"]}
+              tags={["Plotly", "Tableau", "Python", "DataViz", "WebScraping"]}
               description="A data viz project to create an interactive world map showing wine imports and exports. Can also map other traded commodities using the UN's Comtrade data."
               link="projects/wine-exports-viz"
               image="/images/comtrade-screenshot.png"
@@ -59,7 +59,7 @@ const Projects = () => {
             <ProjectCard
               title="Tipping Points"
               date="2019"
-              tags={["MatLab", "Python", "Research", "Time Series"]}
+              tags={["MatLab", "Python", "Research", "TimeSeries"]}
               description="Code for my Ph.D. research. Explore tipping points in a system of coupled non-linear differential equations."
               link="/projects/tipping-points"
               image="/images/indicators.pdf"
@@ -86,7 +86,7 @@ const Projects = () => {
             <ProjectCard
               title="Digraph Explorer"
               date="2012"
-              tags={["JavaScript", "React", "Education", "Graph Theory"]}
+              tags={["JavaScript", "React", "Education", "GraphTheory"]}
               description="A tool for my undergraduate dissertation. Explore directed graphs and calculate the number of paths through them."
               link="/projects/digraph-explorer"
               image="/images/digraph.png"

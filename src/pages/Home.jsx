@@ -44,7 +44,7 @@ const Home = () => {
 
         <div className="bg-gray-200/65 dark:bg-gray-800/50 rounded-lg px-4 py-4 mb-4 mx-2 sm:mx-0">
           
-          <div className="bg-gray-300/100 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
+          <div className="bg-gray-300/70 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <Briefcase className="h-6 w-6 mr-2" /> Professional Experience
             </div>
@@ -59,7 +59,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-gray-300/100 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
+          <div className="bg-gray-300/70 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <GraduationCap className="h-6 w-6 mr-2" /> Academic Background
             </div>
@@ -73,7 +73,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-gray-300/100 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
+          <div className="bg-gray-300/70 dark:bg-gray-800 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <FileTerminal className="h-6 w-6 mr-2" />Tech Stack
             </div>
@@ -90,7 +90,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-gray-300/100 dark:bg-gray-800 rounded-lg px-8 py-6 mx-2 sm:mx-0">
+          <div className="bg-gray-300/70 dark:bg-gray-800 rounded-lg px-8 py-6 mx-2 sm:mx-0">
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <Smile className="h-6 w-6 mr-2" />Bio
             </div>

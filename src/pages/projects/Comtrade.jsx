@@ -30,7 +30,7 @@ const ComtradeProject = () => {
             <h2 className="text-2xl mb-4 font-bold">Finding and Cleaning the Data</h2>
 
             <p className="mb-4 text-justify">
-              The first step, as always, is getting the data. It turns out that the UN's <a href='https://comtradeplus.un.org'>Comtrade database</a> has exactly what I wanted and is publically accessible. I wrote a Python script to 
+              The first step, as always, is getting the data. It turns out that the UN's <a href='https://comtradeplus.un.org' className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Comtrade database</a> has exactly what I wanted and is publically accessible. I wrote a Python script to 
               scrape the data from the Comtrade website and save as a csv. Unfortunately the countries are identified by UN M49 codes, rather than the more typical ISO-alpha codes ("USA", "FRA", etc.) 
               so I also scraped a conversion table from a different UN website to map the values. There was also some manual tinkering involved since the UN M49 codes differ slightly from the Comtrade ones,
               so I had to cross-reference some values. I also needed to know the HS commodity code for "Wine" (2204 by the way), so I scraped a json file from the Comtrade site which lists all of these codes.  
@@ -113,7 +113,7 @@ const ComtradeProject = () => {
             </div>
 
             <p className="mb-4 text-justify">
-              You can open this visualisation <a href="/documents/comtrade_wine_2023.html" >directly in full-screen</a> if it is difficult to use, especially on mobile.               
+              You can open this visualisation <a href="/documents/comtrade_wine_2023.html" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">directly in full-screen</a> if it is difficult to use, especially on mobile.               
             </p>
 
             <p className="mb-8 text-justify">

@@ -82,10 +82,12 @@ const Home = () => {
                 I work in Python, utilising Pandas, ScikitLearn, PyTorch and TensorFlow for data mining and machine learning tasks; and Plotly, Seaborn and Matplotlib for visualisation.
               </p>
               <p className='mb-2'>
-                I also have extensive experience working in SQL, both for database management and data cleaning and manipulation. And I also use JavaScript from time to time. 
+                I also have extensive experience working in SQL, both for database management and data cleaning and manipulation, and have created and maintained BigQuery databases on GCP. 
+                I have also used JavaScript for building web-apps –including dashboards– and for adding custom interactivity to Plotly figures. 
               </p>
               <p>
-                In the past I have used C++, Matlab and Java for various projects.
+                I have used Shell Scripting for command line interfaces and automating tasks on cloud servers. I have built full-stack software solutions running on GCP Compute Engine. 
+                In the past I have also used C++, Matlab and Java for various projects.
               </p>
             </div>
           </div>
@@ -99,7 +101,7 @@ const Home = () => {
                 I live in the Málaga region of Spain and spend most of my time writing code, doing DIY projects on our weird old casita, cooking vegan meals and drinking Spanish wine. 
               </p>
               <p>
-                On the weekend I'll generally be spending time with my family either at a museum in Málaga, on the beach in Torremolinos or paddle-boarding up at Embalse del Guadalhorce. 
+                On the weekend I'll generally be spending time with my family either at a museum in Málaga, on the beach at Torremolinos or paddle-boarding up at Embalse del Guadalhorce. 
                 We might also head off in our campervan to explore Andalucía and beyond. 
               </p>
             </div>

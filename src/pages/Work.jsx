@@ -22,13 +22,18 @@ const Work = () => {
       <ContentBlock title="Professional Experience" icon={Briefcase}>
 
           {/* Intro text */}
-          <p className="text-justify text-gray-700 dark:text-white mb-8">
+          <p className="text-justify text-gray-700 dark:text-white mb-4">
             My Mathematics Ph.D. transitioned me into a career in Data Science:
             I'm good with statistics and problem solving, and enjoy implementing algorithms. 
             I work in mainly in Python and SQL, but I have experience with creating and maintaining databases, 
             dashboards and full-stack software projects. I have implemented and used a variety of 
             Machine Learning algorithms. 
             You can find a pdf-format CV <a href="/documents/JoshuaPrettymanCV.pdf" className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 underline" target="_blank" rel="noopener noreferrer">here</a>.
+          </p>
+
+          <p className="text-justify text-gray-700 dark:text-white mb-8">
+            In my most recent role at Blink SEO I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
+            This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: <i>Macaroni Software</i>.
           </p>
 
           {/* Grid of work entries */}

@@ -1,9 +1,9 @@
 import { LiaGithub } from "react-icons/lia";
 import { DiGithubFull } from "react-icons/di";
 
-const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl }) => {
+const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl, id }) => {
   return (
-    <div className={`max-w-${maxWidth} mx-auto py-6 sm:px-6 lg:px-8`}>
+    <div id={id} className={`max-w-${maxWidth} mx-auto py-6 sm:px-6 lg:px-8`}>
       <div className="bg-gray-200/65 dark:bg-gray-800/85 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
         <div className="text-gray-900 dark:text-white mb-6">
           {/* Mobile layout */}

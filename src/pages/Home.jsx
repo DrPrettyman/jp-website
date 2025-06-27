@@ -56,7 +56,8 @@ const Home = () => {
                 This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: <i>Macaroni Software</i>.
               </p>
               <p>
-                I also have experience as a researcher at the National Physical Laboratory and lecturing Mathemetics at all levels of university. Details are found on my <a href="/professional" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</a>.
+                I also have experience as a researcher at the National Physical Laboratory and lecturing Mathemetics at all levels of university. 
+                Details are found on my <a href="/professional" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</a>.
               </p>
             </div>
           </div>
@@ -90,7 +91,8 @@ const Home = () => {
               </p>
               <p>
                 I have used Shell Scripting for command line interfaces and automating tasks on cloud servers. I have built full-stack software solutions running on GCP Compute Engine. 
-                In the past I have also used C++, Matlab and Java for various projects.
+                In the past I have also used C++, Matlab and Java for various projects. 
+                Details are found on my <a href="/professional#tech-stack" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</a>.
               </p>
             </div>
           </div>

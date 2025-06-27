@@ -101,7 +101,7 @@ const Home = () => {
             </div>
             <div className="text-md text-gray-600 dark:text-white text-justify">
               <p className='mb-2'>
-                I live in the Málaga region of Spain and spend most of my time writing code, doing DIY projects on our casita, reading Walt Whitman and introducing my children to old Nintendo games. 
+                I live in the Málaga region of Spain and spend most of my time writing code, doing DIY projects on our casita, cooking vegan meals and playing old Nintendo games with my children.
               </p>
               <p className='mb-2'>
                 On the weekend I'll generally be spending time with my family either at a museum in Málaga, on the beach at Torremolinos, or paddle-boarding up at Embalse del Guadalhorce. 

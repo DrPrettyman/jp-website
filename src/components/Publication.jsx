@@ -40,13 +40,14 @@ const Publication = ({
                             href={link} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="text-black dark:text-white font-bold hover:underline w-full h-full flex items-center justify-center"
+                            className="group relative text-black dark:text-white font-bold hover:underline w-full h-full flex items-center justify-center"
                             >
                                 <img 
                                     src={logo} 
                                     alt={`${journal} Logo`} 
                                     className={`w-[90%] h-[90%] ${transparent ? '' : 'object-contain rounded-lg shadow-md'}`} 
                                 />
+                                <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Link to full paper</span>
                             </a>
                     </div>
                     <div>
@@ -55,8 +56,9 @@ const Publication = ({
                                 href={link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xl font-bold hover:underline">
+                                className="group relative text-xl font-bold hover:underline">
                                 {journal}
+                                <span className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-gray-800 dark:bg-gray-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Link to full paper</span>
                             </a>
                         </div>
                         <div className="flex items-center text-gray-600 dark:text-white mb-4">

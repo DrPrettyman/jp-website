@@ -7,21 +7,25 @@
 
 <body>
     <div style="margin-bottom: 20px" class="justified">
-    <p>
-        I created Macaroni as internal software for the Blink SEO team, which was successful in increasing productivity by over 20&times;.
-        The management team decided to market it as a SaaS product. 
-        We streamlined the product and positioned it as a Shopify platform, allowing us to focus on the most common use-case and 
-        provide a more tailored solution for our clients.
-    </p>
-</div>
-<div style="margin-bottom: 20px" class="justified">
-    <p>
-        Macaroni is a data engineering and machine learning platform that automates data ingestion, cleaning, analysis, and provides actionable insights for SEO teams.
-        As a new startup Macaroni hired a data engineer, front-end developer, and a product manager to take the product to market. 
-        I worked with the new team to onboard them and hand over parts of the project, freeing up time to work on the machine learning features, 
-        and still consulting regularly with the Blink SEO delivery team to understand their processes and requirements.
-    </p>
-</div>
+        <p>
+            I created Macaroni as internal software for the Blink SEO team, which was successful in increasing productivity by over 20&times;.
+            The management team decided to market it as a SaaS product. 
+            We streamlined the product and positioned it as a Shopify platform, allowing us to focus on the most common use-case and 
+            provide a more tailored solution for our clients.
+        </p>
+    </div>
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            Macaroni is a data engineering and machine learning platform that automates data ingestion, cleaning, analysis, and provides actionable insights for SEO teams.
+        </p>
+    </div>
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            As a new startup Macaroni hired a data engineer, front-end developer, and a product manager to take the product to market:
+            I worked with the new team to onboard them and hand over parts of the project, freeing up time to work on the machine learning features, 
+            and still consulting regularly with the Blink SEO delivery team to understand their processes and requirements.
+        </p>
+    </div>
 
     
 

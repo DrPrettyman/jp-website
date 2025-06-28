@@ -18,8 +18,13 @@
         <p>
             I created a python backend wrapping several web APIs to automate the data engineering process, 
             including the PyGoogalytics library to pull data from Google Analytics, Search Console and Google Ads.
-            These data are cleaned and streamed to a Big Query database with a schema I designed to standardise the data and 
-            several views and procedures to make it easier to query.
+            These data are cleaned and streamed to a Big Query data warehouse with a schema I designed to standardise the data, and 
+            several views and procedures to make it easier to query key business metrics.
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
             I also created a (<em>PostgreSQL</em>-based) job-queue system to manage asynchronous tasks, ensuring that data imports, 
             analysis, and ML-assisted recommendations could be processed efficiently, and a user-friendly front-end
             in Looker Studio which I later migrated to Retool.

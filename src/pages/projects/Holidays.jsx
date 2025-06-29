@@ -5,7 +5,16 @@ import holidayData from '../../assets/holidays.json';
 
 const HolidayMapProject = () => {
   return (    
-          <HolidayMap holidays={holidayData}/>
+          // <HolidayMap holidays={holidayData}/>
+
+          <HolidayMap 
+            holidays={holidayData}
+            projection="geoAzimuthalEqualArea"
+            projectionConfig={{
+              rotate: [-20.0, -52.0, 0],
+              scale: 700
+            }}
+            />
   )
 }
 

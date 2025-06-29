@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 import { X, MapPin } from 'lucide-react';
 
-const HolidayMap = ({ holidays }) => {
+const HolidayMap = ({ holidays, projection = "geoNaturalEarth1", projectionConfig = { scale: 120, center: [0, 0] } }) => {
   const [selectedHoliday, setSelectedHoliday] = useState(null);
 
   
@@ -29,11 +29,8 @@ const HolidayMap = ({ holidays }) => {
       {/* Map Container */}
       <div className="w-full h-full pt-24 pb-4">
         <ComposableMap
-          projection="geoNaturalEarth1"
-          projectionConfig={{
-            scale: 120,
-            center: [0, 0]
-          }}
+          projection={projection}
+          projectionConfig={projectionConfig}
           width={800}
           height={500}
           className="w-full h-full"

@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Latex aux files
+LaTeX_CV/*/*.aux
+LaTeX_CV/*/*.fls
+LaTeX_CV/*/*.fdb_latexmk
+LaTeX_CV/*/*.out
+LaTeX_CV/*/*.synctex.gz

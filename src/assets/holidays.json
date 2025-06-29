@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Summer in Santorini",
+    "photo": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&h=400&fit=crop",
+    "text": "An incredible week exploring the beautiful white-washed villages and stunning sunsets of Santorini. The blue domes, crystal clear waters, and amazing Greek cuisine made this trip unforgettable.",
+    "coordinates": [25.4615, 36.3932]
+  },
+  {
+    "id": 2,
+    "title": "Tokyo Adventure",
+    "photo": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop",
+    "text": "Immersed myself in the vibrant culture of Tokyo, from the bustling streets of Shibuya to the peaceful temples. The perfect blend of modern technology and ancient traditions, plus the best ramen I've ever had!",
+    "coordinates": [139.6503, 35.6762]
+  },
+  {
+    "id": 3,
+    "title": "Swiss Alps Hiking",
+    "photo": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop",
+    "text": "Breathtaking mountain views and challenging hikes through the Swiss Alps. Every trail offered spectacular vistas, and the mountain villages were like something from a fairy tale.",
+    "coordinates": [7.4815, 46.5197]
+  },
+  {
+    "id": 4,
+    "title": "Bali Paradise",
+    "photo": "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=600&h=400&fit=crop",
+    "text": "Tropical paradise with stunning beaches, ancient temples, and the most welcoming people. The rice terraces and sunset at Tanah Lot temple were absolutely magical.",
+    "coordinates": [115.0920, -8.3405]
+  },
+  {
+    "id": 5,
+    "title": "New York City",
+    "photo": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=400&fit=crop",
+    "text": "The city that never sleeps! From Broadway shows to Central Park walks, world-class museums to diverse neighborhoods - every corner had something new to discover.",
+    "coordinates": [-74.0060, 40.7128]
+  },
+  {
+    "id": 6,
+    "title": "Machu Picchu Trek",
+    "photo": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=600&h=400&fit=crop",
+    "text": "An unforgettable journey through the ancient Inca trail to reach the mystical Machu Picchu. The combination of challenging hiking and incredible history made this a once-in-a-lifetime experience.",
+    "coordinates": [-72.5450, -13.1631]
+  }
+]

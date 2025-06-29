@@ -10,6 +10,7 @@ import DigraphExplorerProject from './pages/projects/DigraphExplorer'
 import EducationalGamesProject from './pages/projects/EducationalGames'
 import ComtradeProject from './pages/projects/Comtrade'
 
+import HolidayMapProject from './pages/projects/Holidays';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         <Route path="/projects/digraph-explorer" element={<DigraphExplorerProject />} />
         <Route path="/projects/prettymath" element={<EducationalGamesProject />} />
         <Route path="/projects/wine-exports-viz" element={<ComtradeProject />} />
+
+        <Route path="/holidaymap" element={<HolidayMapProject />} />
+        
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/blog/tag/:tag" element={<Blog />} />

@@ -24,6 +24,10 @@ dist-ssr
 *.sw?
 
 
+# Python
+.venv
+
+
 # Latex aux files
 LaTeX_CV/*/*.aux
 LaTeX_CV/*/*.fls

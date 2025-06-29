@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Data Science",
+    "icon": "TbChartScatter3D",
+    "techIcons": ["Python", "Pandas", "Scikit", "TensorFlow", "PyTorch", "Ollama", "Huggingface"],
+    "firstParagraph": "I've spent a lot of time working with <b>ScikitLearn</b>, <b>PyTorch</b> and <b>TensorFlow</b> for machine learning tasks, and using NLP for working with textual data.",
+    "text": [
+      { "content": "NLP using <b>NLTK</b>, and <b>DBSCAN</b> clustering on Search Console data to provide recommendations for primary keywords. This cut down a days-long spreadsheet-scrolling task to a few minutes." },
+      { "content": "A combination of classification and clustering to recommend new category pages for D2C brands with a focus on optimising click-through rate and capturing niche keywords whilst reducing cannibalisation." },
+      { "content": "<b>LLM</b> intergration (<b>Ollama</b>, <b>Huggingface</b>) to provide highly personalised recomendations for on-page copy. This allowed new pages to be launched in minutes rather than days." }
+    ]
+  },
+  {
+    "title": "Data Engineering",
+    "icon": "BsDatabaseCheck",
+    "techIcons": ["Python", "Pandas", "GraphQL", "GoogleCloud", "GCP-BigQuery", "PostgresSQL"],
+    "firstParagraph": "I designed and implemented the <i>Blink SEO</i> data warehouse in <b>BigQuery</b>. This saved the team from the manual csv-export/excel-import repetative nightmare –freeing up countless hours– and provided consistent data for future dashboards, front-end dev, and ML methods.",
+    "text": [
+      { "content": "Wrote the <b>PyGoogalytics</b> package for data extraction from <b>Google Ads</b>, <b>GA4</b> and <b>Search Console</b> in a consistent format." },
+      { "content": "Plus wrappers for other services such as <b>Shopify</b> (<b>GraphQL</b>) and <b>SemRush</b> (<b>REST</b>)." },
+      { "content": "<b>Python</b> scripts for cleaning data and loading into <b>BigQuery</b>." },
+      { "content": "Dozens of table functions and views to aggregate data across different sources to easily query key business metrics." }
+    ]
+  },
+  {
+    "title": "Software Development",
+    "icon": "PiGitPullRequest",
+    "techIcons": ["Python", "Bash", "JavaScript", "Linux", "GoogleCloud", "GCP-ComputeEngine", "GCP-Endpoints", "PostgresSQL"],
+    "firstParagraph": "I built the <i>Macaroni Software</i> backend in <b>Python</b> running on a <b>GCP Compute Engine</b> virtual machine. This connected to client data sources via APIs, handled Data Cleaning and ML tasks, integrated with <b>BigQuery</b> and communicated with the front-end.",
+    "text": [
+      { "content": "Set up <b>Slack</b> notifications from the backend system to alert devs (me) of tech problems and agency staff of clients' statuses." },
+      { "content": "Created a job-queue system (<b>PostgreSQL</b>) for running back-end processes on demand and on schedules." },
+      { "content": "Created a web-scraping process based on <b>Scrapy</b>." },
+      { "content": "Set up <b>Python</b> scripts in <b>Google Cloud Functions</b> with API endpoints to onboard users into the system." }
+    ]
+  },
+  {
+    "title": "Story Telling",
+    "icon": "PiPresentationChart",
+    "techIcons": ["Matplotlib", "Plotly", "Seaborn", "Retool", "Tableau", "Looker", "MATLAB"],
+    "firstParagraph": "Data is useless if it doesn't tell you anything. I've produced visualisations throughout my accademic career for posters, papers and presentations. More recently I've created interactive dashboards to communicate KPIs, and as playgrounds allowing users to explore data in meaninful ways.",
+    "text": [
+      { "content": "Visualisations created with <b>Matplotlib</b> and <b>Plotly</b>: from academic papers to investor reports." },
+      { "content": "<b>Looker Studio</b> dashboards as prototypes for quick feedback and integration." },
+      {
+        "content": "I created the <i>Macaroni Software</i> frontend in <b>Retool</b> (<b>JavaScript</b>) incorporating multiple dashboards:",
+        "children": [
+          "Client-facing dashboards to replace time-consuming monthly PDF reports, saving hours per client per month,",
+          "Agency-facing dashboards for data exploration and the ability to implement business descisions with a click, dramatically increasing productivity."
+        ]
+      }
+    ]
+  }
+]

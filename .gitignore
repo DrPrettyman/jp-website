@@ -26,6 +26,7 @@ dist-ssr
 
 # Python
 .venv
+*.pyc
 
 
 # Latex aux files

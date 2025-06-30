@@ -35,3 +35,6 @@ LaTeX_CV/*/*.fls
 LaTeX_CV/*/*.fdb_latexmk
 LaTeX_CV/*/*.out
 LaTeX_CV/*/*.synctex.gz
+
+# Gemini
+GEMINI.md

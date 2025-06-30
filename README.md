@@ -1,6 +1,10 @@
-# joshua.prettyman.me
+# [joshua.prettyman.me](https://joshua.prettyman.me)
 
 My personal website. Built with React and Vite.
+
+A [markdown version](/markdown/cv.md) can be compiled using some python functions in the `/markdown` folder.
+
+A pdf-format CV is compiled using LaTeX and is included in the `/public/documents` folder.  
 
 ## Development
 
@@ -14,6 +18,8 @@ npm run dev
 - `src/pages` contains the main pages of the website.
 - `src/components` contains reusable components.
 - `src/assets` contains static assets.
+- `LaTeX_CV` contains files to compile a pdf-format cv.
+- `markdown` contains pythion functions to compile a markdown cv ([here](/markdown/cv.md)) using the text from the website.
 
 ## Pages:
 

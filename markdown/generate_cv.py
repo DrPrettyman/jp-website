@@ -1,10 +1,7 @@
 import os
-import re
 import json
-import sys
-from bs4 import BeautifulSoup
-
-from parse import html_to_markdown
+import inspect
+from .parse import html_to_markdown
 
 
 class CV:
@@ -115,8 +112,23 @@ class CV:
                 _f.write(cv)
         else:
             return cv
+        
+
+def jp_website_path() -> str:
+    # Get the current file path
+    current_file = inspect.getfile(inspect.currentframe())
+    absolute_path = os.path.abspath(current_file)
+    p = os.path.dirname(absolute_path)
+    
+    # Go up a level until we get jp-website
+    while os.path.basename(p) != "jp-website":
+        p = os.path.dirname(p)
+        
+    return p
 
 
 if __name__ == "__main__":
-    cv = CV("../src/assets")
-    cv.to_md("cv.md")
+    p = jp_website_path()
+
+    cv = CV(os.path.join(p, "src", "assets"))
+    cv.to_md(os.path.join(p, "public", "documents", "JPrettymanCV.md"))

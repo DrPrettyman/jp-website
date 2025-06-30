@@ -19,12 +19,26 @@ const renderText = (items, level = 0) => {
 const TechSkill = ({ title, icon, techIcons, firstParagraph, text }) => {
   return (
     <div className="bg-blue-50 dark:bg-gray-600 shadow rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
-      <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center justify-between">
+      {/* Mobile layout */}
+      <div className="sm:hidden text-lg font-bold text-gray-600 dark:text-white mb-4">
+        <div className="flex items-center justify-center mb-2">
+          {icon}
+          {title}
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          {techIcons.map((icon, index) => (
+            <img key={index} src={`/tech_icons/${icon}.svg`} alt={`${icon} Logo`} className="h-6 w-6" />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop layout */}
+      <div className="hidden sm:flex text-lg font-bold text-gray-600 dark:text-white mb-4 items-center justify-between">
         <div className="flex items-center">
           {icon}
           {title}
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-wrap items-center justify-end gap-2">
           {techIcons.map((icon, index) => (
             <img key={index} src={`/tech_icons/${icon}.svg`} alt={`${icon} Logo`} className="h-6 w-6" />
           ))}

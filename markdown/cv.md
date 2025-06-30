@@ -2,7 +2,7 @@
 
 Data Scientist, Mathematics Ph.D., Python Developer
 
-[joshua@prettyman.me](mailto:joshua@prettyman.me) | [linkedin.com/in/joshuaprettyman](https://www.linkedin.com/in/joshuaprettyman/) | [joshua.prettyman.me](joshua.prettyman.me)
+[joshua@prettyman.me](mailto:joshua@prettyman.me) | [linkedin.com/in/joshuaprettyman](https://www.linkedin.com/in/joshuaprettyman/) | [joshua.prettyman.me](https://joshua.prettyman.me)
 
 # Professional Experience
 

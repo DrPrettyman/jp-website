@@ -21,7 +21,7 @@ const TechSkill = ({ title, icon, techIcons, firstParagraph, text }) => {
     <div className="bg-blue-50 dark:bg-gray-600 shadow rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
       {/* Mobile layout */}
       <div className="sm:hidden text-lg font-bold text-gray-600 dark:text-white mb-4">
-        <div className="flex items-center justify-center mb-2">
+        <div className="flex items-center justify-center text-center mb-2">
           {icon}
           {title}
         </div>

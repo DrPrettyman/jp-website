@@ -8,12 +8,11 @@ const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl
         <div className="text-gray-900 dark:text-white mb-6">
           {/* Mobile layout */}
           <div className="sm:hidden">
-            <div className="relative mb-4">
-              <Icon className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-8" />
-              <h1 className="text-4xl font-bold text-center px-12">
+            <div className="flex flex-col items-center mb-4">
+              <Icon className="h-8 w-8 mb-2" />
+              <h1 className="text-4xl font-bold text-center">
                 {title}
               </h1>
-              <Icon className="absolute right-0 top-1/2 -translate-y-1/2 h-8 w-8" />
             </div>
             {githubUrl && (
               <div className="flex justify-center">

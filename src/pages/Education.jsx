@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import CVEntry from '../components/CVEntry';
 import Publication from '../components/Publication';
@@ -8,8 +8,19 @@ import publicationsData from '../assets/cv-academic/publications.json';
 import { GraduationCap, BookOpen } from 'lucide-react';
 
 const Education = () => {
+  const [introAcademic, setIntroAcademic] = useState('');
+  const [introPublications, setIntroPublications] = useState('');
 
   useEffect(() => {
+    // Fetch the intro text
+    fetch('/src/assets/cv-academic/intro-academic.html')
+      .then(response => response.text())
+      .then(text => setIntroAcademic(text));
+
+    fetch('/src/assets/cv-academic/intro-publications.html')
+      .then(response => response.text())
+      .then(text => setIntroPublications(text));
+
     // Check if we should open any modal
     const searchParams = new URLSearchParams(window.location.search);
     const openModal = searchParams.get('open');
@@ -26,13 +37,7 @@ const Education = () => {
       <ContentBlock title="Academic Background" icon={GraduationCap}>
 
           {/* Intro text */}
-          <p className="text-justify text-gray-700 dark:text-white mb-8">
-            At Edinburgh I studied Pure Mathematics but switched to more applied mathematics at the <em>Mathematics of Planet Earth</em> Centre for Doctoral Training. 
-            My Masters taught courses covered Probability, Statistics, Computational Mathematics, and 
-            Dynamical Systems. My Ph.D. focused on the application of dynamical systems theory to 
-            the study of tipping points in geophysical systems.
-            You can find a pdf-format CV <a href="/documents/JoshuaPrettymanCV.pdf" className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 underline" target="_blank" rel="noopener noreferrer">here</a>.
-          </p>
+          <div dangerouslySetInnerHTML={{ __html: introAcademic }} />
 
           {/* Grid of acedemic acheivements */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -56,12 +61,7 @@ const Education = () => {
       <ContentBlock title="Publications" icon={BookOpen}>
         
           {/* Intro text */}
-          <p className="text-justify text-gray-700 dark:text-white mb-8">
-            Throughout my academic career I have been fortunate enough to present my research 
-            at several international conferences and workshops, and publish a number of papers 
-            in respected journals.
-            I have also included my MA and Masters dissertation papers here.
-          </p>
+          <div dangerouslySetInnerHTML={{ __html: introPublications }} />
 
           {/* Publications section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

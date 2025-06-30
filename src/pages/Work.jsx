@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import CVEntry from '../components/CVEntry';
 import ContentBlock from '../components/ContentBlock';
@@ -18,7 +18,19 @@ const iconComponents = {
 };
 
 const Work = () => {
+  const [introExperience, setIntroExperience] = useState('');
+  const [introTechStack, setIntroTechStack] = useState('');
+
   useEffect(() => {
+    // Fetch intro texts
+    fetch('/src/assets/cv-professional/intro-experience.html')
+      .then(response => response.text())
+      .then(text => setIntroExperience(text));
+
+    fetch('/src/assets/cv-professional/intro-tech-stack.html')
+      .then(response => response.text())
+      .then(text => setIntroTechStack(text));
+
     // Handle deep linking
     const { hash } = window.location;
     if (hash) {
@@ -47,23 +59,7 @@ const Work = () => {
       <ContentBlock title="Professional Experience" icon={Briefcase} id="work-experience">
 
           {/* Intro text */}
-          <p className="text-justify text-gray-700 dark:text-white mb-4">
-            My Ph.D. focussed on predicting tipping points in dynamical systems using multi-dimensional time series data, which I thought 
-            to be a great jumping-off point for a career in Data Science:
-            I'm good with statistics, problem solving, implementing algorithms and working with data. 
-          </p>
-
-          <p className="text-justify text-gray-700 dark:text-white mb-4">
-            I work in mainly in Python and SQL, but I have experience with creating and maintaining databases, 
-            dashboards and full-stack software projects. I have implemented and used a variety of 
-            Machine Learning algorithms. 
-            You can find a pdf-format CV <a href="/documents/JoshuaPrettymanCV.pdf" className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 underline" target="_blank" rel="noopener noreferrer">here</a>.
-          </p>
-
-          <p className="text-justify text-gray-700 dark:text-white mb-8">
-            In my most recent role at Blink SEO I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
-            This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: <i>Macaroni Software</i>.
-          </p>
+          <div dangerouslySetInnerHTML={{ __html: introExperience }} />
 
           {/* Grid of work entries */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -88,11 +84,7 @@ const Work = () => {
       {/* Tech Stack */}
       <ContentBlock title="Technologies and Skills" icon={FileTerminal} id="tech-stack">
           {/* Intro text */}
-          <div className="text-justify text-gray-700 dark:text-white mb-8">
-              <p>
-                I work mainly in Python, utilising various packages for data mining, machine learning, visualisation, web-scraping, and most other things. I also have extensive experience working with SQL, JavaScript and a host of other technologies.
-              </p>
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: introTechStack }} />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {techSkillsData.map((skill, index) => (
               <TechSkill

@@ -187,7 +187,7 @@ const Header = () => {
                     <span className="whitespace-nowrap">Projects</span>
                   </div>
                 </Link>
-                <Link 
+                {/* <Link 
                   to="/blog" 
                   className={`text-right px-4 py-2 rounded-lg ${
                     isActive('/blog')
@@ -200,7 +200,7 @@ const Header = () => {
                     <BookOpen className="h-4 w-4" />
                     <span className="whitespace-nowrap">Blog</span>
                   </div>
-                </Link>
+                </Link> */}
               </div>
             </div>
           )}

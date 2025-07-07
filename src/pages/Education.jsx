@@ -6,20 +6,11 @@ import ContentBlock from '../components/ContentBlock';
 import educationData from '../assets/cv-academic/manifest.json';
 import publicationsData from '../assets/cv-academic/publications.json';
 import { GraduationCap, BookOpen } from 'lucide-react';
+import introAcademicHtml from '../assets/cv-academic/intro-academic.html?raw';
+import introPublicationsHtml from '../assets/cv-academic/intro-publications.html?raw';
 
 const Education = () => {
-  const [introAcademic, setIntroAcademic] = useState('');
-  const [introPublications, setIntroPublications] = useState('');
-
   useEffect(() => {
-    // Fetch the intro text
-    fetch('/src/assets/cv-academic/intro-academic.html')
-      .then(response => response.text())
-      .then(text => setIntroAcademic(text));
-
-    fetch('/src/assets/cv-academic/intro-publications.html')
-      .then(response => response.text())
-      .then(text => setIntroPublications(text));
 
     // Check if we should open any modal
     const searchParams = new URLSearchParams(window.location.search);
@@ -37,7 +28,7 @@ const Education = () => {
       <ContentBlock title="Academic Background" icon={GraduationCap}>
 
           {/* Intro text */}
-          <div dangerouslySetInnerHTML={{ __html: introAcademic }} />
+          <div dangerouslySetInnerHTML={{ __html: introAcademicHtml }} />
 
           {/* Grid of acedemic acheivements */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -61,7 +52,7 @@ const Education = () => {
       <ContentBlock title="Publications" icon={BookOpen}>
         
           {/* Intro text */}
-          <div dangerouslySetInnerHTML={{ __html: introPublications }} />
+          <div dangerouslySetInnerHTML={{ __html: introPublicationsHtml }} />
 
           {/* Publications section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

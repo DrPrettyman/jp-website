@@ -9,6 +9,8 @@ import { Briefcase, FileTerminal } from 'lucide-react';
 import { PiGitPullRequest, PiPresentationChart } from "react-icons/pi";
 import { BsDatabaseCheck } from "react-icons/bs";
 import { TbChartScatter3D } from "react-icons/tb";
+import introExperienceHtml from '../assets/cv-professional/intro-experience.html?raw';
+import introTechStackHtml from '../assets/cv-professional/intro-tech-stack.html?raw';
 
 const iconComponents = {
   TbChartScatter3D: <TbChartScatter3D className="h-6 w-6 mr-2" />,
@@ -18,18 +20,7 @@ const iconComponents = {
 };
 
 const Work = () => {
-  const [introExperience, setIntroExperience] = useState('');
-  const [introTechStack, setIntroTechStack] = useState('');
-
   useEffect(() => {
-    // Fetch intro texts
-    fetch('/src/assets/cv-professional/intro-experience.html')
-      .then(response => response.text())
-      .then(text => setIntroExperience(text));
-
-    fetch('/src/assets/cv-professional/intro-tech-stack.html')
-      .then(response => response.text())
-      .then(text => setIntroTechStack(text));
 
     // Handle deep linking
     const { hash } = window.location;
@@ -59,7 +50,7 @@ const Work = () => {
       <ContentBlock title="Professional Experience" icon={Briefcase} id="work-experience">
 
           {/* Intro text */}
-          <div dangerouslySetInnerHTML={{ __html: introExperience }} />
+          <div dangerouslySetInnerHTML={{ __html: introExperienceHtml }} />
 
           {/* Grid of work entries */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -84,7 +75,7 @@ const Work = () => {
       {/* Tech Stack */}
       <ContentBlock title="Technologies and Skills" icon={FileTerminal} id="tech-stack">
           {/* Intro text */}
-          <div dangerouslySetInnerHTML={{ __html: introTechStack }} />
+          <div dangerouslySetInnerHTML={{ __html: introTechStackHtml }} />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {techSkillsData.map((skill, index) => (
               <TechSkill

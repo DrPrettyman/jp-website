@@ -5,7 +5,7 @@ function PublicationModal({ children, onClose, header, transparent = false }) {
     const { logo, journal, title, date, link, authors } = header;
 
     return (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center">
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center z-50">
             <div className="bg-white dark:bg-gray-800 dark:ring-1 dark:ring-gray-200 rounded-lg shadow-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
                 <div className="sticky top-0 bg-white dark:bg-gray-700 z-10 shadow-md">
                     <div className="flex justify-between items-start p-4">

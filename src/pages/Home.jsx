@@ -52,11 +52,11 @@ const Home = () => {
             </div>
             <div className="text-md text-gray-600 dark:text-white text-justify">
               <p className='mb-2'>
-                In my most recent role at Blink SEO I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
+                In my most recent role at <b>Blink SEO</b> I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
                 This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: <i>Macaroni Software</i>.
               </p>
               <p>
-                I also have experience as a researcher at the National Physical Laboratory and lecturing Mathemetics at all levels of university. 
+                I also have experience as a researcher at <b>The National Physical Laboratory</b> and teaching Mathemetics at all levels of university: tutoring at <b>The University of Reading</b>, and as an Associate Lecturer at <b>Sheffield Hallam University</b>. 
                 Details are found on my <a href="/professional" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</a>.
               </p>
             </div>
@@ -68,10 +68,10 @@ const Home = () => {
             </div>
             <div className="text-md text-gray-600 dark:text-white text-justify">
               <p className='mb-2'>
-                My Ph.D. focused on predicting tipping points in dynamical systems, with applications to geophysical time series data. I published three papers in respected journals and presented my research at international conferences.
+                My Ph.D. from <b>The University of Reading</b> focused on predicting tipping points in dynamical systems, with applications to geophysical time series data. I published three papers in respected journals and presented my research at international conferences.
               </p>
               <p>
-                I previously obtained an MRes (Mathematics) from ICL and an MA (Mathematics) from Edinburgh. Details are found on my <a href="/academic" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Academic CV page</a>.
+                I previously obtained an MRes (Mathematics) from <b>Imperial College London</b> and an MA (Mathematics) from <b>The University of Edinburgh</b>. Details are found on my <a href="/academic" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Academic CV page</a>.
               </p>
             </div>
           </div>

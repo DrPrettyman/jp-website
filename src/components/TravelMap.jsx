@@ -3,6 +3,26 @@ import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
+// Custom styles for circular popup
+const style = document.createElement('style');
+style.textContent = `
+  .circular-popup .leaflet-popup-content-wrapper {
+    border-radius: 50%;
+    padding: 4px;
+    background: white;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+  }
+  .circular-popup .leaflet-popup-content {
+    margin: 0;
+    width: 120px !important;
+    height: 120px;
+  }
+  .circular-popup .leaflet-popup-tip-container {
+    display: none;
+  }
+`;
+document.head.appendChild(style);
+
 // Fix for default markers in react-leaflet
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -64,6 +84,27 @@ const MapClickHandler = ({ onMapClick }) => {
   return null;
 };
 
+// Component to handle bounds updates
+const BoundsUpdater = ({ bounds }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (bounds) {
+      const container = map.getContainer();
+      const isLandscape = container.offsetWidth > container.offsetHeight;
+
+      // Use paddingTopLeft to offset the view, accounting for the info panel
+      const paddingOptions = isLandscape
+        ? { paddingTopLeft: [container.offsetWidth * 0.25, 0], padding: [0, 0], animate: false } // Panel on left (1/4 width), no extra padding
+        : { paddingBottomLeft: [0, container.offsetHeight * 0.33], padding: [0, 0], animate: false }; // Panel on bottom (1/3 height), no extra padding
+
+      map.fitBounds(bounds, paddingOptions);
+    }
+  }, [map, bounds]);
+
+  return null;
+};
+
 // Component to handle marker click events
 const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, markerRef }) => {
   const map = useMap();
@@ -85,8 +126,11 @@ const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, m
         click: handleClick
       }}
     >
-      <Popup>
-        <div style={{ width: '120px', textAlign: 'center' }}>
+      <Popup
+        closeButton={false}
+        className="circular-popup"
+      >
+        <div style={{ width: '120px', height: '120px', textAlign: 'center' }}>
           {imagePath && (
             <div
               style={{
@@ -120,19 +164,49 @@ const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, m
 };
 
 const TravelMap = ({
-  travelData = [],
-  imagePath = '',
-  height = '400px',
-  defaultCenter = [51.505, -0.09],
-  defaultZoom = 6,
-  title = ''
+  travelData = {},
+  imagePath = ''
 }) => {
   const mapContainerRef = useRef(null);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const markerRefs = useRef({});
 
+  // Format date as "13th November 2025"
+  const formatDate = (dateTimeString) => {
+    const date = new Date(dateTimeString.replace(/^(\d{4}):(\d{2}):(\d{2}) /, '$1-$2-$3T'));
+    const day = date.getDate();
+    const suffix = day === 1 || day === 21 || day === 31 ? 'st' :
+                   day === 2 || day === 22 ? 'nd' :
+                   day === 3 || day === 23 ? 'rd' : 'th';
+    const month = date.toLocaleDateString('en-GB', { month: 'long' });
+    const year = date.getFullYear();
+    return `${day}${suffix} ${month} ${year}`;
+  };
+
+  // Get chapters from travelData
+  const chapters = travelData?.Chapters || [];
+
+  // Get bounds from travelData
+  const bounds = (() => {
+    if (!travelData?.Bounds) return null;
+
+    const { North, South, East, West } = travelData.Bounds;
+
+    // The metadata has West/East swapped - West is 7.15 (east) and East is -1.50 (west)
+    const actualWest = Math.min(East, West);
+    const actualEast = Math.max(East, West);
+
+    // Return simple bounds - padding will be handled by fitBounds in BoundsUpdater
+    return [
+      [South, actualWest],
+      [North, actualEast]
+    ];
+  })();
+
+  const defaultCenter = [travelData.Bounds.CenterLatitude, travelData.Bounds.CenterLongitude];
+
   // Flatten the nested structure: extract all photos from all chapters
-  const allPhotos = travelData.flatMap(chapter =>
+  const allPhotos = chapters.flatMap(chapter =>
     (chapter.Photos || []).map(photo => ({
       ...photo,
       ChapterTitle: chapter.Title
@@ -146,11 +220,6 @@ const TravelMap = ({
     }
     return parseInt(a.Photo) - parseInt(b.Photo);
   });
-
-  // Calculate bounds if we have data points
-  const bounds = allPhotos.length > 0
-    ? allPhotos.map(point => [point.Latitude, point.Longitude])
-    : null;
 
   // Create path coordinates for polyline
   const pathCoordinates = sortedPhotos.map(point => [point.Latitude, point.Longitude]);
@@ -207,25 +276,23 @@ const TravelMap = ({
       `}</style>
 
       {/* Title pill at top center */}
-      {title && (
-        <div
-          className="absolute left-1/2 transform -translate-x-1/2 bg-white rounded-full shadow-lg px-6 py-2"
-          style={{
-            top: 'calc(3.5rem + 1rem)',
-            zIndex: 1000
-          }}
-        >
-          <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
-        </div>
-      )}
+      <div
+        className="absolute left-1/2 transform -translate-x-1/2 bg-white rounded-full shadow-lg px-6 py-2"
+        style={{
+          top: 'calc(3.5rem + 1rem)',
+          zIndex: 1000
+        }}
+      >
+        <h2 className="text-xl font-semibold text-gray-800">{travelData.Title}</h2>
+      </div>
 
       <MapContainer
         center={defaultCenter}
-        zoom={defaultZoom}
-        bounds={bounds}
+        zoom={6}
         className="w-full h-full"
         style={{ zIndex: 0 }}
       >
+        <BoundsUpdater bounds={bounds} />
         <MapClickHandler onMapClick={handleMapClick} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -263,12 +330,13 @@ const TravelMap = ({
             />
           );
         })}
+
       </MapContainer>
 
       {/* Chapter legend - permanent, same position as info panel */}
       {!selectedLocation && (
         <div
-          className="absolute bg-white rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
+          className="absolute bg-white rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:h-1/3 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
           style={{
             zIndex: 1000,
             padding: '1rem',
@@ -279,7 +347,7 @@ const TravelMap = ({
           }}
         >
           <h3 className="font-bold text-xl mb-2">Chapters</h3>
-          {travelData.map((chapter) => (
+          {chapters.map((chapter) => (
             <div key={chapter.Chapter} className="flex items-start gap-3 mb-3">
               {/* Colored marker icon */}
               <div
@@ -299,7 +367,7 @@ const TravelMap = ({
               />
               {/* Chapter info */}
               <div className="flex-1">
-                <p className="font-bold text-md mb-1">{chapter.Title}</p>
+                <p className="font-bold text-md mb-1">{chapter.Chapter}. {chapter.Title}</p>
                 <p className="text-xs text-gray-500 mb-1">{chapter.StartDate} to {chapter.EndDate}</p>
                 {chapter.Summary && (
                   <p className="text-sm text-gray-600">{chapter.Summary}</p>
@@ -313,7 +381,7 @@ const TravelMap = ({
       {/* Info panel - responsive: bottom 1/3 on portrait, left 1/4 on landscape */}
       {selectedLocation && (
         <div
-          className="absolute bg-white rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
+          className="absolute bg-white rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:h-1/3 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
           style={{
             zIndex: 1000,
             padding: '1rem',
@@ -344,12 +412,11 @@ const TravelMap = ({
 
           {/* Info */}
           <div style={{ flex: 1, overflow: 'auto', display: 'flex', flexDirection: 'column' }}>
-            <h3 className="font-bold text-lg mb-2">{selectedLocation.Title}</h3>
-            <p className="text-md text-gray-600 mb-2">
-              {selectedLocation.Summary}
-            </p>
+            <h3 className="font-bold text-xl mb-2 text-center">{selectedLocation.Title}</h3>
+            <p className="text-md text-gray-600 mb-2 text-center">{formatDate(selectedLocation.DateTime)}</p>
+            <p className="text-md text-gray-600 mb-2">{selectedLocation.Summary}</p>
             <p className="text-sm text-gray-500 mt-auto">
-              Chapter {selectedLocation.Chapter} • Photo {selectedLocation.Photo} • {new Date(selectedLocation.DateTime.replace(/^(\d{4}):(\d{2}):(\d{2}) /, '$1-$2-$3T')).toLocaleDateString()}
+              Chapter {selectedLocation.Chapter} • Photo {selectedLocation.Photo} • {formatDate(selectedLocation.DateTime)}
             </p>
           </div>
 

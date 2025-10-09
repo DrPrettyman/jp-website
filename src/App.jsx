@@ -11,6 +11,7 @@ import EducationalGamesProject from './pages/projects/EducationalGames'
 import ComtradeProject from './pages/projects/Comtrade'
 
 import Vanlife from './pages/travel/Vanlife'
+import Travels from './pages/Travels'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/blog/tag/:tag" element={<Blog />} />
+        <Route path="/travels" element={<Travels />} />
         <Route path="/travel/vanlife" element={<Vanlife />} />
       </Routes>
     </Router>

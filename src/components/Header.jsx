@@ -8,7 +8,7 @@ import { LuGithub } from "react-icons/lu";
 import { Link, useLocation } from 'react-router-dom'
 import DarkModeToggle from './DarkModeToggle'
 
-const Header = () => {
+const Header = ({ fullWidth = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
 
@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className="bg-white dark:bg-gray-900 shadow fixed top-0 w-full z-50">
       {/* <div className="max-w-7xl mx-auto px-0"> */}
-      <div className="max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-6">
+      <div className={`${fullWidth ? '' : 'max-w-screen-2xl'} mx-auto px-2 sm:px-4 lg:px-6`}>
         <div className="flex justify-between items-center h-14">
           {/* Logo/Name and Social Icons */}
           <div className="flex-shrink-0 flex items-center space-x-3">

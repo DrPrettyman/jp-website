@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
+import { useState, useRef, useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -49,86 +49,189 @@ const createChapterIcon = (chapter) => {
   });
 };
 
-// Custom fullscreen button component
-const FullscreenButton = ({ containerRef }) => {
-  const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const toggleFullscreen = () => {
-    if (!document.fullscreenElement && containerRef?.current) {
-      containerRef.current.requestFullscreen();
-    } else if (document.fullscreenElement) {
-      document.exitFullscreen();
-    }
-  };
+// Component to handle map clicks
+const MapClickHandler = ({ onMapClick }) => {
+  const map = useMap();
 
   useEffect(() => {
-    const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
+    map.on('click', onMapClick);
+    return () => {
+      map.off('click', onMapClick);
     };
+  }, [map, onMapClick]);
 
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, []);
+  return null;
+};
+
+// Component to handle marker click events
+const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, markerRef }) => {
+  const map = useMap();
+
+  const handleClick = (e) => {
+    L.DomEvent.stopPropagation(e); // Prevent map click event
+    map.flyTo(position, map.getZoom(), {
+      duration: 0.5
+    });
+    onMarkerClick(location);
+  };
 
   return (
-    <button
-      onClick={toggleFullscreen}
-      className="absolute top-2 right-2 bg-white border border-gray-300 rounded shadow-lg hover:bg-gray-50 p-2 transition-colors"
-      style={{ zIndex: 1000 }}
-      title={isFullscreen ? 'Exit Fullscreen' : 'View Fullscreen'}
+    <Marker
+      ref={markerRef}
+      position={position}
+      icon={icon}
+      eventHandlers={{
+        click: handleClick
+      }}
     >
-      {isFullscreen ? (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
-        </svg>
-      ) : (
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M3 7V3h4M21 7V3h-4M21 17v4h-4M3 17v4h4"/>
-        </svg>
-      )}
-    </button>
+      <Popup>
+        <div style={{ width: '120px', textAlign: 'center' }}>
+          {imagePath && (
+            <div
+              style={{
+                width: '120px',
+                height: '120px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <img
+                src={`${imagePath}${location.FileName.toLowerCase()}`}
+                alt={location.Title}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
+                onError={(e) => {
+                  e.target.parentElement.style.display = 'none';
+                }}
+              />
+            </div>
+          )}
+        </div>
+      </Popup>
+    </Marker>
   );
 };
 
-const TravelMap = ({ 
-  travelData = [], 
-  imagePath = '', 
+const TravelMap = ({
+  travelData = [],
+  imagePath = '',
   height = '400px',
   defaultCenter = [51.505, -0.09],
-  defaultZoom = 6 
+  defaultZoom = 6,
+  title = ''
 }) => {
   const mapContainerRef = useRef(null);
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const markerRefs = useRef({});
 
-  // Sort travel data by chapter and id for sequential order
-  const sortedTravelData = [...travelData].sort((a, b) => {
+  // Flatten the nested structure: extract all photos from all chapters
+  const allPhotos = travelData.flatMap(chapter =>
+    (chapter.Photos || []).map(photo => ({
+      ...photo,
+      ChapterTitle: chapter.Title
+    }))
+  );
+
+  // Sort by chapter and photo number for sequential order
+  const sortedPhotos = [...allPhotos].sort((a, b) => {
     if (a.Chapter !== b.Chapter) {
       return parseInt(a.Chapter) - parseInt(b.Chapter);
     }
-    return parseInt(a.Id) - parseInt(b.Id);
+    return parseInt(a.Photo) - parseInt(b.Photo);
   });
 
   // Calculate bounds if we have data points
-  const bounds = travelData.length > 0 
-    ? travelData.map(point => [point.Latitude, point.Longitude])
+  const bounds = allPhotos.length > 0
+    ? allPhotos.map(point => [point.Latitude, point.Longitude])
     : null;
 
   // Create path coordinates for polyline
-  const pathCoordinates = sortedTravelData.map(point => [point.Latitude, point.Longitude]);
+  const pathCoordinates = sortedPhotos.map(point => [point.Latitude, point.Longitude]);
+
+  // Navigation functions
+  const getCurrentIndex = () => {
+    if (!selectedLocation) return -1;
+    return sortedPhotos.findIndex(
+      photo => photo.Chapter === selectedLocation.Chapter && photo.Photo === selectedLocation.Photo
+    );
+  };
+
+  const navigateToPhoto = (photo) => {
+    const markerKey = `${photo.Chapter}-${photo.Photo}`;
+    const marker = markerRefs.current[markerKey];
+    if (marker) {
+      // Simulate a click on the marker
+      marker.fire('click');
+    }
+  };
+
+  const goToPrevious = () => {
+    const currentIndex = getCurrentIndex();
+    if (currentIndex > 0) {
+      navigateToPhoto(sortedPhotos[currentIndex - 1]);
+    }
+  };
+
+  const goToNext = () => {
+    const currentIndex = getCurrentIndex();
+    if (currentIndex < sortedPhotos.length - 1) {
+      navigateToPhoto(sortedPhotos[currentIndex + 1]);
+    }
+  };
+
+  const hasPrevious = getCurrentIndex() > 0;
+  const hasNext = getCurrentIndex() < sortedPhotos.length - 1;
+
+  const handleMapClick = () => {
+    setSelectedLocation(null);
+  };
 
   return (
-    <div ref={mapContainerRef} className="w-full aspect-square relative">
-      <FullscreenButton containerRef={mapContainerRef} />
+    <div ref={mapContainerRef} className="w-full h-full relative" style={{ zIndex: 0 }}>
+      <style>{`
+        .leaflet-control-zoom {
+          margin-right: 10px !important;
+          margin-top: calc(3.5rem + 10px) !important;
+        }
+        .leaflet-left {
+          left: auto !important;
+          right: 0 !important;
+        }
+      `}</style>
+
+      {/* Title pill at top center */}
+      {title && (
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 bg-white rounded-full shadow-lg px-6 py-2"
+          style={{
+            top: 'calc(3.5rem + 1rem)',
+            zIndex: 1000
+          }}
+        >
+          <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
+        </div>
+      )}
+
       <MapContainer
         center={defaultCenter}
         zoom={defaultZoom}
         bounds={bounds}
-        className="w-full h-full rounded-lg shadow-lg"
+        className="w-full h-full"
+        style={{ zIndex: 0 }}
       >
+        <MapClickHandler onMapClick={handleMapClick} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        
+
         {/* Draw dotted line connecting locations in chronological order */}
         {pathCoordinates.length > 1 && (
           <Polyline
@@ -141,64 +244,146 @@ const TravelMap = ({
             }}
           />
         )}
-        
-        {travelData.map((location) => (
-          <Marker
-            key={`${location.Chapter}-${location.Id}`}
-            position={[location.Latitude, location.Longitude]}
-            icon={createChapterIcon(location.Chapter)}
-          >
-            <Popup>
-              {(() => {
-                const isPortrait = location.AspectRatio < 1;
-                const imageWidth = isPortrait ? 180 : 240;
-                const imageHeight = isPortrait ? 240 : 160;
-                const popupWidth = imageWidth + 10;
-                
-                return (
-                  <div style={{ width: `${popupWidth}px` }}>
-                    <h3 className="font-semibold text-lg mb-2 overflow-hidden text-ellipsis whitespace-nowrap">
-                      {location.Description.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-                    </h3>
-                    {imagePath && (
-                      <div 
-                        className="mb-2 mx-auto"
-                        style={{
-                          width: `${imageWidth}px`,
-                          height: `${imageHeight}px`,
-                          borderRadius: '8px',
-                          overflow: 'hidden',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center'
-                        }}
-                      >
-                        <img 
-                          src={`${imagePath}${location.FileName.toLowerCase()}`}
-                          alt={location.Description}
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            borderRadius: '8px'
-                          }}
-                          onError={(e) => {
-                            e.target.parentElement.style.display = 'none';
-                          }}
-                        />
-                      </div>
-                    )}
-                    <p className="text-xs text-gray-500 dark:text-gray-500">
-                      Chapter {location.Chapter} • Stop {location.Id} • {new Date(location.DateTime.replace(/^(\d{4}):(\d{2}):(\d{2}) /, '$1-$2-$3T')).toLocaleDateString()}
-                    </p>
-                  </div>
-                );
-              })()}
-            </Popup>
-          </Marker>
-        ))}
+
+        {allPhotos.map((location) => {
+          const markerKey = `${location.Chapter}-${location.Photo}`;
+          return (
+            <MarkerWithClick
+              key={markerKey}
+              markerRef={(ref) => {
+                if (ref) {
+                  markerRefs.current[markerKey] = ref;
+                }
+              }}
+              position={[location.Latitude, location.Longitude]}
+              icon={createChapterIcon(location.Chapter)}
+              location={location}
+              imagePath={imagePath}
+              onMarkerClick={setSelectedLocation}
+            />
+          );
+        })}
       </MapContainer>
-      
+
+      {/* Chapter legend - permanent, same position as info panel */}
+      {!selectedLocation && (
+        <div
+          className="absolute bg-white rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
+          style={{
+            zIndex: 1000,
+            padding: '1rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.5rem',
+            overflow: 'auto'
+          }}
+        >
+          <h3 className="font-bold text-xl mb-2">Chapters</h3>
+          {travelData.map((chapter) => (
+            <div key={chapter.Chapter} className="flex items-start gap-3 mb-3">
+              {/* Colored marker icon */}
+              <div
+                style={{
+                  width: '25px',
+                  height: '41px',
+                  flexShrink: 0
+                }}
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    <svg width="25" height="41" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="${getChapterColor(chapter.Chapter)}" stroke="#fff" stroke-width="2" d="M12.5,0 C5.6,0 0,5.6 0,12.5 C0,19.4 12.5,41 12.5,41 S25,19.4 25,12.5 C25,5.6 19.4,0 12.5,0 Z"/>
+                      <circle fill="#fff" cx="12.5" cy="12.5" r="6"/>
+                    </svg>
+                  `
+                }}
+              />
+              {/* Chapter info */}
+              <div className="flex-1">
+                <p className="font-bold text-md mb-1">{chapter.Title}</p>
+                <p className="text-xs text-gray-500 mb-1">{chapter.StartDate} to {chapter.EndDate}</p>
+                {chapter.Summary && (
+                  <p className="text-sm text-gray-600">{chapter.Summary}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Info panel - responsive: bottom 1/3 on portrait, left 1/4 on landscape */}
+      {selectedLocation && (
+        <div
+          className="absolute bg-white rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
+          style={{
+            zIndex: 1000,
+            padding: '1rem',
+            display: 'flex',
+            gap: '1rem'
+          }}
+        >
+          {/* Photo */}
+          <div
+            className="portrait:h-full portrait:w-auto landscape:w-full landscape:h-auto"
+            style={{
+              aspectRatio: '1',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              flexShrink: 0
+            }}
+          >
+            <img
+              src={`${imagePath}${selectedLocation.FileName.toLowerCase()}`}
+              alt={selectedLocation.Title}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
+            />
+          </div>
+
+          {/* Info */}
+          <div style={{ flex: 1, overflow: 'auto', display: 'flex', flexDirection: 'column' }}>
+            <h3 className="font-bold text-lg mb-2">{selectedLocation.Title}</h3>
+            <p className="text-md text-gray-600 mb-2">
+              {selectedLocation.Summary}
+            </p>
+            <p className="text-sm text-gray-500 mt-auto">
+              Chapter {selectedLocation.Chapter} • Photo {selectedLocation.Photo} • {new Date(selectedLocation.DateTime.replace(/^(\d{4}):(\d{2}):(\d{2}) /, '$1-$2-$3T')).toLocaleDateString()}
+            </p>
+          </div>
+
+          {/* Navigation arrows in bottom right */}
+          <div className="absolute bottom-3 right-3 flex gap-1 bg-white rounded-full shadow-lg p-1" style={{ boxShadow: '0 0 15px rgba(0,0,0,0.2)' }}>
+            <button
+              onClick={goToPrevious}
+              disabled={!hasPrevious}
+              className={`p-2 rounded-full transition-colors ${
+                hasPrevious
+                  ? 'text-gray-700 hover:bg-gray-200 cursor-pointer'
+                  : 'text-gray-300 cursor-not-allowed'
+              }`}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </button>
+            <button
+              onClick={goToNext}
+              disabled={!hasNext}
+              className={`p-2 rounded-full transition-colors ${
+                hasNext
+                  ? 'text-gray-700 hover:bg-gray-200 cursor-pointer'
+                  : 'text-gray-300 cursor-not-allowed'
+              }`}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

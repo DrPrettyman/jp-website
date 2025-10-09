@@ -32,14 +32,11 @@ const Vanlife = () => {
 
   return (
     <div className="h-screen w-screen overflow-hidden relative">
-      <Header />
+      <Header fullWidth={true}/>
       <div className="w-full h-full">
         <TravelMap
           travelData={travelData}
           imagePath="/src/assets/map_data/vanlife/"
-          defaultCenter={[48.8566, 2.3522]} // Paris as center of Europe
-          defaultZoom={5}
-          title="Vanlife 2019"
         />
       </div>
     </div>

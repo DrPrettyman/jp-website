@@ -10,7 +10,7 @@ const Vanlife = () => {
     const loadTravelData = async () => {
       try {
         // Import the metadata.json file
-        const response = await import('../../assets/map_data/vanlife/metadata.json');
+        const response = await import('../../assets/map_data/metadata-vanlife.json');
         setTravelData(response.default);
       } catch (error) {
         console.error('Error loading travel data:', error);
@@ -36,7 +36,7 @@ const Vanlife = () => {
       <div className="w-full h-full">
         <TravelMap
           travelData={travelData}
-          imagePath="/src/assets/map_data/vanlife/"
+          imagePath="/travel-images/vanlife/"
         />
       </div>
     </div>

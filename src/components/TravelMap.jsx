@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -114,7 +114,7 @@ const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, m
 
     // Center the marker in the map
     map.flyTo(position, map.getZoom(), {
-      duration: 0.5
+      duration: 0.3
     });
 
     onMarkerClick(location);
@@ -173,6 +173,7 @@ const TravelMap = ({
   const mapContainerRef = useRef(null);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const markerRefs = useRef({});
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   // Format date as "13th November 2025"
   const formatDate = (dateTimeString) => {
@@ -185,6 +186,33 @@ const TravelMap = ({
     const year = date.getFullYear();
     return `${day}${suffix} ${month} ${year}`;
   };
+
+  // Preload all images
+  useEffect(() => {
+    if (!imagePath || !travelData?.Chapters) return;
+
+    const imagePromises = [];
+    const chapters = travelData.Chapters || [];
+
+    chapters.forEach(chapter => {
+      (chapter.Photos || []).forEach(photo => {
+        const img = new Image();
+        const promise = new Promise((resolve, reject) => {
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+        img.src = `${imagePath}${photo.FileName.toLowerCase()}`;
+        imagePromises.push(promise);
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => setImagesLoaded(true))
+      .catch(err => {
+        console.error('Error preloading images:', err);
+        setImagesLoaded(true); // Continue even if some images fail
+      });
+  }, [imagePath, travelData]);
 
   // Get chapters from travelData
   const chapters = travelData?.Chapters || [];
@@ -209,23 +237,30 @@ const TravelMap = ({
   const defaultCenter = [travelData.Bounds.CenterLatitude, travelData.Bounds.CenterLongitude];
 
   // Flatten the nested structure: extract all photos from all chapters
-  const allPhotos = chapters.flatMap(chapter =>
-    (chapter.Photos || []).map(photo => ({
-      ...photo,
-      ChapterTitle: chapter.Title
-    }))
+  const allPhotos = useMemo(() =>
+    chapters.flatMap(chapter =>
+      (chapter.Photos || []).map(photo => ({
+        ...photo,
+        ChapterTitle: chapter.Title
+      }))
+    ), [chapters]
   );
 
   // Sort by chapter and photo number for sequential order
-  const sortedPhotos = [...allPhotos].sort((a, b) => {
-    if (a.Chapter !== b.Chapter) {
-      return parseInt(a.Chapter) - parseInt(b.Chapter);
-    }
-    return parseInt(a.Photo) - parseInt(b.Photo);
-  });
+  const sortedPhotos = useMemo(() =>
+    [...allPhotos].sort((a, b) => {
+      if (a.Chapter !== b.Chapter) {
+        return parseInt(a.Chapter) - parseInt(b.Chapter);
+      }
+      return parseInt(a.Photo) - parseInt(b.Photo);
+    }), [allPhotos]
+  );
 
-  // Create path coordinates for polyline
-  const pathCoordinates = sortedPhotos.map(point => [point.Latitude, point.Longitude]);
+  // Create path coordinates for polyline - memoized to prevent recalculation
+  const pathCoordinates = useMemo(() =>
+    sortedPhotos.map(point => [point.Latitude, point.Longitude]),
+    [sortedPhotos]
+  );
 
   // Navigation functions
   const getCurrentIndex = () => {
@@ -264,6 +299,28 @@ const TravelMap = ({
   const handleMapClick = () => {
     setSelectedLocation(null);
   };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!selectedLocation) return;
+
+      const currentIndex = sortedPhotos.findIndex(
+        photo => photo.Chapter === selectedLocation.Chapter && photo.Photo === selectedLocation.Photo
+      );
+
+      if (e.key === 'ArrowLeft' && currentIndex > 0) {
+        e.preventDefault();
+        navigateToPhoto(sortedPhotos[currentIndex - 1]);
+      } else if (e.key === 'ArrowRight' && currentIndex < sortedPhotos.length - 1) {
+        e.preventDefault();
+        navigateToPhoto(sortedPhotos[currentIndex + 1]);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedLocation, sortedPhotos]);
 
   const goToChapter = (chapterNumber) => {
     // Find the first photo in the chapter
@@ -318,7 +375,8 @@ const TravelMap = ({
               color: '#6b7280',
               weight: 3,
               opacity: 0.7,
-              dashArray: '10, 10'
+              dashArray: '10, 10',
+              dashOffset: '0'
             }}
           />
         )}

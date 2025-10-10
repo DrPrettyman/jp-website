@@ -488,14 +488,49 @@ const TravelMap = ({
 
           {/* Info */}
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-            <h3 className="font-bold text-xl mb-2 text-center">{selectedLocation.Title}</h3>
-            <p className="text-md text-gray-600 mb-2 text-center">{formatDate(selectedLocation.DateTime)}</p>
+            {/* Title, date, and navigation buttons */}
+            <div className="flex items-start justify-between mb-2">
+              <div className="flex-1">
+                <h3 className="font-bold text-xl mb-1 sm:text-center">{selectedLocation.Title}</h3>
+                <p className="text-md text-gray-600 sm:text-center">{formatDate(selectedLocation.DateTime)}</p>
+              </div>
+              {/* Navigation buttons - visible on mobile, hidden on larger screens */}
+              <div className="flex gap-1 bg-white rounded-full p-1 sm:hidden">
+                <button
+                  onClick={goToPrevious}
+                  disabled={!hasPrevious}
+                  className={`p-1.5 rounded-full transition-colors ${
+                    hasPrevious
+                      ? 'text-gray-700 hover:bg-gray-200 cursor-pointer'
+                      : 'text-gray-300 cursor-not-allowed'
+                  }`}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                </button>
+                <button
+                  onClick={goToNext}
+                  disabled={!hasNext}
+                  className={`p-1.5 rounded-full transition-colors ${
+                    hasNext
+                      ? 'text-gray-700 hover:bg-gray-200 cursor-pointer'
+                      : 'text-gray-300 cursor-not-allowed'
+                  }`}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <path d="M9 18l6-6-6-6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
             <div style={{ flex: 1, overflow: 'auto', marginBottom: '0.5rem', minHeight: 0 }}>
               <p className="text-md text-gray-600">{selectedLocation.Summary}</p>
             </div>
 
-            {/* Chapter/Photo info and navigation in pill-shaped container */}
-            <div className="flex items-center shadow-2xl justify-between bg-gray-100/85 rounded-full px-4 py-2">
+            {/* Chapter/Photo info and navigation in pill-shaped container - hidden on mobile */}
+            <div className="hidden sm:flex items-center shadow-2xl justify-between bg-gray-100/85 rounded-full px-4 py-2">
               <p className="text-sm text-gray-500">
                 Chapter {selectedLocation.Chapter} • Photo {selectedLocation.Photo}
               </p>

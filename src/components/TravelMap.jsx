@@ -85,11 +85,11 @@ const MapClickHandler = ({ onMapClick }) => {
 };
 
 // Component to handle bounds updates
-const BoundsUpdater = ({ bounds }) => {
+const BoundsUpdater = ({ bounds, disabled }) => {
   const map = useMap();
 
   useEffect(() => {
-    if (bounds) {
+    if (bounds && !disabled) {
       const container = map.getContainer();
       const isLandscape = container.offsetWidth > container.offsetHeight;
 
@@ -100,7 +100,7 @@ const BoundsUpdater = ({ bounds }) => {
 
       map.fitBounds(bounds, paddingOptions);
     }
-  }, [map, bounds]);
+  }, [map, bounds, disabled]);
 
   return null;
 };
@@ -111,9 +111,12 @@ const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, m
 
   const handleClick = (e) => {
     L.DomEvent.stopPropagation(e); // Prevent map click event
+
+    // Center the marker in the map
     map.flyTo(position, map.getZoom(), {
       duration: 0.5
     });
+
     onMarkerClick(location);
   };
 
@@ -262,6 +265,14 @@ const TravelMap = ({
     setSelectedLocation(null);
   };
 
+  const goToChapter = (chapterNumber) => {
+    // Find the first photo in the chapter
+    const firstPhotoInChapter = sortedPhotos.find(photo => photo.Chapter === chapterNumber);
+    if (firstPhotoInChapter) {
+      navigateToPhoto(firstPhotoInChapter);
+    }
+  };
+
   return (
     <div ref={mapContainerRef} className="w-full h-full relative" style={{ zIndex: 0 }}>
       <style>{`
@@ -292,7 +303,7 @@ const TravelMap = ({
         className="w-full h-full"
         style={{ zIndex: 0 }}
       >
-        <BoundsUpdater bounds={bounds} />
+        <BoundsUpdater bounds={bounds} disabled={selectedLocation !== null} />
         <MapClickHandler onMapClick={handleMapClick} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -336,7 +347,7 @@ const TravelMap = ({
       {/* Chapter legend - permanent, same position as info panel */}
       {!selectedLocation && (
         <div
-          className="absolute bg-white rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:h-1/3 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
+          className="absolute bg-white/80 rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:h-1/3 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
           style={{
             zIndex: 1000,
             padding: '1rem',
@@ -348,14 +359,16 @@ const TravelMap = ({
         >
           <h3 className="font-bold text-xl mb-2">Chapters</h3>
           {chapters.map((chapter) => (
-            <div key={chapter.Chapter} className="flex items-start gap-3 mb-3">
-              {/* Colored marker icon */}
+            <div key={chapter.Chapter} className="flex items-start gap-3 mb-3 p-2">
+              {/* Colored marker icon - clickable */}
               <div
                 style={{
                   width: '25px',
                   height: '41px',
-                  flexShrink: 0
+                  flexShrink: 0,
+                  cursor: 'pointer'
                 }}
+                onClick={() => goToChapter(chapter.Chapter)}
                 dangerouslySetInnerHTML={{
                   __html: `
                     <svg width="25" height="41" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg">
@@ -367,7 +380,12 @@ const TravelMap = ({
               />
               {/* Chapter info */}
               <div className="flex-1">
-                <p className="font-bold text-md mb-1">{chapter.Chapter}. {chapter.Title}</p>
+                <p
+                  className="font-bold text-md mb-1 cursor-pointer hover:text-gray-600 transition-colors"
+                  onClick={() => goToChapter(chapter.Chapter)}
+                >
+                  {chapter.Chapter}. {chapter.Title}
+                </p>
                 <p className="text-xs text-gray-500 mb-1">{chapter.StartDate} to {chapter.EndDate}</p>
                 {chapter.Summary && (
                   <p className="text-sm text-gray-600">{chapter.Summary}</p>
@@ -381,7 +399,7 @@ const TravelMap = ({
       {/* Info panel - responsive: bottom 1/3 on portrait, left 1/4 on landscape */}
       {selectedLocation && (
         <div
-          className="absolute bg-white rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:h-1/3 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
+          className="absolute bg-white/80 rounded-2xl shadow-2xl portrait:bottom-4 portrait:left-4 portrait:right-4 portrait:h-1/3 portrait:flex-row landscape:left-4 landscape:bottom-4 landscape:w-1/4 landscape:flex-col landscape:top-[4.5rem]"
           style={{
             zIndex: 1000,
             padding: '1rem',
@@ -411,43 +429,47 @@ const TravelMap = ({
           </div>
 
           {/* Info */}
-          <div style={{ flex: 1, overflow: 'auto', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
             <h3 className="font-bold text-xl mb-2 text-center">{selectedLocation.Title}</h3>
             <p className="text-md text-gray-600 mb-2 text-center">{formatDate(selectedLocation.DateTime)}</p>
-            <p className="text-md text-gray-600 mb-2">{selectedLocation.Summary}</p>
-            <p className="text-sm text-gray-500 mt-auto">
-              Chapter {selectedLocation.Chapter} • Photo {selectedLocation.Photo} • {formatDate(selectedLocation.DateTime)}
-            </p>
-          </div>
+            <div style={{ flex: 1, overflow: 'auto', marginBottom: '0.5rem', minHeight: 0 }}>
+              <p className="text-md text-gray-600">{selectedLocation.Summary}</p>
+            </div>
 
-          {/* Navigation arrows in bottom right */}
-          <div className="absolute bottom-3 right-3 flex gap-1 bg-white rounded-full shadow-lg p-1" style={{ boxShadow: '0 0 15px rgba(0,0,0,0.2)' }}>
-            <button
-              onClick={goToPrevious}
-              disabled={!hasPrevious}
-              className={`p-2 rounded-full transition-colors ${
-                hasPrevious
-                  ? 'text-gray-700 hover:bg-gray-200 cursor-pointer'
-                  : 'text-gray-300 cursor-not-allowed'
-              }`}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M15 18l-6-6 6-6"/>
-              </svg>
-            </button>
-            <button
-              onClick={goToNext}
-              disabled={!hasNext}
-              className={`p-2 rounded-full transition-colors ${
-                hasNext
-                  ? 'text-gray-700 hover:bg-gray-200 cursor-pointer'
-                  : 'text-gray-300 cursor-not-allowed'
-              }`}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M9 18l6-6-6-6"/>
-              </svg>
-            </button>
+            {/* Chapter/Photo info and navigation in pill-shaped container */}
+            <div className="flex items-center shadow-2xl justify-between bg-gray-100/85 rounded-full px-4 py-2">
+              <p className="text-sm text-gray-500">
+                Chapter {selectedLocation.Chapter} • Photo {selectedLocation.Photo}
+              </p>
+              <div className="flex gap-1 bg-white rounded-full p-1">
+                <button
+                  onClick={goToPrevious}
+                  disabled={!hasPrevious}
+                  className={`p-1.5 rounded-full transition-colors ${
+                    hasPrevious
+                      ? 'text-gray-700 hover:bg-gray-200 cursor-pointer'
+                      : 'text-gray-300 cursor-not-allowed'
+                  }`}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+                </button>
+                <button
+                  onClick={goToNext}
+                  disabled={!hasNext}
+                  className={`p-1.5 rounded-full transition-colors ${
+                    hasNext
+                      ? 'text-gray-700 hover:bg-gray-200 cursor-pointer'
+                      : 'text-gray-300 cursor-not-allowed'
+                  }`}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <path d="M9 18l6-6-6-6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}

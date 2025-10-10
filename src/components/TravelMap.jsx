@@ -467,7 +467,7 @@ const TravelMap = ({
         >
           {/* Photo */}
           <div
-            className="portrait:h-full portrait:w-auto landscape:w-full landscape:h-auto"
+            className="hidden sm:block portrait:h-full portrait:w-auto landscape:w-full landscape:h-auto"
             style={{
               aspectRatio: '1',
               borderRadius: '12px',

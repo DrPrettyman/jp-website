@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Menu, GraduationCap, Briefcase, Home, FolderGit2, BookOpen } from 'lucide-react'
+import { Menu, GraduationCap, Briefcase, Home, FolderGit2, BookOpen, Map } from 'lucide-react'
 
 import { TbMail, TbFileSmile } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { LuGithub } from "react-icons/lu";
 import { Link, useLocation } from 'react-router-dom'
 import DarkModeToggle from './DarkModeToggle'
 
-const Header = () => {
+const Header = ({ fullWidth = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
 
@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className="bg-white dark:bg-gray-900 shadow fixed top-0 w-full z-50">
       {/* <div className="max-w-7xl mx-auto px-0"> */}
-      <div className="max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-6">
+      <div className={`${fullWidth ? '' : 'max-w-screen-2xl'} mx-auto px-2 sm:px-4 lg:px-6`}>
         <div className="flex justify-between items-center h-14">
           {/* Logo/Name and Social Icons */}
           <div className="flex-shrink-0 flex items-center space-x-3">
@@ -102,8 +102,8 @@ const Header = () => {
               </div>
             </Link>
 
-            <Link 
-              to="/projects" 
+            <Link
+              to="/projects"
               className={getButtonClasses('/projects')}
             >
               <div className="flex items-center space-x-1 text-sm">
@@ -112,8 +112,18 @@ const Header = () => {
               </div>
             </Link>
 
-            {/* <Link 
-              to="/blog" 
+            <Link
+              to="/travels"
+              className={getButtonClasses('/travels')}
+            >
+              <div className="flex items-center space-x-1 text-sm">
+                <Map className="h-4 w-4 mr-1" />
+                <span className="whitespace-nowrap">Travels</span>
+              </div>
+            </Link>
+
+            {/* <Link
+              to="/blog"
               className={getButtonClasses('/blog')}
             >
               <div className="flex items-center space-x-1 text-sm">
@@ -122,8 +132,8 @@ const Header = () => {
               </div>
             </Link> */}
 
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className={getButtonClasses('/')}
             >
                 <Home className="h-5 w-5" />
@@ -173,8 +183,8 @@ const Header = () => {
                     <span className="whitespace-nowrap">Professional CV</span>
                   </div>
                 </Link>
-                <Link 
-                  to="/projects" 
+                <Link
+                  to="/projects"
                   className={`text-right px-4 py-2 rounded-lg ${
                     isActive('/projects')
                       ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
@@ -187,8 +197,22 @@ const Header = () => {
                     <span className="whitespace-nowrap">Projects</span>
                   </div>
                 </Link>
-                {/* <Link 
-                  to="/blog" 
+                <Link
+                  to="/travels"
+                  className={`text-right px-4 py-2 rounded-lg ${
+                    isActive('/travels')
+                      ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center justify-end space-x-1">
+                    <Map className="h-4 w-4" />
+                    <span className="whitespace-nowrap">Travels</span>
+                  </div>
+                </Link>
+                {/* <Link
+                  to="/blog"
                   className={`text-right px-4 py-2 rounded-lg ${
                     isActive('/blog')
                       ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'

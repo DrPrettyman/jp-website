@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .text-body {
+    @apply text-xs sm:text-base text-gray-900 dark:text-white;
+  }
+}

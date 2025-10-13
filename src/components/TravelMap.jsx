@@ -525,8 +525,11 @@ const TravelMap = ({
               </div>
             </div>
 
+            {/* Text */}
             <div style={{ flex: 1, overflow: 'auto', marginBottom: '0.5rem', minHeight: 0 }}>
-              <p className="text-md text-gray-600">{selectedLocation.Summary}</p>
+              <p className="text-xs sm:text-base text-gray-600">
+                {selectedLocation.Summary}
+              </p>
             </div>
 
             {/* Chapter/Photo info and navigation in pill-shaped container - hidden on mobile */}

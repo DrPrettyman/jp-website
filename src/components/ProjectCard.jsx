@@ -58,9 +58,9 @@ const ProjectCard = ({
                             </div>
                         )}
                     
-                        <p className="text-gray-800 dark:text-white italic mb-2">
-                    {description}
-                </p>
+                        <p className="text-xs sm:text-base text-gray-800 dark:text-white italic mb-2">
+                            {description}
+                        </p>
             </div>
         </div>
     )

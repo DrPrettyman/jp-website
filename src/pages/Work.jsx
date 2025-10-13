@@ -74,8 +74,11 @@ const Work = () => {
 
       {/* Tech Stack */}
       <ContentBlock title="Technologies and Skills" icon={FileTerminal} id="tech-stack">
+
           {/* Intro text */}
           <div dangerouslySetInnerHTML={{ __html: introTechStackHtml }} />
+
+          {/* Grid of tech skills */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {techSkillsData.map((skill, index) => (
               <TechSkill

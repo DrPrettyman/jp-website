@@ -44,7 +44,7 @@ const TechSkill = ({ title, icon, techIcons, firstParagraph, text }) => {
           ))}
         </div>
       </div>
-      <div className="text-md text-gray-600 dark:text-white text-justify">
+      <div className="text-body">
         <p className='mb-2' dangerouslySetInnerHTML={{ __html: firstParagraph }}></p>
         {renderText(text)}
       </div>

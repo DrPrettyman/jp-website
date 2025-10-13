@@ -19,7 +19,7 @@ const Home = () => {
             </div>
             
             {/* Text content */}
-            <div className="text-xl text-gray-600 dark:text-white">
+            <div className="text-gray-600 dark:text-white">
               <div className="mb-8">
                 <span className="text-4xl font-bold">
                   Hi, 
@@ -28,7 +28,7 @@ const Home = () => {
                   {' '} my name is Joshua.
                 </span>
               </div>
-              <div className='text-justify'>
+              <div className='text-sm sm:text-lg text-justify'>
                 <p className="mb-8">
                   I made this website as an online résumé to showcase my work experience, skills, 
                   and projects. But then I just started having fun with it, it's really giving me nostalgia for MySpace. 
@@ -50,7 +50,7 @@ const Home = () => {
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <Briefcase className="h-6 w-6 mr-2" /> Professional Experience
             </div>
-            <div className="text-md text-gray-600 dark:text-white text-justify">
+            <div className="text-xs sm:text-base text-gray-600 dark:text-white text-justify">
               <p className='mb-2'>
                 In my most recent role at <b>Blink SEO</b> I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
                 This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: <i>Macaroni Software</i>.
@@ -66,7 +66,7 @@ const Home = () => {
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <GraduationCap className="h-6 w-6 mr-2" /> Academic Background
             </div>
-            <div className="text-md text-gray-600 dark:text-white text-justify">
+            <div className="text-xs sm:text-base text-gray-600 dark:text-white text-justify">
               <p className='mb-2'>
                 My Ph.D. from <b>The University of Reading</b> focused on predicting tipping points in dynamical systems, with applications to geophysical time series data. I published three papers in respected journals and presented my research at international conferences.
               </p>
@@ -80,7 +80,7 @@ const Home = () => {
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <FileTerminal className="h-6 w-6 mr-2" />Tech Stack
             </div>
-            <div className="text-md text-gray-600 dark:text-white text-justify">
+            <div className="text-xs sm:text-base text-gray-600 dark:text-white text-justify">
               <p className='mb-2'>
                 I work in Python, utilising Pandas, ScikitLearn, PyTorch and TensorFlow for data mining and machine learning tasks; Plotly, Seaborn and Matplotlib for visualisation; and various libraries for NLP.
                 I also use Python for web-scraping, interacting with REST and GraphQL APIs, and working through LeetCode problems.
@@ -101,7 +101,7 @@ const Home = () => {
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <Smile className="h-6 w-6 mr-2" />Bio
             </div>
-            <div className="text-md text-gray-600 dark:text-white text-justify">
+            <div className="text-xs sm:text-base text-gray-600 dark:text-white text-justify">
               <p className='mb-2'>
                 I live in the Málaga region of Spain and spend most of my time writing code, doing DIY projects on our casita, cooking vegan meals and playing old Nintendo games with my children.
               </p>

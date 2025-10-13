@@ -126,14 +126,14 @@ const CVEntry = ({
                     </div>
                 )}
                 {headline && (
-                    <p className="text-gray-800 dark:text-white italic mb-2">
+                    <p className="text:xs sm:text-base text-gray-800 dark:text-white italic mb-2">
                         {headline}
                     </p>
                 )}
             </div>
             
             <div className="flex justify-center">
-                <button onClick={handleReadMoreClick} className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 font-semibold">
+                <button onClick={handleReadMoreClick} className="text:xs sm:text-base text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 font-semibold">
                     Read More
                 </button>
             </div>

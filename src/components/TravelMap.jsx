@@ -458,7 +458,7 @@ const TravelMap = ({
                   className="font-bold text-md mb-1 cursor-pointer hover:text-gray-600 transition-colors"
                   onClick={() => goToChapter(chapter.Chapter)}
                 >
-                  {chapter.Chapter}. {chapter.Title}
+                  {chapter.Chapter}. {chapter.Title} ({chapter.nPhotos} locations)
                 </p>
                 <p className="text-xs text-gray-500 mb-1">{chapter.StartDate} to {chapter.EndDate}</p>
                 {chapter.Summary && (

@@ -262,6 +262,7 @@ def process_images(folder_name: str):
                 _photos_md_records.append(_photo_md)
                 n_photos += 1
                 
+            _chap_md["nPhotos"] = len(_photos_md_records)
             _chap_md["Photos"] = _photos_md_records
             
             chapter_metadata_records.append(_chap_md)

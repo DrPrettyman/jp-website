@@ -16,6 +16,7 @@
       "Chapter": 1,
       "StartDate": "2019-07-13",
       "EndDate": "2019-10-21",
+      "nPhotos": 3,
       "Photos": [
         {
           "Chapter": 1,
@@ -64,6 +65,7 @@
       "Chapter": 2,
       "StartDate": "2019-10-21",
       "EndDate": "2019-11-07",
+      "nPhotos": 17,
       "Photos": [
         {
           "Chapter": 2,
@@ -289,11 +291,12 @@
       ]
     },
     {
-      "Title": "La costa al desierto",
-      "Summary": "My first view of Spain came with blue skies and sunshine as we headed down the Pyrenees into Catalunya. Just hours after being wrapped up warm for the cold and cloud of Andorra la Vella we were sitting in the sun at a caf\u00e9 in Montserrat, and the next day lying on the beach in Badalona. In six weeks we experienced the cities of Valencia, Murcia, Alicante and Almeria, besides many smaller towns; we drank wine and beer, and ate churros, in local caf\u00e9s; we experienced wild smimming in thermally heated rivers and pools; we saw forrests, mountains, beaches and deserts; we played cowboys in Texas Hollywood, Tabernas; and we had Christmas on a secluded beach near Nerja where we were able to lie in the sun and swim in the sea. What an introduction to the country!",
+      "Title": "De Brava a Blanca",
+      "Summary": "My first view of Spain came with blue skies and sunshine as we headed down the Pyrenees into Catalunya. Just hours after being wrapped up warm for the cold and cloud of Andorra la Vella we were sitting in the sun at a caf\u00e9 in Montserrat, and the next day lying on the beach in Badalona. \nIn one month we traveled from the Catalonian Costa Brava down along Costa Dorada, through Deltebre, ventured inland of the Valencian Community, spent some time in Valencia itself, and continued down to Alicante. \nWe drank wine and beer, and ate churros, in local caf\u00e9s; we experienced wild swimming in thermally heated rivers and pools; we saw forrests, mountains and beaches. What an introduction to the country!",
       "Chapter": 3,
       "StartDate": "2019-11-08",
-      "EndDate": "2019-12-28",
+      "EndDate": "2019-12-04",
+      "nPhotos": 21,
       "Photos": [
         {
           "Chapter": 3,
@@ -509,11 +512,11 @@
           "Title": "Pou Clar, Ontinyent",
           "Summary": "",
           "FileName": "03-17-pou_clar.jpg",
-          "FileSize": 514823,
+          "FileSize": 514363,
           "OriginalSize": 1888983,
           "Latitude": 38.7999278,
           "Longitude": -0.6122861,
-          "AspectRatio": 1.5,
+          "AspectRatio": 1.0,
           "DateTime": "2019:11:29 14:08:07"
         },
         {
@@ -567,13 +570,23 @@
           "Longitude": -0.4844306,
           "AspectRatio": 1.0,
           "DateTime": "2019:12:03 11:09:20"
-        },
+        }
+      ]
+    },
+    {
+      "Title": "December in Spain",
+      "Summary": "From Alicante we carried on down the coast to Almer\u00eda then headed inland to Tabernas Desert, the location of many \"American\" westerns, which has since become one of our favourite places in the world. From there we drove along to Granada, found a few more thermally-heated pools and then headed back down to the Costa Del Sol for Christmas on a secluded beach near Nerja where where we were able to lie in the sun and swim in the sea. Naked. In December.",
+      "Chapter": 4,
+      "StartDate": "2019-12-05",
+      "EndDate": "2019-12-28",
+      "nPhotos": 18,
+      "Photos": [
         {
-          "Chapter": 3,
-          "Photo": 22,
+          "Chapter": 4,
+          "Photo": 1,
           "Title": "Picking Oranges",
           "Summary": "",
-          "FileName": "03-22-oranges.jpg",
+          "FileName": "04-01-oranges.jpg",
           "FileSize": 500954,
           "OriginalSize": 2313547,
           "Latitude": 38.0017583,
@@ -582,11 +595,11 @@
           "DateTime": "2019:12:05 11:20:30"
         },
         {
-          "Chapter": 3,
-          "Photo": 23,
+          "Chapter": 4,
+          "Photo": 2,
           "Title": "Christmas Decorations in Murcia",
           "Summary": "",
-          "FileName": "03-23-murcia.jpg",
+          "FileName": "04-02-murcia.jpg",
           "FileSize": 515894,
           "OriginalSize": 1084396,
           "Latitude": 37.9892167,
@@ -595,11 +608,11 @@
           "DateTime": "2019:12:05 18:33:55"
         },
         {
-          "Chapter": 3,
-          "Photo": 24,
+          "Chapter": 4,
+          "Photo": 3,
           "Title": "Secret Waterfall at Salto de Usero",
           "Summary": "",
-          "FileName": "03-24-salto_de_usero.jpg",
+          "FileName": "04-03-salto_de_usero.jpg",
           "FileSize": 495489,
           "OriginalSize": 1105027,
           "Latitude": 38.0259833,
@@ -608,11 +621,11 @@
           "DateTime": "2019:12:07 10:28:04"
         },
         {
-          "Chapter": 3,
-          "Photo": 25,
+          "Chapter": 4,
+          "Photo": 4,
           "Title": "Abandoned Mine at Bullas",
           "Summary": "",
-          "FileName": "03-25-bullas_mine.jpg",
+          "FileName": "04-04-bullas_mine.jpg",
           "FileSize": 481604,
           "OriginalSize": 1052721,
           "Latitude": 38.0365889,
@@ -621,11 +634,11 @@
           "DateTime": "2019:12:07 16:00:02"
         },
         {
-          "Chapter": 3,
-          "Photo": 26,
+          "Chapter": 4,
+          "Photo": 5,
           "Title": "Bolnuevo",
           "Summary": "",
-          "FileName": "03-26-bolnuevo.jpg",
+          "FileName": "04-05-bolnuevo.jpg",
           "FileSize": 449462,
           "OriginalSize": 1608748,
           "Latitude": 37.5640333,
@@ -634,11 +647,11 @@
           "DateTime": "2019:12:09 10:18:03"
         },
         {
-          "Chapter": 3,
-          "Photo": 27,
+          "Chapter": 4,
+          "Photo": 6,
           "Title": "\u00c1guilas",
           "Summary": "",
-          "FileName": "03-27-aguilas.jpg",
+          "FileName": "04-06-aguilas.jpg",
           "FileSize": 476317,
           "OriginalSize": 1503319,
           "Latitude": 37.4044389,
@@ -647,11 +660,11 @@
           "DateTime": "2019:12:09 14:54:21"
         },
         {
-          "Chapter": 3,
-          "Photo": 28,
+          "Chapter": 4,
+          "Photo": 7,
           "Title": "Sunset in Cabo de Gata",
           "Summary": "",
-          "FileName": "03-28-sunset.jpg",
+          "FileName": "04-07-sunset.jpg",
           "FileSize": 500659,
           "OriginalSize": 1244252,
           "Latitude": 36.9537806,
@@ -660,11 +673,11 @@
           "DateTime": "2019:12:11 18:05:36"
         },
         {
-          "Chapter": 3,
-          "Photo": 29,
+          "Chapter": 4,
+          "Photo": 8,
           "Title": "N\u00edjar",
           "Summary": "",
-          "FileName": "03-29-nijar.jpg",
+          "FileName": "04-08-nijar.jpg",
           "FileSize": 489547,
           "OriginalSize": 1028623,
           "Latitude": 36.9658861,
@@ -673,11 +686,11 @@
           "DateTime": "2019:12:12 12:12:20"
         },
         {
-          "Chapter": 3,
-          "Photo": 30,
+          "Chapter": 4,
+          "Photo": 9,
           "Title": "Parque de las Familias, Almer\u00eda",
           "Summary": "",
-          "FileName": "03-30-park_almeria.jpg",
+          "FileName": "04-09-park_almeria.jpg",
           "FileSize": 448921,
           "OriginalSize": 2044124,
           "Latitude": 36.8312333,
@@ -686,11 +699,11 @@
           "DateTime": "2019:12:12 17:13:01"
         },
         {
-          "Chapter": 3,
-          "Photo": 31,
+          "Chapter": 4,
+          "Photo": 10,
           "Title": "Desert Sunset",
           "Summary": "",
-          "FileName": "03-31-desert_sunset.jpg",
+          "FileName": "04-10-desert_sunset.jpg",
           "FileSize": 478790,
           "OriginalSize": 2063052,
           "Latitude": 37.02035,
@@ -699,11 +712,11 @@
           "DateTime": "2019:12:14 18:00:30"
         },
         {
-          "Chapter": 3,
-          "Photo": 32,
+          "Chapter": 4,
+          "Photo": 11,
           "Title": "Fort Bravo: Texas Hollywood",
           "Summary": "",
-          "FileName": "03-32-fortbravo.jpg",
+          "FileName": "04-11-fortbravo.jpg",
           "FileSize": 461521,
           "OriginalSize": 3032381,
           "Latitude": 37.0488389,
@@ -712,11 +725,11 @@
           "DateTime": "2019:12:14 13:37:55"
         },
         {
-          "Chapter": 3,
-          "Photo": 33,
+          "Chapter": 4,
+          "Photo": 12,
           "Title": "Bones in Tabernas Desert",
           "Summary": "",
-          "FileName": "03-33-bones.jpg",
+          "FileName": "04-12-bones.jpg",
           "FileSize": 459748,
           "OriginalSize": 5128638,
           "Latitude": 37.0788722,
@@ -725,11 +738,11 @@
           "DateTime": "2019:12:15 14:47:37"
         },
         {
-          "Chapter": 3,
-          "Photo": 34,
+          "Chapter": 4,
+          "Photo": 13,
           "Title": "Z\u00fajar Hotsprings",
           "Summary": "",
-          "FileName": "03-34-zujar.jpg",
+          "FileName": "04-13-zujar.jpg",
           "FileSize": 465169,
           "OriginalSize": 613819,
           "Latitude": 37.5969583,
@@ -738,11 +751,11 @@
           "DateTime": "2019:12:17 10:36:48"
         },
         {
-          "Chapter": 3,
-          "Photo": 35,
+          "Chapter": 4,
+          "Photo": 14,
           "Title": "Cave House Birthday",
           "Summary": "",
-          "FileName": "03-35-cave_house.jpg",
+          "FileName": "04-14-cave_house.jpg",
           "FileSize": 428103,
           "OriginalSize": 927418,
           "Latitude": 37.4926944,
@@ -751,11 +764,11 @@
           "DateTime": "2019:12:19 11:15:38"
         },
         {
-          "Chapter": 3,
-          "Photo": 36,
+          "Chapter": 4,
+          "Photo": 15,
           "Title": "Granada",
           "Summary": "",
-          "FileName": "03-36-granada.jpg",
+          "FileName": "04-15-granada.jpg",
           "FileSize": 457458,
           "OriginalSize": 2915712,
           "Latitude": 37.1778306,
@@ -764,11 +777,11 @@
           "DateTime": "2019:12:21 11:59:05"
         },
         {
-          "Chapter": 3,
-          "Photo": 37,
+          "Chapter": 4,
+          "Photo": 16,
           "Title": "Alhama de Granada",
           "Summary": "",
-          "FileName": "03-37-alhama_de_granada.jpg",
+          "FileName": "04-16-alhama_de_granada.jpg",
           "FileSize": 472091,
           "OriginalSize": 3044279,
           "Latitude": 37.0189528,
@@ -777,11 +790,11 @@
           "DateTime": "2019:12:22 12:38:28"
         },
         {
-          "Chapter": 3,
-          "Photo": 38,
+          "Chapter": 4,
+          "Photo": 17,
           "Title": "Christmas on the beach",
           "Summary": "",
-          "FileName": "03-38-xmas.jpg",
+          "FileName": "04-17-xmas.jpg",
           "FileSize": 487400,
           "OriginalSize": 1311922,
           "Latitude": 36.7448361,
@@ -790,11 +803,11 @@
           "DateTime": "2019:12:25 08:22:29"
         },
         {
-          "Chapter": 3,
-          "Photo": 39,
+          "Chapter": 4,
+          "Photo": 18,
           "Title": "Frigiliana",
           "Summary": "",
-          "FileName": "03-39-frigiliana.jpg",
+          "FileName": "04-18-frigiliana.jpg",
           "FileSize": 503972,
           "OriginalSize": 1387358,
           "Latitude": 36.7913667,

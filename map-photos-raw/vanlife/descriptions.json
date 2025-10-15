@@ -117,9 +117,9 @@
             ]
         },
         {
-            "Title": "La costa al desierto",
-            "Dates": "2019-11-08:2019-12-28",
-            "Text": "My first view of Spain came with blue skies and sunshine as we headed down the Pyrenees into Catalunya. Just hours after being wrapped up warm for the cold and cloud of Andorra la Vella we were sitting in the sun at a café in Montserrat, and the next day lying on the beach in Badalona. In six weeks we experienced the cities of Valencia, Murcia, Alicante and Almeria, besides many smaller towns; we drank wine and beer, and ate churros, in local cafés; we experienced wild smimming in thermally heated rivers and pools; we saw forrests, mountains, beaches and deserts; we played cowboys in Texas Hollywood, Tabernas; and we had Christmas on a secluded beach near Nerja where we were able to lie in the sun and swim in the sea. What an introduction to the country!",
+            "Title": "De Brava a Blanca",
+            "Dates": "2019-11-08:2019-12-04",
+            "Text": "My first view of Spain came with blue skies and sunshine as we headed down the Pyrenees into Catalunya. Just hours after being wrapped up warm for the cold and cloud of Andorra la Vella we were sitting in the sun at a café in Montserrat, and the next day lying on the beach in Badalona. \nIn one month we traveled from the Catalonian Costa Brava down along Costa Dorada, through Deltebre, ventured inland of the Valencian Community, spent some time in Valencia itself, and continued down to Alicante. \nWe drank wine and beer, and ate churros, in local cafés; we experienced wild swimming in thermally heated rivers and pools; we saw forrests, mountains and beaches. What an introduction to the country!",
             "Photos": [
                 {
                     "Title": "Monistrol de Montserrat",
@@ -225,7 +225,14 @@
                     "Title": "Museu de Fogueres",
                     "File": "fogueres",
                     "Description": ""
-                },
+                }
+            ]
+        },
+        { 
+            "Title": "December in Spain",
+            "Dates": "2019-12-05:2019-12-28",
+            "Text": "From Alicante we carried on down the coast to Almería then headed inland to Tabernas Desert, the location of many \"American\" westerns, which has since become one of our favourite places in the world. From there we drove along to Granada, found a few more thermally-heated pools and then headed back down to the Costa Del Sol for Christmas on a secluded beach near Nerja where where we were able to lie in the sun and swim in the sea. Naked. In December.",
+            "Photos": [
                 {
                     "Title": "Picking Oranges",
                     "File": "oranges",

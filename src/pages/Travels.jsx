@@ -28,7 +28,8 @@ const Travels = () => {
             dates="2019-2021"
             imagePath="/images/vanlife_wide.jpeg"
             imageAlt="Van Life Part I"
-            tags={["Europe", "Spain", "Portugal", "Vanlife"]}
+            tags={["Europe", "Vanlife"]}
+            flags="🇬🇧 → 🇫🇷 → 🇧🇪 → 🇩🇪 → 🇱🇺 → 🇫🇷 → 🇦🇩 → 🇪🇸 → 🇵🇹"
             link="/travel/vanlife"
             description={
               <>

@@ -6,6 +6,7 @@ const TravelCard = ({
   imagePath,
   imageAlt,
   tags = [],
+  flags,
   description,
   link
 }) => {
@@ -38,24 +39,35 @@ const TravelCard = ({
                   ({dates})
                 </span>
               </div>
-              {/* Tags - hidden on mobile, shown on desktop */}
+              {/* Tags and Flags - hidden on mobile, shown on desktop */}
               <div className="hidden md:flex flex-wrap gap-1 ml-4">
                 {tags.map(tag => (
                   <span key={tag} className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
                     #{tag}
                   </span>
                 ))}
+                {flags && (
+                  <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
+                    {flags}
+                  </span>
+                )}
               </div>
             </div>
 
-            {/* Tags - shown on mobile, hidden on desktop */}
+            {/* Tags and Flags - shown on mobile, hidden on desktop */}
             <div className="flex md:hidden flex-wrap gap-1 mb-2">
               {tags.map(tag => (
                 <span key={tag} className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
                   #{tag}
                 </span>
               ))}
+              {flags && (
+                <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
+                  {flags}
+                </span>
+              )}
             </div>
+
           </div>
 
           {/* Description */}

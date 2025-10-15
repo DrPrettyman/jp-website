@@ -106,7 +106,7 @@ const BoundsUpdater = ({ bounds, disabled }) => {
 };
 
 // Component to handle marker click events
-const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, markerRef }) => {
+const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, onImageClick, markerRef }) => {
   const map = useMap();
 
   const handleClick = (e) => {
@@ -118,6 +118,11 @@ const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, m
     });
 
     onMarkerClick(location);
+  };
+
+  const handleImageClick = (e) => {
+    e.stopPropagation(); // Prevent marker click event
+    onImageClick(location);
   };
 
   return (
@@ -132,6 +137,7 @@ const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, m
       <Popup
         closeButton={false}
         className="circular-popup"
+        interactive={true}
       >
         <div style={{ width: '120px', height: '120px', textAlign: 'center' }}>
           {imagePath && (
@@ -143,8 +149,10 @@ const MarkerWithClick = ({ position, icon, location, imagePath, onMarkerClick, m
                 overflow: 'hidden',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                cursor: 'pointer'
               }}
+              onClick={handleImageClick}
             >
               <img
                 src={`${imagePath}${location.FileName.toLowerCase()}`}
@@ -174,6 +182,7 @@ const TravelMap = ({
   const [selectedLocation, setSelectedLocation] = useState(null);
   const markerRefs = useRef({});
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [fullscreenImage, setFullscreenImage] = useState(null);
 
   // Format date as "13th November 2025"
   const formatDate = (dateTimeString) => {
@@ -303,6 +312,12 @@ const TravelMap = ({
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
+      // Close fullscreen on Escape
+      if (e.key === 'Escape' && fullscreenImage) {
+        setFullscreenImage(null);
+        return;
+      }
+
       if (!selectedLocation) return;
 
       const currentIndex = sortedPhotos.findIndex(
@@ -320,7 +335,7 @@ const TravelMap = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedLocation, sortedPhotos]);
+  }, [selectedLocation, sortedPhotos, fullscreenImage]);
 
   const goToChapter = (chapterNumber) => {
     // Find the first photo in the chapter
@@ -396,6 +411,7 @@ const TravelMap = ({
               location={location}
               imagePath={imagePath}
               onMarkerClick={setSelectedLocation}
+              onImageClick={setFullscreenImage}
             />
           );
         })}
@@ -565,6 +581,47 @@ const TravelMap = ({
                   </svg>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Fullscreen image modal */}
+      {fullscreenImage && (
+        <div
+          className="fixed inset-0 bg-black/90 flex items-center justify-center"
+          style={{ zIndex: 999999 }}
+          onClick={() => setFullscreenImage(null)}
+        >
+          {/* Close button - positioned below the header */}
+          <button
+            className="absolute right-4 text-white hover:bg-white/20 transition-colors bg-white/10 rounded-full p-3 shadow-xl border-2 border-white/30"
+            style={{ zIndex: 1000000, top: 'calc(3.5rem + 1rem)' }}
+            onClick={(e) => {
+              e.stopPropagation();
+              setFullscreenImage(null);
+            }}
+            aria-label="Close fullscreen"
+          >
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+
+          <div className="relative max-w-full max-h-full p-4 flex flex-col items-center" style={{ marginTop: 'calc(3.5rem + 1rem)' }}>
+            {/* Image */}
+            <img
+              src={`${imagePath}${fullscreenImage.FileName.toLowerCase()}`}
+              alt={fullscreenImage.Title}
+              className="max-w-full object-contain"
+              style={{ maxHeight: 'calc(100vh - 3.5rem - 2rem - 8rem)' }}
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            {/* Image caption */}
+            <div className="mt-4 text-white text-center max-w-2xl">
+              <h3 className="text-xl font-bold mb-2">{fullscreenImage.Title}</h3>
+              <p className="text-sm text-gray-300">{formatDate(fullscreenImage.DateTime)}</p>
             </div>
           </div>
         </div>

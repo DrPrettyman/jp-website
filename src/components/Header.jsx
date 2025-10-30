@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Menu, GraduationCap, Briefcase, Home, FolderGit2, BookOpen, Map } from 'lucide-react'
 
-import { TbMail, TbFileSmile } from "react-icons/tb";
+import { TbMail, TbFileSmile, TbCalendarMonthFilled } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 
@@ -76,6 +76,15 @@ const Header = ({ fullWidth = false }) => {
               >
                 <TbFileSmile className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">PDF CV</span>
+              </a>
+              <a 
+                href="https://cal.com/drprettyman" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                <TbCalendarMonthFilled className="h-5 w-5" />
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Schedule call</span>
               </a>
             </div>
           </div>

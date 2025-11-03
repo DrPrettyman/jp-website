@@ -6,6 +6,7 @@ from PIL import Image
 from PIL.ExifTags import TAGS, GPSTAGS
 
 RAW_PHOTOS_PATH = os.getcwd()
+print(RAW_PHOTOS_PATH)
 MAP_ASSETS_PATH = os.path.join(os.path.dirname(os.getcwd()), "src", "assets", "map_data")
 MAP_IMAGES_PATH = os.path.join(os.path.dirname(os.getcwd()), "public", "travel-images")
 
@@ -155,7 +156,10 @@ def resize_image_to_target_size(input_path, output_path, target_size_mb=1.0, qua
         
     return current_size, metadata
 
-def image_names_in_dir(_path):
+def sort_dict(_d: dict) -> dict:
+    return {k: _d.get(k) for k in sorted(_d.keys())}
+
+def image_names_in_dir(_path) -> dict:
     image_extensions = {'.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG'}
     names = {}
     names_list = []
@@ -176,7 +180,7 @@ def image_names_in_dir(_path):
     if duplicate_names:
         raise ValueError(f"Duplicate names: {', '.join(duplicate_names)}")
     
-    return names
+    return sort_dict(names)
     
 def process_images(folder_name: str):
     _d = Path(RAW_PHOTOS_PATH).joinpath(folder_name)
@@ -194,6 +198,9 @@ def process_images(folder_name: str):
             raise FileNotFoundError(f"Could not find descriptions.json in {_d.name}")
         
         image_files = image_names_in_dir(_d)
+        # for _f, _p in image_files.items():
+        #     print(f"'{_f}': {_p}")
+            
         chapters = descriptions.get("Chapters")
         
         chapter_metadata_records = []
@@ -229,6 +236,8 @@ def process_images(folder_name: str):
                 image_file = image_files.get(_file_name)
                 if image_file is None:
                     raise FileNotFoundError(f"Could not find {photo_num}: \"{_file_name}\" in {_d.name}, chapter \"{chapter_data['Title']}\"")
+                
+                # print(f"found '{_file_name}' in {_d.name}, chapter \"{chapter_data['Title']}")
                 
                 image_output_file = image_path_out.joinpath(f"{chapter_num:0>2}-{photo_num:0>2}-{_file_name}.jpg")
                 

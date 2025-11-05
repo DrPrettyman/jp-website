@@ -1,0 +1,511 @@
+% Feedback:
+% 1. Years of Experience — maybe consider two pages.
+%    Write as much as you need to. Thanks you.
+% 2. The first page is therefore prime real estate.
+% 3. Skills section shorter.
+% 4. Don't bother with portfolio. You have years of experience.
+% 5.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+%\usepackage{times}
+%\renewcommand{\familydefault}{\sfdefault}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+\usepackage{comment}
+\usepackage{graphicx}
+% \usepackage{fontawesome}
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+		{\begin{enumerate}{}{%
+%        {\begin{list}{}{%
+	   \setlength{\leftmargin}{\bibhang}%
+	   \setlength{\itemindent}{-\leftmargin}%
+	   \setlength{\itemsep}{\bibsep}%
+	   \setlength{\parsep}{\z@}%
+		\setlength{\partopsep}{0pt}%
+		\setlength{\topsep}{0pt}}}
+		{\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+%\usepackage[paper=letterpaper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=1.2in,     % Length of section titles
+%            marginparsep=.05in,       % Space between titles and text
+%            margin=1in,               % 1 inch margins
+%            includemp]{geometry}
+
+% Use these lines for A4-sized paper
+\usepackage[paper=a4paper,
+			%includefoot, % Uncomment to put page number above margin
+			marginparwidth=0mm,    % Length of section titles
+			marginparsep=0mm,       % Space between titles and text
+			margin=18mm,              % 25mm margins
+			includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+		  {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+	   \parbox{4in}{\, \hfill %
+					\arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+					\hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+			linkcolor=darkblue,urlcolor=darkblue,
+			anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[\includegraphics[height=1.5in]{my_picutre}]{Your Name}
+%
+% the picture will be flush right across from the name.
+\newcommand{\makeheading}[8][]{
+	\hspace*{-\marginparsep minus \marginparwidth}%
+	\begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+		\begin{tabular}[t]{@{}l}
+		{\hspace{-8pt} \Large \bfseries#2}\\
+		\\
+		{\normalsize \emph{#3}}
+		\end{tabular}
+		\hfill
+		\begin{tabular}[t]{|l}
+		#4  \\
+		#5  \\
+		#6 \\
+
+		\end{tabular}
+		\vspace{1pt}
+		\\[-0.2\baselineskip]%
+
+		\rule{\columnwidth}{1pt}%
+	\end{minipage}
+}
+
+% The section headings
+%
+% Usage: \section{section name}
+% \renewcommand{\section}[1]{\pagebreak[3]%
+%     \hyphenpenalty=10000%
+%     \vspace{1.8\baselineskip}%
+%     \phantomsection\addcontentsline{toc}{section}{#1}%
+%     \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\raggedright #1}}}%
+%     \vspace{-\baselineskip}\par}
+
+\renewcommand{\section}[1]{
+	\pagebreak[3]%
+	\hyphenpenalty=10000%
+	\vspace{\baselineskip}%
+	\phantomsection\addcontentsline{toc}{section}{#1}%
+	\noindent{\scshape #1}%
+	\vspace{\baselineskip}\par
+}
+
+\newcommand{\sectioncont}[1]{
+	\pagebreak[3]%
+	\hyphenpenalty=10000%
+	\vspace{\baselineskip}%
+	\noindent{\scshape #1} (continuación)%
+	\vspace{\baselineskip}\par
+}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]{
+\begin{itemize}[#1,leftmargin=*]}{\end{itemize}%
+\vspace{-.6\baselineskip}
+}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]{
+	\begin{list}{#1}{%
+	\setlength{\partopsep}{0pt}%
+	\setlength{\topsep}{0pt}}
+}{\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]{
+	\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=1pt,topsep=2pt,partopsep=0pt]
+}{\end{itemize}}
+
+\newenvironment{innerlist2}[1][\enskip\textasteriskcentered]{
+	\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=1pt,topsep=2pt,partopsep=0pt]
+}{\end{itemize}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+		{\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+		{\end{itemize}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+\newcommand{\nohref}[2]{#2}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+	\TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\rcollength}\setlength{\rcollength}{1.2in}%
+
+
+\begin{document}
+\makeheading{
+		\href{https://joshua.prettyman.me/}{Joshua Prettyman, Ph.D.}
+}
+{Científico de Datos, Doctor en Matemáticas, Desarrollador Python}
+% {Python Developer, Data Scientist, Mathematics Ph.D.}
+{\email{joshua@prettyman.me}}
+% {\href{https://github.com/DrPrettyman}{github.com/DrPrettyman}}
+{\href{https://www.linkedin.com/in/joshuaprettyman/}{linkedin.com/in/joshuaprettyman}}
+% {{\href{tel:+44(0)7470885347}{tel: 07470 885 347}}}
+% {{\href{tel:+34711042515}{(+34) 711 042 151}}}
+{\href{https://joshua.prettyman.me/}{joshua.prettyman.me}}
+
+
+
+%\section{Objective}
+
+%Insert text here if you want to
+%\begin{innerlist}
+%\item More information and auxiliary documents can be found at\\\url{http://www.tedpavlic.com/facjobsearch/}
+%\end{innerlist}
+
+
+
+\section{Declaración Personal}
+
+Desarrollé desde cero la base de datos y el software interno de Blink SEO
+y supervisé su evolución hacia el producto SaaS impulsado por ML para e-commerce
+\href{https://www.macaroni.works}{\textit{Macaroni Software}},
+logrando \href{https://blinkseo.co.uk/blogs/case-studies/how-macaroni-made-us-20x-more-productive}{un aumento de $20\times$ en la productividad del SEO}.
+Creé este puesto después de ser contratado como un equipo unipersonal de datos/desarrollo con el objetivo:
+`usar datos para mejorar procesos'.
+El equipo ha crecido y he estado perfeccionando el producto en un entorno ágil.
+% I am looking for a role in which I can continue to solve problems and
+% develop software using python.
+Busco un nuevo puesto donde pueda implementar mis habilidades en ciencia de datos y
+continuar mi desarrollo profesional.
+
+% \vspace{.05in}
+
+% I have  experience lecturing upto Masters level, presenting at international conferences
+% and \href{https://www.linkedin.com/in/joshuaprettyman/details/publications/}{publishing in respected journals}, so I'm used
+% to communicating technical concepts to a variety of audiences.
+
+\vspace{-6pt}
+\begin{center}
+		\rule{0.5\columnwidth}{1pt}
+\end{center}
+\vspace{-10pt}
+
+% \section{Tech Stack}
+\section{Habilidades en Ciencia de Datos y Stack Tecnológico}
+\vspace{-6pt}
+\begin{innerlist}
+	% \item Deployment to remote UNIX server using Docker and GitHub.
+	\item Uso regular de librerías Python: ScikitLearn, Numpy, Pandas, NLTK, MatPlotLib, Plotly, etc.
+	\item Desarrollo en Python: Ciencia de Datos / ML, async, gestión de paquetes, REST APIs, etc.
+	\item Desarrollo full stack con Python, Google Cloud Platform, BigQuery, PostgreSQL y JavaScript.
+	\item Transformers de Huggingface y LLMs, ollama LLM, OpenAI Assistant API.
+	% \item I have experience producing visualisations for public apps, business reports,
+	% 	dashboards and academic publications.
+	\item Curso profesional \href{https://www.codecademy.com/learn/paths/data-science}{CodeCademy}
+		\textit{Data Scientist}:
+		ScikitLearn, TensorFlow, PyTorch, NLP y visualización de datos.
+	\item Experiencia con C++, shell scripting, Matlab, Retool,
+		ingeniería de datos, dashboards, computación científica.
+\end{innerlist}
+
+\vspace{-6pt}
+\begin{center}
+		\rule{0.5\columnwidth}{1pt}
+\end{center}
+\vspace{-10pt}
+
+\section{Experiencia Profesional}
+\setlength\tabcolsep{0pt}
+
+\textbf{Científico de Datos} — \href{https://www.blinkseo.co.uk}{Blink SEO} / \href{https://www.macaroni.works}{Macaroni Software} \hfill \emph{Nov. 2021 a Dic. 2024} \\
+\vspace{-6pt}
+\begin{innerlist}
+\item Entregué Macaroni Software, permitiendo a los equipos de SEO realizar
+	el trabajo de un año \href{https://www.linkedin.com/posts/sam-wright-17b6ab6_shopify-seo-activity-7170336529146441729-JGDn?utm_source=combined_share_message&utm_medium=member_desktop}{en un solo mes}.
+\item Creé este puesto trabajando con el equipo para replicar
+	y luego mejorar sus procesos (basados en hojas de cálculo) con retroalimentación y despliegue continuo.
+\item Macaroni realiza la ingeniería de datos (típicamente manual) para SEO agregando datos de diversas fuentes,
+	transmitidos diariamente (o bajo petición) a una base de datos \emph{BigQuery} mediante el backend en Python (\textit{GCP Compute Engine}: Linux/Debian) que utiliza
+	varias REST APIs y pasos de preprocesamiento.
+\item La incorporación de clientes, importación de datos, tareas de análisis de datos y recomendaciones asistidas por ML se pueden activar
+	en la aplicación y ejecutarse de forma asíncrona en el backend usando un sistema de cola de trabajos (basado en \textit{PostgreSQL}) que escribí para este propósito.
+\item Los datos cuantitativos se utilizan para diversas visualizaciones en la aplicación, impulsadas por \textit{Plotly}.
+\item Los datos de texto (contenido de la página y términos de búsqueda) se procesan y combinan con
+	datos cuantitativos (clics, impresiones, etc.) para revelar recomendaciones prácticas
+	para nuevo contenido y taxonomía del sitio. Esto utiliza algoritmos de NLP y Clustering (\textit{NLTK}, \textit{huggingface}, \textit{ScikitLearn}) pero también
+	un profundo conocimiento de SEO, requiriendo intercambios regulares con el equipo de entrega de SEO
+	y iteraciones frecuentes.
+\item También integré un LLM (\textit{huggingface}) para generar sugerencias listas para usar
+	sobre brechas de contenido, permitiendo a los clientes ver impacto inmediato.
+\item Además de concebir y trabajar en Macaroni, también realicé frecuentes
+	tareas de datos puntuales para los equipos de entrega de SEO y gestión, incluyendo
+	ingeniería de datos, generación de contenido, y provisión de análisis y
+	visualizaciones para clientes e inversores.
+\end{innerlist}
+
+\vspace{14pt}
+\textbf{Investigador en Ciencia de Datos} — \href{http://www.npl.co.uk}{National Physical Laboratory (NPL)} \hfill \emph{Sep. 2015 a Feb. 2021} \\
+\vspace{-6pt}
+\begin{innerlist}
+	\item Completé mi investigación doctoral en colaboración industrial
+		con la Dra. Valerie Livina en NPL.
+	\item Presenté datos y resultados en reuniones de partes interesadas en NPL,
+		así como en artículos publicados y conferencias internacionales.
+	\item Mi investigación desarrolló métodos para detectar puntos de inflexión en sistemas dinámicos,
+		trabajando con grandes conjuntos de datos de series temporales
+		y construyendo modelos estocásticos para probar hipótesis.
+	\item Código escrito en \textit{MatLab} y \textit{Python}. Visualizaciones producidas
+		usando \textit{MatPlotLib} y \textit{XMGrace}.
+	\item Se utilizaron señales en la presión atmosférica horaria para producir señales de alerta temprana
+		de tormentas tropicales en aproximación. Esto requirió la limpieza, interpolación y
+		correcta interpretación de grandes conjuntos de datos meteorológicos descargados (en bruto) de
+		fuentes públicas.
+
+	% \item Work involved analysing large datasets and coding in Matlab and Python.
+\end{innerlist}
+
+\vspace{14pt}
+
+\textbf{Profesor Asociado} — \href{https://www.shu.ac.uk/about-us/academic-departments/engineering-and-mathematics}{Sheffield Hallam University} \hfill \emph{Sep. 2017 a Jul. 2019} \\
+\vspace{-6pt}
+\begin{innerlist}
+	\item Impartí cursos de matemáticas, estadística e informática desde Foundation Degree hasta Máster.
+	\item Las responsabilidades incluían preparación de lecciones, planificación de cursos, corrección, dirección de tutorías.
+\end{innerlist}
+\vspace{10pt}
+
+\textbf{Desarrollador de informática (prácticas)} — \href{https://www.metoffice.gov.uk/research/foundation/informatics-lab/what-we-do}{UK Met Office Informatics Lab} \hfill \emph{Jun. a Ago. 2017} \\
+\vspace{-6pt}
+\begin{innerlist}
+	\item Un proyecto de tres meses evaluando la viabilidad de usar datos en vivo de
+		meteorólogos aficionados para aumentar los datos oficiales de observación.
+	\item Esto implicó acceder a datos internos y externos mediante APIs usando Java,
+		luego realizar limpieza y análisis de datos en Python.
+	\item Trabajé como parte de un equipo y participé en reuniones diarias de seguimiento.
+\end{innerlist}
+
+
+
+%\vspace{.1in}
+%\textbf{Informatics developer} — \href{https://www.metoffice.gov.uk/research/foundation/informatics-lab/what-we-do}{UK Met Office Informatics Lab} \hfill \emph{2017}
+%\begin{innerlist}
+%	\item 3 Month project involved consolidating and testing observation data.
+%%	\item Worked as part of a team: daily stand-ups, using Slack to coordinate.
+%	\item Working in Python, accessing internal and external data via APIs.
+%\end{innerlist}
+
+%\textbf{Teaching Assistant} — University of Reading \hfill \emph{2014 - 2015}
+%\vspace{.05in}
+%	\begin{innerlist}
+%		\item Tutorial support and teaching cover on undergraduate courses whilst undertaking my own Masters studies.
+%		\item Responsibilities such as marking and exam invigilator.
+%	\end{innerlist}
+
+
+
+\vspace{1pt}
+\begin{center}
+		\rule{0.5\columnwidth}{1pt}
+\end{center}
+\vspace{-10pt}
+
+% \pagebreak
+
+\section{Formación Académica}
+\setlength\tabcolsep{0pt}
+
+\textbf{Doctorado en Matemáticas} — \textbf{University of Reading}\\
+\vspace{-2pt}
+\hspace{2pt} \textbf{Tesis:} \href{http://centaur.reading.ac.uk/98364/1/23022044_Prettyman_Thesis_Joshua\%20Prettyman.pdf}{\emph{Tipping Points and Early Warning Signals with Applications to Geophysical Data}}.
+\vspace{4pt}
+\begin{innerlist}
+	\item Mi tesis desarrolla métodos de análisis espectral para detectar correlaciones en
+		series temporales multidimensionales, que se utilizan como Señales de Alerta Temprana
+		para eventos de inflexión en sistemas dinámicos estocásticos.
+	\item Publicación de tres artículos en revistas de prestigio:
+		\begin{innerlist2}
+			\item \textit{A novel scaling indicator of early warning signals} \href{https://doi.org/10.1209/0295-5075/121/10002}{(EPL, 2018)}
+			\item \textit{Generalized early warning signals in multivariate and gridded data} \href{https://doi.org/10.1063/1.5093495}{(Chaos, 2019)}
+			\item \textit{Power spectrum scaling as a measure of critical slowing down} \href{https://doi.org/10.1088/1748-9326/ac526f}{(ERL, 2022)}
+		\end{innerlist2}
+	\item Código escrito en \textit{MatLab} y \textit{Python}. Visualizaciones producidas
+		usando \textit{MatPlotLib} y \textit{XMGrace}.
+	\item En muchos casos implementé numéricamente métodos derivados matemáticamente —tanto propios
+		como de otros— mediante discretización y linealización.
+	\item Participación en varias conferencias y talleres internacionales.
+	\item Prácticas de tres meses enfocadas en datos en UK Met Office (ver sección \textit{Experiencia Profesional}).
+\end{innerlist}
+\vspace{14pt}
+
+\textbf{M.Res. en Matemáticas} — \textbf{Imperial College London} (\emph{Distinción})\\
+\vspace{-2pt}
+\hspace{2pt} \textbf{Proyecto:} \href{https://github.com/DrPrettyman/dissertations/blob/main/MresDiss_Prettyman.pdf}{\emph{Mesh Generation Using Solutions of an Optimal Transport Problem}}.
+\vspace{4pt}
+\begin{innerlist}
+	% \item Dissertation title: \href{https://github.com/DrPrettyman/dissertations/blob/main/MresDiss_Prettyman.pdf}{\emph{Adaptive Mesh Generation}}.
+	\item Mi proyecto utiliza soluciones a una linealización de la ecuación de Monge-Ampère
+		para generar una malla adaptativa, óptimamente distribuida para modelos numéricos.
+	\item Trabajando en C++; monitoreando el uso de CPU y tiempo de convergencia en varios escenarios.
+	\item Participación en talleres semanales de habilidades blandas y presentaciones internas mensuales.
+	\item Asistencia a seminarios semanales de Mathematics of Planet Earth
+		organizados por el Center for Doctoral Training.
+	\item Cursos completados en Python, R, Sistemas Dinámicos,
+		ecuaciones diferenciales estocásticas, Análisis Bayesiano y Probabilidad.
+\end{innerlist}
+\vspace{14pt}
+
+\textbf{MA en Matemáticas} — \textbf{University of Edinburgh} (\emph{Matrícula de Honor de Primera Clase}) \\
+\vspace{-2pt}
+\hspace{2pt} \textbf{Proyecto:} \href{https://github.com/DrPrettyman/dissertations/blob/main/MaDiss_Prettyman.pdf}{\emph{Growth and its Applications in Graph Theory}}.
+\vspace{4pt}
+\begin{innerlist}
+	\item Mi proyecto explora patrones en caminos a través de digrafos conexos.
+	\item Para el proyecto escribí un programa con una interfaz simple para
+		investigar las propiedades de estos digrafos: esto se convirtió en una herramienta didáctica,
+		recibiendo una carta de agradecimiento del director.
+	\item Completé los cursos requeridos para el título de Matemáticas Puras,
+		además de módulos opcionales en informática y educación matemática.
+\end{innerlist}
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%

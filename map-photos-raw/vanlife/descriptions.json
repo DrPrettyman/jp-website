@@ -505,12 +505,191 @@
         {
             "Title": "Lockdown",
             "Dates": "2020-03-17:2020-05-19",
-            "Text": ""
+            "Text": "",
+            "Photos": [
+                {
+                    "Title": "Praia da Vagueira",
+                    "File": "praia_da_vagueira",
+                    "Description": ""
+                },
+                {
+                    "Title": "Camping Orbitur Vagueira",
+                    "File": "orbitur",
+                    "Description": "Our last night before lockdown. We had heard things were getting serious and decided to head to a nearby campsite to have our bi-monthly showers and assess the options. The campsite told us that the next morning they would be closing the gates: if you were inside, you were going to stay inside; if you left in the morning, you wouldn't be getting back it for a while. And at that time nobody knew how long it would be. On the one hand, we didn't want to be stuck on a campsite for, potentially, months. But on the other hand, we didn't want to be arrested or told to go back to the UK — both posibilities if we continued our nomadic life while everyone else was locked-down indoors. It didn't take long for us to make up our minds: those would be our last showers for a very long time!"
+                },
+                {
+                    "Title": "Prettycamp Wannachill",
+                    "File": "prettycamp",
+                    "Description": "Leaving Camping Oributur and knowing that we were breaking the law just by being on the road, we were in a difficult position. The useful aire at Praia da Vagueira was roped off to prevent people like us from camping, so we headed to the nearest beach we could find which was somewhat away from civilisation: Praia de Mira, just north of the town, with nobody else around. This became our home from the 22nd of March to 19th of May: we dubbed it \"Prettycamp Wannachill\". The locals of Praia de Mira would walk by occasionally to walk their dogs in defiance of the lockdown: in England a troupe of foreign gypsies would have been shouted out of town, but in Portugal everyone waved and smiled, asked (from a distance) if we were ok, and even if we would like to come to their house to do laundry (we declined, obviously)."
+                },
+                {
+                    "Title": "Campfire",
+                    "File": "campfire",
+                    "Description": ""
+                },
+                {
+                    "Title": "Postboxes on the main road",
+                    "File": "postboxes",
+                    "Description": "For two months we stayed on the same beach. We walked north along the beach, sometimes we walked south about 100 yards to the edge of the town, and sometimes we walked up Rua Principal—teh amin road which goes as far up as Gafanha do Carmo. This photo is a selection of the postboxes of Rua Principal, probably the most cultural thing we saw during those two months."
+                },
+                {
+                    "Title": "Robot",
+                    "File": "robot",
+                    "Description": "Found an old building, did some artwork."
+                },
+                {
+                    "Title": "O Rabo Da Sereia",
+                    "File": "the_bar",
+                    "Description": ""
+                },
+                {
+                    "Title": "Luxury Air BnB in Coimbra",
+                    "File": "luxury",
+                    "Description": "There was an odd week at the start of May when it seemed that lockdown was winding down, a couple of weeks before it officially lifted. We didn't miss the opportunity to book an apartment for the night and to have a bit of luxury. Coimbra is a really nice little university town and we have revisited since. We walked around the town and the Jardins da Quinta das Lágrimas, and bought a folding bike from Decathlon which could fit in the back of the van."
+                }
+            ]
         },
         {
             "Title": "Porto to Calais",
             "Dates": "2020-05-20:2020-06-23",
-            "Text": ""
+            "Text": "",
+            "Photos": [
+                {
+                    "Title": "Lockdown is over!",
+                    "File": "estarreja",
+                    "Description": "Once we felt safe enough to leave Prettycamp Wannachill we drove up to Estarreja where we found a fully-equiped aire, free to stay for 48 hours. The children's playground was roped off but there were a few cafes open. This would not be the end of lockdown: over the next year there would be on-and-off periods of restricted movement, but it really felt like the world was working again. Our journey back to the UK had begun."
+                },
+                {
+                    "Title": "Beautiful church in Válega",
+                    "File": "valega",
+                    "Description": ""
+                },
+                {
+                    "Title": "Blue church — Cortegaça",
+                    "File": "blue_church",
+                    "Description": ""
+                },
+                {
+                    "Title": "Capela do Senhor da Pedra",
+                    "File": "capela",
+                    "Description": "A nice little chappel on the beach, just south of Porto."
+                },
+                {
+                    "Title": "Parque de Serralves",
+                    "File": "serralves",
+                    "Description": ""
+                },
+                {
+                    "Title": "Meia Laranja Beach",
+                    "File": "meia_laranja",
+                    "Description": ""
+                },
+                {
+                    "Title": "Parque da Cidade",
+                    "File": "cidade",
+                    "Description": ""
+                },
+                {
+                    "Title": "Praia de Memória",
+                    "File": "memoria",
+                    "Description": ""
+                },
+                {
+                    "Title": "Barcelos Cock",
+                    "File": "barcelos",
+                    "Description": "After years of familiarity with that cock from the nandos sauce bottles we finally visited his home town! Ledgend says that a Galician, who was passing through Barcelos on a pilgrimage, was falsely accused of steeling some silver and sentenced to death by hanging. He pointed to a roasted rooster on the dinner table and said \"If I am innocent, the rooster will crow when I am hanged\". A little while later the dead rooster got up and started crowing, so they all ran to the gallows where the Galician was not dead because the knot hadn't been tied properly. They all belived him and let him go on his way."
+                },
+                {
+                    "Title": "Bom Jesus do Monte - Braga",
+                    "File": "bom_jesus",
+                    "Description": ""
+                },
+                {
+                    "Title": "Van Maths",
+                    "File": "van_maths",
+                    "Description": ""
+                },
+                {
+                    "Title": "Guimarães",
+                    "File": "guimaraes",
+                    "Description": ""
+                },
+                {
+                    "Title": "Casa do penedo",
+                    "File": "casa_do_penedo",
+                    "Description": ""
+                },
+                {
+                    "Title": "Albufeira da Queimadela",
+                    "File": "albufeira_queimadela",
+                    "Description": ""
+                },
+                {
+                    "Title": "Making a statement",
+                    "File": "blm",
+                    "Description": ""
+                },
+                {
+                    "Title": "Sad Hill Cemetery",
+                    "File": "sad_hill",
+                    "Description": ""
+                },
+                {
+                    "Title": "Glonky Dinosaurs, Rioja",
+                    "File": "glonky_dinos",
+                    "Description": ""
+                },
+                {
+                    "Title": "Arnedillo Hot Springs",
+                    "File": "arnedillo",
+                    "Description": ""
+                },
+                {
+                    "Title": "Guggenheim, Bilbao",
+                    "File": "guggenheim",
+                    "Description": ""
+                },
+                {
+                    "Title": "Capbreton bunkers",
+                    "File": "capbreton",
+                    "Description": "Back in France! It's been a while. "
+                },
+                {
+                    "Title": "Dune du Pilat",
+                    "File": "pilat",
+                    "Description": ""
+                },
+                {
+                    "Title": "Sitting on a hand in Angoulême",
+                    "File": "angouleme",
+                    "Description": "Our first time in Angoulême. A few years later we came back here and completely forgot we'd been before. Wes Anderson was here to film The French Dispatch."
+                },
+                {
+                    "Title": "Futuroscope!",
+                    "File": "futuroscope",
+                    "Description": ""
+                },
+                {
+                    "Title": "Shell house in Nonancourt",
+                    "File": "nonancourt",
+                    "Description": ""
+                },
+                {
+                    "Title": "Rouen Cathedral",
+                    "File": "rouen",
+                    "Description": ""
+                },
+                {
+                    "Title": "Calais",
+                    "File": "ferry",
+                    "Description": ""
+                },
+                {
+                    "Title": "Made it!",
+                    "File": "rara",
+                    "Description": ""
+                }
+            ]
         },
         {
             "Title": "Summer in Britain",

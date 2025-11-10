@@ -2,6 +2,8 @@ import os
 import json
 import argparse
 from pathlib import Path
+from datetime import datetime
+
 from PIL import Image
 from PIL.ExifTags import TAGS, GPSTAGS
 
@@ -17,48 +19,80 @@ if not os.path.exists(MAP_ASSETS_PATH):
     
 if not os.path.exists(MAP_IMAGES_PATH):
     os.makedirs(MAP_IMAGES_PATH)
+    
+    
+class DateRange:
+    def __init__(self, date1, date2, fmt=None):
+        if isinstance(date1, str) and fmt:
+            date1 = datetime.datetime.strptime(date1, fmt)
+        if isinstance(date2, str) and fmt:
+            date2 = datetime.datetime.strptime(date2, fmt)
+        self.date1 = date1
+        self.date2 = date2
+        
+    def str_days(self):
+        if self.date1.year == self.date2.year:
+            if self.date1.month == self.date2.month:
+                if self.date1.day == self.date2.day:
+                    return self.date1.strftime('%d %b %Y')
+                return f"{self.date1.day} - {self.date2.day} {self.date1.strftime('%b %Y')}"
+            return f"{self.date1.strftime('%d %b')} - {self.date2.strftime('%d %b')} {self.date1.strftime('%Y')}"
+        return f"{self.date1.strftime('%d %b %Y')} - {self.date2.strftime('%d %b %Y')}"
+                
+    def str_months(self):
+        if self.date1.year == self.date2.year:
+            if self.date1.month == self.date2.month:
+                return self.date1.strftime('%b %Y')
+            return f"{self.date1.strftime('%b')} - {self.date2.strftime('%b')} {self.date1.strftime('%Y')}"
+        return f"{self.date1.strftime('%b %Y')} - {self.date1.strftime('%b %Y')}"
+
 
 def convert_to_degrees(value):
     """Convert GPS coordinates to degrees in float format"""
     d, m, s = value
     return round(d + (m / 60.0) + (s / 3600.0), 7)
 
-def get_metadata(img):
-    """Get all metadata including GPS coordinates if available"""
 
-    exif_data = img.getexif()
-    
-    metadata = {}
-    
-    # Get basic EXIF data
-    for tag_id, value in exif_data.items():
-        tag = TAGS.get(tag_id, tag_id)
-        metadata[tag] = value
+def get_metadata(input_path):
+    """Get all metadata including GPS coordinates if available"""
+    with Image.open(input_path) as img:
+        exif_data = img.getexif()
         
-    if metadata.get("Orientation") is None:
-        metadata["Orientation"] = 1
-    
-    # Get GPS data if it exists
-    if 34853 in exif_data:  # GPSInfo tag exists
-        gps_ifd = exif_data.get_ifd(0x8825)
-        gps_info = {}
-        for tag_id, value in gps_ifd.items():
-            tag = GPSTAGS.get(tag_id, tag_id)
-            gps_info[tag] = value
+        metadata = {}
         
-        # Convert to decimal degrees if coordinates exist
-        if 'GPSLatitude' in gps_info and 'GPSLongitude' in gps_info:
-            lat = convert_to_degrees(gps_info['GPSLatitude'])
-            lon = convert_to_degrees(gps_info['GPSLongitude'])
+        # Get basic EXIF data
+        for tag_id, value in exif_data.items():
+            tag = TAGS.get(tag_id, tag_id)
+            metadata[tag] = value
             
-            if gps_info.get('GPSLatitudeRef') == 'S':
-                lat = -lat
-            if gps_info.get('GPSLongitudeRef') == 'W':
-                lon = -lon
+        if metadata.get("Orientation") is None:
+            metadata["Orientation"] = 1
+        
+        # Get GPS data if it exists
+        if 34853 in exif_data:  # GPSInfo tag exists
+            gps_ifd = exif_data.get_ifd(0x8825)
+            gps_info = {}
+            for tag_id, value in gps_ifd.items():
+                tag = GPSTAGS.get(tag_id, tag_id)
+                gps_info[tag] = value
             
-            metadata['Latitude'] = lat
-            metadata['Longitude'] = lon
-            metadata['GPS_raw'] = gps_info
+            # Convert to decimal degrees if coordinates exist
+            if 'GPSLatitude' in gps_info and 'GPSLongitude' in gps_info:
+                lat = convert_to_degrees(gps_info['GPSLatitude'])
+                lon = convert_to_degrees(gps_info['GPSLongitude'])
+                
+                if gps_info.get('GPSLatitudeRef') == 'S':
+                    lat = -lat
+                if gps_info.get('GPSLongitudeRef') == 'W':
+                    lon = -lon
+                
+                metadata['Latitude'] = lat
+                metadata['Longitude'] = lon
+                metadata['GPS_raw'] = gps_info
+    
+    if metadata.get("DateTime") is None:
+        creation_time = os.stat(input_path).st_birthtime  # Note: this is only going to work on Mac
+        metadata["DateTime"] = datetime.fromtimestamp(creation_time).strftime('%Y:%m:%d %H:%M:%S')
     
     return metadata
 
@@ -112,10 +146,12 @@ def resize_image_to_target_size(input_path, output_path, target_size_mb=1.0, qua
         target_size_mb: Target file size in MB (default 1.0)
         quality: Initial JPEG quality (default 85)
     """
+    
+    metadata = get_metadata(input_path)
+    
     target_size_bytes = target_size_mb * 1024 * 1024
     
     with Image.open(input_path) as img:
-        metadata = get_metadata(img)
         
         img = correct_image_orientation(img=img, orientation=metadata.get("Orientation"))
         
@@ -216,11 +252,8 @@ def process_images(folder_name: str):
                 "Title": chapter_data["Title"],
                 "Summary": chapter_data["Text"],
                 "Chapter": chapter_num
-            }
-            dates = chapter_data["Dates"].split(":")
-            _chap_md["StartDate"] = dates[0].strip()
-            _chap_md["EndDate"] = dates[1].strip()
-            
+            }     
+                  
             _photos_md_records = []
             for _photo_num, photo_data in enumerate(photo_data_records):
                 photo_num = _photo_num + 1
@@ -273,6 +306,9 @@ def process_images(folder_name: str):
                 
             _chap_md["nPhotos"] = len(_photos_md_records)
             _chap_md["Photos"] = _photos_md_records
+            
+            _chap_md["StartDate"] = _photos_md_records[0].get("DateTime")
+            _chap_md["EndDate"] = _photos_md_records[-1].get("DateTime")
             
             chapter_metadata_records.append(_chap_md)
             

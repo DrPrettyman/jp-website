@@ -44,7 +44,7 @@ class DateRange:
             if self.date1.month == self.date2.month:
                 return self.date1.strftime('%b %Y')
             return f"{self.date1.strftime('%b')} - {self.date2.strftime('%b')} {self.date1.strftime('%Y')}"
-        return f"{self.date1.strftime('%b %Y')} - {self.date1.strftime('%b %Y')}"
+        return f"{self.date1.strftime('%b %Y')} - {self.date2.strftime('%b %Y')}"
 
 
 def convert_to_degrees(value):

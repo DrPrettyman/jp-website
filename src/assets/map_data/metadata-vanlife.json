@@ -1728,19 +1728,6 @@
           "Longitude": 1.8518806,
           "AspectRatio": 1.0,
           "DateTime": "2020:06:23 10:22:34"
-        },
-        {
-          "Chapter": 7,
-          "Photo": 27,
-          "Title": "Made it!",
-          "Summary": "",
-          "FileName": "07-27-rara.jpg",
-          "FileSize": 469880,
-          "OriginalSize": 1674254,
-          "Latitude": 53.3640222,
-          "Longitude": -1.503275,
-          "AspectRatio": 1.0,
-          "DateTime": "2020:06:23 16:08:55"
         }
       ]
     }

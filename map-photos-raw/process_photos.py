@@ -22,15 +22,15 @@ if not os.path.exists(MAP_IMAGES_PATH):
     
     
 class DateRange:
-    def __init__(self, date1, date2, fmt=None):
+    def __init__(self, date1: datetime | str, date2: datetime | str, fmt: str = None):
         if isinstance(date1, str) and fmt:
-            date1 = datetime.datetime.strptime(date1, fmt)
+            date1 = datetime.strptime(date1, fmt)
         if isinstance(date2, str) and fmt:
-            date2 = datetime.datetime.strptime(date2, fmt)
+            date2 = datetime.strptime(date2, fmt)
         self.date1 = date1
         self.date2 = date2
         
-    def str_days(self):
+    def str_days(self) -> str:
         if self.date1.year == self.date2.year:
             if self.date1.month == self.date2.month:
                 if self.date1.day == self.date2.day:
@@ -39,7 +39,7 @@ class DateRange:
             return f"{self.date1.strftime('%d %b')} - {self.date2.strftime('%d %b')} {self.date1.strftime('%Y')}"
         return f"{self.date1.strftime('%d %b %Y')} - {self.date2.strftime('%d %b %Y')}"
                 
-    def str_months(self):
+    def str_months(self) -> str:
         if self.date1.year == self.date2.year:
             if self.date1.month == self.date2.month:
                 return self.date1.strftime('%b %Y')
@@ -309,6 +309,7 @@ def process_images(folder_name: str):
             
             _chap_md["StartDate"] = _photos_md_records[0].get("DateTime")
             _chap_md["EndDate"] = _photos_md_records[-1].get("DateTime")
+            _chap_md["DateRangeString"] = DateRange(_chap_md["StartDate"], _chap_md["EndDate"], fmt='%Y:%m:%d %H:%M:%S').str_days()
             
             chapter_metadata_records.append(_chap_md)
             
@@ -327,6 +328,10 @@ def process_images(folder_name: str):
             "Bounds": bounds,
             "Chapters": chapter_metadata_records
         }
+        metadata["StartDate"] = chapter_metadata_records[0]["StartDate"]
+        metadata["EndDate"] = chapter_metadata_records[-1]["EndDate"]
+        metadata["DateRangeString"] = DateRange(metadata["StartDate"], metadata["EndDate"], fmt='%Y:%m:%d %H:%M:%S').str_months()
+            
             
         with Path(MAP_ASSETS_PATH).joinpath(f"metadata-{folder_name}.json").open("w") as _f:
             json.dump(metadata, _f, indent=2)

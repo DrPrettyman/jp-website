@@ -460,7 +460,7 @@ const TravelMap = ({
                 >
                   {chapter.Chapter}. {chapter.Title} ({chapter.nPhotos} locations)
                 </p>
-                <p className="text-xs text-gray-500 mb-1">{chapter.StartDate} to {chapter.EndDate}</p>
+                <p className="text-xs text-gray-500 mb-1">{chapter.DateRangeString}</p>
                 {chapter.Summary && (
                   <p className="text-sm text-gray-600">{chapter.Summary}</p>
                 )}
@@ -549,8 +549,11 @@ const TravelMap = ({
             </div>
 
             {/* Chapter/Photo info and navigation in pill-shaped container - hidden on mobile */}
-            <div className="hidden sm:flex items-center shadow-2xl justify-between bg-gray-100/85 rounded-full px-4 py-2">
-              <p className="text-sm text-gray-500">
+            <div
+              className="hidden sm:flex items-center shadow-2xl justify-between rounded-full px-4 py-2"
+              style={{ backgroundColor: `${getChapterColor(selectedLocation.Chapter)}20` }}
+            >
+              <p className="text-sm text-gray-700">
                 Chapter {selectedLocation.Chapter} • Photo {selectedLocation.Photo}
               </p>
               <div className="flex gap-1 bg-white rounded-full p-1">

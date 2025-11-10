@@ -327,8 +327,8 @@
         },
         {
             "Title": "South-west Iberia",
-            "Dates": "2020-01-08:2020-03-16",
-            "Text": "We spent the week around New Year's 2019/20 in Sheffield, flying from Málaga airport. After getting back to Málaga we found we'd missed King's Day: we didn't know about it at the time, but we now look forward to it every year. We spent the next couple of months around the South West of the peninsula, bouncing between Spain and Portugal, visiting Cádiz, Sevilla, Faro, Lisbon and loads of smaller places. We went down to Tarifa for the first time and saw Africa across the water, tantilisingly close; we went to Sagres in Portugal, the south-west tip of Continental Europe. Finally, we started hearing rumors about some pandemic somewhere far away; living in a van with limited internet access we weren't really sure of the situation: everything seemed fine to us, no zombies anywhere, then one day we pulled up to a campsite and the gate was locked despite there being campers inside. A woman came up to the gate wearing a mask and told us to go away, and that was that.",
+            "Dates": "2020-01-08:2020-02-19",
+            "Text": "We spent the week around New Year's 2019/20 in Sheffield, flying from Málaga airport. After getting back to Málaga we found we'd missed King's Day: we didn't know about it at the time, but we now look forward to it every year. We spent the next couple of months around the South West of the peninsula, bouncing between Spain and Portugal, visiting Cádiz, Sevilla, Faro, Gibraltar and loads of smaller places. We went down to Tarifa for the first time and saw Africa across the water, tantilisingly close; we went to Sagres in Portugal, the south-west tip of Continental Europe.",
             "Photos": [
                 {
                     "Title": "El Torcal de Antequera",
@@ -449,7 +449,14 @@
                     "Title": "Sagres, the end of Europe",
                     "File": "sagres",
                     "Description": ""
-                },
+                }
+            ]
+        },
+        {
+            "Title": "Lisbon and Lockdown",
+            "Dates": "2020-02-21:2020-05-19",
+            "Text": "In February 2020 we experienced our first Carnival in Torres Vedras, Portugal, and then spent some weeks in Lisbon, one of our favourite cities in the world, where some friends of ours came to visit from England. We dropped back into Spain (Extremadura) for a couple of days to see Wolf Vostell's insane artworks, and then back into Portugal. Finally, we started hearing rumors about some pandemic somewhere far away; living in a van with limited internet access we weren't really sure of the situation: everything seemed fine to us, no zombies anywhere, then one day we pulled up to a campsite and the gate was locked despite there being campers inside. A woman came up to the gate wearing a mask and told us to go away, and that was that. For the next two months we stayed put on the beach of Praia de Mira, having a truly glorious lockdown: that beach was our home and we will always remember it fondly.",
+            "Photos": [
                 {
                     "Title": "Carnival, Torres Vedras",
                     "File": "carnival",
@@ -499,14 +506,7 @@
                     "Title": "Aveiro",
                     "File": "aveiro",
                     "Description": "Last stop before lockdown. we wandered around and looked at the beautiful boats, but things were getting weird. We were parked next to a hotel and we saw the staff carrying out dozens of matresses to be burned. It's a charming little place though."
-                }
-            ]
-        },
-        {
-            "Title": "Lockdown",
-            "Dates": "2020-03-17:2020-05-19",
-            "Text": "",
-            "Photos": [
+                },
                 {
                     "Title": "Praia da Vagueira",
                     "File": "praia_da_vagueira",

@@ -25,7 +25,7 @@ const Travels = () => {
         <div className="grid grid-cols-1 gap-6">
           <TravelCard
             title="Van Life Part I"
-            dates="2019-2021"
+            dates="Oct 2019 — June 2020"
             imagePath="/images/vanlife_wide.jpeg"
             imageAlt="Van Life Part I"
             tags={["Europe", "Vanlife"]}

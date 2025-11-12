@@ -231,7 +231,7 @@
 
 % An itemize-style list with little space between items
 \newenvironment{innerlist}[1][\enskip\textbullet]{
-	\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=1pt,topsep=2pt,partopsep=0pt]
+	\begin{itemize}[#1,leftmargin=*,rightmargin=30pt,parsep=0pt,itemsep=1pt,topsep=2pt,partopsep=0pt]
 }{\end{itemize}}
 
 \newenvironment{innerlist2}[1][\enskip\textasteriskcentered]{
@@ -305,7 +305,7 @@
 
 
 \section{Personal Statement}
-I built an ML-powered SaaS platform that increased SEO productivity by $20\times$, taking Blink SEO's internal tooling from spreadsheets to a marketable product now used by multiple agencies: \href{https://www.macaroni.works}{\textit{Macaroni Software}}. I created the role after being hired as a one-man data/dev team with the brief: `use data to improve processes'. \\
+I built an ML-powered SaaS platform that increased SEO productivity by $20\times$, taking Blink SEO's internal tooling from spreadsheets to a marketable product now used by multiple agencies: \href{https://www.macaroni.works}{\textit{Macaroni Software}}. I created the role after being hired as a one-man data/dev team with the brief: ``use data to improve processes''. \\
 My research at the National Physical Laboratory produced a novel scaling indicator for tipping point detection in multidimensional time series, published in \href{https://doi.org/10.1088/1748-9326/ac526f}{Environmental Research Letters, 2022}.\\
 I am seeking a remote data science role where I can build production systems and continue solving complex technical problems.
 
@@ -326,10 +326,10 @@ I am seeking a remote data science role where I can build production systems and
 \vspace{-6pt}
 \begin{innerlist}
 	% \item Deployment to remote UNIX server using Docker and GitHub.
-	\item Regular use of Python libraries: ScikitLearn, Numpy, Pandas, NLTK, Matplotlib, Plotly, PyTorch.
+	\item Regular use of Python libraries: ScikitLearn, Numpy, Pandas, NLTK, Matplotlib, Plotly.
 	\item Python development: Data Science/ML, async, package management, REST, GraphQL.
 	\item Full stack development with Bash, Python, Google Cloud Platform, SQL and JavaScript.
-	\item Huggingface transformers and LLMs, ollama LLM, OpenAI Assistant API.
+	\item Huggingface transformers and LLMs, Ollama, OpenAI Assistant API.
 	\item Experience with C++, MATLAB, Retool, data engineering, dashboards, scientific computing. 
 \end{innerlist}
 
@@ -345,19 +345,18 @@ I am seeking a remote data science role where I can build production systems and
 \textbf{Data Scientist} — \href{https://www.blinkseo.co.uk}{Blink SEO} / \href{https://www.macaroni.works}{Macaroni Software} \hfill \emph{Nov. 2021 to Dec. 2024} \\
 \vspace{-6pt}
 
-Built a full-stack ML platform from scratch, increasing team productivity by $20\times$ and 
-enabling year-long SEO campaigns to be \href{https://www.linkedin.com/posts/sam-wright-17b6ab6_shopify-seo-activity-7170336529146441729-JGDn?utm_source=combined_share_message&utm_medium=member_desktop}{delivered in weeks}.\\
+Built a full-stack ML platform from scratch, increasing team productivity by $20\times$ and enabling year-long SEO campaigns to be \href{https://www.linkedin.com/posts/sam-wright-17b6ab6_shopify-seo-activity-7170336529146441729-JGDn?utm_source=combined_share_message&utm_medium=member_desktop}{delivered in weeks}.\\
 
 \vspace{-6pt}
 
 \begin{innerlist}
+	\item Developed NLP-powered keyword clustering, combined with quantitative data, reducing manual work from days to minutes.
+	\item Architected Python backend (\textit{GCP Compute Engine}) integrated with \textit{BigQuery} to process 50M+ data points daily from multiple APIs.
 	\item Worked with the team to replicate and then improve their (spreadsheet-based) processes with continual feedback and deployment.
-	\item Macaroni does the (typically manual) data-engineering for SEO by aggregating data from various sources, streamed daily (or on request) to a \emph{BigQuery} database via the python backend (\textit{GCP Compute Engine}: Linux/Debian) which utilises various REST APIs and preprocessing steps.
-	\item Client onboarding, data imports, data analysis tasks and ML-assisted recommendations can be triggered in the app and run asynchronously in the backend using a (\textit{PostgreSQL}-based) job-queue system which I wrote for this purpose.
-	\item Quantitative data are used for various visualisations in the app, powered by \textit{Plotly}.
-	\item Text data (on-page content and search terms) are processed and combined with quantitative data (clicks, impressions, etc.) to surface actionable recommendations for new content and site taxonomy. This uses NLP and Clustering algorithms (\textit{NLTK}, \textit{huggingface}, \textit{ScikitLearn}) but also a deep understanding of SEO, necessitating regular exchanges with the SEO delivery team and frequent iterations. 
-	\item I also integrated an LLM (\textit{huggingface}) to generate ready-to-go suggestions for content gaps, allowing customers to see immediate impact. 
-	\item Frequent, one-off data tasks for the delivery and management teams including data engineering, content generation, and providing analyses and visualisations for clients and investors. 
+	\item Created a job-queue system (\textit{PostgreSQL}) to run client onboarding, data imports, data analysis and ML tasks asynchronously in the backend.
+	\item Built interactive dashboards (\textit{Plotly} + \textit{JavaScript}) enabling clients to identify and prioritise revenue opportunities in minutes.
+	\item Integrated LLMs (\textit{huggingface}) to generate ready-to-go suggestions for content gaps, allowing customers to see immediate impact. 
+	\item Delivered ad-hoc analyses and data engineering for C-suite investor presentations and internal reporting.
 \end{innerlist}
 
 \vspace{14pt}
@@ -370,7 +369,7 @@ Produced a novel scaling indicator for tipping point detection in multidimension
 \vspace{-6pt}
 
 \begin{innerlist}
-	\item Presented results for stakeholder meetings at NLP, in published articles, and at international conferences. 
+	\item Presented results for stakeholder meetings at NPL, in published articles, and at international conferences. 
 	\item Developed methods to detect tipping points in dynamical systems, working with large time series datasets and building stochastic models to test hypotheses. 
 	\item Code written in \textit{MATLAB} and \textit{Python}. Visualisations produced using \textit{Matplotlib} and \textit{XMGrace}.
 	\item Accessing, cleaning, interpolating and correctly interpreting large, raw meteorological datasets.

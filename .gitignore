@@ -47,5 +47,11 @@ LaTeX_CV/*/*.fdb_latexmk
 LaTeX_CV/*/*.out
 LaTeX_CV/*/*.synctex.gz
 
+public/cv/*/*.aux
+public/cv/*/*.fls
+public/cv/*/*.fdb_latexmk
+public/cv/*/*.out
+public/cv/*/*.synctex.gz
+
 # Gemini
 GEMINI.md

@@ -274,6 +274,16 @@
 	\TeX}}
 \providecommand\Matlab{\textsc{MATLAB}}
 
+% Work experience subsection with PDF navigation
+% Usage: \worksubsection{Job Title}{Company (with links)}{Date Range}
+\newcommand{\worksubsection}[3]{
+	\phantomsection
+	\addcontentsline{toc}{subsection}{#1 — #2}
+	\setlength\tabcolsep{0pt}
+	\noindent\textbf{#1} — #2 \hfill \emph{#3} \\
+	\vspace{-6pt}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -340,10 +350,8 @@ I am seeking a remote data science role where I can build production systems and
 \vspace{-10pt}
 
 \section{Professional Experience}
-\setlength\tabcolsep{0pt}
 
-\textbf{Data Scientist} — \href{https://www.blinkseo.co.uk}{Blink SEO} / \href{https://www.macaroni.works}{Macaroni Software} \hfill \emph{Nov. 2021 to Dec. 2024} \\
-\vspace{-6pt}
+\worksubsection{Data Scientist}{\href{https://www.blinkseo.co.uk}{Blink SEO} / \href{https://www.macaroni.works}{Macaroni Software}}{Nov. 2021 to Dec. 2024}
 
 Built a full-stack ML platform from scratch, increasing team productivity by $20\times$ and enabling year-long SEO campaigns to be \href{https://www.linkedin.com/posts/sam-wright-17b6ab6_shopify-seo-activity-7170336529146441729-JGDn?utm_source=combined_share_message&utm_medium=member_desktop}{delivered in weeks}.\\
 
@@ -360,9 +368,7 @@ Built a full-stack ML platform from scratch, increasing team productivity by $20
 \end{innerlist}
 
 \vspace{14pt}
-\textbf{Data Science Researcher} — \href{http://www.npl.co.uk}{National Physical Laboratory (NPL)} \hfill \emph{Sep. 2015 to Feb. 2021} \\
-
-\vspace{-6pt}
+\worksubsection{Data Science Researcher}{\href{http://www.npl.co.uk}{National Physical Laboratory (NPL)}}{Sep. 2015 to Feb. 2021}
 
 Produced a novel scaling indicator for tipping point detection in multidimensional time series.\\
 
@@ -380,9 +386,7 @@ Produced a novel scaling indicator for tipping point detection in multidimension
 
 \sectioncont{Professional Experience}
 
-\textbf{Associate Lecturer} — \href{https://www.shu.ac.uk/about-us/academic-departments/engineering-and-mathematics}{Sheffield Hallam University} \hfill \emph{Sep. 2017 to Jul. 2019} \\
-
-\vspace{-6pt}
+\worksubsection{Associate Lecturer}{\href{https://www.shu.ac.uk/about-us/academic-departments/engineering-and-mathematics}{Sheffield Hallam University}}{Sep. 2017 to Jul. 2019}
 
 Taught mathematics, statistics and computing courses from Foundation Degree to Masters.\\
 
@@ -395,8 +399,7 @@ Taught mathematics, statistics and computing courses from Foundation Degree to M
 \end{innerlist} 
 \vspace{10pt}
 
-\textbf{Informatics developer (internship)} — \href{https://www.metoffice.gov.uk/research/foundation/informatics-lab/what-we-do}{UK Met Office Informatics Lab} \hfill \emph{Jun. to Aug. 2017} \\
-\vspace{-6pt}
+\worksubsection{Informatics developer (internship)}{\href{https://www.metoffice.gov.uk/research/foundation/informatics-lab/what-we-do}{UK Met Office Informatics Lab}}{Jun. to Aug. 2017}
 
 A three-month project assessing the viability of using live data from amateur meteorologists to augment official observation data. \\
 

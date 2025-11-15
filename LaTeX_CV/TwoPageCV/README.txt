@@ -1,1 +1,0 @@
-After compiling the Latex, copy the file pdf to /public/documents and rename JPrettymanCV.pdf

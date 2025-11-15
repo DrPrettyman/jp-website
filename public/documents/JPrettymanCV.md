@@ -10,7 +10,7 @@ My Ph.D. focussed on predicting tipping points in dynamical systems using multi-
 
 I work in mainly in Python and SQL, but I have experience with creating and maintaining databases, dashboards and full-stack software projects. I have implemented and used a variety of Machine Learning algorithms.
 
-In my most recent role at Blink SEO I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: *Macaroni Software*. You can find a pdf-format CV [here](https://j.prettyman.me/documents/JPrettymanCV.pdf).
+In my most recent role at Blink SEO I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: *Macaroni Software*. You can find a pdf-format CV [here](https://j.prettyman.me/cv/two_page/JPrettymanCV.pdf).
 
 ## Data Scientist
 
@@ -168,7 +168,7 @@ Data is useless if it doesn't tell you anything. I've produced visualisations th
 
 # Academic Background
 
-At Edinburgh I studied Pure Mathematics but switched to more applied mathematics at the *Mathematics of Planet Earth* Centre for Doctoral Training. My Masters taught courses covered Probability, Statistics, Computational Mathematics, and Dynamical Systems. My Ph.D. focused on the application of dynamical systems theory to the study of tipping points in geophysical systems. You can find a pdf-format CV [here](https://j.prettyman.me/documents/JPrettymanCV.pdf).
+At Edinburgh I studied Pure Mathematics but switched to more applied mathematics at the *Mathematics of Planet Earth* Centre for Doctoral Training. My Masters taught courses covered Probability, Statistics, Computational Mathematics, and Dynamical Systems. My Ph.D. focused on the application of dynamical systems theory to the study of tipping points in geophysical systems. You can find a pdf-format CV [here](https://j.prettyman.me/cv/two_page/JPrettymanCV.pdf).
 
 ## Ph.D. Mathematics
 

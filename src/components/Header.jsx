@@ -68,10 +68,10 @@ const Header = ({ fullWidth = false }) => {
                 <LuGithub className="h-5 w-5" />
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">GitHub</span>
               </a>
-              <a 
-                href="/documents/JPrettymanCV.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="/cv/two_page/JPrettymanCV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 <TbFileSmile className="h-5 w-5" />

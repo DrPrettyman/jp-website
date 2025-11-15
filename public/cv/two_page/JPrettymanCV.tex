@@ -284,6 +284,17 @@
 	\vspace{-6pt}
 }
 
+% Education subsection with PDF navigation
+% Usage: \edusubsection{Degree}{Institution}{Honors/Grade (optional)}
+\newcommand{\edusubsection}[3]{
+	\phantomsection
+	\addcontentsline{toc}{subsection}{#1 — #2}
+	\setlength\tabcolsep{0pt}
+	\noindent\textbf{#1} — \textbf{#2}%
+	\if\relax\detokenize{#3}\relax\else\ (\emph{#3})\fi\\
+	\vspace{-2pt}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -440,10 +451,8 @@ A three-month project assessing the viability of using live data from amateur me
 
 
 \section{Academic background}
-\setlength\tabcolsep{0pt}
 
-\textbf{Ph.D. Mathematics} — \textbf{University of Reading}\\
-\vspace{-2pt}
+\edusubsection{Ph.D. Mathematics}{University of Reading}{}
 \hspace{2pt} \textbf{Thesis:} \href{http://centaur.reading.ac.uk/98364/1/23022044_Prettyman_Thesis_Joshua\%20Prettyman.pdf}{\emph{Tipping Points and Early Warning Signals with Applications to Geophysical Data}}.
 \vspace{4pt}
 \begin{innerlist}
@@ -460,8 +469,7 @@ A three-month project assessing the viability of using live data from amateur me
 \end{innerlist}
 \vspace{14pt}
 
-\textbf{M.Res. Mathematics} — \textbf{Imperial College London} (\emph{Distinction})\\
-\vspace{-2pt}
+\edusubsection{M.Res. Mathematics}{Imperial College London}{Distinction}
 \hspace{2pt} \textbf{Dissertation:} \href{https://github.com/DrPrettyman/dissertations/blob/main/MresDiss_Prettyman.pdf}{\emph{Mesh Generation Using Solutions of an Optimal Transport Problem}}. 
 \vspace{4pt}
 \begin{innerlist}
@@ -474,8 +482,7 @@ A three-month project assessing the viability of using live data from amateur me
 \end{innerlist}
 \vspace{14pt}
 
-\textbf{MA Mathematics} — \textbf{University of Edinburgh} (\emph{First Class Hons.}) \\
-\vspace{-2pt}
+\edusubsection{MA Mathematics}{University of Edinburgh}{First Class Hons.}
 \hspace{2pt} \textbf{Dissertation:} \href{https://github.com/DrPrettyman/dissertations/blob/main/MaDiss_Prettyman.pdf}{\emph{Growth and its Applications in Graph Theory}}. 
 \vspace{4pt}
 \begin{innerlist}

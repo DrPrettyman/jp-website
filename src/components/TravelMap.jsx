@@ -62,10 +62,7 @@ const createChapterIcon = (chapter) => {
     `)}`,
     iconSize: [25, 41],
     iconAnchor: [12.5, 41],
-    popupAnchor: [0, -41],
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-    shadowSize: [41, 41],
-    shadowAnchor: [12, 41]
+    popupAnchor: [0, -41]
   });
 };
 

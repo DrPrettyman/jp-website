@@ -3,7 +3,9 @@
     "allow": [
       "WebFetch(domain:docs.claude.com)",
       "Bash(npm install:*)",
-      "Bash(perl -i -pe:*)"
+      "Bash(perl -i -pe:*)",
+      "Bash(npm run build:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

@@ -34,6 +34,19 @@ npm run dev
   - Includes a list of projects with a card component for each.
 
 
+## Sitemap
+
+A sitemap is automatically generated during `npm run build` using `vite-plugin-sitemap`.
+
+To add new pages to the sitemap, edit `vite.config.js`:
+- `staticRoutes` - Add new page routes
+- `blogPosts` - Add new blog post IDs
+- `blogTags` - Add new blog tags
+
+Generated files appear in `dist/`:
+- `sitemap.xml`
+- `robots.txt`
+
 ## Components:
 
 - `CVEntry`

@@ -71,9 +71,24 @@ Interactive travel visualization using React Leaflet with the following features
 - Check package.json dependencies before adding new libraries
 - Components use standard React patterns with hooks
 
+## Sitemap Maintenance
+The sitemap is auto-generated at build time via `vite-plugin-sitemap`. Configuration is in `vite.config.js`.
+
+**When adding new routes:**
+1. Add static routes to the `staticRoutes` array
+2. Add new blog post IDs to the `blogPosts` array
+3. Add new blog tags to the `blogTags` array
+
+**Generated files (in `dist/` on build):**
+- `sitemap.xml` - All page URLs for search engines
+- `robots.txt` - Crawler directives with sitemap reference
+
+**Exclusions:** Non-page HTML files (Google verification, `/documents/`) are excluded via the `exclude` option.
+
 ## Important Files to Reference
 - `src/App.jsx`: Main routing configuration
 - `src/components/Layout.jsx`: Page layout wrapper
+- `vite.config.js`: Build config including sitemap generation
 - `package.json`: Dependencies and scripts
 - `README.md`: Project documentation and structure details
 

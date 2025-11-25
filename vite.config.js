@@ -44,7 +44,7 @@ export default defineConfig({
   plugins: [
     react(),
     Sitemap({
-      hostname: 'https://joshuaprettyman.com', // Update with your actual domain
+      hostname: 'https://joshua.prettyman.me',
       dynamicRoutes: [...staticRoutes, ...dynamicRoutes],
       outDir: 'dist',
       generateRobotsTxt: true,

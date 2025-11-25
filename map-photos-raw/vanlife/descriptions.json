@@ -4,7 +4,6 @@
     "Chapters": [
         {
             "Title": "Setting off",
-            "Dates": "2019-07-13:2019-10-21",
             "Text": "During the four years of my PhD I spent a lot of time dreaming of vanlife, and watching a lot of youtube videos for inspiration. On the 13th of July 2019 I bought a Mercedes Sprinter (long wheel base) for £7,000. It had been used as a delivery van previously and had 160k miles on the clock but was in good condition. I converted it into a campervan by cladding the interior with pine, cutting holes in the sides for windows, and putting in beds, a kitchen, electric (solar powered) and storage spaces. I built a composting toilet and fitted some back seats for the children which I picked up from a guy who was taking them out of an old minivan, also for a camper conversion. In October that year we finally set off, planning to travel the whole of Europe — if only we'd known covid was coming!",
             "Photos": [
                 {
@@ -26,7 +25,6 @@
         },
         {
             "Title": "A España",
-            "Dates": "2019-10-21:2019-11-07",
             "Text": "We drove down to the south coast in one go with a Dover-Calais ferry booked. We were giving a lift to a friend of ours who's parents lived near Düsseldorf so we passed quickly through France, Belgium and The Netherlands, stopping for a few ours at Doel (near Antwerp), an abandoned town covered with street art. After Düsseldorf we headed through Luxembourg and down through France to Andorra.",
             "Photos": [
                 {
@@ -118,7 +116,6 @@
         },
         {
             "Title": "De Brava a Blanca",
-            "Dates": "2019-11-08:2019-12-04",
             "Text": "My first view of Spain came with blue skies and sunshine as we headed down the Pyrenees into Catalunya. Just hours after being wrapped up warm for the cold and cloud of Andorra la Vella we were sitting in the sun at a café in Montserrat, and the next day lying on the beach in Badalona. \nIn one month we traveled from the Catalonian Costa Brava down along Costa Dorada, through Deltebre, ventured inland of the Valencian Community, spent some time in Valencia itself, and continued down to Alicante. \nWe drank wine and beer, and ate churros, in local cafés; we experienced wild swimming in thermally heated rivers and pools; we saw forrests, mountains and beaches. What an introduction to the country!",
             "Photos": [
                 {
@@ -230,7 +227,6 @@
         },
         { 
             "Title": "December in Spain",
-            "Dates": "2019-12-05:2019-12-28",
             "Text": "From Alicante we carried on down the coast to Almería then headed inland to Tabernas Desert, the location of many \"American\" westerns, which has since become one of our favourite places in the world. From there we drove along to Granada, found a few more thermally-heated pools and then headed back down to the Costa Del Sol for Christmas on a secluded beach near Nerja where where we were able to lie in the sun and swim in the sea. Naked. In December.",
             "Photos": [
                 {
@@ -327,7 +323,6 @@
         },
         {
             "Title": "South-west Iberia",
-            "Dates": "2020-01-08:2020-02-19",
             "Text": "We spent the week around New Year's 2019/20 in Sheffield, flying from Málaga airport. After getting back to Málaga we found we'd missed King's Day: we didn't know about it at the time, but we now look forward to it every year. We spent the next couple of months around the South West of the peninsula, bouncing between Spain and Portugal, visiting Cádiz, Sevilla, Faro, Gibraltar and loads of smaller places. We went down to Tarifa for the first time and saw Africa across the water, tantilisingly close; we went to Sagres in Portugal, the south-west tip of Continental Europe.",
             "Photos": [
                 {
@@ -454,7 +449,6 @@
         },
         {
             "Title": "Lisbon and Lockdown",
-            "Dates": "2020-02-21:2020-05-19",
             "Text": "In February 2020 we experienced our first Carnival in Torres Vedras, Portugal, and then spent some weeks in Lisbon, one of our favourite cities in the world, where some friends of ours came to visit from England. We dropped back into Spain (Extremadura) for a couple of days to see Wolf Vostell's insane artworks, and then back into Portugal. Finally, we started hearing rumors about some pandemic somewhere far away; living in a van with limited internet access we weren't really sure of the situation: everything seemed fine to us, no zombies anywhere, then one day we pulled up to a campsite and the gate was locked despite there being campers inside. A woman came up to the gate wearing a mask and told us to go away, and that was that. For the next two months we stayed put on the beach of Praia de Mira, having a truly glorious lockdown: that beach was our home and we will always remember it fondly.",
             "Photos": [
                 {
@@ -551,7 +545,6 @@
         },
         {
             "Title": "Porto to Calais",
-            "Dates": "2020-05-20:2020-06-23",
             "Text": "",
             "Photos": [
                 {
@@ -685,51 +678,6 @@
                     "Description": ""
                 }
             ]
-        },
-        {
-            "Title": "Summer in Britain",
-            "Dates": "2020-06-24:2020-09-27",
-            "Text": ""
-        },
-        {
-            "Title": "South for the winter",
-            "Dates": "2020-09-28:2020-11-06",
-            "Text": ""
-        },
-        {
-            "Title": "Costa del Sol",
-            "Dates": "7 November – 10 December 2020",
-            "Text": ""
-        },
-        {
-            "Title": "Navidad",
-            "Dates": "11 December 2020 – 4 January 2021",
-            "Text": ""
-        },
-        {
-            "Title": "Exodus",
-            "Dates": "5 January – 13 February 2021",
-            "Text": ""
-        },
-        {
-            "Title": "Journey to Catalunya",
-            "Dates": "15 February – 21 March 2021",
-            "Text": ""
-        },
-        {
-            "Title": "Galicia and The North",
-            "Dates": "22 March – 19 May 2021",
-            "Text": ""
-        },
-        {
-            "Title": "Return to Catalunya",
-            "Dates": "20 May – 1 July 2021",
-            "Text": ""
-        },
-        {
-            "Title": "La Fiesta Final",
-            "Dates": "2 – 13 July 2021",
-            "Text": ""
         }
     ]
 }

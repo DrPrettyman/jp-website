@@ -1,0 +1,77 @@
+[
+    {
+        "company": "Resend",
+        "title": "Data Scientist",
+        "description": "Email is unlike any other medium in the world. With just an address, anyone can talk to anyone, no matter their location, status, or class. It's democratized access, it's a sacred privilege, and it's worth protecting at all costs.\nResend is building the most accessible email platform for developers. As we've grown to over 15K customers and continue to onboard thousands of new users every day, the pressure of maintaining a safe place for good senders continues to build up.\nAs the first Data Scientist on our Trust & Safety squad, you will wear many investigative hats— identifying abuse patterns, designing purpose build data sets, and developing models that prevent harmful users and enable good senders and scale.\nIn this role, you will…\n\n- Facilitate a novel, zero-friction approach to email sending\n- Investigate the root-causes of anomalies and gang attacks\n- Analyze signal effectiveness: precision, recall, drift, overlap, etc\n- Consult with data engineering to shape purpose-built data pipelines\n- Deeply understand and stay up to date on email abuse vectors and trends\n- Build dashboards and alerts for real-time visibility into behavior and policy violations\n- Build machine learning models to prevent abuse at scale with zero false-positive budget\n\nWho You Are...\n\n- Fluent in SQL and Python (Javascript is a plus)\n- Completed a relevant scientific or mathematical degree\n- Proven ability to productize algorithms for real-time systems\n- You thrive in ambiguity and can build frameworks out of thin air\n- Great communicator that can explain complicated models to non-data folks\n- +2 years of professional experience in relevant role working with massive data sets",
+        "questions": [
+            {
+                "question": "Why do you want to join us?",
+                "answer": "The abuse detection problem interests me because it's not static: bad actors adapt, so the signals that work today drift or get gamed. That's closer to the kind of detection problems I worked on in my PhD (identifying early warning signals in noisy systems where the underlying dynamics shift) than typical classification tasks. I like that it demands ongoing investigation rather than train-once-deploy-forever.\n\nAlso, being the first Data Scientist on Trust & Safety means building the frameworks from scratch. I did that at Blink SEO - joined as their first Data Scientist when everything was spreadsheets and built the full ML platform that's now a standalone product. I'm really motivated by this type of zero-to-one work."
+            },
+            {
+                "question": "Tell us about your favorite model you've built.",
+                "answer": "At Blink SEO I was really hired just to improve their internal processes by moving the \"download csv, open in excel\" process to databases and dashboards. The software I built as a result increased productivity by 20 times.\n\nOne major time-consuming task for SEO for e-commerce stores is to identify opportunities for new collection pages (which are likely to show in search results). I solved this problem by automating the cleaning, embedding and clustering of Google search terms (weighted for number of searches), then separately clustering the store's products based on embedded product descriptions and metadata, and finally using a weighted centroid matching to identify groups of products which would make a promising new collection. Thanks to the data pipelines and automations I had built, I was able to incorporate this into the software so that the user can click a button to generate these collection opportunities.\n\nThis probably had the largest impact on ROI of all the features because these collection pages are extremely valuable. For our internal team, identifying these opportunities manually (in spreadsheets) was one of the most time-consuming tasks."
+            }
+        ]
+    },
+    {
+        "company": "Room Price Genie",
+        "title": "Data Scientist",
+        "description": "",
+        "questions": [
+            {
+                "question": "What's Got You Excited About RoomPriceGenie?",
+                "answer": "This sounds like a great place to be an employee generally, and also a great place for me because it looks like there is lots of work to be done and I can imagine there are lots of ways to potentially optimise things. I'm really looking for something collaborative because I find the best work gets done when bouncing ideas around, both within the data team and between departments. I also appreciate the mention of \"ownership mentality\" because I tend to get attached to products and want to make things the best they can be, although I have learned not to become precious about individual features: the ownership is of the product, not the code."
+            },
+            {
+                "question": "What's Your Superpower?",
+                "answer": "I've always been a deep thinker. This was a great help getting my PhD, and it's also been useful as a developer. I'm continually saying: \"How will this scale?\"; \"How can we generalise this?\"; \"What's the best way to implement this? Here are five more ideas.\". It did take some time to get used to working outside of academia, trying to balance ideas with action, but I've worked a lot on time management since then and I find I enjoy working fast and operating with a CI/CD mindset."
+            },
+            {
+                "question": "What's your proudest moment?",
+                "answer": "At Blink SEO I was really hired just to improve their internal processes by moving the \"download csv, open in excel\" process to databases and dashboards. The software I built as a result increased productivity by 20 times. But I built it with scalability in mind from the start and always felt that there's no point inventing a chainsaw just to chop down one tree: you want to market the chainsaw. With the internal tool as an MVP, management were sufficiently impressed that they did decide to seek VC backing and launch my product as a SaaS business: Macaroni Software. That was a proud moment because it really validated my approach."
+            }
+        ]
+    },
+    {
+        "company": "PEAS",
+        "title": "Data Scientist",
+        "description": "",
+        "questions": [
+            {
+                "question": "Can you describe a time when you realised your code in Python or SQL wasn't the most efficient way of doing something? What changes did you make so it became more efficient?",
+                "answer": "When I built the data pipeline at Blink SEO I initially had a python script which streamed data daily from multiple sources into a BigQuery database, and then several SQL table functions to aggregate over different periods (last 28 days, last 90 days, etc.) which powered the various charts and tables in the dashboards I had created. As the product scaled this became very costly so I switched to using views rather than static tables, and also cached daily aggregates on a rolling basis. This required a bit more work but cut database compute costs by 90% and also sped up the user experience."
+            },
+            {
+                "question": "Looking at the job description, which area do you think might be the biggest stretch for you and where you'd like to grow?",
+                "answer": "Looking at the job description, I feel I'm familiar with most of the requirements: I have developed and maintained data pipelines before; worked with other developers and stake-holders to ideate and realise solutions; and, working at a small start-up, I have lots of experience in delivering ad-hoc projects alongside working on bigger goals. But I haven't actually worked with DataBricks before, although I have read a lot about it and would be excited to see what I could achieve. It's a really popular platform so gaining experience with it would be fantastic, and I'm sure I could pick it up easily enough given my previous experience."
+            },
+            {
+                "question": "How does this position align with your career aspirations? Feel free to share specific goals or directions you're aiming for.",
+                "answer": "I'm always excited to learn and grow in the data sciences and to use my skills to make processes simpler for others, that's why I got into this field. Mostly, however, I would really appreciate the opportunity to work for a charity (I've been specifically looking for roles in the third sector), particularly in education. I'm passionate about the cause and it would be really inspiring to contribute to making a positive difference in the world. As an undergraduate at Edinburgh University I did a lot of voluntary outreach work in local schools and trained to be a teacher before my PhD, then when I was an lecturer (teaching, among other things, a course on Excel For Business) I volunteered to man the \"maths help desk\". Somehow I've managed to end up working in data so it would be wonderful to be able to apply these skills I now have to actually promoting education, particularly for those who have some of the poorest access in the world."
+            }
+        ]
+    },
+    {
+        "company": "Verif",
+        "title": "Data Scientist",
+        "description": "",
+        "questions": [
+            {
+                "question": "Please describe a project where you focused on developing statistical and machine learning models? Please share the numerical and statistical techniques you applied, and the impact your work had. If applicable, feel free to include any experience related to fraud detection.",
+                "answer": "I built the SaaS product Macaroni Software, which incorporated several machine learning and statistical techniques, whilst working for Blink SEO.\n\nOne major time-consuming task for SEO for e-commerce stores is to identify opportunities for new collection pages (which are likely to show in search results). I solved this problem by automating the cleaning, embedding and clustering of Google search terms (weighted for number of searches), then separately clustering the store's products based on embedded product descriptions and metadata, and finally using a weighted centroid matching to identify groups of products which would make a promising new collection. Thanks to the data pipelines and automations I had built, I was able to incorporate this into the software so that the user can click a button to generate these collection opportunities.\n\nThis probably had the largest impact on ROI of all the features because these collection pages are extremely valuable. For our internal team, identifying these opportunities manually (in spreadsheets) was one of the most time-consuming tasks. Management worked out that my software overall increased productivity by twenty times."
+            }
+        ],
+        "cover_letter": "I am writing to apply for the Data Scientist position on Verif's Fraud Engineering team. With over eight years of experience spanning production ML systems and applied research, I am drawn to the challenge of building detection systems that stay ahead of evolving threats.\nAt Blink SEO, I built a full-stack ML platform from the ground up—architecting a Python backend on GCP Compute Engine integrated with BigQuery to process over 50 million data points daily. I developed NLP-powered clustering models, created asynchronous job-queue systems in PostgreSQL, and deployed interactive dashboards that transformed how the team worked. This experience gave me a strong foundation in taking models from prototype to production at scale.\nMy PhD research at the National Physical Laboratory focused on detecting tipping points in complex systems—identifying early warning signals before critical transitions occur. While the domain was geophysical rather than fraud, the core challenge is analogous: recognising subtle patterns in noisy, high-dimensional data that precede significant events. This work sharpened my ability to develop novel detection strategies and validate hypotheses rigorously.\nI bring proficiency in Python, SQL, and the ML stack you've outlined (scikit-learn, Pandas, NumPy, Matplotlib), along with practical experience deploying models in cloud environments. I'm comfortable communicating technical findings to diverse stakeholders, having published in peer-reviewed journals and presented at international conferences.\nI would welcome the opportunity to contribute to Verif's next-generation fraud detection platform and help establish trust online.\nThank you for considering my application."
+    },
+    {
+        "company": "Cochrane",
+        "title":"Data Scientist",
+        "cover_letter": "I am interested in applying for the Data Scientist position. Looking over the job description I'm confident this is a good fit. \nIn my last role as a Data Scientist for Blink SEO I started out by building the database and backend system from scratch, which wasn't exactly what I'd expected but it gave me great experience writing python modules for data ingestion and cleaning; working in SQL; writing wrappers for web-based APIs; and  working closely with the delivery team to understand their processes and how I could automate these and present data usefully in dashboards. As the role progressed I added ML features into the software and built a user-friendly frontend in Retool as the software transitioned from an internal system to a SaaS app (Macaroni Software).\nFor Macaroni Software I was mainly focussed on NLP and clustering algorithms, although I have a broad knowledge of the ML landscape. My Ph.D. research involved detecting tipping points in dynamical systems using multi-dimensional time series data. For this I had to access large datasets using web APIs and I built stochastic models to test hypotheses. \nThank you for your consideration. I look forward to hearing from you and learning more about the specifics of this role. "
+    },
+    {
+        "company": "Tupl",
+        "title":"Data Scientist",
+        "cover_letter": "I am interested in applying for the Python Software Engineer position. Looking over the job description I'm confident this is a good fit. \nIn my last role at Blink SEO I was hired as a “Data Scientist” but started out by building the database and backend system from scratch, which wasn't exactly what I'd expected but it gave me great experience writing efficient python modules; serving our backend from a GCP Compute Engine instance (Debian); writing wrappers for web-based APIs;  and  working closely with the delivery team to understand their processes and how I could automate these. As the role progressed I added ML features into the software and built a user-friendly frontend in Retool as the software transitioned from an internal system to a SaaS app (Macaroni Software).\nI really enjoy writing in great python code, expanding my knowledge of the language an its libraries. \nThank you for your consideration. I look forward to hearing from you and learning more about the specifics of this role. "
+    }
+]

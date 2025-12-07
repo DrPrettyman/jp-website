@@ -5,7 +5,8 @@
       "Bash(npm install:*)",
       "Bash(perl -i -pe:*)",
       "Bash(npm run build:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []

@@ -49,6 +49,33 @@ const Travels = () => {
               </>
             }
           />
+
+          <TravelCard
+            title="Van Life Part II"
+            dates="June 2020 — Jul 2021"
+            imagePath="/images/vanlife_wide.jpeg"
+            imageAlt="Van Life Part I"
+            tags={["Europe", "Vanlife"]}
+            flags="🇬🇧 → 🇫🇷 → 🇧🇪 → 🇩🇪 → 🇱🇺 → 🇫🇷 → 🇦🇩 → 🇪🇸 → 🇵🇹"
+            link="/travel/vanlife2"
+            description={
+              <>
+                <p className='mb-2'>
+                  The first part of our five-year (on-and-off) adventure traveling across Europe in a converted Mercedes Sprinter van.
+                  From the UK through Belgium, Germany, Luxembourg, France and Andorra to Sunny Spain and Portugal.
+                </p>
+                <p className='mb-2'>
+                  After years of dreaming and months of building, with my PhD thesis submitted, we set off in late 2019
+                  to explore as much of Europe as possible...
+                </p>
+                <p className='mb-2'>
+                  Well, it didn't turn out quite as we'd planned because of that global pandemic, but we did spend our Lock-Down stuck on a beach in Portugal —
+                  not such a bad thing after all! At the end of this period, once travel restrictions had eased, we headed back to the UK for the
+                  summer before starting on Vanlife Part II.
+                </p>
+              </>
+            }
+          />
         </div>
 
       </ContentBlock>

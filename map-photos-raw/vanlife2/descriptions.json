@@ -4,18 +4,115 @@
     "Chapters": [
         {
             "Title": "Summer in Britain",
-            "Text": "",
+            "Text": "We spent the summer of 2020 back in Lockdown Britain and were surprised to find the \"restrictions\" not nearly as restrictive as they were in the rest of Europe. We managed to spend some time with friends and family, visited a few familiar places and ate some familiar food (Porter Pizza in Sheffield is our favourite). By the end of September we yearned for the road (and some sun) so set off again, stopping off at the Harry Potter studio tour on the way south: probably the highlight of the year.",
             "Photos": [
                 {
-                    "Title": "",
-                    "File": "",
+                    "Title": "Homework",
+                    "File": "makingmap",
+                    "Description": ""
+                },
+                {
+                    "Title": "Broken Road",
+                    "File": "brokenroad",
+                    "Description": ""
+                },
+                {
+                    "Title": "Camping",
+                    "File": "camping",
+                    "Description": ""
+                },
+                {
+                    "Title": "Our old friend",
+                    "File": "cock",
+                    "Description": ""
+                },
+                {
+                    "Title": "Restocking",
+                    "File": "books",
+                    "Description": ""
+                },
+                {
+                    "Title": "Hunstanton",
+                    "File": "hunstanton",
+                    "Description": ""
+                },
+                {
+                    "Title": "Sundown!",
+                    "File": "sundown",
+                    "Description": ""
+                },
+                {
+                    "Title": "Harry Potter Studio Tour",
+                    "File": "potter",
                     "Description": ""
                 }
             ]
         },
         {
             "Title": "South for the winter",
-            "Text": ""
+            "Text": "",
+            "Photos": [
+                {
+                    "Title": "Crossing",
+                    "File": "ferry",
+                    "Description": ""
+                },
+                {
+                    "Title": "Dunkerque Bunkers",
+                    "File": "dunkerque",
+                    "Description": ""
+                },
+                {
+                    "Title": "Ypres",
+                    "File": "ypres",
+                    "Description": ""
+                },
+                {
+                    "Title": "Roubaix",
+                    "File": "roubaix",
+                    "Description": ""
+                },
+                {
+                    "Title": "",
+                    "File": "",
+                    "Description": ""
+                },
+                {
+                    "Title": "",
+                    "File": "",
+                    "Description": ""
+                },
+                {
+                    "Title": "",
+                    "File": "",
+                    "Description": ""
+                },
+                {
+                    "Title": "",
+                    "File": "",
+                    "Description": ""
+                },
+                {
+                    "Title": "",
+                    "File": "",
+                    "Description": ""
+                },
+                {
+                    "Title": "",
+                    "File": "",
+                    "Description": ""
+                },
+                {
+                    "Title": "",
+                    "File": "",
+                    "Description": ""
+                },
+                {
+                    "Title": "",
+                    "File": "",
+                    "Description": ""
+                }
+            ]
         },
         {
             "Title": "Costa del Sol",

@@ -1,4 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+
+const CVRedirect = () => {
+  useEffect(() => {
+    window.location.href = '/cv/two_page/JPrettymanCV.pdf'
+  }, [])
+  return null
+}
 import Home from './pages/Home'
 import Education from './pages/Education'
 import Work from './pages/Work'
@@ -32,6 +40,7 @@ function App() {
         <Route path="/blog/tag/:tag" element={<Blog />} />
         <Route path="/travels" element={<Travels />} />
         <Route path="/travel/vanlife" element={<Vanlife />} />
+        <Route path="/cv" element={<CVRedirect />} />
       </Routes>
     </Router>
   )

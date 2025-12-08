@@ -36,7 +36,7 @@ LATEX_TEMPLATE = r"""\documentclass[11pt]{article}
 
 \vspace{4pt}
 
-\href{mailto:joshua@prettyman.me}{joshua@prettyman.me} \textbar{} \href{https://linkedin.com/in/joshuaprettyman}{linkedin.com/in/joshuaprettyman} \textbar{} \href{https://joshuaprettyman.com}{joshuaprettyman.com}
+\href{mailto:joshua@prettyman.me}{joshua@prettyman.me} \textbar{} \href{https://joshuaprettyman.com}{joshuaprettyman.com} \textbar{} \href{https://linkedin.com/in/joshuaprettyman}{in/joshuaprettyman}
 \end{center}
 
 \vspace{20pt}

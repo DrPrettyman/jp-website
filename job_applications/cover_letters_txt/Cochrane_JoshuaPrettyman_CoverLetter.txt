@@ -1,0 +1,10 @@
+Dear hiring team,
+
+I am interested in applying for the Data Scientist position. Looking over the job description I'm confident this is a good fit. 
+In my last role as a Data Scientist for Blink SEO I started out by building the database and backend system from scratch, which wasn't exactly what I'd expected but it gave me great experience writing python modules for data ingestion and cleaning; working in SQL; writing wrappers for web-based APIs; and  working closely with the delivery team to understand their processes and how I could automate these and present data usefully in dashboards. As the role progressed I added ML features into the software and built a user-friendly frontend in Retool as the software transitioned from an internal system to a SaaS app (Macaroni Software).
+For Macaroni Software I was mainly focussed on NLP and clustering algorithms, although I have a broad knowledge of the ML landscape. My Ph.D. research involved detecting tipping points in dynamical systems using multi-dimensional time series data. For this I had to access large datasets using web APIs and I built stochastic models to test hypotheses. 
+Thank you for your consideration. I look forward to hearing from you and learning more about the specifics of this role. 
+
+Yours sincerely,
+
+Joshua Prettyman

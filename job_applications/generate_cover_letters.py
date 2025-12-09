@@ -117,6 +117,23 @@ def generate_latex_cover_letter(
     return latex_template
 
 
+def generate_plain_text_cover_letter(
+    cover_letter: str,
+    addressee: str = "hiring team"
+) -> str:
+    """Generate plain text cover letter (no letterhead)."""
+    lines = [
+        f"Dear {addressee},",
+        "",
+        cover_letter,
+        "",
+        "Yours sincerely,",
+        "",
+        "Joshua Prettyman"
+    ]
+    return "\n".join(lines)
+
+
 def compile_latex_to_pdf(latex_source: str, output_path: Path) -> bool:
     """Compile LaTeX source to PDF."""
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -145,13 +162,17 @@ def compile_latex_to_pdf(latex_source: str, output_path: Path) -> bool:
 
 def sanitize_filename(name: str) -> str:
     """Convert company name to safe filename."""
-    return name.lower().replace(' ', '_').replace('/', '_').replace('\\', '_')
+    return name.replace(' ', '_').replace('/', '_').replace('\\', '_')
 
 
 def main():
     script_dir = Path(__file__).parent
     jobs_file = script_dir / "jobs.json"
     output_dir = script_dir / "cover_letters"
+    txt_output_dir = script_dir / "cover_letters_txt"
+
+    # Ensure output directories exist
+    txt_output_dir.mkdir(parents=True, exist_ok=True)
 
     # Read jobs data
     with open(jobs_file, 'r') as f:
@@ -179,14 +200,23 @@ def main():
         )
 
         # Compile to PDF
-        output_filename = f"cover_letter_{sanitize_filename(company)}.pdf"
-        output_path = output_dir / output_filename
+        base_filename = f"{sanitize_filename(company)}_JoshuaPrettyman_CoverLetter"
+        output_path = output_dir / f"{base_filename}.pdf"
 
         if compile_latex_to_pdf(latex_source, output_path):
             print(f"  Created: {output_path}")
             generated_count += 1
         else:
             print(f"  Failed to generate PDF for {company}")
+
+        # Generate plain text version
+        plain_text = generate_plain_text_cover_letter(
+            cover_letter=cover_letter,
+            addressee=addressee
+        )
+        txt_output_path = txt_output_dir / f"{base_filename}.txt"
+        txt_output_path.write_text(plain_text)
+        print(f"  Created: {txt_output_path}")
 
     print(f"\nGenerated {generated_count} cover letter(s)")
 

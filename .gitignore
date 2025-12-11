@@ -55,3 +55,6 @@ public/cv/*/*.synctex.gz
 
 # Gemini
 GEMINI.md
+
+# Job application files
+Jobgether*.html

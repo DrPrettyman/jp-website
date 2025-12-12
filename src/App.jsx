@@ -7,6 +7,14 @@ const CVRedirect = () => {
   }, [])
   return null
 }
+
+const TutorRedirect = () => {
+  useEffect(() => {
+    window.location.href = '/tutor_poster/tutor_poster.pdf'
+  }, [])
+  return null
+}
+
 import Home from './pages/Home'
 import Education from './pages/Education'
 import Work from './pages/Work'
@@ -41,6 +49,7 @@ function App() {
         <Route path="/travels" element={<Travels />} />
         <Route path="/travel/vanlife" element={<Vanlife />} />
         <Route path="/cv" element={<CVRedirect />} />
+        <Route path="/tutor" element={<TutorRedirect />} />
       </Routes>
     </Router>
   )

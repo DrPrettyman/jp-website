@@ -53,6 +53,12 @@ public/cv/*/*.fdb_latexmk
 public/cv/*/*.out
 public/cv/*/*.synctex.gz
 
+public/tutor_poster/*.aux
+public/tutor_poster/*.fls
+public/tutor_poster/*.fdb_latexmk
+public/tutor_poster/*.out
+public/tutor_poster/*.synctex.gz
+
 # Gemini
 GEMINI.md
 

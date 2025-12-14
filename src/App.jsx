@@ -8,12 +8,12 @@ const CVRedirect = () => {
   return null
 }
 
-const TutorRedirect = () => {
-  useEffect(() => {
-    window.location.href = '/tutor_poster/tutor_poster.pdf'
-  }, [])
-  return null
-}
+// const TutorRedirect = () => {
+//   useEffect(() => {
+//     window.location.href = '/tutor_poster/tutor_poster.pdf'
+//   }, [])
+//   return null
+// }
 
 import Home from './pages/Home'
 import Education from './pages/Education'
@@ -21,6 +21,8 @@ import Work from './pages/Work'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+
+import Tutor from './pages/Tutor'
 
 import DigraphExplorerProject from './pages/projects/DigraphExplorer'
 import EducationalGamesProject from './pages/projects/EducationalGames'
@@ -49,7 +51,7 @@ function App() {
         <Route path="/travels" element={<Travels />} />
         <Route path="/travel/vanlife" element={<Vanlife />} />
         <Route path="/cv" element={<CVRedirect />} />
-        <Route path="/tutor" element={<TutorRedirect />} />
+        <Route path="/tutor" element={<Tutor />} />
       </Routes>
     </Router>
   )

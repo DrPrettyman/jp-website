@@ -24,6 +24,10 @@ const Tutor = () => {
 
             <p>Alteratively, if you live within a 15 minute drive of Estación de Cártama, and you have a quiet space to learn, I could come to your home and tutor there. Get in touch and we can try to arrange a time suitable for both of us.</p>
 
+            <p>I charge €30 per 1-hour session, but I'm not going to charge extra if we run overtime or you're a bit late picking up. If you actually want a longer session (1.5 hour = €40, 2 hour = €50), that could be arranged.</p>
+
+            <p>I'm looking for clients who want a regular, weekly session at a fixed time, but if you want a one-off pre-exam session maybe we could work something out.</p>
+
             <div className="flex flex-col sm:flex-row gap-4 mt-6 items-center justify-center">
               <a
                 href="mailto:joshua@prettyman.me"

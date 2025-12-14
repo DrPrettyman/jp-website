@@ -14,6 +14,7 @@ const content = {
     howTitle: "How it works",
     how1: "I live only a short walk from Sunland and my own children do the walk themselves every day. It would be convenient to arrange an after-school tutoring session at my house, with you picking up your child afterwards. I'd be happy for a parent to come round for a chat on the first session: I wouldn't want to send my children to a stranger's house on their own either.",
     how2: "Alternatively, if you live within a 15 minute drive of Estación de Cártama, and you have a quiet space to learn, I could come to your home and tutor there. Get in touch and we can try to arrange a time suitable for both of us.",
+    pricingTitle: "Pricing",
     pricing: "I charge €30 per 1-hour session, but I'm not going to charge extra if we run overtime or you're a bit late picking up. If you actually want a longer session (1.5 hour = €40, 2 hour = €50), that could be arranged.",
     regular: "I'm looking for clients who want a regular, weekly session at a fixed time, but if you want a one-off pre-exam session maybe we could work something out.",
   },
@@ -26,6 +27,7 @@ const content = {
     howTitle: "Cómo funciona",
     how1: "Vivo a poca distancia de Sunland y mis propios hijos hacen el camino solos todos los días. Sería conveniente organizar una clase particular después del colegio en mi casa, y que usted recoja a su hijo después. Me encantaría que un padre viniese a conocernos en la primera sesión: yo tampoco enviaría a mis hijos solos a casa de un desconocido.",
     how2: "Alternativamente, si vive a menos de 15 minutos en coche de la Estación de Cártama y tiene un espacio tranquilo para aprender, podría ir a su casa y dar la clase allí. Póngase en contacto y podemos intentar encontrar un horario que nos convenga a ambos.",
+    pricingTitle: "Precios",
     pricing: "Cobro 30€ por sesión de 1 hora, pero no voy a cobrar extra si nos pasamos de tiempo o si llega un poco tarde a recoger. Si realmente quiere una sesión más larga (1,5 horas = 40€, 2 horas = 50€), se podría organizar.",
     regular: "Busco clientes que quieran una sesión regular semanal a una hora fija, pero si quiere una sesión única antes de un examen, quizás podamos llegar a un acuerdo.",
   },
@@ -38,6 +40,7 @@ const content = {
     howTitle: "So funktioniert es",
     how1: "Ich wohne nur wenige Gehminuten von Sunland entfernt und meine eigenen Kinder gehen jeden Tag selbst dorthin. Es wäre praktisch, eine Nachhilfestunde nach der Schule bei mir zu Hause zu vereinbaren, wobei Sie Ihr Kind danach abholen. Ich würde mich freuen, wenn ein Elternteil bei der ersten Sitzung auf einen Kaffee vorbeikommt: Ich würde meine Kinder auch nicht allein zu einem Fremden nach Hause schicken.",
     how2: "Alternativ, wenn Sie innerhalb von 15 Autominuten von Estación de Cártama wohnen und einen ruhigen Lernort haben, könnte ich zu Ihnen nach Hause kommen und dort unterrichten. Nehmen Sie Kontakt auf und wir können versuchen, einen für uns beide passenden Termin zu finden.",
+    pricingTitle: "Preisgestaltung",
     pricing: "Ich berechne 30€ für eine einstündige Sitzung, aber ich werde keinen Aufpreis verlangen, wenn wir überziehen oder Sie etwas später zum Abholen kommen. Wenn Sie tatsächlich eine längere Sitzung wünschen (1,5 Stunden = 40€, 2 Stunden = 50€), lässt sich das einrichten.",
     regular: "Ich suche Kunden, die eine regelmäßige wöchentliche Sitzung zu einer festen Zeit wünschen, aber wenn Sie eine einmalige Sitzung vor einer Prüfung möchten, können wir vielleicht etwas vereinbaren.",
   }
@@ -102,6 +105,8 @@ const Tutor = () => {
             <p>{t.how1}</p>
 
             <p>{t.how2}</p>
+
+            <h2 className="font-bold">{t.pricingTitle}</h2>
 
             <p>{t.pricing}</p>
 

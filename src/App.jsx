@@ -23,6 +23,7 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 
 import Tutor from './pages/Tutor'
+import Freelance from './pages/Freelance'
 
 import DigraphExplorerProject from './pages/projects/DigraphExplorer'
 import EducationalGamesProject from './pages/projects/EducationalGames'
@@ -52,6 +53,7 @@ function App() {
         <Route path="/travel/vanlife" element={<Vanlife />} />
         <Route path="/cv" element={<CVRedirect />} />
         <Route path="/tutor" element={<Tutor />} />
+        <Route path="/freelance" element={<Freelance />} />
       </Routes>
     </Router>
   )

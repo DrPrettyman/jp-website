@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freelance Data & Development Services</title>
+</head>
+
+<body>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            I build production ML systems, data pipelines, and full-stack applications
+            that solve real business problems. Whether you need a machine learning model
+            deployed, a data pipeline automated, or a dashboard that actually gets used,
+            I can help.
+        </p>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <h2>Services:</h2>
+        <ul>
+            <li><strong>Machine Learning & NLP:</strong> Custom ML models, NLP pipelines, OpenAI/LLM integrations, and predictive analytics.</li>
+            <li><strong>Data Engineering:</strong> ETL/ELT pipelines, database architecture (AWS, GCP, BigQuery), and automation with dbt and Databricks.</li>
+            <li><strong>Dashboards & Visualisation:</strong> Interactive dashboards in Tableau, Plotly, or Retool.</li>
+            <li><strong>Full-Stack Development:</strong> Python backends, REST/GraphQL APIs, cloud deployment (GCP, AWS).</li>
+        </ul>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <h2>Recent Projects:</h2>
+        <ul>
+            <li>Model deployment to production cloud environments</li>
+            <li>Dashboard creation with Tableau for executive reporting</li>
+            <li>Pipeline automation using dbt and Databricks</li>
+            <li>Database setup and architecture on AWS</li>
+            <li>Data engineering and analysis for business insights</li>
+        </ul>
+    </div>
+
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            See <a href="/freelance">my freelance page</a> for more details, or
+            <a href="https://cal.com/drprettyman" target="_blank">book a call</a> to discuss your project.
+        </p>
+    </div>
+
+</body>
+</html>

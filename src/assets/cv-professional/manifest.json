@@ -1,5 +1,15 @@
 [
     {
+      "title": "Data Freelancer",
+      "company": "Self-employed",
+      "duration": "Jan 2025 — Present",
+      "headline": "Freelance data science, ML deployment, and full-stack development",
+      "address": "/freelance",
+      "logo": "/company_logo/freelance.png",
+      "details": "freelance",
+      "entryId": "freelance"
+    },
+    {
       "title": "Data Scientist",
       "company": "Macaroni Software",
       "address": "https://www.macaroni.works",

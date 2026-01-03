@@ -14,6 +14,7 @@ const staticRoutes = [
   '/blog',
   '/travels',
   '/travel/vanlife',
+  '/freelance',
 ]
 
 // Dynamic blog routes (blog post IDs from Blog.jsx)

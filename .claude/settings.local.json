@@ -6,7 +6,8 @@
       "Bash(perl -i -pe:*)",
       "Bash(npm run build:*)",
       "Bash(cat:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(pdflatex:*)"
     ],
     "deny": [],
     "ask": []

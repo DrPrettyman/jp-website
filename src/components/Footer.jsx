@@ -12,11 +12,7 @@ const Footer = () => {
           <div className="flex justify-center space-x-6">
             <p className="text-gray-700 dark:text-gray-200 text-sm">
               <FaRegCopyright className="inline-block mr-1" />
-              Joshua Prettyman 2025 <PiHandPeace className="inline-block mr-1" />
-              <span className="hidden sm:inline">
-                Created with React <FaReact className="inline-block mr-1" />
-                Hosted on Vercel <IoLogoVercel className="inline-block mr-1" />
-              </span>
+              Joshua Prettyman 2024 - 2026 <PiHandPeace className="inline-block mr-1" />
             </p>
           </div>
         </div>

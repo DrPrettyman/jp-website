@@ -24,7 +24,7 @@ const Home = () => {
                 <span className="text-4xl font-bold">
                   Hi, 
                 </span>
-                <span>
+                <span className="text-sm sm:text-lg">
                   {' '} my name is Joshua.
                 </span>
               </div>

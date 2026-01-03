@@ -51,7 +51,7 @@ const Header = ({ fullWidth = false }) => {
                 <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-700 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Email</span>
               </a>
               <a 
-                href="https://www.linkedin.com/in/joshuaprettyman/" 
+                href="https://www.linkedin.com/in/prettyman/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="relative group text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"

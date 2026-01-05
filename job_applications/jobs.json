@@ -2,6 +2,7 @@
     {
         "company": "Resend",
         "title": "Data Scientist",
+        "date_found": "2025-10-03",
         "description": "Email is unlike any other medium in the world. With just an address, anyone can talk to anyone, no matter their location, status, or class. It's democratized access, it's a sacred privilege, and it's worth protecting at all costs.\nResend is building the most accessible email platform for developers. As we've grown to over 15K customers and continue to onboard thousands of new users every day, the pressure of maintaining a safe place for good senders continues to build up.\nAs the first Data Scientist on our Trust & Safety squad, you will wear many investigative hats— identifying abuse patterns, designing purpose build data sets, and developing models that prevent harmful users and enable good senders and scale.\nIn this role, you will…\n\n- Facilitate a novel, zero-friction approach to email sending\n- Investigate the root-causes of anomalies and gang attacks\n- Analyze signal effectiveness: precision, recall, drift, overlap, etc\n- Consult with data engineering to shape purpose-built data pipelines\n- Deeply understand and stay up to date on email abuse vectors and trends\n- Build dashboards and alerts for real-time visibility into behavior and policy violations\n- Build machine learning models to prevent abuse at scale with zero false-positive budget\n\nWho You Are...\n\n- Fluent in SQL and Python (Javascript is a plus)\n- Completed a relevant scientific or mathematical degree\n- Proven ability to productize algorithms for real-time systems\n- You thrive in ambiguity and can build frameworks out of thin air\n- Great communicator that can explain complicated models to non-data folks\n- +2 years of professional experience in relevant role working with massive data sets",
         "questions": [
             {
@@ -17,6 +18,7 @@
     {
         "company": "Room Price Genie",
         "title": "Data Scientist",
+        "date_found": "2025-10-03",
         "description": "",
         "questions": [
             {
@@ -36,6 +38,7 @@
     {
         "company": "PEAS",
         "title": "Data Scientist",
+        "date_found": "2025-10-03",
         "description": "",
         "questions": [
             {
@@ -55,6 +58,7 @@
     {
         "company": "Verif",
         "title": "Data Scientist",
+        "date_found": "2025-10-03",
         "description": "",
         "questions": [
             {
@@ -66,34 +70,226 @@
     },
     {
         "company": "Cochrane",
-        "title":"Data Scientist",
+        "title": "Data Scientist",
+        "date_found": "2025-10-03",
         "cover_letter": "I am interested in applying for the Data Scientist position. Looking over the job description I'm confident this is a good fit. \nIn my last role as a Data Scientist for Blink SEO I started out by building the database and backend system from scratch, which wasn't exactly what I'd expected but it gave me great experience writing python modules for data ingestion and cleaning; working in SQL; writing wrappers for web-based APIs; and  working closely with the delivery team to understand their processes and how I could automate these and present data usefully in dashboards. As the role progressed I added ML features into the software and built a user-friendly frontend in Retool as the software transitioned from an internal system to a SaaS app (Macaroni Software).\nFor Macaroni Software I was mainly focussed on NLP and clustering algorithms, although I have a broad knowledge of the ML landscape. My Ph.D. research involved detecting tipping points in dynamical systems using multi-dimensional time series data. For this I had to access large datasets using web APIs and I built stochastic models to test hypotheses. \nThank you for your consideration. I look forward to hearing from you and learning more about the specifics of this role. "
     },
     {
         "company": "Tupl",
-        "title":"Data Scientist",
+        "title": "Data Scientist",
+        "date_found": "2025-10-03",
         "cover_letter": "I am interested in applying for the Python Software Engineer position. Looking over the job description I'm confident this is a good fit. \nIn my last role at Blink SEO I was hired as a “Data Scientist” but started out by building the database and backend system from scratch, which wasn't exactly what I'd expected but it gave me great experience writing efficient python modules; serving our backend from a GCP Compute Engine instance (Debian); writing wrappers for web-based APIs;  and  working closely with the delivery team to understand their processes and how I could automate these. As the role progressed I added ML features into the software and built a user-friendly frontend in Retool as the software transitioned from an internal system to a SaaS app (Macaroni Software).\nI really enjoy writing in great python code, expanding my knowledge of the language an its libraries. \nThank you for your consideration. I look forward to hearing from you and learning more about the specifics of this role. "
     },
     {
         "company": "Cognite",
         "title": "Data Scientist",
+        "date_found": "2025-10-03",
         "description": "About the job\n\nAbout Cognite\n\nCognite is gearing up for an exciting year of growth in 2026. As we expand our global footprint and scale our impact across industries, we're building our team with talented, forward-thinking individuals who want to make a difference. Even if you don't see a role that matches your experience today, we encourage you to apply and join our talent community. As immediate opportunities open up, our recruiting team will reach out to connect and explore how your skills align with our growing needs. Join us as we continue to innovate and transform how industrial data drives the world forward.\n\nIn the realm of industrial digital transformation, we stand at the forefront, reshaping the future of Oil & Gas, Chemicals, Pharma and other Manufacturing and Energy sectors. Join us in this venture where AI and data meet ingenuity, and together, we forge the path to a smarter, more connected industrial future.\n\nOur values\n\nImpact: Cogniters strive to make an impact in all that they do. We are result-oriented, always asking ourselves.\n\nOwnership: Cogniters embrace a culture of ownership. We go beyond our comfort zones to contribute to the greater good, fostering inclusivity and sharing responsibilities for challenges and success.\n\nRelentless: Cogniters are relentless in their pursuit of innovation. We are determined and deliverable (never ruthless or reckless), facing challenges head-on and viewing setbacks as opportunities for growth.\n\nCognite is a global leader in industrial software and AI with our Industrial DataOps platform, Cognite Data Fusion, at the core. We were awarded the 2022 Technology Innovation Leader for Global Digital Industrial Platforms.\n\nThe Data Science team at Cognite plays a crucial role in building data-driven solutions that empower our clients to make impactful business decisions. As a Data Scientist at Cognite, you will work on challenging data-problems with leaders in the industry. You will be a part of cross-functional teams that include data engineers, solution architects, and project managers. Together, your focus will be on configuring, deploying, and operationalizing digital solutions in sectors such as Oil and Gas, Power & Utilities, and Manufacturing.\n\nAdditionally, you will engage with clients to understand their desired outcomes, lead discovery workshops, and provide insights on potential strategies and obstacles.\n\nThe Data Science team is a part of the EMEA delivery team in our Global Delivery organization. Global Delivery is truly global, with offices in Oslo (Norway), Phoenix & Houston (USA), Tokyo (Japan) and Bengaluru (India). We are a good mix of Project Managers, Data Scientists, Data Engineers, Solution Architects with domain expertise from Oil and Gas, Power & Utilities and Manufacturing.\n\nWe are responsible for delivering successful projects that are flexible and scalable, and foster adoption of our product. In sum, we derive valuable insights from previously hidden data, enabling workers and leaders to transform how heavy asset industries operate to become more efficient and sustainable.\n\nAs a Data Scientist you are responsible for the following, but not limited to:\n\n- Develop and deploy scalable solutions for customer use cases from Oil and Gas, Manufacturing and Power & Utilities industries using Cognite's core capabilities\n- Participate in intensive use case generation workshops with subject matter experts to understand the problem and how it maps to the data\n- Perform data cleansing and exploratory data analysis\n- Implement physical models / machine learning models in Python and deploy to our model hosting environment\n- Design and develop domain specific information and data models\n- Apply GenAI techniques to enhance data-driven decision-making in customer use cases\n- Build dashboards in Grafana, Power BI, Plotly or Dash for visualizing the solutions\n- Utilize and contribute to solution templates and best practices within the Data Science team\n- Mentoring and coaching junior team members is an important part of being a Senior at Cognite\n- Collaborate with data engineers, project managers and solution architects on project deliveries to enable our customers to achieve the full potential of our industrial dataops platform\n- Support customers and partners in conducting data science tasks with Cognite products\n\nWe Believe Most Of These Should Match Your Experience:\n\n- Bachelor/Master of Science in a quantitative field or mechanical, systems, electrical or industrial engineering\n- 2+ years of full-time work experience as a data scientist (preferably within related industry), or data scientist with domain expertise in Oil and Gas or Maintenance or Manufacturing\n- Proficient experience with Python and SQL. Experience with Python in a production setting is a plus\n- Experience with machine learning methods and techniques, statistics and/or optimization\n- Experience with Git\n- Experience working customer faced, with external customers\n- Experience with managed cloud services such as GCP, Azure or AWS is a plus\n- Domain knowledge or a good understanding of the Oil and Gas industry Asset Performance Management - covering i.e production optimization is a big plus\n- Enjoy working in cross-functional teams\n- Able to deliver independently, coach and mentor others internally\n- Enjoy challenges and dare to set ambitious goals that drive innovation\n- Humility to ask for help and enjoy sharing knowledge with others",
         "cover_letter": "At Blink SEO I built an ML platform that increased team productivity by 20x and grew into a standalone SaaS product. I deployed scalable Python systems on GCP, built Plotly dashboards, and worked in a cross-functional team where I engaged directly with stakeholders to understand their workflows. That's the kind of client-focused, production-oriented data science work I want to keep doing, which is why Cognite's approach appeals to me.\nThe platform I built processed 50M+ data points daily from external APIs, with async job queues in PostgreSQL and ML models (NLP clustering, embeddings) deployed to serve real users. I handled everything from data cleansing to dashboard delivery. The part I found most rewarding was iterating with the delivery team: understanding what they actually needed, deploying quickly, and watching features get adopted rather than ignored.\nMy PhD at the National Physical Laboratory involved extracting signals from noisy, high-dimensional time series, which is conceptually similar to deriving insights from operational industrial data. I've published in peer-reviewed journals and presented at international conferences, so I'm comfortable communicating technical work to different audiences.\nI'd be glad to discuss how this experience fits with what Cognite is building.\nThank you for your consideration."
     },
     {
         "company": "Adaptify SEO",
         "title": "AI Engineer",
+        "date_found": "2025-10-03",
         "description": "About the job\n\nAbout Adaptify SEO\n\nWe see the potential for AI to replace boring, repetitive jobs, and are bringing this in practice by helping marketing agencies deliver SEO fully on autopilot.\n\nAs an AI-first company, we use LLMs everywhere (we developed RAGs before they were called that way). We have a simple and modern stack, ship fast, and work on cutting-edge product features. If you want to join a company and really learn how to make AI/LLM-powered apps that make people's lives easier, Adaptify SEO is the right fit for you.\n\nWe also have collected hundreds of data points, with latent opportunities for data insights, so you could be the person to build powerful analytics and turn data into learnings.\n\nAbout This Role\n\nWe are looking for someone who gets excited about code, loves learning new things, and wants to dive deep into the world of AI-powered products that Adaptify is building. You don't need to be the most experienced developer in the room - we care more about your curiosity, your ability to pick things up quickly, and your passion for building cool stuff.\n\nYour job will be to help make our tech product the best it can be by building exciting new features that push the boundaries of what's possible with AI. You'll be part of a new wave of software development that requires more creativity, experimentation, and rapid context switching between different problems and technologies. We'll fully support you in developing your skills and pursuing your passions. There's lots to do, from crafting clever prompts to building features that feel like magic.\n\nWe are a fully async organisation, we are based in three continents, and you are truly able to set your own working hours. We don't do tickets or stand-ups, we have a work environment that is focused on productivity and no BS with great documentation and the occasional high-impact meeting.\n\nWho You Are\n\nYou're looking to be an early tech hire at a fast-growing and profitable startup, and have an ownership mentality and the ability to come up with innovative ideas autonomously.\nYou are excited about building features that feel like magic and being part of a new wave of software development that requires creativity, experimentation, and rapid context switching.\nYou're a learning machine. Maybe you're newer to the industry, maybe you're self-taught, maybe you're a career changer – what matters is that you absorb new concepts quickly and aren't afraid to dive into unfamiliar territory\nYou're a problem solver who likes digging into stuff and looking at it from different angles, to create powerful new features or fix high-impact bugs\nYou have some professional coding experience – 1-5+ years professionally and you understand the fundamentals and can write clean, functional code. If you have more years of experience we'd love to speak with you too!\nYou're genuinely excited about joining an AI startup and the weird, wonderful challenges that come with building products that weren't possible a few years ago\nYou're comfortable working independently, taking ownership of projects, and aren't shy about asking questions when you need help\nYou have good vibes - you're collaborative, communicative, and bring positive energy to the team\n\nWhat the Job Involves\n\nBuild exciting new features that combine LLMs, prompt engineering, and creative problem-solving in ways that feel magical to our users\nExperiment with cutting-edge AI capabilities and turn wild ideas into working code\nWork with Python FastAPI backend and Firebase to bring innovative features to life\nCollaborate on React + NextJS frontend development to create seamless user experiences\nRapidly switch between different challenges - from crafting the perfect prompt to debugging tricky integrations\n\nTech Stack\n\nPython\nFastAPI\nReact\nNextJS\nFirebase\nLLMs\nPrompt Engineering\nCreative Problem Solving",
         "cover_letter": "I've spent the last three years building an AI-powered SEO platform, so when I saw Adaptify's mission to deliver SEO fully on autopilot, I had to reach out.\nAt Blink SEO I joined as their first data scientist when everything ran on spreadsheets. I built the entire ML platform from scratch: Python backend on GCP, BigQuery processing 50M+ data points daily, NLP-powered clustering that reduced manual keyword grouping from days to minutes, and LLM integrations via Huggingface to generate content recommendations. The platform increased team productivity by 20x and eventually became its own SaaS product, Macaroni Software. I know what it takes to build AI features that feel like magic to end users because I've done exactly that, in the SEO space specifically.\nThe ownership mentality you describe fits how I work. I wasn't hired to build a product, just to improve internal processes. But I saw the potential, built with scalability in mind from day one, and pushed for it to become something bigger. I'm used to rapid context switching, experimenting with new ideas, and shipping fast.\nMy PhD was in applied mathematics, which means I came into industry as a career changer. That transition taught me to pick things up quickly and not be precious about what I don't yet know. I'm comfortable with Python, have worked with React frontends, and have hands-on experience integrating LLMs into production systems.\nI'd love to chat about what you're building and how I could contribute.\nThank you for reading."
     },
     {
         "company": "Syngenta",
         "title": "Geospatial Data Scientist",
+        "date_found": "2025-10-03",
         "description": "# Company Description\n\nSyngenta Group, a global leader in agricultural technology and innovation, employs 60,000 people across more than 100 countries to transform agriculture through tailor-made solutions for farmers, society, and our planet. Our diverse portfolio encompasses seeds, crop protection, nutrition products, agronomic solutions, and digital services, all designed to help farmers produce healthy food, feed, fiber, and fuel while conserving natural resources and protecting the environment. Our mission is to address critical challenges such as climate change and food security through sustainable practices and cutting-edge solutions, while safeguarding the planet's resources.\n\n# Job Description\n\nThe Geospatial Data Scientist will leverage advanced geospatial analytics, machine learning, and remote sensing expertise to transform complex agricultural and earth observation data into actionable insights that drive innovation in Syngenta's Computational Agronomy Department. This role will develop cutting-edge models and algorithms that enable data-informed agricultural decision-making, supporting Syngenta's mission to improve global food security and sustainable farming practices.\n\nWorking within cross-functional teams, the Geospatial Data Scientist will bridge technical expertise with agricultural knowledge to create scalable, data-driven solutions for modern agricultural challenges.\n\n# Accountabilities\n\n- Develop and implement advanced geospatial and machine learning models to analyze agricultural datasets (satellite imagery, drone data, IoT sensors) and extract meaningful patterns.\n- Design, build, and maintain scalable, cloud-enabled large data pipelines for cleaning, transforming, and integrating diverse geospatial data sources.\n- Perform statistical analysis and data mining to uncover spatial and temporal trends that inform agricultural management strategies.\n- Engineer innovative features from remote sensing data to enhance model accuracy and performance.\n- Deliver high-quality, documented code for geospatial data processing using Python and relevant libraries.\n- Translate analytical results into practical recommendations for agronomists, growers, and decision-makers.\n- Stay current with advancements in geospatial technologies, remote sensing, and machine learning to maintain technical leadership.\n- Contribute to technical reports, scientific publications, and presentations to share research outcomes.\n- Collaborate closely with interdisciplinary teams, including agronomists, data scientists, and software engineers.\n\n# Qualifications\n\n**Critical Knowledge & Experience**\n\n- Master's degree in Geographic Information Science, Remote Sensing, Computer Science, Data Science, or a related field with a strong focus on geospatial analysis.\n- 5+ years of experience in satellite and geospatial data analysis and modeling.\n- Proficiency in Python programming, with experience in geospatial libraries such as GeoPandas, Rasterio, and related tools.\n- Expertise in machine learning for earth observation applications (e.g., image classification, object detection, time series analysis).\n- Experience with geospatial foundation models.\n- Experience with version control systems (e.g., Git) and collaborative software development practices.\n- Experience leveraging generative AI tools to optimize workflows, automate tasks, and enhance productivity in geospatial analysis and data science projects.\n\n**Skills**\n\n- Excellent written and verbal communication skills in English.\n- Strong analytical and problem-solving skills, with the ability to explain complex technical concepts to non-technical audiences.\n\n**Nice to have**\n\n- PhD in a relevant field.\n- Familiarity with agronomy concepts and agricultural systems.\n- Expertise in deep learning techniques.\n- Experience with cloud-based geospatial processing and big data technologies (e.g., Google Earth Engine, Spark)."
     },
     {
         "company": "Trimble",
         "title": "Data Engineer / Scientist",
+        "date_found": "2025-10-03",
         "description": "Are you an enthusiastic and self-motivated Data Engineer / Scientist eager to contribute your expertise to our dynamic and innovative team? Join us in leveraging data to drive meaningful business outcomes and contribute to the success of Trimble's data-driven initiatives.\nWhat You Will Do\nUnleash your potential as a Trimble Data Engineer and Scientist! Working closely with your manager and team, you will leverage your expertise to drive impactful business outcomes, particularly in understanding and improving customer retention for SketchUp. Your path to impactful action starts here:\nDesign, develop, and program methods, processes, and systems to deploy ML models (e.g., logistic regression, XGBoost) to predict churn risk for SketchUp's diverse customer base.\nGenerate actionable insights and solutions by translating complex model outputs into business-friendly insights for targeted retention strategies.\nCollaborate with product and go-to-market teams to engineer impactful features from raw customer data, developing metrics for tracking engagement and activity facilitating better understanding of customer behavior.\nDevelop software programs, algorithms, and automated processes to cleanse, integrate, and evaluate datasets for customer segmentation, ML model training and evaluation.\nExtract meaningful insights from data and effectively communicate findings to optimize churn prediction models using metrics like AUC and lift.\nWhat Skills & Experience You Should Bring\nBachelor's Degree in Computer Science, Data Analytics, Engineering, or a related field. Master's and Ph.D. graduates welcome.\nMinimum of 5 years of experience in data science, data engineering or a related field, with demonstrated expertise in building, evaluating, and deploying machine learning models for predictive analytics, particularly in areas like churn prediction.\nStrong critical thinking abilities and the capacity to work autonomously.\nProficient understanding of key data engineering concepts, such as data lakes, columnar formats, ETL tools, and BI tools, coupled with strong statistical modeling skills for churn analysis and customer segmentation, including cohort analysis and the use of demographic and firmographic data.\nDemonstrated passion and aptitude for problem-solving.\nProficiency in Python & SQL - other languages a benefit.\nEffective collaboration skills within a team environment.\nAbout Trimble\nDedicated to the world's tomorrow, Trimble is a technology company delivering solutions that enable our customers to work in new ways to measure, build, grow and move goods for a better quality of life. Core technologies in positioning, modeling, connectivity and data analytics connect the digital and physical worlds to improve productivity, quality, safety, transparency and sustainability. From purpose-built products and enterprise lifecycle solutions to industry cloud services, Trimble is transforming critical industries such as construction, geospatial, agriculture and transportation to power an interconnected world of work. For more information about Trimble (NASDAQ: TRMB), visit: www.trimble.com\nAbout Your Location\nHybrid location verbiage: Under a flexible work arrangement (hybrid), this resource primarily supports the Architecture, Engineering, Construction and Owners (\"AECO\") Segment and works collaboratively more widely.\nIn a hybrid role, you will work with your manager and team lead to establish a mutually agreeable schedule for your time working in the office based on the position and the business need. Typically hybrid positions are 1-3 days per week, or 20%-60% of the month in the office."
+    },
+    {
+        "company": "ETFbook",
+        "title": "Senior ETF Data Analyst/Specialist",
+        "date_found": "2025-10-03",
+        "cover_letter": "I've spent the last three years building a SaaS data platform from scratch, and ETFbook's mission to make ETF data accessible and actionable resonates with what I find most rewarding about this work: turning complex, messy data into something people can actually use.\nAt Blink SEO I built a full-stack ML platform that processed 50M+ data points daily from external APIs, with a Python backend on GCP integrated with BigQuery. I created async job queues in PostgreSQL to handle data imports and analysis tasks, built interactive dashboards in Plotly and JavaScript, and worked closely with delivery teams to translate their workflows into automated pipelines. The platform increased productivity by 20x and eventually became its own SaaS product, Macaroni Software. I've done the end-to-end delivery work you describe: acquiring data, ensuring quality and integrity, building scalable pipelines, and shipping solutions that clients trust.\nI don't have direct ETF industry experience, so I'll be upfront about that. What I do bring is a quantitative foundation (PhD in Mathematics focused on time series analysis), strong Python and SQL skills, and proven ability to work with high-volume data in production systems. My research involved extracting meaningful signals from noisy, multidimensional time series data, which feels relevant to the kind of analytics work ETFbook delivers. I'm a quick learner and genuinely interested in financial markets.\nI'd welcome the chance to discuss how my platform-building experience could contribute to what you're building.\nThank you for reading.",
+        "description": "About us:\nETFbook is a Swiss SaaS company providing data, analytics, and custom solutions in the Exchange Traded Funds (ETFs) space. Founded in 2020, we aim to make global ETF data accessible, actionable, and valuable for institutional participants, including ETF issuers, index providers, fund service providers, market makers, exchanges, and buy-side institutions.\nWe develop a platform which offers comprehensive insights through a user-friendly web application and robust APIs, covering areas such as product analysis, fund flow tracking, performance comparisons, and liquidity assessments.\n\nAbout the role:\nYou'll join a highly skilled data analysts team, part of the data department. This team is responsible for shaping data roadmap across three regions incl. EMEA, AMER and APAC, acquiring and defining data and analytics contents, ensuring quality and integrity of the data throughout our solutions available to institutional clients.\nYour primary goal will be to work on key data and analytics contents relevant for institutional clients (buy-and-sell side) for analysing, utilizing, and interpreting data related to global ETFs markets. The goal is to deliver trusted data and analytics solutions to internal stakeholders and predominantly to external clients, enabling data-driven decisions or strategic solutions.\nReporting to the Head of Data, you'll be a part of a collaborative team focused on data contents, data analytics, and data roadmap. This role offers the chance to make a visible impact in a dynamic, fast-evolving field.\n\nResponsibilities:\nDefine key ETF data and analytics contents relevant for institutional clients (buy-and-sell side) for analysing, utilizing, and interpreting data related to global ETFs markets, including ETF markets in EMEA, AMER and APAC.\nWork on shaping data and analytics contents available through ETFbook platform and other distributing methods (Web-Application and APIs) to meet institutional clients (buy-and-sell side) data and analytics needs.\nWork closely with Business, Tech and Product teams on unified, efficient, and collaborative approach to ensure great depth of data and breadth of analytics within ETFbook solutions.\nWork and contribute to end-to-end delivery of ETF data contents, including reference data, dynamic data, holdings, performance, liquidity, and many others.\nWork and contribute to end-to-end delivery of large datasets from multiple sources, ensuring they are clean and structured and work with data engineers on ensuring automation and continuity, by leveraging latest technologies in Big Data and AI/ML.\nMaintain and improve data quality, accuracy, and integrity across various ETFbook solutions (Web-Application and APIs).\nConsult with internal stakeholders and external clients on data and analytics contents and solutions to ensure ETFbook competitive edge and growth in the ETF data space.\n\nRequirements:\n7+ years of experience in the ETF/indexing industry within data, analytics, portfolio management, risk, or research, preferably gained at an ETF issuer or an index provider.\nDesired experience in working with high-frequency financial data, such as tick-level market data and exchange feeds.\nPreferred Master degree in finance, data analysis, data science or related field.\nStrong proficiency in Python/R/SQL and experience in Data Visualisation techniques. Experience in Databricks preferred.\nExperience in project delivery across cross-functional teams.\nExcellent communication skills, with ability to translate complex concept into clear messages for internal (e.g. tech teams) and external purposes (e.g. clients, research)."
+    },
+    {
+        "company": "RavenPack",
+        "title": "Senior Search Data Scientist - NLP",
+        "date_found": "2026-01-05",
+        "link": "https://ravenpack.teamtailor.com/jobs/6112437-senior-search-data-scientist-nlp",
+        "location": "Marbella/Málaga, Spain (shuttle bus from Málaga)",
+        "description": "Join the Search Team to define and build relevance systems from the ground up. NLP-focused role at a fintech AI company powering the future of finance. RavenPack has been recognized as the Best Alternative Data Provider by WatersTechnology. International team with 29 nationalities.",
+        "fit_notes": "Perfect match for NLP skills, Python expertise, and Ph.D. background. Local company with shuttle from Málaga."
+    },
+    {
+        "company": "RavenPack",
+        "title": "Senior Data Scientist - Quantitative Investment Strategies",
+        "date_found": "2026-01-05",
+        "link": "https://ravenpack.teamtailor.com/jobs/6291195-senior-data-scientist-quantitative-investment-strategies",
+        "location": "Marbella/Málaga, Spain",
+        "description": "Lead quantitative investment use cases across RavenPack's product suite. Create alpha-generating datasets, develop intelligent agents and workflow solutions. Requires MSc/PhD in CS, ML, NLP, Quant Finance or related field. 3+ years in quantitative investment strategies. Python + SQL required.",
+        "fit_notes": "Ph.D. and Python expertise align well. Would need to emphasize mathematical/statistical skills over direct quant finance experience."
+    },
+    {
+        "company": "RavenPack",
+        "title": "Data Scientist - Data Science Factor Team",
+        "date_found": "2026-01-05",
+        "link": "https://www.ravenpack.com/careers/",
+        "location": "Marbella/Málaga, Spain",
+        "description": "Support validation of new data products and LLM-driven agents. Contribute to productization of innovative factors and workflows at RavenPack's Spanish headquarters.",
+        "fit_notes": "LLM experience and production ML deployment experience from Macaroni/Blink align well."
+    },
+    {
+        "company": "Moniepoint",
+        "title": "Senior Data Scientist (Credit)",
+        "date_found": "2026-01-05",
+        "link": "https://moniepoint.com/careers/roles/4736481101",
+        "location": "Remote, Spain",
+        "description": "Power consumer lending decisions at scale. Build models for underwriting millions of customers across Nigeria and Africa. Fast-paced fintech with international leaders from Glovo, Bolt, Monzo, Klarna, Checkout.com, and Tide. Opportunity to build data science function from the ground up.",
+        "fit_notes": "ML production experience and ability to build from scratch align perfectly. Focus is on African markets - check timezone compatibility."
+    },
+    {
+        "company": "Clarity AI",
+        "title": "Senior Data Scientist",
+        "date_found": "2026-01-05",
+        "link": "https://job-boards.eu.greenhouse.io/clarityai/jobs/4739620101",
+        "location": "Madrid (Remote/Hybrid)",
+        "description": "Join 20+ international Data Scientists improving ML systems for sustainability data. Requires 3+ years DS experience, LLMs, agentic workflows, prompt engineering, RAG, vector databases. Production Python, English C1+. Backed by BlackRock, SoftBank, Deutsche Börse.",
+        "fit_notes": "Excellent match - LLM/RAG experience from Blink, production ML systems, Python. Climate/sustainability focus aligns with research background. Remote Spain option ideal.",
+        "cover_letter_topics": [
+            {
+                "topic": "Python data science ecosystem (Pandas, Matplotlib, Scikit-Learn); deploying end-to-end ML models",
+                "relevant_experience": "Built full ML platform at Blink processing 50M+ data points daily; NLP clustering with sklearn, text embeddings, DBSCAN; Plotly/Matplotlib dashboards"
+            },
+            {
+                "topic": "LLMs, prompt engineering, RAG, vector databases",
+                "relevant_experience": "Integrated HuggingFace models for content generation; built prompt engineering workflows; deployed to production on GCP"
+            },
+            {
+                "topic": "Sustainability sector; mission of 'bringing societal impact to markets'",
+                "relevant_experience": "MRes and PhD part of EPSRC Mathematics of Planet Earth programme (climate/sustainability focus); PhD on tipping point detection in climate systems; published in Environmental Research Letters"
+            },
+            {
+                "topic": "Team of 20+ international Data Scientists from top academic institutions",
+                "relevant_experience": "PhD (Reading), MRes (Imperial College); 3 peer-reviewed publications; presented at international conferences"
+            },
+            {
+                "topic": "Strong software engineering foundations (testing, code review, design); scalable ML production environments",
+                "relevant_experience": "Built SaaS product from scratch; PostgreSQL job queues for async processing; GCP Compute Engine deployment; system scaled to handle enterprise clients"
+            },
+            {
+                "topic": "Startup experience",
+                "relevant_experience": "Joined Blink SEO as first data scientist; built internal tool that became standalone SaaS product (Macaroni Software)"
+            },
+            {
+                "topic": "Translate business objectives into technical requirements; communicate to non-technical stakeholders",
+                "relevant_experience": "Worked directly with delivery team to understand workflows; built dashboards that got adopted; 20x productivity increase"
+            }
+        ],
+        "cover_letter": "I've spent the last three years building production ML systems. At Blink SEO I built a platform that processed 50M+ data points daily: sklearn clustering for keyword grouping, text embeddings for semantic matching, HuggingFace integrations for content generation. The system ran on GCP with PostgreSQL job queues handling async workloads. It started as an internal tool and grew into Macaroni Software, a standalone SaaS product.\nThe sustainability focus is what drew me to Clarity AI. My MRes and PhD were part of the EPSRC Mathematics of Planet Earth programme, which trains researchers specifically for climate and environmental work. My PhD focused on tipping point detection in climate systems. I spent five years at the National Physical Laboratory analysing meteorological time series, published in Environmental Research Letters, and presented at international conferences.\nI saw you're looking for someone who can work in a collaborative, scalable ML production environment. At Blink I worked closely with the delivery team to translate their workflows into automated pipelines and dashboards. The features that got built were the ones they actually used, which meant constant iteration based on feedback. That back-and-forth is where I do my best work.\nI'm based in Spain and interested in remote or hybrid. Happy to discuss further."
+    },
+    {
+        "company": "Tidio",
+        "title": "Senior Machine Learning Engineer (NLP/LLMs)",
+        "date_found": "2026-01-05",
+        "link": "https://tidiocareer.recruitee.com/o/senior-machine-learning-engineer-nlpllms",
+        "location": "Remote (Poland-based company)",
+        "description": "Build conversational AI for customer support. Own full ML lifecycle from data preprocessing to model deployment. Design NLP models to improve chatbot abilities. Work with LLMs (Claude, GPT, Gemini). 8-person ML team behind Lyro AI chatbot.",
+        "fit_notes": "Excellent NLP/LLM match. Production ML systems experience aligns well. Concern: Poland-based - check if they hire in Spain/EU-wide."
+    },
+    {
+        "company": "CI&T",
+        "title": "Data Scientist",
+        "date_found": "2026-01-05",
+        "link": "https://jobs.lever.co/ciandt",
+        "location": "Remote (global company)",
+        "description": "Apply statistical modeling and machine learning to solve real-world problems. Data analysis, algorithm experimentation, business impact solutions. Global company with offices including London.",
+        "fit_notes": "Good generalist DS role. May need to check specific remote location eligibility for Spain/UK."
+    },
+    {
+        "company": "Accenture",
+        "title": "Data Analyst / Data Scientist",
+        "date_found": "2026-01-05",
+        "link": "https://www.linkedin.com/jobs/accenture-jobs-málaga",
+        "location": "Málaga, Spain (hybrid)",
+        "description": "Multiple data roles in Málaga. Work with Python/R on large datasets, build ML models and recommendation engines for marketing activation. Analytics and machine learning for global clients.",
+        "fit_notes": "Local Málaga option. Large company stability. May be more junior-focused but worth exploring senior roles."
+    },
+    {
+        "company": "VML MAP",
+        "title": "Data Scientist",
+        "date_found": "2026-01-05",
+        "link": "https://job-boards.greenhouse.io/map/jobs/8350011002#app",
+        "location": "Málaga, Spain",
+        "description": "Data Scientist in Data & AI practice. Develop predictive models (propensity, churn, lookalike), recommendation systems, customer analytics (segmentation, LTV, behavioral analysis). Production-aware ML, working with Data Engineers on deployment. Python, SQL, cloud ML platforms (GCP Vertex AI, Salesforce Einstein). Agency working with world-renowned brands on marketing and customer experience. 1000+ specialists from 55+ nationalities.",
+        "fit_notes": "Strong match: Python/SQL, production ML experience, propensity/clustering models from Blink. Local Málaga office. Marketing/CRM focus similar to SEO background. Cross-functional collaboration experience aligns well.",
+        "cover_letter_topics": [
+            {
+                "topic": "Production-aware mindset: moving models from experimentation to production, working with Data Engineers on deployment, scoring pipelines, orchestration",
+                "relevant_experience": "Built full production ML system at Blink from scratch; PostgreSQL job queues for async scoring; GCP Compute Engine deployment; system scaled to handle enterprise clients with 50M+ data points daily"
+            },
+            {
+                "topic": "Propensity models, lookalike/similarity models, customer segmentation, recommendation systems",
+                "relevant_experience": "Built clustering models for keyword grouping (weighted by search volume, similar to propensity scoring); product-keyword matching using centroid similarity (lookalike model); HuggingFace integrations for content recommendations"
+            },
+            {
+                "topic": "Python and SQL proficiency; cloud ML platforms (GCP)",
+                "relevant_experience": "10+ years Python; BigQuery processing 50M+ data points daily; GCP Compute Engine backend; sklearn, Pandas, NLTK"
+            },
+            {
+                "topic": "Solid statistical foundation; statistical rigor in methodologies",
+                "relevant_experience": "PhD Mathematics; published in peer-reviewed journals (ERL, Chaos, EPL); statistical modeling for tipping point detection"
+            },
+            {
+                "topic": "Translate business challenges into data-driven solutions; advising clients; communicating complex findings clearly",
+                "relevant_experience": "Worked directly with delivery team to understand workflows; built dashboards they actually used; 20x productivity increase; features iterated based on feedback"
+            },
+            {
+                "topic": "Marketing domain; customer experience outcomes",
+                "relevant_experience": "3 years in SEO/marketing tech at Blink; built platform for e-commerce clients; familiar with marketing metrics and customer analytics"
+            },
+            {
+                "topic": "Cross-functional collaboration with engineering, strategy, and client teams",
+                "relevant_experience": "Worked in small cross-functional team; collaborated with delivery team and stakeholders; presented at international conferences"
+            },
+            {
+                "topic": "Not just a notebook data scientist; good engineering practices (Git, clean code)",
+                "relevant_experience": "Built maintainable SaaS product; version control; async job queues; code that scales"
+            }
+        ],
+        "cover_letter": "I've been building production ML systems in marketing tech for the last three years. At Blink SEO I created a platform that processed 50M+ data points daily through a Python backend on GCP, with PostgreSQL job queues handling async scoring and analysis. The system increased team productivity by 20x and eventually became its own SaaS product.\nThe similarity and clustering work I did transfers well. I built centroid matching to connect products with high-value search terms, clustering weighted by search volume, and LLM integrations for content recommendations. The domain was SEO rather than CRM, but the techniques overlap: embedding entities, scoring by weighted attributes, finding matches using similarity metrics.\nWorking at an agency meant collaborating with the delivery team on what to build and how. I translated their workflows into automated pipelines, built dashboards they actually used, and iterated based on feedback. The code had to work reliably for enterprise clients, so I focused on maintainable systems: version control, async processing, clean interfaces between components.\nMy PhD in Mathematics at the National Physical Laboratory focused on detecting patterns in noisy time series data. I published in peer-reviewed journals and presented at international conferences, so I'm comfortable explaining technical work to different audiences.\nI'm based in Málaga and interested in learning more about the role."
+    },
+    {
+        "company": "Management Solutions",
+        "title": "Data Science Consultant",
+        "date_found": "2026-01-05",
+        "link": "https://recruiting.managementsolutions.com/VerOfertas.aspx?num=271",
+        "location": "Málaga, Spain",
+        "description": "Consulting role focused on data mining, predictive modeling, and analytical support to major organizations. Requires background in Mathematics, Physics, Statistics, Econometrics, or related quantitative fields. Knowledge of modeling techniques including logit, GLM, time series, decision trees, random forests. Proficiency in SAS, R, Python, or Matlab. Role offers exposure to high-profile projects with leading companies, approximately 600 hours of training during first two years, merit-based advancement and partnership model.",
+        "fit_notes": "Local Málaga office. Technical skills match well (Python, time series, modeling). However, role targets 'recent graduates or final-year students' so may be too junior. Worth checking if they have senior positions.",
+        "cover_letter_topics": [
+            {
+                "topic": "Background in Mathematics, Physics, Statistics, Econometrics, or related quantitative fields",
+                "relevant_experience": "PhD Mathematics (Reading), MRes Mathematics (Imperial College), MA Mathematics (Edinburgh, First Class). Published in peer-reviewed journals on statistical methods."
+            },
+            {
+                "topic": "Knowledge of modeling techniques: logit, GLM, time series, decision trees, random forests",
+                "relevant_experience": "PhD focused on time series analysis and tipping point detection. Built clustering models (sklearn) and recommendation systems at Blink. Familiar with tree-based methods and statistical modeling."
+            },
+            {
+                "topic": "Proficiency in Python or Matlab",
+                "relevant_experience": "10+ years Python; built full ML platform processing 50M+ data points daily. PhD research used MATLAB for numerical simulations."
+            },
+            {
+                "topic": "Data mining, predictive modeling, analytical support to major organizations",
+                "relevant_experience": "Built predictive models and automated analytics at Blink for e-commerce clients. Created dashboards and pipelines that increased productivity by 20x."
+            },
+            {
+                "topic": "Consulting/client-facing work with leading companies",
+                "relevant_experience": "Worked directly with delivery team and stakeholders to understand needs. Built solutions for enterprise clients. Comfortable presenting technical work to different audiences."
+            }
+        ],
+        "cover_letter": "The consulting model at Management Solutions interests me: at Blink I built a platform from scratch that processed 50M+ data points daily. Python backend on GCP, sklearn for clustering and predictive models, PostgreSQL for async job queues. The work involved translating client needs into automated analytics. I'd meet with the delivery team, understand their workflows, then build pipelines and dashboards that actually got used. The system increased productivity by 20x and eventually became a SaaS product.\nSince leaving Blink I've taken on freelance projects: model deployment, dashboard creation in Tableau, pipeline automation with dbt and Databricks. I enjoy the variety and the direct client relationships.\nMy PhD in Mathematics focused on time series analysis and tipping point detection: I used MATLAB for numerical simulations and published in peer-reviewed journals. That gave me strong foundations in statistical modeling, and presenting at international conferences taught me to communicate technical work clearly.\nThe exposure to high-profile projects and the partnership model both appeal to me.\nI'm based in Málaga and available to talk."
     }
 ]

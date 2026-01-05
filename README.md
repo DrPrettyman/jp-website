@@ -1,4 +1,4 @@
-# [joshua.prettyman.me](https://joshua.prettyman.me)
+# [joshuaprettyman.com](https://joshuaprettyman.com)
 
 My personal website. Built with React and Vite.
 

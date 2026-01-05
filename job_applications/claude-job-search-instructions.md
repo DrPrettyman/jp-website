@@ -1,0 +1,228 @@
+# Claude Job Search Instructions
+
+These instructions are for Claude to assist Joshua Prettyman in finding suitable job opportunities.
+
+---
+
+## Candidate Summary
+
+**Name:** Joshua Prettyman, Ph.D.
+**Current Role:** Data Freelancer (Jan 2025 - Present)
+**Website:** [joshuaprettyman.com](https://joshuaprettyman.com)
+**LinkedIn:** [linkedin.com/in/prettyman](https://www.linkedin.com/in/prettyman/)
+
+### Professional Profile
+
+Data Scientist with 10+ years of Python experience and a Ph.D. in Mathematics. Built an ML-powered SaaS platform from scratch that increased team productivity by 20x. Strong background in NLP, data engineering, full-stack development, and scientific computing. Published researcher with papers in Environmental Research Letters, Chaos, and Europhysics Letters.
+
+---
+
+## Location & Work Preferences
+
+**Current Location:** Cártama, Málaga, Spain
+**Nationality:** British
+**Work Authorization:** EU/UK work rights
+
+### Acceptable Work Arrangements (in order of preference):
+
+1. **Remote** - Spanish company (fully remote)
+2. **Remote** - UK company (fully remote)
+3. **Remote** - Any company with "work from anywhere" policy
+4. **Hybrid/On-site** - Málaga area only (willing to commute within Málaga province)
+
+**Note:** Not open to relocation outside the Málaga area.
+
+---
+
+## Core Technical Skills
+
+### Primary Stack (10+ years)
+- **Python**: ScikitLearn, NumPy, Pandas, NLTK, Matplotlib, Plotly
+
+### Data Science & ML
+- Machine Learning (ScikitLearn, PyTorch, TensorFlow)
+- NLP (NLTK, text processing, keyword clustering)
+- LLM integrations (OpenAI API, Ollama, HuggingFace)
+- Time series analysis, statistical modeling
+
+### Data Engineering
+- Cloud platforms: GCP (BigQuery, Compute Engine, Cloud Functions), AWS, Databricks
+- Databases: PostgreSQL, BigQuery, SQL
+- ETL/ELT pipelines, dbt
+- API integrations: REST, GraphQL
+
+### Full-Stack Development
+- Backend: Python, Bash
+- Frontend: JavaScript, Retool, Plotly dashboards
+- Infrastructure: Docker, Git, CI/CD, Linux/Unix
+- Async systems, job queues
+
+### Visualization & Reporting
+- Tableau, Looker, Retool
+- Matplotlib, Plotly, Seaborn
+
+### Additional Experience
+- C++, MATLAB, R
+- Scientific computing
+- LaTeX, academic writing
+
+---
+
+## Professional Experience Summary
+
+### Data Scientist at Blink SEO / Macaroni Software (Nov 2021 - Dec 2024)
+- Built full-stack ML SaaS platform from scratch
+- Increased team productivity by 20x
+- Developed NLP-powered keyword clustering
+- Architected Python backend on GCP processing 50M+ data points daily
+- Created job-queue system (PostgreSQL) for async backend tasks
+- Built interactive dashboards (Plotly + JavaScript)
+- Integrated LLMs for content generation
+
+### Data Science Researcher at National Physical Laboratory (Sep 2015 - Feb 2021)
+- Developed novel scaling indicator for tipping point detection
+- Published in peer-reviewed journals (ERL, Chaos, EPL)
+- Time series analysis on large meteorological datasets
+- Presented at international conferences
+
+### Associate Lecturer at Sheffield Hallam University (Sep 2017 - Jul 2019)
+- Taught mathematics, statistics, and computing (Foundation to Masters level)
+- Course on Microsoft Excel for Business
+
+### Informatics Developer at UK Met Office (Jun - Aug 2017)
+- Data engineering internship
+- API integrations (Java), data analysis (Python)
+
+---
+
+## Academic Background
+
+- **Ph.D. Mathematics** - University of Reading
+  - Thesis: "Tipping Points and Early Warning Signals with Applications to Geophysical Data"
+  - 3 peer-reviewed publications
+
+- **MRes Mathematics** - Imperial College London (Distinction)
+  - Mathematics of Planet Earth CDT
+  - Focus: Probability, Statistics, Computational Mathematics
+
+- **MA Mathematics** - University of Edinburgh (First Class Honours)
+  - Focus: Pure Mathematics and Mathematics Education
+
+---
+
+## Target Job Roles
+
+Search for positions matching these titles (or similar):
+
+- Data Scientist
+- Senior Data Scientist
+- Machine Learning Engineer
+- ML Engineer
+- Data Engineer
+- Analytics Engineer
+- Python Developer (data-focused)
+- Full Stack Data Scientist
+- Applied Scientist
+- Research Scientist (industry)
+- NLP Engineer
+- AI Engineer
+
+---
+
+## Industry Preferences
+
+Open to most industries, but particularly interested in:
+- Technology / SaaS
+- Climate / Environmental tech
+- Marketing tech / SEO / Analytics
+- Finance / Fintech
+- Research institutions
+- E-commerce
+- Healthcare / Biotech
+
+---
+
+## Search Strategy for Claude
+
+When searching for jobs, use queries such as:
+- "remote data scientist Spain" OR "remote data scientist UK"
+- "data scientist remote anywhere" OR "ML engineer remote worldwide"
+- "data scientist Málaga" OR "machine learning engineer Andalucía"
+- "Python developer remote Europe"
+- "NLP engineer remote"
+- Site-specific searches on LinkedIn, Indeed, RemoteOK, WeWorkRemotely, etc.
+
+### Key Considerations When Evaluating Roles:
+1. Must be remote OR based in Málaga area
+2. Check if company hires in Spain/EU or UK
+3. Look for mention of "work from anywhere" or specific country requirements
+4. Senior/Mid-level roles preferred (3+ years experience required is fine)
+5. Roles requiring heavy deep learning / computer vision are less suitable (NLP is fine)
+6. Avoid roles requiring relocation outside Málaga
+
+---
+
+## Source Files for More Details
+
+If more detailed information is needed, refer to these files in the repository:
+
+### CV & Experience
+- `public/cv/two_page/JPrettymanCV.tex` - Full LaTeX CV with detailed experience
+- `src/assets/cv-professional/manifest.json` - Professional experience overview
+- `src/assets/cv-professional/blink.shtml` - Detailed Blink SEO/Macaroni experience
+- `src/assets/cv-professional/npl.shtml` - NPL research experience
+- `src/assets/cv-professional/freelance.shtml` - Current freelance services
+
+### Academic Background
+- `src/assets/cv-academic/manifest.json` - Education overview
+- `src/assets/cv-academic/publications.json` - Full publication list with abstracts
+- `src/assets/cv-academic/phd-reading.shtml` - Ph.D. details
+- `src/assets/cv-academic/mres-imperial.shtml` - MRes details
+- `src/assets/cv-academic/ma-edinburgh.shtml` - MA details
+
+### Technical Skills
+- `src/assets/techSkills.json` - Detailed breakdown of technical capabilities
+
+---
+
+## Output Format
+
+When presenting job opportunities, include:
+1. **Job Title** and **Company Name**
+2. **Location** (Remote/Hybrid/On-site + any restrictions)
+3. **Brief Description** of the role
+4. **Why it's a good fit** (match with skills/experience)
+5. **Link** - Direct application URL, or link to the job board/site where it was found (always required)
+6. **Any concerns** (e.g., visa requirements, relocation expectations)
+
+---
+
+## Saving Jobs to jobs.json
+
+When asked to save promising jobs, add them to `job_applications/jobs.json` with the following fields:
+
+### Required Fields
+- `company` - Company name
+- `title` - Job title
+- `date_found` - Date the job was found (YYYY-MM-DD format)
+- `link` - Direct application URL or job board link
+
+### Optional Fields (include when available)
+- `location` - Remote/Hybrid/On-site details
+- `description` - Brief job description
+- `fit_notes` - Why this role is a good match
+- `cover_letter` - If a cover letter has been drafted
+- `questions` - Array of application questions and answers
+
+### Example Entry
+```json
+{
+    "company": "Example Corp",
+    "title": "Senior Data Scientist",
+    "date_found": "2026-01-05",
+    "link": "https://example.com/careers/job-id",
+    "location": "Remote, Spain",
+    "description": "Build ML models for...",
+    "fit_notes": "Python and NLP experience align well."
+}
+```

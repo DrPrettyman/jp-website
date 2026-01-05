@@ -57,6 +57,75 @@
 - Make every paragraph the same length
 - List skills like a checklist
 - Over-explain or pad with filler
+- Misrepresent experience to match job description terminology
+
+### Accuracy and honesty
+
+Do not stretch or misrepresent experience to match job description language. If the techniques are transferable but the application is different, say so honestly.
+
+**Bad (misrepresenting experience):**
+> "I wrote clustering models for customer segmentation (grouping keywords by search intent, weighted by volume)"
+
+This incorrectly calls keyword clustering "customer segmentation". Customer segmentation means grouping customers by attributes or behaviour. Keyword clustering for SEO is a different application, even if it uses similar techniques.
+
+**Good (honest about what it actually was):**
+> "I built NLP clustering models and similarity matching using sklearn and text embeddings. The application was SEO rather than CRM, but the techniques overlap: grouping items by embedded features, scoring by weighted attributes, matching entities using centroid similarity."
+
+This accurately describes what was built and acknowledges the techniques are transferable without claiming direct experience in customer segmentation.
+
+### AI writing patterns to avoid
+
+These sentence constructions are dead giveaways that AI wrote the text:
+
+**Contrastive reframes ("It's not X, it's Y")**
+- "It wasn't just a tool, it was a transformation"
+- "The LLM integrations I shipped weren't demos, they were production features"
+- "This isn't just about data, it's about impact"
+
+Instead: Just say what it is. "I shipped LLM integrations to production" is fine.
+
+**Negation for false depth ("more than just", "not only... but also")**
+- "This role is more than just a job"
+- "I'm not only a data scientist but also a problem solver"
+- "It's not simply about building models"
+
+Instead: Make the actual point without the negation setup.
+
+**The Rule of Three**
+- "I bring expertise in Python, passion for data, and commitment to excellence"
+- "Speed, scale, and sustainability"
+- Any time three parallel items appear for rhetorical effect
+
+Instead: Two items or four. Or just one if that's all you need.
+
+**Paragraph-opening hedges**
+- "When it comes to..."
+- "In today's rapidly evolving..."
+- "In the realm of..."
+
+Instead: Start with the actual subject.
+
+**Flattering intensifiers**
+- "Fascinating", "captivating", "remarkable", "compelling"
+- "Truly", "deeply", "genuinely" (when not actually needed)
+- Calling anything a "journey" or "transformation"
+
+Instead: Let facts speak. If something is impressive, show why.
+
+**Excessive transitions**
+- "Furthermore", "Moreover", "Indeed", "In summary"
+- Starting multiple sentences with "This" referring back
+
+Instead: If ideas connect, the connection should be obvious. Cut the signposting.
+
+**Mirrored structure across paragraphs**
+- Every paragraph being roughly the same length
+- Every paragraph following the same claim-evidence-conclusion pattern
+- Repeating sentence rhythms
+
+Instead: Vary structure deliberately. A two-sentence paragraph followed by a longer one feels human.
+
+*Sources: [Blake Stockton](https://www.blakestockton.com/dont-write-like-ai-1-101-negation/), [Undetectable AI](https://undetectable.ai/blog/gpt-phrases/), [ProductiveShop](https://productiveshop.com/how-to-avoid-ai-writing-patterns/)*
 
 ### Structure (flexible, not a rigid template)
 1. Opening: State interest and what specifically draws you to the role
@@ -92,6 +161,57 @@ The cover letter is where you explain your journey and emphasise transferable sk
 
 *Sources: [Resume Worded](https://resumeworded.com/cover-letter-samples/data-scientist), [BrainStation](https://brainstation.io/career-guides/data-science-cover-letter-templates-and-examples), [365 Data Science](https://365datascience.com/career-advice/job-interview-tips/data-scientist-cover-letter/), [Indeed](https://www.indeed.com/career-advice/cover-letter-samples/data-scientist), [Teal](https://www.tealhq.com/cover-letter-examples/software-engineer)*
 
+## Cover letter writing process
+
+### Step 1: Analyse the job description
+
+Before writing the cover letter, read the full job description carefully. Look for topics across:
+- Company description and mission
+- Sector/industry
+- Team composition and culture
+- Role responsibilities
+- Required skills
+- Nice-to-haves
+- Any specific phrases or values mentioned
+
+### Step 2: Create cover_letter_topics
+
+Add a `cover_letter_topics` array to the job entry in jobs.json. Each topic should map a job requirement to relevant experience:
+
+```json
+"cover_letter_topics": [
+    {
+        "topic": "Proficiency in Python ecosystem (Pandas, Matplotlib, Scikit-Learn); deploying end-to-end ML models",
+        "relevant_experience": "Built full ML platform at Blink processing 50M+ data points daily; NLP clustering, embeddings, sklearn"
+    },
+    {
+        "topic": "sustainability sector",
+        "relevant_experience": "MRes and PhD part of Mathematics of Planet Earth programme; PhD focused on tipping point detection in climate systems"
+    },
+    {
+        "topic": "team of 20+ international Data Scientists from top academic institutions",
+        "relevant_experience": "PhD from Reading/Imperial; published in peer-reviewed journals; presented at international conferences"
+    }
+]
+```
+
+Don't just list "Required Skills" verbatim. Look for:
+- Implicit requirements (e.g., "team of PhDs" implies academic background matters)
+- Company values or mission statements
+- Industry-specific context
+- Team structure clues
+
+### Step 3: Select the strongest points
+
+Choose 3-5 topics where Joshua has the strongest, most specific experience. Prioritise:
+- Topics where concrete metrics or outcomes can be cited
+- Topics that differentiate Joshua from other candidates
+- Topics the company emphasises most (mentioned multiple times, in headlines, etc.)
+
+### Step 4: Write the cover letter
+
+Use the selected topics to structure the letter. Don't try to hit every point. A focused letter with 3-4 strong connections beats a scattered letter trying to address everything.
+
 ## Example prompt
 
 > Look at claude-instructions.md and write a cover letter for [Company Name]
@@ -106,3 +226,69 @@ Make sure the job entry in jobs.json has at minimum:
 ```
 
 The cover letter will be added as a `"cover_letter"` field to the same entry.
+
+## Critical rules (learned from past mistakes)
+
+### 1. Read the CV for accurate dates
+
+**ALWAYS** check `public/cv/two_page/JPrettymanCV.tex` for current employment dates before writing. Do not assume timelines.
+
+**Bad:**
+> "I've been building production ML systems in marketing tech for the last three years."
+
+This was wrong because Blink SEO ended Dec 2024. Joshua has been freelancing since Jan 2025. The CV clearly shows:
+- Data Freelancer: Jan. 2025 to Present
+- Data Scientist at Blink SEO: Nov. 2021 to Dec. 2024
+
+**Good:**
+> "I spent three years at Blink SEO building production data systems, and I've been freelancing since early 2025."
+
+### 2. Lead with industry experience for non-academic roles
+
+For industry positions, lead with Blink/freelance experience. Mention PhD after industry experience, not before.
+
+**Bad:**
+> "My background is in mathematics: PhD from the University of Reading, MRes from Imperial College, MA from Edinburgh. I've spent the last three years in industry..."
+
+**Good:**
+> "The consulting model at Management Solutions interests me: at Blink I built a platform from scratch..."
+
+### 3. Don't list all degrees
+
+For industry roles, the PhD is sufficient. Listing MRes and MA with grades looks like padding.
+
+**Bad:**
+> "PhD from the University of Reading, MRes from Imperial College (Distinction), MA from Edinburgh (First Class)"
+
+**Good:**
+> "My PhD in Mathematics focused on time series analysis and tipping point detection"
+
+### 4. No self-limiting language
+
+Never point out potential mismatches or rule yourself out. Let the CV speak for itself and let them decide.
+
+**Bad:**
+> "I notice this role targets recent graduates. I bring more experience than that, but I'm interested in consulting and would be glad to discuss whether there's a fit at a more senior level."
+
+**Good:**
+> "The exposure to high-profile projects and the partnership model both appeal to me."
+
+### 5. Use colons to connect related sentences
+
+Short related sentences should be joined with colons rather than left as choppy separate sentences.
+
+**Bad:**
+> "My PhD in Mathematics focused on time series analysis and tipping point detection. I used MATLAB for numerical simulations and published in peer-reviewed journals."
+
+**Good:**
+> "My PhD in Mathematics focused on time series analysis and tipping point detection: I used MATLAB for numerical simulations and published in peer-reviewed journals."
+
+### 6. Avoid redundant openings
+
+Don't waste the opening on throat-clearing. Lead directly with what draws you to the role.
+
+**Bad:**
+> "I spent three years at Blink SEO building production data systems, and I've been freelancing since early 2025. The consulting model at Management Solutions interests me."
+
+**Good:**
+> "The consulting model at Management Solutions interests me: at Blink I built a platform from scratch that processed 50M+ data points daily."

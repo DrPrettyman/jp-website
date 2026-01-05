@@ -36,7 +36,7 @@ LATEX_TEMPLATE = r"""\documentclass[11pt]{article}
 
 \vspace{4pt}
 
-\href{mailto:joshua@prettyman.me}{joshua@prettyman.me} \textbar{} \href{https://joshuaprettyman.com}{joshuaprettyman.com} \textbar{} \href{https://linkedin.com/in/joshuaprettyman}{in/joshuaprettyman}
+\href{mailto:joshua@prettyman.me}{joshua@prettyman.me} \textbar{} \href{https://joshuaprettyman.com}{joshuaprettyman.com} \textbar{} \href{https://linkedin.com/in/prettyman}{in/prettyman}
 \end{center}
 
 \vspace{20pt}
@@ -58,7 +58,7 @@ Dear <INSERT_ADDRESSEE>,
 
 \vspace{12pt}
 
-Yours sincerely,
+Yours <INSERT_SIGNOFF>,
 
 \vspace{24pt}
 
@@ -91,10 +91,15 @@ def generate_latex_cover_letter(
     company: str,
     title: str,
     cover_letter: str,
-    addressee: str = "hiring team"
+    addressee: str = None
 ) -> str:
     """Generate LaTeX source for a cover letter."""
 
+    sign_off: str = "sincerely"
+    if addressee is None:
+        addressee = "hiring team"
+        sign_off = "faithfully"
+    
     # Escape text for LaTeX
     company_escaped = escape_latex(company)
     cover_letter_escaped = escape_latex(cover_letter)
@@ -108,6 +113,7 @@ def generate_latex_cover_letter(
     cover_letter_formatted = cover_letter_escaped.replace('\n', '\n\n')
 
     latex_template = LATEX_TEMPLATE
+    latex_template = latex_template.replace('<INSERT_SIGNOFF>', sign_off)
     latex_template = latex_template.replace('<INSERT_DATE>', current_date)
     latex_template = latex_template.replace('<INSERT_TITLE>', title_escaped)
     latex_template = latex_template.replace('<INSERT_COMPANY>', company_escaped)
@@ -181,13 +187,21 @@ def main():
     # Process each job with a cover letter
     generated_count = 0
     for job in jobs:
-        if 'cover_letter' not in job or not job['cover_letter'].strip():
+        company = job.get('company')
+        title = job.get('title')
+        cover_letter = job.get('cover_letter', '')
+        addressee = job.get('addressee')
+        
+        print('')
+        if not company:
+            print(f"WARNING: Skipping entry - missing 'company' field")
             continue
-
-        company = job.get('company', 'Unknown')
-        title = job.get('title', 'Position')
-        cover_letter = job['cover_letter']
-        addressee = job.get('addressee', 'hiring team')
+        if not cover_letter.strip():
+            print(f"WARNING: Skipping {company} - 'cover_letter' field is empty")
+            continue
+        if not title:
+            print(f"WARNING: Skipping {company} - missing 'title' field")
+            continue
 
         print(f"Generating cover letter for {company}...")
 
@@ -204,7 +218,7 @@ def main():
         output_path = output_dir / f"{base_filename}.pdf"
 
         if compile_latex_to_pdf(latex_source, output_path):
-            print(f"  Created: {output_path}")
+            print(f"  Created: .pdf cover letter for {company}")
             generated_count += 1
         else:
             print(f"  Failed to generate PDF for {company}")
@@ -216,7 +230,7 @@ def main():
         )
         txt_output_path = txt_output_dir / f"{base_filename}.txt"
         txt_output_path.write_text(plain_text)
-        print(f"  Created: {txt_output_path}")
+        print(f"  Created: .txt cover letter for {company}")
 
     print(f"\nGenerated {generated_count} cover letter(s)")
 

@@ -10,6 +10,15 @@ const Projects = () => {
       <ContentBlock title="Projects" icon={FolderGit2}>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Fraud Detection */}
+            <ProjectCard
+              title="Fraud Detection"
+              date="2026"
+              tags={["Python", "ML", "LightGBM", "Kaggle"]}
+              description="Cost-sensitive fraud detection achieving 97.4% AUC and $447K annual savings. Features time-based CV and business-optimized thresholds."
+              link="projects/fraud-detection"
+              image="/images/fraud-detection/score_distribution.png"
+            />
             {/* Comtrade */}
             <ProjectCard
               title="Wine exports/imports visualisation"

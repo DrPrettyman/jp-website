@@ -1,0 +1,11 @@
+Dear None,
+
+I've been building production ML systems in marketing tech for the last three years. At Blink SEO I created a platform that processed 50M+ data points daily through a Python backend on GCP, with PostgreSQL job queues handling async scoring and analysis. The system increased team productivity by 20x and eventually became its own SaaS product.
+The similarity and clustering work I did transfers well. I built centroid matching to connect products with high-value search terms, clustering weighted by search volume, and LLM integrations for content recommendations. The domain was SEO rather than CRM, but the techniques overlap: embedding entities, scoring by weighted attributes, finding matches using similarity metrics.
+Working at an agency meant collaborating with the delivery team on what to build and how. I translated their workflows into automated pipelines, built dashboards they actually used, and iterated based on feedback. The code had to work reliably for enterprise clients, so I focused on maintainable systems: version control, async processing, clean interfaces between components.
+My PhD in Mathematics at the National Physical Laboratory focused on detecting patterns in noisy time series data. I published in peer-reviewed journals and presented at international conferences, so I'm comfortable explaining technical work to different audiences.
+I'm based in Málaga and interested in learning more about the role.
+
+Yours sincerely,
+
+Joshua Prettyman

@@ -1,4 +1,4 @@
-Dear hiring team,
+Dear None,
 
 I've spent the last three years building an AI-powered SEO platform, so when I saw Adaptify's mission to deliver SEO fully on autopilot, I had to reach out.
 At Blink SEO I joined as their first data scientist when everything ran on spreadsheets. I built the entire ML platform from scratch: Python backend on GCP, BigQuery processing 50M+ data points daily, NLP-powered clustering that reduced manual keyword grouping from days to minutes, and LLM integrations via Huggingface to generate content recommendations. The platform increased team productivity by 20x and eventually became its own SaaS product, Macaroni Software. I know what it takes to build AI features that feel like magic to end users because I've done exactly that, in the SEO space specifically.

@@ -1,4 +1,4 @@
-Dear hiring team,
+Dear None,
 
 At Blink SEO I built an ML platform that increased team productivity by 20x and grew into a standalone SaaS product. I deployed scalable Python systems on GCP, built Plotly dashboards, and worked in a cross-functional team where I engaged directly with stakeholders to understand their workflows. That's the kind of client-focused, production-oriented data science work I want to keep doing, which is why Cognite's approach appeals to me.
 The platform I built processed 50M+ data points daily from external APIs, with async job queues in PostgreSQL and ML models (NLP clustering, embeddings) deployed to serve real users. I handled everything from data cleansing to dashboard delivery. The part I found most rewarding was iterating with the delivery team: understanding what they actually needed, deploying quickly, and watching features get adopted rather than ignored.

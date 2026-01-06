@@ -66,7 +66,7 @@ const Projects = () => {
             />
             {/* 2021 - Paper 3: PS Robustness (ERL) */}
             <ProjectCard
-              title="PS Robustness (ERL)"
+              title="PS Indicator Robustness"
               date="2021"
               tags={["MATLAB", "Research", "Paper", "Climate"]}
               description="Analytical foundation for power spectrum indicator. Proves robustness against trends and periodic oscillations. Applied to paleoclimate ice-core data. Published in ERL."
@@ -84,7 +84,7 @@ const Projects = () => {
             />
             {/* 2019 - Paper 2: Multivariate EWS (Chaos) */}
             <ProjectCard
-              title="Multivariate EWS (Chaos)"
+              title="Multivariate EWS"
               date="2019"
               tags={["MATLAB", "Research", "Paper"]}
               description="Extending early warning signals to multivariate and gridded data. Developed stochastic hurricane model and spatial analysis methods. Published in Chaos."
@@ -93,7 +93,7 @@ const Projects = () => {
             />
             {/* 2018 - Paper 1: PS Indicator (EPL) */}
             <ProjectCard
-              title="PS Indicator (EPL)"
+              title="Power Spectrum Scaling Indicator"
               date="2018"
               tags={["MATLAB", "Research", "Paper"]}
               description="Novel power spectrum scaling indicator for early warning signals. Applied to tropical cyclone prediction where traditional indicators fail. Published in EPL."

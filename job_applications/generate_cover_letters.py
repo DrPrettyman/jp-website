@@ -4,7 +4,6 @@ Generate PDF cover letters from jobs.json using LaTeX.
 """
 
 import json
-import os
 import subprocess
 import tempfile
 from datetime import datetime

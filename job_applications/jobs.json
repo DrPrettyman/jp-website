@@ -216,9 +216,9 @@
         "date_found": "2026-01-05",
         "applied": true,
         "link": "https://tidiocareer.recruitee.com/o/senior-machine-learning-engineer-nlpllms",
-        "location": "Remote (Poland-based company)",
-        "description": "Build conversational AI for customer support. Own full ML lifecycle from data preprocessing to model deployment. Design NLP models to improve chatbot abilities. Work with LLMs (Claude, GPT, Gemini). 8-person ML team behind Lyro AI chatbot.",
-        "fit_notes": "Excellent NLP/LLM match. Production ML systems experience aligns well. Concern: Poland-based - check if they hire in Spain/EU-wide."
+        "location": "Remote-first (Poland-based, offices in Poland or coworking)",
+        "description": "8-person ML team building Lyro, an advanced RAG AI Agent on Claude/Gemini. Projects include: multi-agent workflow systems, agentic product intelligence (search/recommendation), knowledge base management AI, context optimization engine. 350M unique users/month view widget. Received 10M PLN grant for fine-tuning open-source models. Requirements: 4+ years NLP/deep learning in production, LLM experience (Claude/GPT/Gemini), Python expert, PyTorch/HuggingFace, FastAPI/Flask, strong software engineering. Salary: 23-33k PLN net B2B or 19-27k gross employed. Benefits: 26 days off, MacBook Pro, private medical, mental health program, English classes budget.",
+        "fit_notes": "Excellent match: NLP/LLM production experience, Python expert, HuggingFace integrations from Blink, FastAPI. Projects align well (RAG, multi-agent, recommendations). Concern: Poland-based but remote-first. Need to verify if they hire in Spain/EU. Salary in PLN suggests Poland contract preference."
     },
     {
         "company": "CI&T",
@@ -315,5 +315,50 @@
             }
         ],
         "cover_letter": "The consulting model at Management Solutions interests me: at Blink I built a platform from scratch that processed 50M+ data points daily. Python backend on GCP, sklearn for clustering and predictive models, PostgreSQL for async job queues. The work involved translating client needs into automated analytics. I'd meet with the delivery team, understand their workflows, then build pipelines and dashboards that actually got used. The system increased productivity by 20x and eventually became a SaaS product.\nSince leaving Blink I've taken on freelance projects: model deployment, dashboard creation in Tableau, pipeline automation with dbt and Databricks. I enjoy the variety and the direct client relationships.\nMy PhD in Mathematics focused on time series analysis and tipping point detection: I used MATLAB for numerical simulations and published in peer-reviewed journals. That gave me strong foundations in statistical modeling, and presenting at international conferences taught me to communicate technical work clearly.\nThe exposure to high-profile projects and the partnership model both appeal to me.\nI'm based in Málaga and available to talk."
+    },
+    {
+        "company": "OLX",
+        "title": "(Senior) Data Scientist - Generative AI",
+        "date_found": "2026-01-06",
+        "link": "https://jobs.eu.lever.co/olx/51226864-5bed-4ccc-b4e4-5528a94d5c92",
+        "location": "100% Remote (Europe)",
+        "description": "Join Generative AI Data Science Team expanding LLM investments. Build models for platform and marketplace perspective. Focus on LLMs, GenAI, RAG. Work across OLX, Automotive (Otomoto, Standvirtual), and Real Estate platforms in EU region. Requires SQL, MLOps experience, CI/CD, testing.",
+        "fit_notes": "Strong LLM/GenAI focus matches recent experience. 100% remote Europe is ideal. Large platform scale (millions of users). Production ML experience required - good fit."
+    },
+    {
+        "company": "InPost Group",
+        "title": "Senior Data Scientist",
+        "date_found": "2026-01-06",
+        "link": "https://inpost.eu/careers",
+        "location": "Remote (Europe)",
+        "description": "Europe's leading e-commerce enablement platform. Develop AI solutions, address complex business problems, drive data product evolution. Partner with product and business teams, lead full lifecycle of data science initiatives. Remote setting with operations across Poland, France, Benelux, UK, Italy.",
+        "fit_notes": "E-commerce/logistics scale is interesting. Remote Europe option. Need to verify Spain eligibility specifically."
+    },
+    {
+        "company": "agap2 Spain",
+        "title": "Data Scientist",
+        "date_found": "2026-01-06",
+        "link": "https://agap2.com/spain/en/jobs/data-scientist-remote/",
+        "location": "Remote (Spain)",
+        "description": "Senior Data Scientist role focused on definition and deployment of innovative solutions based on predictive algorithms. AWS infrastructure (Terraform). Consulting firm with permanent contracts (99%+ permanent), close follow-up, and career development focus.",
+        "fit_notes": "Remote Spain is ideal. AWS experience required - have GCP but transferable. Consulting model offers variety. Permanent contract focus is attractive."
+    },
+    {
+        "company": "Proxify",
+        "title": "Senior Data Engineer (AWS & Python)",
+        "date_found": "2026-01-06",
+        "link": "https://weworkremotely.com/remote-jobs/proxify-ab-senior-data-engineer-aws-python",
+        "location": "Remote (CET +/- 3 hours)",
+        "description": "Design, build, and optimize scalable ETL/ELT pipelines and data warehouses for analytics, ML, and BI. Expert Python (Pandas, PySpark), AWS (S3, Glue, Lambda, EMR), modern data warehouses (Snowflake, Redshift, BigQuery). Swedish company, highly vetted talent network. Salary $45k-$80k.",
+        "fit_notes": "Data engineering focus rather than pure DS but skills overlap well. Python/BigQuery experience transfers. Remote CET timezone perfect. Good for pipeline/infrastructure work."
+    },
+    {
+        "company": "CrowdStrike",
+        "title": "Sr. Data Scientist",
+        "date_found": "2026-01-06",
+        "link": "https://www.crowdstrike.com/en-us/careers/",
+        "location": "Remote (global, remote-first)",
+        "description": "Cybersecurity platform - technical leadership in AI solutions, driving innovation while mentoring junior team members in advanced ML applications. Purpose-built remote-first company. Also has Manager of Data Science role leading AI assistants development and LLM applications.",
+        "fit_notes": "Remote-first culture is excellent. Cybersecurity domain is different but ML skills transfer. Need to check specific Europe/Spain eligibility for roles."
     }
 ]

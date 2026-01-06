@@ -214,6 +214,7 @@
         "company": "Tidio",
         "title": "Senior Machine Learning Engineer (NLP/LLMs)",
         "date_found": "2026-01-05",
+        "applied": true,
         "link": "https://tidiocareer.recruitee.com/o/senior-machine-learning-engineer-nlpllms",
         "location": "Remote (Poland-based company)",
         "description": "Build conversational AI for customer support. Own full ML lifecycle from data preprocessing to model deployment. Design NLP models to improve chatbot abilities. Work with LLMs (Claude, GPT, Gemini). 8-person ML team behind Lyro AI chatbot.",

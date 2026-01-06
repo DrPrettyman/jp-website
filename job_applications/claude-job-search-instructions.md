@@ -234,6 +234,7 @@ When asked to save promising jobs, add them to `job_applications/jobs.json` with
 ### Optional Fields (include when available)
 - `location` - Remote/Hybrid/On-site details
 - `fit_notes` - Why this role is a good match
+- `full_description` - Boolean indicating if full job description was successfully scraped (see scraping section below)
 - `cover_letter` - If a cover letter has been drafted
 - `questions` - Array of application questions and answers
 
@@ -256,3 +257,50 @@ Before adding a job, verify:
     "fit_notes": "Python and NLP experience align well."
 }
 ```
+
+---
+
+## Full Description Scraping (Before Writing Cover Letters)
+
+**IMPORTANT:** The WebFetch tool summarizes content, which can lose critical details from job descriptions. Before writing cover letters, use the scraping script to get the complete job description.
+
+### Why This Matters
+- WebFetch passes content through a summarization model
+- Requirements, technologies, and qualifications may be omitted
+- Missing a keyword could hurt your cover letter
+- The full description may reveal deal-breakers not in the summary
+
+### Process
+After the initial job search and before writing cover letters:
+
+1. **For each newly-added job**, run the scraping script:
+   ```bash
+   python3 job_applications/scrape_job.py "<job_url>"
+   ```
+
+2. **Compare the output** with the description you saved. Look for:
+   - Additional requirements not captured
+   - Specific technologies or tools mentioned
+   - Company culture details
+   - Salary information
+   - Location restrictions
+
+3. **Update the job entry in jobs.json** with any missing details that are relevant for the cover letter.
+
+4. **Set the `full_description` field:**
+   - `"full_description": true` - Script successfully returned complete job description
+   - `"full_description": false` - Script failed (e.g., JavaScript-rendered pages like Workable) and manual verification is needed
+
+### Known Limitations
+Some job boards use heavy JavaScript rendering that prevents scraping:
+- **Workable** (`apply.workable.com`) - Returns minimal content, requires manual check
+- Other JS-heavy sites may also fail
+
+For jobs with `"full_description": false`, you must manually visit the page and update the description before writing a cover letter.
+
+### Example
+```bash
+python3 job_applications/scrape_job.py "https://jobs.lever.co/company/job-id"
+```
+
+This returns the full text content of the page, without summarization. Use this to ensure you have complete information before tailoring your cover letter.

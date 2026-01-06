@@ -65,7 +65,43 @@ In addition, also follow the guidelines in `job_applications/claude-job-search-i
 
 ---
 
-## PHASE 4: Create Cover Letter Topics
+## PHASE 4: Scrape Full Job Descriptions
+
+**IMPORTANT:** The WebFetch tool summarizes content, which can lose critical details. Before writing cover letters, scrape each newly-added job to get the complete description.
+
+For each job you just added to jobs.json:
+
+1. Run the scraping script:
+   ```bash
+   python3 job_applications/scrape_job.py "<job_url>"
+   ```
+
+2. Compare the output with the description you saved. Look for:
+   - Additional requirements not captured by WebFetch
+   - Specific technologies or tools mentioned
+   - Company culture details
+   - Salary information
+   - Location restrictions or deal-breakers
+
+3. Update the job entry in jobs.json with the FULL job description, plus any extra information about the company, location, etc..
+
+4. Set the `full_description` field:
+   - `"full_description": true` - Script successfully returned complete job description
+   - `"full_description": false` - Script failed (e.g., Workable JS pages) and manual verification is needed
+
+**Note:** Some job boards (like Workable) use JavaScript rendering that prevents scraping. For jobs with `"full_description": false`, flag them for manual verification and do not write cover letters until the description is confirmed.
+
+This step ensures you have the fullest possible information before tailoring cover letters. WebFetch summaries may omit keywords, requirements, or context that could make or break your application.
+
+---
+
+## WARNING
+
+For jobs with `"full_description": false`, STOP HERE. The following phases should be completed only after manual verification of the job description. 
+
+For jobs with `"full_description": true`, continue to PHASE 5.
+
+## PHASE 5: Create Cover Letter Topics
 
 For each job, before writing the cover letter, create a `cover_letter_topics` array mapping job requirements to relevant experience. Look for:
 - Explicit requirements from the job description
@@ -79,7 +115,7 @@ In addition, also follow the guidelines in `job_applications/claude-instructions
 
 ---
 
-## PHASE 5: Write Cover Letters
+## PHASE 6: Write Cover Letters
 
 For each job, write a cover letter following these rules strictly:
 
@@ -113,7 +149,7 @@ In addition, also follow the guidelines in `job_applications/claude-instructions
 
 ---
 
-## PHASE 6: Quality Review
+## PHASE 7: Quality Review
 
 Before finalizing, review each cover letter for:
 
@@ -146,3 +182,5 @@ Report back with:
 - Check your cover letters against the "AI patterns to avoid" checklist before saving.
 
 Begin by reading all the source documents listed in Phase 1.
+
+During context compaction always include this instruction: "If continuing from a compacted conversation, first read the full prompt for this task at `job_applications/claude-prompt.md`.".

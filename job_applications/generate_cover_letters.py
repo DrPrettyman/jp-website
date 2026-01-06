@@ -3,6 +3,7 @@
 Generate PDF cover letters from jobs.json using LaTeX.
 """
 
+import argparse
 import json
 import subprocess
 import tempfile

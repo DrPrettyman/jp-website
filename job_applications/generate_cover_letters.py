@@ -86,59 +86,6 @@ def escape_latex(text: str) -> str:
     return text
 
 
-def generate_latex_cover_letter(
-    company: str,
-    title: str,
-    cover_letter: str,
-    addressee: str = None
-) -> str:
-    """Generate LaTeX source for a cover letter."""
-
-    sign_off: str = "sincerely"
-    if addressee is None:
-        addressee = "hiring team"
-        sign_off = "faithfully"
-    
-    # Escape text for LaTeX
-    company_escaped = escape_latex(company)
-    cover_letter_escaped = escape_latex(cover_letter)
-    title_escaped = escape_latex(title)
-    addressee_escaped = escape_latex(addressee)
-
-    # Format current date
-    current_date = datetime.now().strftime("%d %B %Y")
-
-    # Convert newlines to LaTeX paragraph breaks
-    cover_letter_formatted = cover_letter_escaped.replace('\n', '\n\n')
-
-    latex_template = LATEX_TEMPLATE
-    latex_template = latex_template.replace('<INSERT_SIGNOFF>', sign_off)
-    latex_template = latex_template.replace('<INSERT_DATE>', current_date)
-    latex_template = latex_template.replace('<INSERT_TITLE>', title_escaped)
-    latex_template = latex_template.replace('<INSERT_COMPANY>', company_escaped)
-    latex_template = latex_template.replace('<INSERT_ADDRESSEE>', addressee_escaped)
-    latex_template = latex_template.replace('<INSERT_BODY>', cover_letter_formatted)
-
-    return latex_template
-
-
-def generate_plain_text_cover_letter(
-    cover_letter: str,
-    addressee: str = "hiring team"
-) -> str:
-    """Generate plain text cover letter (no letterhead)."""
-    lines = [
-        f"Dear {addressee},",
-        "",
-        cover_letter,
-        "",
-        "Yours sincerely,",
-        "",
-        "Joshua Prettyman"
-    ]
-    return "\n".join(lines)
-
-
 def compile_latex_to_pdf(latex_source: str, output_path: Path) -> bool:
     """Compile LaTeX source to PDF."""
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -165,31 +112,35 @@ def compile_latex_to_pdf(latex_source: str, output_path: Path) -> bool:
         return False
 
 
-def sanitize_filename(name: str) -> str:
-    """Convert company name to safe filename."""
-    return name.replace(' ', '_').replace('/', '_').replace('\\', '_')
-
-
-def main():
-    script_dir = Path(__file__).parent
-    jobs_file = script_dir / "jobs.json"
-    output_dir = script_dir / "cover_letters"
-    txt_output_dir = script_dir / "cover_letters_txt"
-
-    # Ensure output directories exist
-    txt_output_dir.mkdir(parents=True, exist_ok=True)
-
-    # Read jobs data
-    with open(jobs_file, 'r') as f:
-        jobs = json.load(f)
-
-    # Process each job with a cover letter
-    generated_count = 0
-    for job in jobs:
-        company = job.get('company')
-        title = job.get('title')
-        cover_letter = job.get('cover_letter', '')
-        addressee = job.get('addressee')
+class Job:
+    def __init__(
+        self, 
+        company: str,
+        title: str,
+        cover_letter_body: str,
+        addressee: str = None):
+        
+        self.company: str = company
+        self.title: str = title
+        self.cover_letter_body: str = cover_letter_body
+        
+        if addressee:
+            self.addressee = addressee
+            self.sign_off: str = "sincerely"
+        else:           
+            self.addressee = "hiring team"
+            self.sign_off = "faithfully"
+            
+    @classmethod
+    def from_dict(cls, job_dict: dict):
+        if not isinstance(job_dict, dict):
+            print(f"WARNING: Skipping entry - incorrect formatting")
+            return None
+        
+        company = job_dict.get('company')
+        title = job_dict.get('title')
+        cover_letter = job_dict.get('cover_letter', '')
+        addressee = job_dict.get('addressee')
         
         print('')
         if not company:
@@ -200,36 +151,97 @@ def main():
             continue
         if not title:
             print(f"WARNING: Skipping {company} - missing 'title' field")
+            return None
+            
+        return cls(company, title, cover_letter, addressee)
+    
+    @property
+    def filename(self) -> str:
+        """Convert company name to safe filename."""
+        sanitized = self.company.replace(' ', '_').replace('/', '_').replace('\\', '_')
+        return f"{sanitized}_JoshuaPrettyman_CoverLetter"
+
+    @property
+    def latex_source_cover_letter(self) -> str:
+        """Generate LaTeX source for a cover letter."""
+        
+        # Escape text for LaTeX
+        company_escaped = escape_latex(self.company)
+        cover_letter_escaped = escape_latex(self.cover_letter_body)
+        title_escaped = escape_latex(self.title)
+        addressee_escaped = escape_latex(self.addressee)
+
+        # Format current date
+        current_date = datetime.now().strftime("%d %B %Y")
+
+        # Convert newlines to LaTeX paragraph breaks
+        cover_letter_formatted = cover_letter_escaped.replace('\n', '\n\n')
+
+        latex_template = LATEX_TEMPLATE
+        latex_template = latex_template.replace('<INSERT_SIGNOFF>', self.sign_off)
+        latex_template = latex_template.replace('<INSERT_DATE>', current_date)
+        latex_template = latex_template.replace('<INSERT_TITLE>', title_escaped)
+        latex_template = latex_template.replace('<INSERT_COMPANY>', company_escaped)
+        latex_template = latex_template.replace('<INSERT_ADDRESSEE>', addressee_escaped)
+        latex_template = latex_template.replace('<INSERT_BODY>', cover_letter_formatted)
+
+        return latex_template
+
+    @property
+    def plain_text_cover_letter(self) -> str:
+        """Generate plain text cover letter (no letterhead)."""
+        lines = [
+            f"Dear {self.addressee},",
+            "",
+            self.cover_letter_body,
+            "",
+            f"Yours {self.sign_off},",
+            "",
+            "Joshua Prettyman"
+        ]
+        return "\n".join(lines)
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Generate PDF cover letters from jobs.json')
+    parser.add_argument('company', nargs='?', help='Generate for specific company only (case-insensitive)')
+    args = parser.parse_args()
+
+    # Ensure output directories exist
+    TXT_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Read jobs data
+    with open(JOBS_FILE, 'r') as f:
+        jobs = json.load(f)
+
+    # Filter by company if specified
+    if args.company:
+        jobs = [j for j in jobs if j.get('company', '').lower() == args.company.lower()]
+        if not jobs:
+            print(f"No job found for company: {args.company}")
+            return
+
+    # Process each job with a cover letter
+    generated_count = 0
+    for job_dict in jobs:
+        print()
+        job = Job.from_dict(job_dict)
+        
+        if job is None:
             continue
-
-        print(f"Generating cover letter for {company}...")
-
-        # Generate LaTeX
-        latex_source = generate_latex_cover_letter(
-            company=company,
-            title=title,
-            cover_letter=cover_letter,
-            addressee=addressee
-        )
-
-        # Compile to PDF
-        base_filename = f"{sanitize_filename(company)}_JoshuaPrettyman_CoverLetter"
-        output_path = output_dir / f"{base_filename}.pdf"
-
-        if compile_latex_to_pdf(latex_source, output_path):
-            print(f"  Created: .pdf cover letter for {company}")
+        
+        print(f"Generating cover letter for {job.company}...")
+        output_path = PDF_OUTPUT_DIR / f"{job.filename}.pdf"
+        if compile_latex_to_pdf(job.latex_source_cover_letter, output_path):
+            print(f"  Created: .pdf cover letter for {job.company}")
             generated_count += 1
         else:
-            print(f"  Failed to generate PDF for {company}")
+            print(f"  Failed to generate PDF for {job.company}")
 
         # Generate plain text version
-        plain_text = generate_plain_text_cover_letter(
-            cover_letter=cover_letter,
-            addressee=addressee
-        )
-        txt_output_path = txt_output_dir / f"{base_filename}.txt"
-        txt_output_path.write_text(plain_text)
-        print(f"  Created: .txt cover letter for {company}")
+        txt_output_path = TXT_OUTPUT_DIR / f"{job.filename}.txt"
+        txt_output_path.write_text(job.plain_text_cover_letter)
+        print(f"  Created: .txt cover letter for {job.company}")
 
     print(f"\nGenerated {generated_count} cover letter(s)")
 

@@ -30,6 +30,8 @@ import EducationalGamesProject from './pages/projects/EducationalGames'
 import ComtradeProject from './pages/projects/Comtrade'
 import MastermindGameProject from './pages/projects/MastermindGame'
 import FraudDetectionProject from './pages/projects/FraudDetection'
+import JobMasterProject from './pages/projects/JobMaster'
+import MacaroniProject from './pages/projects/Macaroni'
 
 import Vanlife from './pages/travel/Vanlife'
 import Travels from './pages/Travels'
@@ -48,6 +50,8 @@ function App() {
         <Route path="/projects/wine-exports-viz" element={<ComtradeProject />} />
         <Route path="/projects/mastermind" element={<MastermindGameProject />} />
         <Route path="/projects/fraud-detection" element={<FraudDetectionProject />} />
+        <Route path="/projects/jobmaster" element={<JobMasterProject />} />
+        <Route path="/projects/macaroni" element={<MacaroniProject />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/blog/tag/:tag" element={<Blog />} />

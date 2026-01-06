@@ -52,7 +52,7 @@ const Projects = () => {
               date="2022"
               tags={["Python", "SQL", "PostgreSQL", "Workflow"]}
               description="A job-queue system for triggering backend Python tasks from a web application. Created whilst working at Blink SEO to fill a need for a scalable and reliable system with a flexible API."
-              link="https://github.com/DrPrettyman/jobmaster"
+              link="/projects/jobmaster"
               image="/images/jobmaster.png"
             />
             {/* PyGoogalytics */}

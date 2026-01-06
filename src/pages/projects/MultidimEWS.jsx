@@ -42,7 +42,7 @@ const CodeBlock = ({ children, title }) => (
 const MultidimEWSProject = () => {
   return (
     <Layout>
-      <ContentBlock title="Multivariate Early Warning Signals" icon={Grid3X3} githubUrl="https://github.com/DrPrettyman/MatlabCodePhD/tree/main/Projects/Paper2_Chaos" maxWidth='4xl'>
+      <ContentBlock title="Multivariate Early Warning Signals" icon={Grid3X3} githubUrl="https://github.com/DrPrettyman/PhD/tree/main/Papers/Paper2_Chaos/manuscript" maxWidth='4xl'>
         <div className="text-gray-700 dark:text-white">
 
           <div className="mb-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">

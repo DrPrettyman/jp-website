@@ -42,7 +42,7 @@ const CodeBlock = ({ children, title }) => (
 const PSIndicatorProject = () => {
   return (
     <Layout>
-      <ContentBlock title="A Novel Power Spectrum Indicator for Early Warning Signals" icon={Activity} githubUrl="https://github.com/DrPrettyman/MatlabCodePhD/tree/main/Projects/Paper1_EPL" maxWidth='4xl'>
+      <ContentBlock title="A Novel Power Spectrum Indicator for Early Warning Signals" icon={Activity} githubUrl="https://github.com/DrPrettyman/PhD/tree/main/Papers/Paper1_EPL/manuscript" maxWidth='4xl'>
         <div className="text-gray-700 dark:text-white">
 
           <div className="mb-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">

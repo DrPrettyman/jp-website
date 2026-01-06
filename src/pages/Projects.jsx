@@ -10,7 +10,7 @@ const Projects = () => {
       <ContentBlock title="Projects" icon={FolderGit2}>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Fraud Detection */}
+            {/* 2026 - Fraud Detection */}
             <ProjectCard
               title="Fraud Detection"
               date="2026"
@@ -19,7 +19,7 @@ const Projects = () => {
               link="projects/fraud-detection"
               image="/images/fraud-detection/score_distribution.png"
             />
-            {/* Comtrade */}
+            {/* 2025 - Comtrade */}
             <ProjectCard
               title="Wine exports/imports visualisation"
               date="2025"
@@ -28,7 +28,7 @@ const Projects = () => {
               link="projects/wine-exports-viz"
               image="/images/comtrade-screenshot.png"
             />
-            {/* TAORG */}
+            {/* 2025 - TAORG */}
             <ProjectCard
               title="TAORG"
               date="2025"
@@ -37,7 +37,7 @@ const Projects = () => {
               link="https://taorg.app"
               image="/images/taorg-screenshot.png"
             />
-            {/* Macaroni */}
+            {/* 2023 - Macaroni */}
             <ProjectCard
               title="Macaroni"
               date="2023"
@@ -46,7 +46,7 @@ const Projects = () => {
               link="/projects/macaroni"
               image="/images/macaroni.jpeg"
             />
-            {/* JobMaster */}
+            {/* 2022 - JobMaster */}
             <ProjectCard
               title="JobMaster"
               date="2022"
@@ -55,7 +55,7 @@ const Projects = () => {
               link="/projects/jobmaster"
               image="/images/jobmaster.png"
             />
-            {/* PyGoogalytics */}
+            {/* 2022 - PyGoogalytics */}
             <ProjectCard
               title="PyGoogalytics"
               date="2022"
@@ -64,7 +64,16 @@ const Projects = () => {
               link="https://pypi.org/project/pygoogalytics/"
               image="/images/pygoogalytics.svg"
             />
-            {/* PhD Research - Early Warning Signals */}
+            {/* 2021 - Paper 3: PS Robustness (ERL) */}
+            <ProjectCard
+              title="PS Robustness (ERL)"
+              date="2021"
+              tags={["MATLAB", "Research", "Paper", "Climate"]}
+              description="Analytical foundation for power spectrum indicator. Proves robustness against trends and periodic oscillations. Applied to paleoclimate ice-core data. Published in ERL."
+              link="/projects/ps-robustness"
+              image="/images/phd/temp_proxy.png"
+            />
+            {/* 2019 - PhD Research - Early Warning Signals */}
             <ProjectCard
               title="Early Warning Signals"
               date="2019"
@@ -73,7 +82,25 @@ const Projects = () => {
               link="/projects/early-warning-signals"
               image="/images/phd/potential_bifurcation.png"
             />
-            {/* Adaptive Mesh */}
+            {/* 2019 - Paper 2: Multivariate EWS (Chaos) */}
+            <ProjectCard
+              title="Multivariate EWS (Chaos)"
+              date="2019"
+              tags={["MATLAB", "Research", "Paper"]}
+              description="Extending early warning signals to multivariate and gridded data. Developed stochastic hurricane model and spatial analysis methods. Published in Chaos."
+              link="/projects/multidim-ews"
+              image="/images/phd/one_and_many_timeseries.png"
+            />
+            {/* 2018 - Paper 1: PS Indicator (EPL) */}
+            <ProjectCard
+              title="PS Indicator (EPL)"
+              date="2018"
+              tags={["MATLAB", "Research", "Paper"]}
+              description="Novel power spectrum scaling indicator for early warning signals. Applied to tropical cyclone prediction where traditional indicators fail. Published in EPL."
+              link="/projects/ps-indicator"
+              image="/images/phd/PowerSpectrum.png"
+            />
+            {/* 2015 - Adaptive Mesh */}
             <ProjectCard
               title="Adaptive Mesh"
               date="2015"
@@ -82,7 +109,7 @@ const Projects = () => {
               link="/projects/adaptive-mesh"
               image="/images/ring_phi.pdf"
             />
-            {/* Educational Games */}
+            {/* 2013 - Educational Games */}
             <ProjectCard
               title="PrettyMath Games"
               date="2013"
@@ -91,7 +118,7 @@ const Projects = () => {
               link="/projects/prettymath"
               image="/images/angle-game-screenshot.png"
             />
-            {/* Digraph Explorer */}
+            {/* 2012 - Digraph Explorer */}
             <ProjectCard
               title="Digraph Explorer"
               date="2012"

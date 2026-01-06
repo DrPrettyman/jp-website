@@ -33,6 +33,9 @@ import FraudDetectionProject from './pages/projects/FraudDetection'
 import JobMasterProject from './pages/projects/JobMaster'
 import MacaroniProject from './pages/projects/Macaroni'
 import EarlyWarningSignalsProject from './pages/projects/EarlyWarningSignals'
+import PSIndicatorProject from './pages/projects/PSIndicator'
+import MultidimEWSProject from './pages/projects/MultidimEWS'
+import PSRobustnessProject from './pages/projects/PSRobustness'
 
 import Vanlife from './pages/travel/Vanlife'
 import Travels from './pages/Travels'
@@ -54,6 +57,9 @@ function App() {
         <Route path="/projects/jobmaster" element={<JobMasterProject />} />
         <Route path="/projects/macaroni" element={<MacaroniProject />} />
         <Route path="/projects/early-warning-signals" element={<EarlyWarningSignalsProject />} />
+        <Route path="/projects/ps-indicator" element={<PSIndicatorProject />} />
+        <Route path="/projects/multidim-ews" element={<MultidimEWSProject />} />
+        <Route path="/projects/ps-robustness" element={<PSRobustnessProject />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/blog/tag/:tag" element={<Blog />} />

@@ -152,6 +152,8 @@ When searching for jobs, use queries such as:
 - "NLP engineer remote"
 - Site-specific searches on LinkedIn, Indeed, RemoteOK, WeWorkRemotely, etc.
 
+Use many different combinations to return relevant results. 
+
 ### Key Considerations When Evaluating Roles:
 1. Must be remote OR based in Málaga area
 2. Check if company hires in Spain/EU or UK

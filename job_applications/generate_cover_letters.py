@@ -14,6 +14,10 @@ import tempfile
 from datetime import datetime
 from pathlib import Path
 
+SCRIPT_DIR = Path(__file__).parent
+JOBS_FILE = SCRIPT_DIR / "jobs.json"
+PDF_OUTPUT_DIR = SCRIPT_DIR / "cover_letters"
+TXT_OUTPUT_DIR = SCRIPT_DIR / "cover_letters_txt"
 
 LATEX_TEMPLATE = r"""\documentclass[11pt]{article}
 

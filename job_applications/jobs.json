@@ -350,5 +350,68 @@
             }
         ],
         "cover_letter": "At Blink SEO I defined and built a full ML platform from scratch. There was no existing system: I architected the Python backend on GCP, set up BigQuery to handle 50M+ data points daily, and created PostgreSQL job queues to orchestrate async workloads. The sklearn clustering and NLP features I built increased team productivity by 20x, and the platform eventually became a standalone SaaS product.\nThe role meant owning the full stack: data preparation, model development, infrastructure, deployment. I worked directly with the delivery team to understand what they needed, then built pipelines and dashboards they actually used. Continuous deployment based on feedback.\nSince January 2025 I've been consulting, taking on projects across different clients and stacks: pipeline automation with dbt and Databricks, dashboards in Tableau, database setup in AWS. The variety suits me and I've gotten comfortable adapting quickly to new environments.\nMy PhD focused on time series forecasting: detecting tipping points in noisy systems using spectral analysis. The domain was geophysical but the statistical foundations transfer directly.\nI'm based in Spain. Happy to discuss."
+    },
+    {
+        "company": "Wikimedia Foundation",
+        "title": "Senior Data Scientist",
+        "date_found": "2026-01-06",
+        "link": "https://job-boards.greenhouse.io/wikimedia/jobs/7493811",
+        "location": "Remote (Spain eligible)",
+        "description": "Remote-first organization hiring across 40+ countries including Spain. Building data systems for grant-funded activities, creating internal dashboards tracking program outcomes, extracting actionable insights from datasets to guide grantmaking decisions, designing data processes and storage pipelines. Requirements: Bachelor's + 5 years experience (or Master's + 3 years) in data analysis/science, SQL and Python proficiency, API integration experience, large-scale data tools (Hadoop, Hive, Presto, Spark), data visualization tools. Salary: $106,227-$167,858 annually (US), adjusted by country.",
+        "fit_notes": "Excellent fit: Remote-first with Spain eligibility. Strong match for Python/SQL skills, data pipeline experience, and dashboard building. Mission-driven nonprofit aligns with interest in impact-focused work."
+    },
+    {
+        "company": "Typeform",
+        "title": "Sr. Machine Learning Engineer",
+        "date_found": "2026-01-06",
+        "link": "https://job-boards.greenhouse.io/typeform/jobs/7446908",
+        "location": "Remote (Spain, Germany, UK, Ireland, Netherlands, Portugal)",
+        "description": "Design, train, and deploy ML models with focus on production-readiness using Docker, Kubernetes, MLflow, Kafka, AWS. Build generative AI capabilities leveraging LLMs, create automated evaluation pipelines. Requirements: 4+ years deploying ML models in production, Python proficiency with PyTorch/LangChain/Agents, AWS Cloud/Kubernetes/Docker/Terraform/CI-CD, deep understanding of LLMs and generative AI, enterprise RAG systems. Typeform helps 150,000+ businesses collect data with forms/surveys.",
+        "fit_notes": "Strong match: Production ML experience, LLM/HuggingFace integrations from Blink, Python expert. Spain explicitly eligible. Focus on LLMs and RAG aligns with recent work."
+    },
+    {
+        "company": "Awin",
+        "title": "Senior Data Scientist & ML Engineer",
+        "date_found": "2026-01-06",
+        "link": "https://job-boards.greenhouse.io/awin/jobs/7571203003",
+        "location": "Madrid, Spain (Flexi-Office/Hybrid)",
+        "description": "Design scalable data pipelines and storage systems for ML workloads, productionize LLM and agent-based workflows with reliability and observability, build feature stores and vector/embedding stores, develop end-to-end ML pipelines including data preparation, training, deployment. Requirements: Bachelor's/Master's in data science or CS, 5+ years as AI/ML data engineer, cloud platforms (AWS/Azure), Spark, Databricks, Python, ML frameworks (MLflow), NLP concepts, ETL pipeline development. Mentor junior engineers and lead strategic AI/ML initiatives.",
+        "fit_notes": "Excellent match: Madrid location, production ML experience, LLM workflows, Python/cloud skills. Leadership component aligns with building teams from scratch at Blink."
+    },
+    {
+        "company": "Bluetab (IBM Company)",
+        "title": "Data Scientist",
+        "date_found": "2026-01-06",
+        "link": "https://www.bluetab.net/es/data-scientist/",
+        "location": "Madrid, Spain (Flexible Remote)",
+        "description": "Advanced Analytics (AI & ML) for national and international projects. Design, build, and deploy ML solutions including model lifecycle, infrastructure, data engineering, and application development. Requirements: Python, R, JavaScript, C++; ML frameworks (Scikit-Learn, TensorFlow, Keras, PyTorch, XGBoost); MLOps and TDSP methodologies; cloud platforms (AWS, Azure, GCP). Benefits: Permanent contract, flexible hours, 23 vacation days + 2 company days, medical/dental insurance, continuous training with 1000+ courses. Great Place to Work certified.",
+        "fit_notes": "Good match: Flexible remote in Spain, ML/cloud skills align well, production ML experience. IBM company provides stability. Training and certification opportunities."
+    },
+    {
+        "company": "Welocalize",
+        "title": "AI Machine Learning R&D Engineer",
+        "date_found": "2026-01-06",
+        "link": "https://jobs.lever.co/welocalize/c0df04a2-8e58-4f9b-9916-bf03fb2e87a6",
+        "location": "Remote (Spain, Italy, Greece, UK, Romania, France, Portugal, Estonia, and more)",
+        "description": "Design and develop ML models and algorithms for localization workflows, deploy ML models using Docker and AWS services (SageMaker, EC2, S3), take ownership of projects from definition to deployment, perform statistical analysis and model optimization. Requirements: Master's (PhD preferred) in CS/Data Science/Engineering/Math, 3+ years as ML Engineer, production-grade Python, TensorFlow/PyTorch/Scikit-learn, NLP expertise, AWS hands-on experience. Flexible culture with core hours 4-6pm CET.",
+        "fit_notes": "Excellent fit: Remote Spain, NLP focus aligns perfectly with Blink experience, full project ownership model matches work style. PhD preferred is a plus."
+    },
+    {
+        "company": "Leadtech",
+        "title": "Data Scientist (Full Remote within Spain)",
+        "date_found": "2026-01-06",
+        "link": "https://apply.workable.com/leadtech/j/C088ED0335/",
+        "location": "100% Remote (Spain)",
+        "description": "Data Scientist role at a digital innovation company with 700+ team members from 23+ nationalities. Leadtech creates innovative online solutions reaching millions of users monthly. Full remote position within Spain.",
+        "fit_notes": "Location ideal: 100% remote Spain. Company appears to be digital/tech focused which aligns with background. Need to verify full job requirements."
+    },
+    {
+        "company": "Wallapop",
+        "title": "Data Scientist",
+        "date_found": "2026-01-06",
+        "link": "https://apply.workable.com/wallapop/j/A321A97636/",
+        "location": "Barcelona, Spain",
+        "description": "Data Scientist at Barcelona-based scale-up focused on conscious consumption and collaborative economy. Wallapop is a leading second-hand marketplace.",
+        "fit_notes": "Barcelona location works. Marketplace/e-commerce focus similar to SEO work at Blink. Spanish company. Need to verify full job requirements."
     }
 ]

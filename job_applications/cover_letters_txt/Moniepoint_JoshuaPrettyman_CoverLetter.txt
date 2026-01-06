@@ -1,0 +1,10 @@
+Dear None,
+
+At Blink SEO I built an ML platform from the ground up that increased team productivity by 20x. The role started as "improve our spreadsheet workflows" and ended as Macaroni Software, a standalone SaaS product. That zero-to-one trajectory is what draws me to this role.
+I spent three years at Blink as their first data scientist and built everything: Python backend on GCP, BigQuery processing 50M+ data points daily, PostgreSQL job queues for async workloads. The ML work included sklearn clustering weighted by commercial metrics, text embeddings for semantic matching, and scoring systems that ranked opportunities by predicted value. I built a job queue in PostgreSQL to run these models asynchronously so users got results without waiting. The job meant shaping how models fit into the product and working directly with the delivery team until features actually got used. The ownership culture you describe fits how I work.
+My PhD focused on detecting regime changes in noisy time series: identifying when a system is about to shift state. The core technique was spectral analysis of variance and autocorrelation as early warning signals, which is conceptually similar to tracking behavioural indicators that precede churn or default. I've published on these methods in peer-reviewed journals.
+I'm based in Spain and the remote setup works well. Happy to discuss.
+
+Yours sincerely,
+
+Joshua Prettyman

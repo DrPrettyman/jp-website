@@ -142,13 +142,12 @@ class Job:
         cover_letter = job_dict.get('cover_letter', '')
         addressee = job_dict.get('addressee')
         
-        print('')
         if not company:
             print(f"WARNING: Skipping entry - missing 'company' field")
-            continue
+            return None
         if not cover_letter.strip():
             print(f"WARNING: Skipping {company} - 'cover_letter' field is empty")
-            continue
+            return None
         if not title:
             print(f"WARNING: Skipping {company} - missing 'title' field")
             return None

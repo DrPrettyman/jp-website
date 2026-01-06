@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
 Generate PDF cover letters from jobs.json using LaTeX.
+
+Usage:
+    python generate_cover_letters.py              # Generate all cover letters
+    python generate_cover_letters.py Moniepoint   # Generate for specific company
 """
 
 import argparse

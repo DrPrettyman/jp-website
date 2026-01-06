@@ -225,18 +225,9 @@
         "title": "Data Scientist",
         "date_found": "2026-01-05",
         "link": "https://jobs.lever.co/ciandt",
-        "location": "Remote (global company)",
-        "description": "Apply statistical modeling and machine learning to solve real-world problems. Data analysis, algorithm experimentation, business impact solutions. Global company with offices including London.",
-        "fit_notes": "Good generalist DS role. May need to check specific remote location eligibility for Spain/UK."
-    },
-    {
-        "company": "Accenture",
-        "title": "Data Analyst / Data Scientist",
-        "date_found": "2026-01-05",
-        "link": "https://www.linkedin.com/jobs/accenture-jobs-málaga",
-        "location": "Málaga, Spain (hybrid)",
-        "description": "Multiple data roles in Málaga. Work with Python/R on large datasets, build ML models and recommendation engines for marketing activation. Analytics and machine learning for global clients.",
-        "fit_notes": "Local Málaga option. Large company stability. May be more junior-focused but worth exploring senior roles."
+        "location": "Remote (global company, 8000+ employees, 30 years history)",
+        "description": "Tech transformation specialists using AI. Work with world's largest brands on ML/analytics. Responsibilities: translate business challenges to DS problems, build ML models (regression, classification, clustering, forecasting), A/B testing, deliver PoCs and production models in Agile teams, data storytelling, model explainability. Requirements: Python (pandas, sklearn, statsmodels), SQL, cloud platforms (AWS/Azure/GCP), Databricks/BigQuery/SageMaker, Git, model deployment, consulting mindset, advanced English. Nice to have: Explainable AI, graph analytics, recommender systems, NLP, Plotly/Tableau, MLOps (MLflow, DVC).",
+        "fit_notes": "Strong match: Python/SQL/GCP/BigQuery experience, ML models in production, clustering/forecasting, Plotly dashboards, consulting mindset from working with delivery team. Nice-to-haves align well (NLP, recommender systems, Plotly). Need to verify Spain/EU remote eligibility."
     },
     {
         "company": "VML MAP",
@@ -317,48 +308,47 @@
         "cover_letter": "The consulting model at Management Solutions interests me: at Blink I built a platform from scratch that processed 50M+ data points daily. Python backend on GCP, sklearn for clustering and predictive models, PostgreSQL for async job queues. The work involved translating client needs into automated analytics. I'd meet with the delivery team, understand their workflows, then build pipelines and dashboards that actually got used. The system increased productivity by 20x and eventually became a SaaS product.\nSince leaving Blink I've taken on freelance projects: model deployment, dashboard creation in Tableau, pipeline automation with dbt and Databricks. I enjoy the variety and the direct client relationships.\nMy PhD in Mathematics focused on time series analysis and tipping point detection: I used MATLAB for numerical simulations and published in peer-reviewed journals. That gave me strong foundations in statistical modeling, and presenting at international conferences taught me to communicate technical work clearly.\nThe exposure to high-profile projects and the partnership model both appeal to me.\nI'm based in Málaga and available to talk."
     },
     {
-        "company": "OLX",
-        "title": "(Senior) Data Scientist - Generative AI",
-        "date_found": "2026-01-06",
-        "link": "https://jobs.eu.lever.co/olx/51226864-5bed-4ccc-b4e4-5528a94d5c92",
-        "location": "100% Remote (Europe)",
-        "description": "Join Generative AI Data Science Team expanding LLM investments. Build models for platform and marketplace perspective. Focus on LLMs, GenAI, RAG. Work across OLX, Automotive (Otomoto, Standvirtual), and Real Estate platforms in EU region. Requires SQL, MLOps experience, CI/CD, testing.",
-        "fit_notes": "Strong LLM/GenAI focus matches recent experience. 100% remote Europe is ideal. Large platform scale (millions of users). Production ML experience required - good fit."
-    },
-    {
-        "company": "InPost Group",
-        "title": "Senior Data Scientist",
-        "date_found": "2026-01-06",
-        "link": "https://inpost.eu/careers",
-        "location": "Remote (Europe)",
-        "description": "Europe's leading e-commerce enablement platform. Develop AI solutions, address complex business problems, drive data product evolution. Partner with product and business teams, lead full lifecycle of data science initiatives. Remote setting with operations across Poland, France, Benelux, UK, Italy.",
-        "fit_notes": "E-commerce/logistics scale is interesting. Remote Europe option. Need to verify Spain eligibility specifically."
-    },
-    {
         "company": "agap2 Spain",
         "title": "Data Scientist",
         "date_found": "2026-01-06",
         "link": "https://agap2.com/spain/en/jobs/data-scientist-remote/",
-        "location": "Remote (Spain)",
-        "description": "Senior Data Scientist role focused on definition and deployment of innovative solutions based on predictive algorithms. AWS infrastructure (Terraform). Consulting firm with permanent contracts (99%+ permanent), close follow-up, and career development focus.",
-        "fit_notes": "Remote Spain is ideal. AWS experience required - have GCP but transferable. Consulting model offers variety. Permanent contract focus is attractive."
-    },
-    {
-        "company": "Proxify",
-        "title": "Senior Data Engineer (AWS & Python)",
-        "date_found": "2026-01-06",
-        "link": "https://weworkremotely.com/remote-jobs/proxify-ab-senior-data-engineer-aws-python",
-        "location": "Remote (CET +/- 3 hours)",
-        "description": "Design, build, and optimize scalable ETL/ELT pipelines and data warehouses for analytics, ML, and BI. Expert Python (Pandas, PySpark), AWS (S3, Glue, Lambda, EMR), modern data warehouses (Snowflake, Redshift, BigQuery). Swedish company, highly vetted talent network. Salary $45k-$80k.",
-        "fit_notes": "Data engineering focus rather than pure DS but skills overlap well. Python/BigQuery experience transfers. Remote CET timezone perfect. Good for pipeline/infrastructure work."
-    },
-    {
-        "company": "CrowdStrike",
-        "title": "Sr. Data Scientist",
-        "date_found": "2026-01-06",
-        "link": "https://www.crowdstrike.com/en-us/careers/",
-        "location": "Remote (global, remote-first)",
-        "description": "Cybersecurity platform - technical leadership in AI solutions, driving innovation while mentoring junior team members in advanced ML applications. Purpose-built remote-first company. Also has Manager of Data Science role leading AI assistants development and LLM applications.",
-        "fit_notes": "Remote-first culture is excellent. Cybersecurity domain is different but ML skills transfer. Need to check specific Europe/Spain eligibility for roles."
+        "location": "100% Remote (Spain), indefinite contract",
+        "description": "Senior Data Scientist: definition and deployment of predictive algorithms. Tech: AWS (Terraform), Spark, Python, Apache Airflow, Jenkins CI/CD. Work with structured/unstructured data, prepare datasets for model training, implement and improve forecasting models, collaborate with business for data-driven decisions. Requirements: 4+ years Python or OOP language, data science project experience, AWS experience a plus. Benefits: indefinite contract from day one, 100% remote, flexible hours, continuous training/certifications, performance reviews, flexible remuneration, restaurant ticket, medical insurance.",
+        "fit_notes": "Excellent location fit: 100% remote Spain with indefinite contract. Tech stack: Python matches perfectly, Airflow/Spark/AWS are learnable (have GCP experience). Forecasting models align with time series PhD background. Consulting variety appeals.",
+        "cover_letter_topics": [
+            {
+                "topic": "Python proficiency (4+ years required)",
+                "relevant_experience": "10+ years Python; built full ML platform from scratch; sklearn, Pandas, NLTK, Matplotlib, Plotly"
+            },
+            {
+                "topic": "Definition of innovative solutions (not just implementing, but architecting from scratch)",
+                "relevant_experience": "Defined entire ML platform architecture at Blink when nothing existed; identified automation opportunities; pushed for internal tool to become commercial product"
+            },
+            {
+                "topic": "Forecasting models; predictive algorithms",
+                "relevant_experience": "PhD focused on time series forecasting (tipping point detection using spectral analysis); sklearn clustering and scoring systems in production at Blink"
+            },
+            {
+                "topic": "Full-stack comfort: cloud infrastructure, orchestration, CI/CD (AWS, Terraform, Airflow, Jenkins mentioned)",
+                "relevant_experience": "GCP Compute Engine + BigQuery at Blink; PostgreSQL job queues for orchestration; continuous deployment; AWS in freelance work; comfortable across the stack"
+            },
+            {
+                "topic": "European engineering consultancy; challenging projects in dynamic environment; varied clients",
+                "relevant_experience": "Freelancing since Jan 2025 across different clients and stacks (dbt, Databricks, Tableau, AWS); three years at fast-moving startup; comfortable adapting quickly"
+            },
+            {
+                "topic": "Work with structured/unstructured data; prepare datasets for model training",
+                "relevant_experience": "Built ETL pipelines at Blink; NLP work with unstructured text (keyword clustering, embeddings); data cleaning from external APIs"
+            },
+            {
+                "topic": "Collaborate with business for data-driven decisions",
+                "relevant_experience": "Worked directly with delivery team; translated workflows into automated pipelines; dashboards that got adopted; 20x productivity increase"
+            },
+            {
+                "topic": "Career development culture; continuous learning emphasis",
+                "relevant_experience": "PhD shows deep learning commitment; transitioned academia to industry; continuously expanding stack (recent: dbt, Databricks, Tableau)"
+            }
+        ],
+        "cover_letter": "At Blink SEO I defined and built a full ML platform from scratch. There was no existing system: I architected the Python backend on GCP, set up BigQuery to handle 50M+ data points daily, and created PostgreSQL job queues to orchestrate async workloads. The sklearn clustering and NLP features I built increased team productivity by 20x, and the platform eventually became a standalone SaaS product.\nThe role meant owning the full stack: data preparation, model development, infrastructure, deployment. I worked directly with the delivery team to understand what they needed, then built pipelines and dashboards they actually used. Continuous deployment based on feedback.\nSince January 2025 I've been consulting, taking on projects across different clients and stacks: pipeline automation with dbt and Databricks, dashboards in Tableau, database setup in AWS. The variety suits me and I've gotten comfortable adapting quickly to new environments.\nMy PhD focused on time series forecasting: detecting tipping points in noisy systems using spectral analysis. The domain was geophysical but the statistical foundations transfer directly.\nI'm based in Spain. Happy to discuss."
     }
 ]

@@ -195,7 +195,7 @@ Add a `cover_letter_topics` array to the job entry in jobs.json. Each topic shou
 ]
 ```
 
-Don't just list "Required Skills" verbatim. Look for:
+Don't just list "Required Skills" verbatim. Also look for:
 - Implicit requirements (e.g., "team of PhDs" implies academic background matters)
 - Company values or mission statements
 - Industry-specific context

@@ -30,7 +30,8 @@
       "WebFetch(domain:teamtailor.com)",
       "Bash(cd /Users/joshua/website_projects/jp-website/job_applications && python3 generate_cover_letters.py)",
       "Bash(ls:*)",
-      "Bash(pdftoppm:*)"
+      "Bash(pdftoppm:*)",
+      "Bash(python3:*)"
     ],
     "deny": [],
     "ask": []

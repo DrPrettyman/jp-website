@@ -159,6 +159,7 @@ When searching for jobs, use queries such as:
 4. Senior/Mid-level roles preferred (3+ years experience required is fine)
 5. Roles requiring heavy deep learning / computer vision are less suitable (NLP is fine)
 6. Avoid roles requiring relocation outside Málaga
+7. **Verify listings on the company's official careers page** before adding to jobs.json - job aggregators (WeWorkRemotely, Remotive, Remote Rocketship, etc.) often have stale listings that have been filled or removed
 
 ---
 

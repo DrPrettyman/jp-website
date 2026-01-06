@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reading Work Details</title>
+</head>
+
+<body>
+    <div style="margin-bottom: 20px" class="justified">
+        <p>
+            During my MRes at the University of Reading, I worked as a Teaching Assistant supporting undergraduate mathematics courses.
+            This involved running tutorials, helping students with problem sheets, and providing one-on-one support during office hours.
+            I also taught computing sessions, introducing students to programming in Python and MATLAB for mathematical applications.
+        </p>
+    </div>
+
+
+    <div style="margin-bottom: 20px" class="justified">
+        <h2>Key points:</h2>
+        <ul>
+            <li>Supported a range of undergraduate mathematics courses.</li>
+            <li>Taught computing sessions in Python and MATLAB.</li>
+            <li>Ran tutorials and provided one-on-one student support.</li>
+            <li>Assisted with marking coursework and exams.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

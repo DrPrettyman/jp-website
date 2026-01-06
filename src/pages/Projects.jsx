@@ -64,14 +64,14 @@ const Projects = () => {
               link="https://pypi.org/project/pygoogalytics/"
               image="/images/pygoogalytics.svg"
             />
-            {/* Tipping Points */}
+            {/* PhD Research - Early Warning Signals */}
             <ProjectCard
-              title="Tipping Points"
+              title="Early Warning Signals"
               date="2019"
-              tags={["MatLab", "Python", "Research", "TimeSeries"]}
-              description="Code for my Ph.D. research. Explore tipping points in a system of coupled non-linear differential equations."
-              link="/projects/tipping-points"
-              image="/images/indicators.pdf"
+              tags={["MATLAB", "Python", "Research", "Climate"]}
+              description="PhD research on detecting early warning signals for critical transitions. Developed novel methods applied to climate data and tropical cyclones. Published in EPL, Chaos, and ERL."
+              link="/projects/early-warning-signals"
+              image="/images/phd/potential_bifurcation.png"
             />
             {/* Adaptive Mesh */}
             <ProjectCard

@@ -67,7 +67,6 @@ Joshua Prettyman
 """
 
 
-
 def escape_latex(text: str) -> str:
     """Escape special LaTeX characters in text."""
     replacements = {
@@ -89,7 +88,7 @@ def escape_latex(text: str) -> str:
 def compile_latex_to_pdf(latex_source: str, output_path: Path) -> bool:
     """Compile LaTeX source to PDF."""
     with tempfile.TemporaryDirectory() as tmpdir:
-        tex_file = Path(tmpdir) / "cover_letter.tex"
+        tex_file = Path(tmpdir) / "latex_source.tex"
         tex_file.write_text(latex_source)
 
         # Run pdflatex twice for references
@@ -104,7 +103,7 @@ def compile_latex_to_pdf(latex_source: str, output_path: Path) -> bool:
                 return False
 
         # Copy PDF to output location
-        pdf_file = Path(tmpdir) / "cover_letter.pdf"
+        pdf_file = Path(tmpdir) / "latex_source.pdf"
         if pdf_file.exists():
             output_path.parent.mkdir(parents=True, exist_ok=True)
             output_path.write_bytes(pdf_file.read_bytes())

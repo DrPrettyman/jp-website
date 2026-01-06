@@ -161,6 +161,26 @@ When searching for jobs, use queries such as:
 6. Avoid roles requiring relocation outside Málaga
 7. **Verify listings on the company's official careers page** before adding to jobs.json - job aggregators (WeWorkRemotely, Remotive, Remote Rocketship, etc.) often have stale listings that have been filled or removed
 
+### CRITICAL: Link and Description Requirements
+
+**DO NOT save a job unless you have BOTH:**
+
+1. **A direct link to the specific job posting** - NOT:
+   - A general company careers page (e.g., `company.com/careers/`)
+   - A job board search results page (e.g., `linkedin.com/jobs/company-jobs`)
+   - A job aggregator listing that may go stale
+
+   The link must go directly to the individual job posting with its full description.
+
+2. **An actual job description** - NOT:
+   - A generic company description
+   - A one-line summary you wrote yourself
+   - A "talent community" or "future opportunities" page
+
+   You must be able to read the actual responsibilities, requirements, and qualifications for the specific role.
+
+**If you cannot find a direct job link or actual description, do not add the job to jobs.json.** It wastes time when the listing cannot be found or has already been filled.
+
 ---
 
 ## Source Files for More Details
@@ -206,14 +226,21 @@ When asked to save promising jobs, add them to `job_applications/jobs.json` with
 - `company` - Company name
 - `title` - Job title
 - `date_found` - Date the job was found (YYYY-MM-DD format)
-- `link` - Direct application URL or job board link
+- `link` - **Direct URL to the specific job posting** (NOT a careers page or job board search)
+- `description` - **The actual job description** with responsibilities and requirements (NOT a company summary)
 
 ### Optional Fields (include when available)
 - `location` - Remote/Hybrid/On-site details
-- `description` - Brief job description
 - `fit_notes` - Why this role is a good match
 - `cover_letter` - If a cover letter has been drafted
 - `questions` - Array of application questions and answers
+
+### Pre-Save Checklist
+Before adding a job, verify:
+- [ ] The link goes directly to this specific job (not a careers landing page)
+- [ ] You can see the full job description at that link
+- [ ] The listing is still active (not expired/filled)
+- [ ] The description field contains actual job requirements, not a company blurb
 
 ### Example Entry
 ```json

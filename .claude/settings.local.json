@@ -28,7 +28,9 @@
       "WebFetch(domain:himalayas.app)",
       "WebFetch(domain:ravenpack.com)",
       "WebFetch(domain:teamtailor.com)",
-      "Bash(cd /Users/joshua/website_projects/jp-website/job_applications && python3 generate_cover_letters.py)"
+      "Bash(cd /Users/joshua/website_projects/jp-website/job_applications && python3 generate_cover_letters.py)",
+      "Bash(ls:*)",
+      "Bash(pdftoppm:*)"
     ],
     "deny": [],
     "ask": []

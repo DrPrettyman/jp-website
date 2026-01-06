@@ -68,7 +68,7 @@ const Projects = () => {
             <ProjectCard
               title="PS Indicator Robustness"
               date="2021"
-              tags={["MATLAB", "Research", "Paper", "Climate"]}
+              tags={["PhD", "MATLAB", "Research", "Climate", "Mathematics", "Time Series"]}
               description="Analytical foundation for power spectrum indicator. Proves robustness against trends and periodic oscillations. Applied to paleoclimate ice-core data. Published in ERL."
               link="/projects/ps-robustness"
               image="/images/phd/temp_proxy.png"
@@ -77,7 +77,7 @@ const Projects = () => {
             <ProjectCard
               title="Early Warning Signals"
               date="2019"
-              tags={["MATLAB", "Python", "Research", "Climate"]}
+              tags={["PhD", "MATLAB", "Python", "Research", "Climate", "Mathematics", "Dynamical Systems", "Time Series"]}
               description="PhD research on detecting early warning signals for critical transitions. Developed novel methods applied to climate data and tropical cyclones. Published in EPL, Chaos, and ERL."
               link="/projects/early-warning-signals"
               image="/images/phd/potential_bifurcation.png"
@@ -86,7 +86,7 @@ const Projects = () => {
             <ProjectCard
               title="Multivariate EWS"
               date="2019"
-              tags={["MATLAB", "Research", "Paper"]}
+              tags={["PhD", "MATLAB", "Research", "Mathematics", "Dynamical Systems"]}
               description="Extending early warning signals to multivariate and gridded data. Developed stochastic hurricane model and spatial analysis methods. Published in Chaos."
               link="/projects/multidim-ews"
               image="/images/phd/one_and_many_timeseries.png"
@@ -95,19 +95,19 @@ const Projects = () => {
             <ProjectCard
               title="Power Spectrum Scaling Indicator"
               date="2018"
-              tags={["MATLAB", "Research", "Paper"]}
+              tags={["PhD", "MATLAB", "Research", "Mathematics"]}
               description="Novel power spectrum scaling indicator for early warning signals. Applied to tropical cyclone prediction where traditional indicators fail. Published in EPL."
               link="/projects/ps-indicator"
               image="/images/phd/PowerSpectrum.png"
             />
             {/* 2015 - Adaptive Mesh */}
             <ProjectCard
-              title="Adaptive Mesh"
+              title="Adaptive Mesh Generation"
               date="2015"
-              tags={["C++", "Numerical Methods", "Research"]}
-              description="MRes. research."
+              tags={["MRes", "OpenFOAM", "Python", "Research", "Mathematics", "Numerical Methods"]}
+              description="MRes thesis on adaptive mesh generation using optimal transport and the Monge-Ampère equation. Developed a novel parameter-free linearisation method for numerical weather prediction."
               link="/projects/adaptive-mesh"
-              image="/images/ring_phi.pdf"
+              image="/images/mres/densityfunction.png"
             />
             {/* 2013 - Educational Games */}
             <ProjectCard

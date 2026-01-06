@@ -18,6 +18,7 @@ const staticRoutes = [
   '/projects/ps-indicator',
   '/projects/multidim-ews',
   '/projects/ps-robustness',
+  '/projects/adaptive-mesh',
   '/blog',
   '/travels',
   '/travel/vanlife',

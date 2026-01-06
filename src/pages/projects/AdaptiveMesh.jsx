@@ -47,11 +47,8 @@ const AdaptiveMeshProject = () => {
 
           <div className="mb-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
             <p className="text-sm">
-              <strong>MRes Thesis</strong> — Imperial College London, 2015.
+              <strong>MRes Thesis</strong> — Imperial College London, 2015. Supervised by Dr. Hilary Weller & Dr. Phil Browne, Department of Meteorology, University of Reading.
               {' '}<a href="/documents/MResDissertation.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline">Read the thesis</a>.
-            </p>
-            <p className="text-sm mt-2">
-              <strong>Supervisors:</strong> Hilary Weller & Phil Browne (Department of Meteorology, University of Reading)
             </p>
           </div>
 
@@ -190,7 +187,7 @@ const AdaptiveMeshProject = () => {
 
           <h2 className="text-2xl mb-4 font-bold">Key Results</h2>
 
-          <div className="mt-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+          <div className="mt-6 mb-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
             <h3 className="text-lg font-bold mb-2">Performance Comparison</h3>
             <ul className="list-disc list-inside space-y-2">
               <li><strong>AL method converges in ~50 iterations</strong> for both test cases without any parameter tuning</li>

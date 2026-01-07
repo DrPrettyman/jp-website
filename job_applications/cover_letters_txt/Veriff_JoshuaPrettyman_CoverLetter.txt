@@ -1,0 +1,13 @@
+Dear hiring team,
+
+Fraud detection interests me because the problem shifts: attackers adapt, so detection systems have to evolve. At Blink SEO I built a production ML platform from scratch that processed 50M+ data points daily. Python backend on GCP, sklearn clustering, text embeddings for semantic matching. I deployed models that ran reliably for enterprise clients and iterated based on what actually worked. The platform increased team productivity by 20x and became a standalone SaaS product.
+
+The embeddings and vector similarity work I did at Blink transfers directly. I built centroid matching to connect products with high-value search terms, using weighted similarity scores. Matching new cases against known fraud patterns using vector similarity is the same technique in a different domain.
+
+My PhD at the National Physical Laboratory focused on tipping point detection: identifying early warning signals in noisy systems before critical transitions occur. The domain was geophysical, but the core challenge is similar to catching subtle patterns before fraud succeeds. I've published in peer-reviewed journals and presented at international conferences, so I'm comfortable communicating technical work to different audiences.
+
+Veriff's mission of establishing trust online resonates with me. I'm based in Spain and the remote setup works well.
+
+Yours faithfully,
+
+Joshua Prettyman

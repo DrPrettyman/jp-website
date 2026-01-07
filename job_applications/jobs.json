@@ -395,11 +395,73 @@
         "company": "Welocalize",
         "title": "AI Machine Learning R&D Engineer",
         "date_found": "2026-01-06",
+        "applied": true,
         "link": "https://jobs.lever.co/welocalize/c0df04a2-8e58-4f9b-9916-bf03fb2e87a6",
         "location": "Remote (Spain, Italy, Greece, UK, Romania, France, Portugal, Estonia, and more)",
         "description": "Welocalize is a global transformation partner delivering multilingual content for 250+ languages with 400,000+ linguistic resources. They deliver NLP-enabled ML training data solutions. Role: Design and develop ML models for localization workflows including machine translation, LLM fine-tuning, and quality assurance. Take ownership of projects from conception to deployment using AWS (SageMaker, EC2, S3, SNS), Docker, MLflow. Evaluate and optimize models using TensorFlow/PyTorch. Requirements: Master's (PhD preferred) in CS/Data Science/Engineering/Math, 3+ years ML Engineer, production-grade Python, TensorFlow/PyTorch/Scikit-learn, NLP expertise, AWS hands-on experience, GPU deployments. Flexible culture with core hours 4-6pm CET only. Success indicators: effective model development, team collaboration, continuous learning, clear communication, ethical AI.",
         "fit_notes": "Excellent fit: Remote Spain, NLP/LLM fine-tuning aligns perfectly with Blink experience, full project ownership model matches work style. PhD preferred is a plus. Machine translation domain is interesting.",
-        "full_description": true
+        "full_description": true,
+        "cover_letter_topics": [
+            {
+                "topic": "Master's (PhD preferred) in CS, Data Science, Engineering, or Math",
+                "relevant_experience": "PhD Mathematics (University of Reading); 3 peer-reviewed publications; statistical foundations for model development"
+            },
+            {
+                "topic": "3+ years ML Engineer experience; production-grade Python",
+                "relevant_experience": "3 years at Blink SEO building production ML platform from scratch; Python backend on GCP processing 50M+ data points daily; sklearn, Pandas, NLTK"
+            },
+            {
+                "topic": "NLP expertise; NLP-enabled ML training data solutions",
+                "relevant_experience": "Built NLP-powered features at Blink: keyword clustering using text embeddings, NLTK for text processing, semantic matching using centroid similarity"
+            },
+            {
+                "topic": "LLM fine-tuning; evaluate and optimize models",
+                "relevant_experience": "HuggingFace integrations for content generation; Ollama for local LLM deployment; prompt engineering for SEO recommendations"
+            },
+            {
+                "topic": "Take ownership of projects from conception to deployment",
+                "relevant_experience": "Owned entire Blink platform: conceived architecture, built backend, deployed to GCP, iterated based on user feedback; internal tool became standalone SaaS product"
+            },
+            {
+                "topic": "AWS hands-on experience (SageMaker, EC2, S3)",
+                "relevant_experience": "Primary cloud experience is GCP (Compute Engine, BigQuery, Cloud Functions); AWS in recent freelance work; cloud-agnostic skills transfer"
+            },
+            {
+                "topic": "Machine translation and localization workflows",
+                "relevant_experience": "NLP work with text at scale, though domain was SEO rather than translation; techniques overlap: text processing, embeddings, quality scoring"
+            },
+            {
+                "topic": "Flexible culture with core hours 4-6pm CET only; remote-first",
+                "relevant_experience": "Based in Spain (CET timezone); freelancing remotely since Jan 2025; comfortable with async collaboration"
+            },
+            {
+                "topic": "Team collaboration; clear communication; continuous learning",
+                "relevant_experience": "Worked directly with delivery team at Blink; presented at international conferences; published in peer-reviewed journals; PhD-to-industry transition shows learning adaptability"
+            }
+        ],
+        "cover_letter": "The ownership model at Welocalize appeals to me. At Blink SEO I built an NLP-powered ML platform from scratch: I conceived the architecture, wrote the Python backend, deployed to GCP, and iterated based on user feedback until it became a standalone SaaS product. That full cycle, from conception to production system handling 50M+ data points daily, is what I do best.\n\nThe NLP work I did at Blink included keyword clustering using NLTK and text embeddings, semantic matching via centroid similarity, and HuggingFace integrations for content generation. The application was SEO rather than localization, but the techniques overlap: processing text at scale, building embeddings, scoring quality, deploying models that run reliably. I've also done prompt engineering work and local LLM deployment with Ollama.\n\nMy PhD in Mathematics gave me foundations in statistical modeling and rigorous evaluation. I've published in peer-reviewed journals and presented at international conferences, so I'm comfortable communicating technical work to different audiences.\n\nMy cloud experience is primarily GCP (Compute Engine, BigQuery, Cloud Functions) rather than AWS, though I've worked with AWS in recent freelance projects and the skills transfer. I'm based in Spain and the flexible remote setup with core hours in CET works well for me.\n\nHappy to discuss how my NLP and production ML experience fits what you're building.",
+        "questions": [
+            {
+                "question": "What are the stages of building a model in Machine Learning?",
+                "answer": "Data collection, cleaning/preprocessing, exploratory analysis, feature engineering, model selection, training, evaluation, hyperparameter tuning, deployment, monitoring."
+            },
+            {
+                "question": "What are the differences between Deep Learning and Machine Learning.",
+                "answer": "Deep learning is a subset of ML that uses neural networks with many layers. Traditional ML typically requires manual feature engineering, while DL learns feature representations directly from raw data. DL needs more data and compute but excels at unstructured data like images, text, and audio."
+            },
+            {
+                "question": "Which built-in Python data type is immutable: list or tuple?",
+                "answer": "Tuple."
+            },
+            {
+                "question": "What file name is commonly used to list / pin Python package versions for a project?",
+                "answer": "requirements.txt for pinning exact versions. pyproject.toml (PEP 621) is the modern standard for declaring dependencies, but typically with version ranges rather than pins."
+            },
+            {
+                "question": "Which neural architecture is now the de-facto standard for state-of-the-art machine-translation models?",
+                "answer": "Transformer."
+            }
+        ]
     },
     {
         "company": "Leadtech",
@@ -420,5 +482,55 @@
         "description": "Data Scientist at Barcelona-based scale-up focused on conscious consumption and collaborative economy. Wallapop is a leading second-hand marketplace. NOTE: Workable uses JavaScript rendering - full job description must be verified manually on the page.",
         "fit_notes": "Barcelona location works. Marketplace/e-commerce focus similar to SEO work at Blink. Spanish company. MANUAL VERIFICATION NEEDED: Workable JS prevents scraping full requirements.",
         "full_description": false
+    },
+    {
+        "company": "Veriff",
+        "title": "Senior Data Scientist - Fraud",
+        "date_found": "2026-01-07",
+        "applied": true,
+        "link": "https://www.veriff.com/careers/position/8302940002?gh_jid=8302940002",
+        "location": "Remote (Spain, Estonia)",
+        "description": "Fraud Engineering team building next-generation fraud detection platform. Responsibilities: Design and evolve fraud detection mechanisms, build real-time models to identify and block fraud, invent new detection strategies, design data-driven hypotheses to identify emerging fraud patterns, collaborate with engineers to deploy models at scale, define model monitoring strategies. Requirements: 7-8 years Data Scientist experience, production ML deployment, Python and SQL proficiency, Pandas/Polars, NumPy, Matplotlib/Seaborn, scikit-learn, XGBoost/LightGBM/CatBoost, supervised and unsupervised learning, clear communication with technical and non-technical stakeholders. Desirable: fraud detection/financial crime experience, embeddings and vector similarity search, cloud environments (AWS, GCP, Azure). Benefits: Remote or office flexibility, 4 extra recharge days, stock options, private health insurance, L&D budget.",
+        "fit_notes": "Spain remote works. Strong match: Python/SQL/sklearn, production ML, embeddings/vector similarity from NLP work, cloud experience (GCP). PhD research on tipping point detection relates to anomaly/fraud detection conceptually. 7-8 years requirement is senior but PhD + Blink + NPL totals 8+ years.",
+        "full_description": true,
+        "cover_letter_topics": [
+            {
+                "topic": "7-8 years Data Scientist experience; production deployment of ML models",
+                "relevant_experience": "3 years at Blink building production ML platform from scratch; 5 years at NPL doing applied research; PhD in Mathematics. Total 8+ years working with data and models."
+            },
+            {
+                "topic": "Python and SQL proficiency; Pandas, NumPy, Matplotlib/Seaborn",
+                "relevant_experience": "10+ years Python; BigQuery/PostgreSQL in production; Pandas, Matplotlib, Plotly for dashboards and analysis"
+            },
+            {
+                "topic": "scikit-learn, XGBoost/LightGBM/CatBoost; supervised and unsupervised learning",
+                "relevant_experience": "sklearn clustering (DBSCAN) for keyword grouping; classification and scoring systems; NLP with embeddings"
+            },
+            {
+                "topic": "Embeddings and vector similarity search (desirable)",
+                "relevant_experience": "Text embeddings for semantic matching; centroid similarity for product-keyword matching; HuggingFace integrations"
+            },
+            {
+                "topic": "Cloud environments (AWS, GCP, Azure)",
+                "relevant_experience": "GCP Compute Engine, BigQuery, Cloud Functions at Blink; AWS in freelance work"
+            },
+            {
+                "topic": "Fraud detection, identifying patterns, staying ahead of sophisticated threats",
+                "relevant_experience": "PhD on tipping point detection: identifying early warning signals in noisy systems before critical transitions. Conceptually similar to detecting anomalous patterns before fraud succeeds."
+            },
+            {
+                "topic": "Collaborate with engineers to deploy and scale models; work with fraud analysts and product managers",
+                "relevant_experience": "Worked directly with delivery team at Blink; built features based on user needs; comfortable with cross-functional collaboration"
+            },
+            {
+                "topic": "Communicate findings clearly with technical and non-technical stakeholders",
+                "relevant_experience": "Published in peer-reviewed journals; presented at international conferences; built dashboards for non-technical users"
+            },
+            {
+                "topic": "Company mission: creating a safer, more secure world by establishing trust online; values trust, accountability, practical excellence",
+                "relevant_experience": "Mission-driven work appeals; PhD research was about understanding critical systems; built reliable production systems that enterprise clients depended on"
+            }
+        ],
+        "cover_letter": "Fraud detection interests me because the problem shifts: attackers adapt, so detection systems have to evolve. At Blink SEO I built a production ML platform from scratch that processed 50M+ data points daily. Python backend on GCP, sklearn clustering, text embeddings for semantic matching. I deployed models that ran reliably for enterprise clients and iterated based on what actually worked. The platform increased team productivity by 20x and became a standalone SaaS product.\n\nThe embeddings and vector similarity work I did at Blink transfers directly. I built centroid matching to connect products with high-value search terms, using weighted similarity scores. Matching new cases against known fraud patterns using vector similarity is the same technique in a different domain.\n\nMy PhD at the National Physical Laboratory focused on tipping point detection: identifying early warning signals in noisy systems before critical transitions occur. The domain was geophysical, but the core challenge is similar to catching subtle patterns before fraud succeeds. I've published in peer-reviewed journals and presented at international conferences, so I'm comfortable communicating technical work to different audiences.\n\nVeriff's mission of establishing trust online resonates with me. I'm based in Spain and the remote setup works well."
     }
 ]

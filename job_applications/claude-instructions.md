@@ -263,7 +263,21 @@ For industry roles, the PhD is sufficient. Listing MRes and MA with grades looks
 **Good:**
 > "My PhD in Mathematics focused on time series analysis and tipping point detection"
 
-### 4. No self-limiting language
+### 4. Don't list irrelevant credentials
+
+Only name specific journals, conferences, or institutions if they're relevant to the role. Otherwise, the general claim is sufficient.
+
+**Bad (for an NLP/ML role):**
+> "I published in peer-reviewed journals (Environmental Research Letters, Chaos, Europhysics Letters)"
+
+These are geophysics journals. Listing them adds nothing for an NLP role and looks like padding.
+
+**Good:**
+> "I've published in peer-reviewed journals and presented at international conferences"
+
+The point is to show academic rigor and communication skills. The specific names only matter if they strengthen the application for this particular role.
+
+### 5. No self-limiting language
 
 Never point out potential mismatches or rule yourself out. Let the CV speak for itself and let them decide.
 
@@ -273,7 +287,7 @@ Never point out potential mismatches or rule yourself out. Let the CV speak for 
 **Good:**
 > "The exposure to high-profile projects and the partnership model both appeal to me."
 
-### 5. Use colons to connect related sentences
+### 6. Use colons to connect related sentences
 
 Short related sentences should be joined with colons rather than left as choppy separate sentences.
 
@@ -283,7 +297,7 @@ Short related sentences should be joined with colons rather than left as choppy 
 **Good:**
 > "My PhD in Mathematics focused on time series analysis and tipping point detection: I used MATLAB for numerical simulations and published in peer-reviewed journals."
 
-### 6. Avoid redundant openings
+### 7. Avoid redundant openings
 
 Don't waste the opening on throat-clearing. Lead directly with what draws you to the role.
 

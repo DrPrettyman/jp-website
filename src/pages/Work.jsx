@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
 import CVEntry from '../components/CVEntry';
 import ContentBlock from '../components/ContentBlock';
 import TechSkill from '../components/TechSkill';
+import ProjectCard from '../components/ProjectCard';
 import professionalData from '../assets/cv-professional/manifest.json';
 import techSkillsData from '../assets/techSkills.json';
-import { Briefcase, FileTerminal } from 'lucide-react';
+import projectsData from '../assets/projects.json';
+import { Briefcase, FileTerminal, FolderGit2 } from 'lucide-react';
 import { PiGitPullRequest, PiPresentationChart } from "react-icons/pi";
 import { BsDatabaseCheck } from "react-icons/bs";
 import { TbChartScatter3D } from "react-icons/tb";
 import introExperienceHtml from '../assets/cv-professional/intro-experience.html?raw';
 import introTechStackHtml from '../assets/cv-professional/intro-tech-stack.html?raw';
+
+// Project IDs to display in the Portfolio section
+const portfolioProjectIds = [
+  'jobsearch-agent',
+  'fraud-detection',
+  'wine-exports-viz',
+];
 
 const iconComponents = {
   TbChartScatter3D: <TbChartScatter3D className="h-6 w-6 mr-2" />,
@@ -70,6 +80,33 @@ const Work = () => {
           </div>
 
       
+      </ContentBlock>
+
+      {/* Portfolio */}
+      <ContentBlock title="Portfolio" icon={FolderGit2} id="portfolio">
+          <p className="text-gray-700 dark:text-gray-300 mb-6">
+            A selection of data science and analysis projects. More projects can be found on my{' '}
+            <Link to="/projects" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline">
+              projects page
+            </Link>.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {portfolioProjectIds
+              .map(id => projectsData.projects.find(p => p.id === id))
+              .filter(Boolean)
+              .map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  date={project.date}
+                  tags={project.tags}
+                  description={project.description}
+                  link={project.link}
+                  image={project.image}
+                />
+              ))}
+          </div>
       </ContentBlock>
 
       {/* Tech Stack */}

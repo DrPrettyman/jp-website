@@ -37,6 +37,7 @@ import PSIndicatorProject from './pages/projects/PSIndicator'
 import MultidimEWSProject from './pages/projects/MultidimEWS'
 import PSRobustnessProject from './pages/projects/PSRobustness'
 import AdaptiveMeshProject from './pages/projects/AdaptiveMesh'
+import JobSearchAgentProject from './pages/projects/JobSearchAgent'
 
 import Vanlife from './pages/travel/Vanlife'
 import Travels from './pages/Travels'
@@ -62,6 +63,7 @@ function App() {
         <Route path="/projects/multidim-ews" element={<MultidimEWSProject />} />
         <Route path="/projects/ps-robustness" element={<PSRobustnessProject />} />
         <Route path="/projects/adaptive-mesh" element={<AdaptiveMeshProject />} />
+        <Route path="/projects/jobsearch-agent" element={<JobSearchAgentProject />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/blog/tag/:tag" element={<Blog />} />

@@ -13,7 +13,8 @@
       "Bash(cd /Users/joshua/website_projects/jp-website/job_applications && python3 generate_cover_letters.py)",
       "Bash(ls:*)",
       "Bash(pdftoppm:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []

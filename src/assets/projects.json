@@ -7,7 +7,7 @@
       "tags": ["Python", "CLI", "AI", "Claude", "Automation"],
       "description": "AI-powered CLI tool that automates job hunting: searches the web for relevant positions, intelligently filters based on your background, and generates tailored cover letters as professional PDFs.",
       "link": "projects/jobsearch-agent",
-      "image": "/images/jobsearch-agent.png"
+      "image": "/images/jobsearch-cli-screenshot.png"
     },
     {
       "id": "fraud-detection",

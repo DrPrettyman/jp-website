@@ -19,7 +19,7 @@ const CodeBlock = ({ children, title }) => (
 const JobSearchAgentProject = () => {
   return (
     <Layout>
-      <ContentBlock title="JobSearch Agent" icon={Briefcase} githubUrl="https://github.com/DrPrettyman/JobSearch" maxWidth='4xl'>
+      <ContentBlock title="JobSearch Agent" icon={Briefcase} githubUrl="https://github.com/DrPrettyman/JobSearchAgent" maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">
 

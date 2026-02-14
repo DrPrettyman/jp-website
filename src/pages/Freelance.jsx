@@ -38,7 +38,7 @@ const highlights = [
 const Freelance = () => {
   return (
     <Layout>
-      <ContentBlock title="Freelance Data & Development Services" icon={LayoutDashboard}>
+      <ContentBlock title="Freelance Data & Dev Services" icon={LayoutDashboard}>
 
         {/* Intro pitch */}
         <div className="space-y-4 mb-8 text-gray-600 dark:text-white">

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Menu, GraduationCap, Briefcase, Home, FolderGit2, BookOpen, Map, LayoutDashboard } from 'lucide-react'
 
 import { TbMail, TbFileSmile, TbCalendarMonthFilled } from "react-icons/tb";
+import { PiMathOperationsBold } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 
@@ -131,6 +132,16 @@ const Header = ({ fullWidth = false }) => {
               </div>
             </Link>
 
+            <Link 
+              to="/tutor" 
+              className={getButtonClasses('/tutor')}
+            >
+              <div className="flex items-center space-x-1 text-sm">
+                <PiMathOperationsBold className="h-4 w-4 mr-1" />
+                <span className="whitespace-nowrap">Tuition</span>
+              </div>
+            </Link>
+
             <Link
               to="/travels"
               className={getButtonClasses('/travels')}
@@ -188,6 +199,7 @@ const Header = ({ fullWidth = false }) => {
                     <span>Academic CV</span>
                   </div>
                 </Link>
+
                 <Link 
                   to="/professional" 
                   className={`text-right px-4 py-2 rounded-lg ${
@@ -230,6 +242,22 @@ const Header = ({ fullWidth = false }) => {
                     <span className="whitespace-nowrap">Freelance</span>
                   </div>
                 </Link>
+
+                <Link 
+                  to="/tutor" 
+                  className={`text-right px-4 py-2 rounded-lg ${
+                    isActive('/tutor')
+                      ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center justify-end space-x-1">
+                    <PiMathOperationsBold className="h-4 w-4" />
+                    <span>Tuition</span>
+                  </div>
+                </Link>
+
                 <Link
                   to="/travels"
                   className={`text-right px-4 py-2 rounded-lg ${

@@ -118,16 +118,16 @@ const Tutor = () => {
                 className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
               >
                 <Mail size={20} />
-                <span>joshua@prettyman.me</span>
+                <span>Email</span>
               </a>
               <a
-                href="https://wa.me/34711042151"
+                href="https://wa.me/34711042151?text=Tutoring%20enquiry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
               >
                 <FaWhatsapp size={20} />
-                <span>+34 711 042 151</span>
+                <span>WhatsApp</span>
               </a>
             </div>
             

@@ -7,7 +7,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const content = {
   en: {
     title: "Private Maths Tuition in English",
-    intro: "Hi, I'm Joshua. My own children are in Years 7 and 8 at Sunland International School and we live just up the road (10 minute walk from school).",
+    intro: "Hi, I'm Joshua. My own children are in Years 7 and 8 at Sunland International School (Estación de Cártama) and we live just up the road (10 minute walk from school).",
     backgroundTitle: "Background",
     background1: "I have a Ph.D. in Mathematics and have studied Mathematics Education at Masters level. I gave private maths tuition for years in the UK to all levels of school and university students, and a couple of adult learners. I have helped high-achievers with their Cambridge entrance exams, and I've also helped students with dyscalculia to develop learning strategies.",
     background2: "Since my working hours have reduced recently I have decided to get back into tutoring here in Spain.",
@@ -20,7 +20,7 @@ const content = {
   },
   es: {
     title: "Clases Particulares de Matemáticas en Inglés",
-    intro: "Hola, soy Joshua. Mis hijos están en Year 7 y Year 8 en el colegio Sunland International School y vivimos muy cerca (a 10 minutos andando del colegio).",
+    intro: "Hola, soy Joshua. Mis hijos están en Year 7 y Year 8 en el colegio Sunland International School (Estación de Cártama) y vivimos muy cerca (a 10 minutos andando del colegio).",
     backgroundTitle: "Experiencia",
     background1: "Tengo un doctorado en Matemáticas y he estudiado Educación Matemática a nivel de máster. Durante años di clases particulares de matemáticas en el Reino Unido a estudiantes de todos los niveles escolares y universitarios, además de algunos adultos. He ayudado a estudiantes de alto rendimiento con sus exámenes de acceso a Cambridge, y también he ayudado a estudiantes con discalculia a desarrollar estrategias de aprendizaje.",
     background2: "Como mis horas de trabajo se han reducido recientemente, he decidido volver a dar clases particulares aquí en España.",
@@ -33,7 +33,7 @@ const content = {
   },
   de: {
     title: "Private Mathematik-Nachhilfe auf Englisch",
-    intro: "Hallo, ich bin Joshua. Meine eigenen Kinder sind in der 7. und 8. Klasse an der Sunland International School und wir wohnen ganz in der Nähe (10 Minuten zu Fuß von der Schule).",
+    intro: "Hallo, ich bin Joshua. Meine eigenen Kinder sind in der 7. und 8. Klasse an der Sunland International School (Estación de Cártama) und wir wohnen ganz in der Nähe (10 Minuten zu Fuß von der Schule).",
     backgroundTitle: "Hintergrund",
     background1: "Ich habe einen Doktortitel in Mathematik und habe Mathematikdidaktik auf Masterniveau studiert. Ich habe jahrelang in Großbritannien Mathematik-Nachhilfe für Schüler und Studenten aller Stufen sowie einige Erwachsene gegeben. Ich habe leistungsstarken Schülern bei ihren Cambridge-Aufnahmeprüfungen geholfen und auch Schülern mit Dyskalkulie bei der Entwicklung von Lernstrategien unterstützt.",
     background2: "Da meine Arbeitszeiten sich kürzlich reduziert haben, habe ich beschlossen, hier in Spanien wieder Nachhilfe zu geben.",

@@ -112,10 +112,10 @@ const Tutor = () => {
 
   return (
     <Layout>
-      <ContentBlock title="Maths with Dr. Joshua" maxWidth="4xl" centerTitle={true}>
+      <ContentBlock title="Maths with Dr.&nbsp;Joshua" maxWidth="4xl" centerTitle={true}>
 
           <div className="flex justify-center mb-4">
-            <h2 className="font-bold text-xl">{t.title}</h2>
+            <h2 className="font-bold text-xl dark:text-white">{t.title}</h2>
           </div>
 
           {/* Language toggle */}
@@ -126,7 +126,7 @@ const Tutor = () => {
                 className={`px-3 py-1 text-sm transition-colors ${
                   lang === 'en'
                     ? 'bg-blue-600 text-white'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+                    : 'hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white'
                 }`}
               >
                 English
@@ -136,7 +136,7 @@ const Tutor = () => {
                 className={`px-3 py-1 text-sm transition-colors ${
                   lang === 'es'
                     ? 'bg-blue-600 text-white'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+                    : 'hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white'
                 }`}
               >
                 Español
@@ -146,7 +146,7 @@ const Tutor = () => {
                 className={`px-3 py-1 text-sm transition-colors ${
                   lang === 'de'
                     ? 'bg-blue-600 text-white'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+                    : 'hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white'
                 }`}
               >
                 Deutsch

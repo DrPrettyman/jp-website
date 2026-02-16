@@ -38,24 +38,25 @@ const highlights = [
 const Freelance = () => {
   return (
     <Layout>
-      <ContentBlock title="Freelance Data & Dev Services" icon={LayoutDashboard}>
+      <ContentBlock title="Freelance Data & Dev Services" icon={LayoutDashboard} maxWidth="4xl">
 
         {/* Intro pitch */}
         <div className="space-y-4 mb-8 text-gray-600 dark:text-white">
-          <p className="text-lg">
-            I'm a Data Scientist and Python Developer with a PhD in Mathematics. I build production ML systems, data pipelines, and full-stack applications that solve real business problems.
-          </p>
-          <p className="text-lg">
-            Whether you need a machine learning model deployed, a data pipeline automated, or a dashboard that actually gets used, I can help.
-          </p>
+          
 
         </div>
 
         {/* Contact */}
         <div className="bg-blue-50 dark:bg-gray-600 rounded-lg p-6 mb-8">
-          <h2 className="font-bold text-lg mb-4 text-gray-600 dark:text-white">Contact</h2>
+
           <p className="text-gray-600 dark:text-white mb-4">
-            Happy New Year! I have availability for 2026. If you have a project in mind, please reach out.
+            I'm a Data Scientist and Python Developer with a PhD in Mathematics. I build production ML systems, data pipelines, and full-stack applications that solve real business problems.
+          </p>
+          <p className="text-gray-600 dark:text-white mb-4">
+            Whether you need a machine learning model deployed, a data pipeline automated, or a dashboard that actually gets used, I can help.
+          </p>
+          <p className="text-gray-600 dark:text-white mb-4">
+            I have availability for 2026. If you have a project in mind, please reach out.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
@@ -86,6 +87,9 @@ const Freelance = () => {
             </a>
           </div>
         </div>
+
+        {/* TODO: add upwork profile https://www.upwork.com/freelancers/~01f29ff60bafe385e6?mp_source=share 
+        And fiverr https://www.fiverr.com/s/ZmA8EEY*/}
 
         {/* Highlights */}
         <div className="bg-blue-50 dark:bg-gray-600 rounded-lg p-6 mb-8">

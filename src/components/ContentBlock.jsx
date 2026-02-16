@@ -1,7 +1,7 @@
 import { LiaGithub } from "react-icons/lia";
 import { DiGithubFull } from "react-icons/di";
 
-const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl, id }) => {
+const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl, id, centerTitle = false }) => {
   return (
     <div id={id} className={`max-w-${maxWidth} mx-auto py-6 sm:px-6 lg:px-8`}>
       <div className="bg-gray-200/65 dark:bg-gray-800/85 rounded-lg px-8 py-6 mb-4 mx-2 sm:mx-0">
@@ -9,7 +9,7 @@ const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl
           {/* Mobile layout */}
           <div className="sm:hidden">
             <div className="flex flex-col items-center mb-4">
-              <Icon className="h-8 w-8 mb-2" />
+              {Icon && (<Icon className="h-8 w-8 mb-2" />)}
               <h1 className="text-4xl font-bold text-center">
                 {title}
               </h1>
@@ -29,8 +29,8 @@ const ContentBlock = ({ title, icon: Icon, children, maxWidth = "7xl", githubUrl
           </div>
           
           {/* Desktop layout */}
-          <div className="hidden sm:flex items-center">
-            <Icon className="h-8 w-8 mr-2" />
+          <div className={`hidden sm:flex items-center ${centerTitle ? 'justify-center' : ''}`}>
+            {Icon && (<Icon className="h-8 w-8 mr-2" />)}
             <h1 className="text-4xl font-bold">
               {title}
             </h1>

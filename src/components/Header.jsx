@@ -138,7 +138,7 @@ const Header = ({ fullWidth = false }) => {
             >
               <div className="flex items-center space-x-1 text-sm">
                 <PiMathOperationsBold className="h-4 w-4 mr-1" />
-                <span className="whitespace-nowrap">Tuition</span>
+                <span className="whitespace-nowrap">Private Tuition</span>
               </div>
             </Link>
 
@@ -254,7 +254,7 @@ const Header = ({ fullWidth = false }) => {
                 >
                   <div className="flex items-center justify-end space-x-1">
                     <PiMathOperationsBold className="h-4 w-4" />
-                    <span>Tuition</span>
+                    <span>Private Tuition</span>
                   </div>
                 </Link>
 

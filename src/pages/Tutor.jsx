@@ -112,7 +112,7 @@ const Tutor = () => {
 
   return (
     <Layout>
-      <ContentBlock title="Maths with Joshua" maxWidth="4xl" centerTitle={true}>
+      <ContentBlock title="Maths with Dr. Joshua" maxWidth="4xl" centerTitle={true}>
 
           <div className="flex justify-center mb-4">
             <h2 className="font-bold text-xl">{t.title}</h2>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Menu, GraduationCap, Briefcase, Home, FolderGit2, BookOpen, Map, LayoutDashboard } from 'lucide-react'
+import React, { useState, useRef, useEffect } from 'react'
+import { Menu, GraduationCap, Briefcase, Home, FolderGit2, BookOpen, Map, LayoutDashboard, ChevronDown } from 'lucide-react'
 
 import { TbMail, TbFileSmile, TbCalendarMonthFilled } from "react-icons/tb";
 import { PiMathOperationsBold } from "react-icons/pi";
@@ -11,7 +11,19 @@ import DarkModeToggle from './DarkModeToggle'
 
 const Header = ({ fullWidth = false }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false)
+  const moreMenuRef = useRef(null)
   const location = useLocation()
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (moreMenuRef.current && !moreMenuRef.current.contains(e.target)) {
+        setMoreMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   const isActive = (path) => location.pathname === path
 
@@ -112,45 +124,84 @@ const Header = ({ fullWidth = false }) => {
               </div>
             </Link>
 
-            <Link
-              to="/projects"
-              className={getButtonClasses('/projects')}
-            >
-              <div className="flex items-center space-x-1 text-sm">
-                <FolderGit2 className="h-4 w-4 mr-1" />
-                <span className="whitespace-nowrap">Projects</span>
-              </div>
-            </Link>
+            <div className="relative" ref={moreMenuRef}>
+              <button
+                onClick={() => setMoreMenuOpen(!moreMenuOpen)}
+                className={`px-4 py-2 rounded-lg ${
+                  ['/projects', '/freelance', '/tutor', '/travels'].some(p => isActive(p))
+                    ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
+                    : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+                }`}
+              >
+                <div className="flex items-center space-x-1 text-sm">
+                  <span className="whitespace-nowrap">More</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform ${moreMenuOpen ? 'rotate-180' : ''}`} />
+                </div>
+              </button>
 
-            <Link
-              to="/freelance"
-              className={getButtonClasses('/freelance')}
-            >
-              <div className="flex items-center space-x-1 text-sm">
-                <LayoutDashboard className="h-4 w-4 mr-1" />
-                <span className="whitespace-nowrap">Freelance</span>
-              </div>
-            </Link>
-
-            <Link 
-              to="/tutor" 
-              className={getButtonClasses('/tutor')}
-            >
-              <div className="flex items-center space-x-1 text-sm">
-                <PiMathOperationsBold className="h-4 w-4 mr-1" />
-                <span className="whitespace-nowrap">Private Tuition</span>
-              </div>
-            </Link>
-
-            <Link
-              to="/travels"
-              className={getButtonClasses('/travels')}
-            >
-              <div className="flex items-center space-x-1 text-sm">
-                <Map className="h-4 w-4 mr-1" />
-                <span className="whitespace-nowrap">Travels</span>
-              </div>
-            </Link>
+              {moreMenuOpen && (
+                <div className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden">
+                  <div className="px-4 py-2 space-y-2 flex flex-col items-end">
+                    <Link
+                      to="/projects"
+                      className={`text-right px-4 py-2 rounded-lg ${
+                        isActive('/projects')
+                          ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
+                      onClick={() => setMoreMenuOpen(false)}
+                    >
+                      <div className="flex items-center justify-end space-x-1">
+                        <FolderGit2 className="h-4 w-4" />
+                        <span className="whitespace-nowrap">Projects</span>
+                      </div>
+                    </Link>
+                    <Link
+                      to="/freelance"
+                      className={`text-right px-4 py-2 rounded-lg ${
+                        isActive('/freelance')
+                          ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
+                      onClick={() => setMoreMenuOpen(false)}
+                    >
+                      <div className="flex items-center justify-end space-x-1">
+                        <LayoutDashboard className="h-4 w-4" />
+                        <span className="whitespace-nowrap">Freelance</span>
+                      </div>
+                    </Link>
+                    <Link
+                      to="/tutor"
+                      className={`text-right px-4 py-2 rounded-lg ${
+                        isActive('/tutor')
+                          ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
+                      onClick={() => setMoreMenuOpen(false)}
+                    >
+                      <div className="flex items-center justify-end space-x-1">
+                        <PiMathOperationsBold className="h-4 w-4" />
+                        <span className="whitespace-nowrap">Private Tuition</span>
+                      </div>
+                    </Link>
+                    <Link
+                      to="/travels"
+                      className={`text-right px-4 py-2 rounded-lg ${
+                        isActive('/travels')
+                          ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
+                      onClick={() => setMoreMenuOpen(false)}
+                    >
+                      <div className="flex items-center justify-end space-x-1">
+                        <Map className="h-4 w-4" />
+                        <span className="whitespace-nowrap">Travels</span>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* <Link
               to="/blog"

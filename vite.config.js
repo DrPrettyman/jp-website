@@ -19,6 +19,8 @@ const staticRoutes = [
   '/projects/multidim-ews',
   '/projects/ps-robustness',
   '/projects/adaptive-mesh',
+  '/projects/steam-market-gap',
+  '/projects/jobsearch-agent',
   '/blog',
   '/travels',
   '/travel/vanlife',

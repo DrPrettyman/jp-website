@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "id": "steam-market-gap",
+      "title": "Steam Market Gap Analysis",
+      "date": "2026",
+      "tags": ["Python", "ML", "Data Pipeline", "Streamlit", "Recommender Systems"],
+      "description": "Multi-source data pipeline and hybrid recommendation engine that identifies underserved game niches on Steam, scoring 140,000+ market opportunities with revenue estimates.",
+      "link": "projects/steam-market-gap",
+      "image": "/images/steam-market-gap/niche_metrics_heatmap.png"
+    },
+    {
       "id": "jobsearch-agent",
       "title": "JobSearch Agent",
       "date": "2026",

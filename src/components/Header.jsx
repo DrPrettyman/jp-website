@@ -104,9 +104,10 @@ const Header = ({ fullWidth = false }) => {
           
           {/* Navigation links */}
           <nav className="hidden md:flex space-x-2 ml-auto">
-            <Link 
-              to="/academic" 
+            <Link
+              to="/academic"
               className={getButtonClasses('/academic')}
+              aria-current={isActive('/academic') ? 'page' : undefined}
             >
               <div className="flex items-center space-x-1 text-sm">
                 <GraduationCap className="h-4 w-4 mr-1" />
@@ -114,9 +115,10 @@ const Header = ({ fullWidth = false }) => {
               </div>
             </Link>
 
-            <Link 
-              to="/professional" 
+            <Link
+              to="/professional"
               className={getButtonClasses('/professional')}
+              aria-current={isActive('/professional') ? 'page' : undefined}
             >
               <div className="flex items-center space-x-1 text-sm">
                 <Briefcase className="h-4 w-4 mr-1" />
@@ -152,6 +154,7 @@ const Header = ({ fullWidth = false }) => {
                           ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                       }`}
+                      aria-current={isActive('/projects') ? 'page' : undefined}
                       onClick={() => setMoreMenuOpen(false)}
                     >
                       <div className="flex items-center justify-end space-x-1">
@@ -166,6 +169,7 @@ const Header = ({ fullWidth = false }) => {
                           ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                       }`}
+                      aria-current={isActive('/freelance') ? 'page' : undefined}
                       onClick={() => setMoreMenuOpen(false)}
                     >
                       <div className="flex items-center justify-end space-x-1">
@@ -180,6 +184,7 @@ const Header = ({ fullWidth = false }) => {
                           ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                       }`}
+                      aria-current={isActive('/tutor') ? 'page' : undefined}
                       onClick={() => setMoreMenuOpen(false)}
                     >
                       <div className="flex items-center justify-end space-x-1">
@@ -194,6 +199,7 @@ const Header = ({ fullWidth = false }) => {
                           ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                       }`}
+                      aria-current={isActive('/travels') ? 'page' : undefined}
                       onClick={() => setMoreMenuOpen(false)}
                     >
                       <div className="flex items-center justify-end space-x-1">
@@ -219,6 +225,7 @@ const Header = ({ fullWidth = false }) => {
             <Link
               to="/"
               className={getButtonClasses('/')}
+              aria-current={isActive('/') ? 'page' : undefined}
             >
                 <Home className="h-5 w-5" />
             </Link>
@@ -241,13 +248,14 @@ const Header = ({ fullWidth = false }) => {
           {mobileMenuOpen && (
             <div className="absolute top-16 right-0 left-0 bg-white dark:bg-gray-900 shadow-lg md:hidden">
               <div className="px-4 py-2 space-y-2 flex flex-col items-end">
-                <Link 
-                  to="/academic" 
+                <Link
+                  to="/academic"
                   className={`text-right px-4 py-2 rounded-lg ${
                     isActive('/academic')
                       ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
+                  aria-current={isActive('/academic') ? 'page' : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <div className="flex items-center justify-end space-x-1">
@@ -256,13 +264,14 @@ const Header = ({ fullWidth = false }) => {
                   </div>
                 </Link>
 
-                <Link 
-                  to="/professional" 
+                <Link
+                  to="/professional"
                   className={`text-right px-4 py-2 rounded-lg ${
                     isActive('/professional')
                       ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
+                  aria-current={isActive('/professional') ? 'page' : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <div className="flex items-center justify-end space-x-1">
@@ -277,6 +286,7 @@ const Header = ({ fullWidth = false }) => {
                       ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
+                  aria-current={isActive('/projects') ? 'page' : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <div className="flex items-center justify-end space-x-1">
@@ -291,6 +301,7 @@ const Header = ({ fullWidth = false }) => {
                       ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
+                  aria-current={isActive('/freelance') ? 'page' : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <div className="flex items-center justify-end space-x-1">
@@ -299,13 +310,14 @@ const Header = ({ fullWidth = false }) => {
                   </div>
                 </Link>
 
-                <Link 
-                  to="/tutor" 
+                <Link
+                  to="/tutor"
                   className={`text-right px-4 py-2 rounded-lg ${
                     isActive('/tutor')
                       ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
+                  aria-current={isActive('/tutor') ? 'page' : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <div className="flex items-center justify-end space-x-1">
@@ -321,6 +333,7 @@ const Header = ({ fullWidth = false }) => {
                       ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
+                  aria-current={isActive('/travels') ? 'page' : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <div className="flex items-center justify-end space-x-1">

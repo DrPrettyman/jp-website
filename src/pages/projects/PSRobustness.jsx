@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { ShieldCheck } from 'lucide-react';
 import 'katex/dist/katex.min.css';
@@ -42,6 +43,7 @@ const CodeBlock = ({ children, title }) => (
 const PSRobustnessProject = () => {
   return (
     <Layout>
+      <SEO title="Power Spectrum Robustness" description="Research investigating the robustness of power spectrum scaling as an indicator of critical slowing down." path="/projects/ps-robustness" />
       <ContentBlock title="Power Spectrum Scaling and Critical Slowing Down" icon={ShieldCheck} githubUrl="https://github.com/DrPrettyman/PhD/tree/main/Papers/Paper3_ERL/manuscript" maxWidth='4xl'>
         <div className="text-gray-700 dark:text-white">
 

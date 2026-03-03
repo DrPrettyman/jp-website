@@ -88,7 +88,7 @@ Added `Service` JSON-LD to `src/pages/Tutor.jsx` via `<Helmet>`.
 
 ---
 
-## Phase 4 — Image Optimisation (partially done)
+## Phase 4 — Image Optimisation ✅ DONE
 
 ### 4.1 ✅ Add `loading="lazy"` to all images below the fold
 
@@ -106,25 +106,21 @@ Header and Home headshots correctly left without lazy loading.
 
 Added `width={40} height={40}` to the header headshot in `src/components/Header.jsx`.
 
-### 4.3 ⬜ Convert key images to WebP
+### 4.3 ✅ Convert key images to WebP
 
-Convert the most-loaded images to WebP format for smaller file sizes. Priority targets:
-
-1. `/public/images/headshot.jpeg` — loaded on every page
-2. Company logos in `/public/company_logo/`
-3. Project screenshots in `/public/images/*/`
-
-Use a tool like `cwebp` or an online converter. Keep the JPEG originals as fallbacks if needed, but modern browsers all support WebP.
+Converted all key images to WebP using `cwebp -q 85`. Updated all references across:
+- `src/components/Header.jsx` and `src/pages/Home.jsx` (headshot)
+- `src/assets/cv-academic/manifest.json` (3 logos)
+- `src/assets/cv-professional/manifest.json` (8 logos)
+- `src/assets/cv-academic/publications.json` (6 logos)
+- `src/assets/projects.json` (14 project thumbnails, excluding .svg)
+- All project detail JSX pages (FraudDetection, SteamMarketGap, PSIndicator, PSRobustness, EarlyWarningSignals, MultidimEWS, AdaptiveMesh, DigraphExplorer)
+- `src/pages/Tutor.jsx` (2 banner images)
+- `src/pages/Travels.jsx` (vanlife image)
 
 ### 4.4 ⬜ Consider a Vite image optimisation plugin
 
-For automated build-time compression, consider adding `vite-plugin-imagemin`:
-
-```bash
-npm install -D vite-plugin-imagemin
-```
-
-This will compress all images during `npm run build` without manual conversion.
+Optional: For automated build-time compression, consider adding `vite-plugin-imagemin`.
 
 ---
 
@@ -140,7 +136,7 @@ Added to `src/components/Header.jsx`:
 - Mobile menu button: `aria-label="Toggle menu"` and `aria-expanded={mobileMenuOpen}`
 - "More" dropdown button: `aria-label="More pages"`, `aria-expanded={moreMenuOpen}`, `aria-haspopup="true"`
 
-**Still TODO:** Add `aria-current="page"` to active navigation links (where `isActive(path)` is true).
+Added `aria-current={isActive(path) ? 'page' : undefined}` to all navigation `<Link>` elements (desktop nav, dropdown menu, and mobile menu).
 
 ### 5.3 ✅ Wrap blog post previews in `<article>`
 
@@ -391,17 +387,15 @@ Blog post dates are hardcoded as strings ("June 15, 2023"). If/when the blog sca
 | 1 | Quick wins (sitemap, headings, links, 404) | ✅ Done |
 | 2 | Per-page titles, descriptions, OG tags | ✅ Done |
 | 3 | JSON-LD structured data | ✅ Done |
-| 4 | Image optimisation (lazy load, dimensions) | ✅ Partially done (WebP conversion remaining) |
-| 5 | Semantic HTML & ARIA | ✅ Done (aria-current remaining) |
+| 4 | Image optimisation (lazy load, WebP, dimensions) | ✅ Done |
+| 5 | Semantic HTML & ARIA | ✅ Done |
 | 6 | Prerendering via React Router v7 framework mode | ⬜ Not started |
 | 7 | Code splitting | ⬜ Not started |
 | 8 | Miscellaneous cleanup | ⬜ Not started |
 
 ### What's left
 
-- **4.3** Convert key images to WebP (manual or via build plugin)
-- **4.4** Consider `vite-plugin-imagemin` for build-time compression
-- **5.2** Add `aria-current="page"` to active nav links in Header
+- **4.4** Optional: `vite-plugin-imagemin` for build-time compression
 - **Phase 6** Migrate to React Router v7 framework mode for prerendering (largest remaining item)
 - **Phase 7** Code splitting (automatic if Phase 6 is done, manual otherwise)
 - **Phase 8** Miscellaneous cleanup (CVRedirect removal, rel audit, blog dates)

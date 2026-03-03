@@ -6,12 +6,13 @@ const BlogPost = ({ post, isPreview = false }) => {
   const { id, title, date, excerpt, content, coverImage, tags } = post
 
   return (
-    <div className="bg-blue-50 shadow rounded-lg overflow-hidden">
+    <article className="bg-blue-50 shadow rounded-lg overflow-hidden">
       {coverImage && (
         <div className="w-full h-48 overflow-hidden">
-          <img 
-            src={coverImage} 
-            alt={title} 
+          <img
+            src={coverImage}
+            alt={title}
+            loading="lazy"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
           />
         </div>
@@ -65,7 +66,7 @@ const BlogPost = ({ post, isPreview = false }) => {
           </div>
         )}
       </div>
-    </div>
+    </article>
   )
 }
 

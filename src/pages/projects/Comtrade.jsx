@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { Wine } from 'lucide-react';
 import { LiaGithub } from "react-icons/lia";
@@ -7,6 +8,7 @@ import { LiaGithub } from "react-icons/lia";
 const ComtradeProject = () => {
   return (
     <Layout>
+      <SEO title="Wine Trade Data" description="An interactive data visualization of global wine export routes using UN Comtrade data." path="/projects/wine-exports-viz" />
       <ContentBlock title="Wine Trade Data" icon={Wine} githubUrl="https://github.com/DrPrettyman/comtrade" maxWidth='4xl'>
           
           <div className="text-gray-700 dark:text-white">

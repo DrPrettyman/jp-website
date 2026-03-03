@@ -1,11 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { ChefHat } from 'lucide-react';
 
 const MacaroniProject = () => {
   return (
     <Layout>
+      <SEO title="Macaroni" description="An SEO software platform built from scratch, automating data pipelines and adding ML-powered features for an SEO agency." path="/projects/macaroni" />
       <ContentBlock title="Macaroni" icon={ChefHat} maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">

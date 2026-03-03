@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { Gamepad2 } from 'lucide-react';
 
@@ -19,6 +20,7 @@ const CodeBlock = ({ children, title }) => (
 const SteamMarketGapProject = () => {
   return (
     <Layout>
+      <SEO title="Steam Market Gap Analysis" description="A data-driven analysis of the Steam games marketplace to identify underserved genres and market opportunities." path="/projects/steam-market-gap" />
       <ContentBlock title="Steam Market Gap Analysis" icon={Gamepad2} githubUrl="https://github.com/DrPrettyman/SteamMarketGapAnalysis" maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">

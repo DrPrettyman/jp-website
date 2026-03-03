@@ -8,6 +8,7 @@ import publicationsData from '../assets/cv-academic/publications.json';
 import { GraduationCap, BookOpen } from 'lucide-react';
 import introAcademicHtml from '../assets/cv-academic/intro-academic.html?raw';
 import introPublicationsHtml from '../assets/cv-academic/intro-publications.html?raw';
+import SEO from '../components/SEO';
 
 const Education = () => {
   useEffect(() => {
@@ -24,6 +25,11 @@ const Education = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Academic Background"
+        description="Ph.D. in Mathematics from the University of Reading, MRes from Imperial College London, MA from the University of Edinburgh. Publications and research."
+        path="/academic"
+      />
       {/* Academic Background */}
       <ContentBlock title="Academic Background" icon={GraduationCap}>
 

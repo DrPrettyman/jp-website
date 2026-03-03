@@ -43,7 +43,7 @@ const Header = ({ fullWidth = false }) => {
           {/* Logo/Name and Social Icons */}
           <div className="flex-shrink-0 flex items-center space-x-3">
             <Link to="/" className="text-2xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-              <img src="/images/headshot.jpeg" alt="Joshua's face" className="h-10 w-10 rounded-full" />
+              <img src="/images/headshot.webp" alt="Joshua Prettyman" className="h-10 w-10 rounded-full" width={40} height={40} />
             </Link>
             <Link to="/" className="hidden md:block text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
               Dr Joshua Prettyman
@@ -127,6 +127,9 @@ const Header = ({ fullWidth = false }) => {
             <div className="relative" ref={moreMenuRef}>
               <button
                 onClick={() => setMoreMenuOpen(!moreMenuOpen)}
+                aria-label="More pages"
+                aria-expanded={moreMenuOpen}
+                aria-haspopup="true"
                 className={`px-4 py-2 rounded-lg ${
                   ['/projects', '/freelance', '/tutor', '/travels'].some(p => isActive(p))
                     ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
@@ -224,9 +227,11 @@ const Header = ({ fullWidth = false }) => {
           </nav>
 
           {/* Mobile menu button */}
-          <button 
+          <button
             className="md:hidden ml-auto"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
           >
             <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
           </button>

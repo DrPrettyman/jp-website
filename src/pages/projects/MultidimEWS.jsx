@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { Grid3X3 } from 'lucide-react';
 import 'katex/dist/katex.min.css';
@@ -42,6 +43,7 @@ const CodeBlock = ({ children, title }) => (
 const MultidimEWSProject = () => {
   return (
     <Layout>
+      <SEO title="Multidimensional Early Warning Signals" description="Research extending early warning signal methods to multivariate dynamical systems." path="/projects/multidim-ews" />
       <ContentBlock title="Multivariate Early Warning Signals" icon={Grid3X3} githubUrl="https://github.com/DrPrettyman/PhD/tree/main/Papers/Paper2_Chaos/manuscript" maxWidth='4xl'>
         <div className="text-gray-700 dark:text-white">
 

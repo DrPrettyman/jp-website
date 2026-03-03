@@ -3,6 +3,8 @@ import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock';
 import { Mail, CheckCircle } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 
 const content = {
   en: {
@@ -121,11 +123,39 @@ const Tutor = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Private Maths Tuition"
+        description="Private maths tuition in English near Cartama, Malaga. Ph.D. in Mathematics, experienced teacher. GCSEs, A-levels, IB."
+        path="/tutor"
+      />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Private Maths Tuition",
+            "provider": {
+              "@type": "Person",
+              "name": "Joshua Prettyman"
+            },
+            "areaServed": {
+              "@type": "Place",
+              "name": "Cartama, Malaga, Spain"
+            },
+            "description": "Private maths tuition in English for all levels.",
+            "offers": {
+              "@type": "Offer",
+              "price": "30",
+              "priceCurrency": "EUR"
+            }
+          })}
+        </script>
+      </Helmet>
       <ContentBlock title="" maxWidth="4xl" centerTitle={true}>
 
         <div className="relative rounded-lg p-6 mb-8 overflow-hidden">
-          <img src="/images/math-with-dr-joshua/light.png" alt="" className="absolute inset-0 w-full h-full object-cover dark:hidden" />
-          <img src="/images/math-with-dr-joshua/dark.png" alt="" className="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+          <img src="/images/math-with-dr-joshua/light.png" alt="Math with Dr Joshua banner" loading="lazy" className="absolute inset-0 w-full h-full object-cover dark:hidden" />
+          <img src="/images/math-with-dr-joshua/dark.png" alt="Math with Dr Joshua banner" loading="lazy" className="absolute inset-0 w-full h-full object-cover hidden dark:block" />
           <div className="absolute inset-0 bg-white/60 dark:bg-gray-900/60" />
           
           <div className="relative z-10 flex justify-center mb-8">

@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { Workflow } from 'lucide-react';
 
@@ -19,6 +20,7 @@ const CodeBlock = ({ children, title }) => (
 const JobMasterProject = () => {
   return (
     <Layout>
+      <SEO title="JobMaster" description="A Python job queue framework for triggering and tracking long-running tasks from a web frontend." path="/projects/jobmaster" />
       <ContentBlock title="JobMaster" icon={Workflow} githubUrl="https://github.com/DrPrettyman/jobmaster" maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">

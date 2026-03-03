@@ -3,10 +3,16 @@ import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock'
 import TravelCard from '../components/TravelCard'
 import { Map } from 'lucide-react'
+import SEO from '../components/SEO'
 
 const Travels = () => {
   return (
     <Layout>
+      <SEO
+        title="Travels"
+        description="Travel map and stories from travelling Europe in a campervan."
+        path="/travels"
+      />
       <ContentBlock title="Travels" icon={Map}>
         {/* Intro text */}
         <div className="text-body text-justify mb-6">

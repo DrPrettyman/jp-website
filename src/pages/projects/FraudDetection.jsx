@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { ShieldAlert } from 'lucide-react';
 
@@ -19,6 +20,7 @@ const CodeBlock = ({ children, title }) => (
 const FraudDetectionProject = () => {
   return (
     <Layout>
+      <SEO title="Fraud Detection" description="A machine learning project tackling the IEEE-CIS fraud detection Kaggle competition." path="/projects/fraud-detection" />
       <ContentBlock title="Fraud Detection" icon={ShieldAlert} githubUrl="https://github.com/DrPrettyman/ieee-fraud-detection" maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">

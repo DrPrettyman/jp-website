@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import MasterMindGame from '../../components/MasterMindGame';
 
@@ -8,6 +9,7 @@ import { Puzzle } from 'lucide-react';
 const MastermindGame = () => {
   return (
     <Layout>
+      <SEO title="Mastermind Game" description="A classic code-breaking board game built in React where you crack a secret colour combination." path="/projects/mastermind" />
       <ContentBlock title="Mastermind Game" icon={Puzzle}>
         <div className="text-gray-700 dark:text-white">
           <p className="mb-8 text-justify">

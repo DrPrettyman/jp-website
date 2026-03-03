@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { Briefcase } from 'lucide-react';
 
@@ -19,6 +20,7 @@ const CodeBlock = ({ children, title }) => (
 const JobSearchAgentProject = () => {
   return (
     <Layout>
+      <SEO title="JobSearch Agent" description="An AI-powered CLI tool that automates job research, opportunity filtering, and cover letter writing using Claude." path="/projects/jobsearch-agent" />
       <ContentBlock title="JobSearch Agent" icon={Briefcase} githubUrl="https://github.com/DrPrettyman/JobSearchAgent" maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">

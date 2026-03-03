@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import GraphBuilder from '../../components/GraphBuilder';
 import ContentBlock from '../../components/ContentBlock';
 import { Waypoints } from 'lucide-react';
@@ -9,6 +10,7 @@ import { Circle, Share2 } from 'lucide-react';
 const DigraphExplorerProject = () => {
   return (
     <Layout>
+      <SEO title="Digraph Explorer" description="An interactive graph theory visualization tool for exploring directed graphs and their algebraic properties." path="/projects/digraph-explorer" />
       <ContentBlock title="Digraph Explorer" icon={Waypoints} maxWidth='7xl'>
           
           <div className="text-gray-700 dark:text-white">

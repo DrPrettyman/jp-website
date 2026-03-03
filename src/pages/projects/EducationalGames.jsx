@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 
 import { Gamepad2 } from 'lucide-react';
@@ -9,6 +10,7 @@ import { AngleEstimationGame, FractionEstimationGame } from 'prettymath-games';
 const EducationalGames = () => {
   return (
     <Layout>
+      <SEO title="PrettyMath Games" description="Interactive educational maths games for practising angle and fraction estimation." path="/projects/prettymath" />
       <ContentBlock title="PrettyMath Games" icon={Gamepad2} githubUrl="https://github.com/DrPrettyman/prettymath-games">
           <div className="text-gray-700 dark:text-white">
             <p className="mb-8 text-justify">

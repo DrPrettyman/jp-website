@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
 import { Search, BookOpen } from 'lucide-react'
+import SEO from '../components/SEO'
 
 const Blog = () => {
   const [posts, setPosts] = useState([])
@@ -81,6 +82,11 @@ const Blog = () => {
   
   return (
     <Layout>
+      <SEO
+        title="Blog"
+        description="Articles on data science, React, and software development."
+        path="/blog"
+      />
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="bg-gray-200/65 rounded-lg px-8 py-6 mb-8">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">

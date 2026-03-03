@@ -14,6 +14,7 @@ import { BsDatabaseCheck } from "react-icons/bs";
 import { TbChartScatter3D } from "react-icons/tb";
 import introExperienceHtml from '../assets/cv-professional/intro-experience.html?raw';
 import introTechStackHtml from '../assets/cv-professional/intro-tech-stack.html?raw';
+import SEO from '../components/SEO';
 
 // Project IDs to display in the Portfolio section
 const portfolioProjectIds = [
@@ -56,6 +57,11 @@ const Work = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Professional Experience"
+        description="Data scientist and software developer. Experience at Blink SEO, the National Physical Laboratory, and university teaching."
+        path="/professional"
+      />
       {/* Experience */}
       <ContentBlock title="Professional Experience" icon={Briefcase} id="work-experience">
 

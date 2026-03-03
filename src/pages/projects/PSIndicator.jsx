@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
 import { Activity } from 'lucide-react';
 import 'katex/dist/katex.min.css';
@@ -42,6 +43,7 @@ const CodeBlock = ({ children, title }) => (
 const PSIndicatorProject = () => {
   return (
     <Layout>
+      <SEO title="Power Spectrum Indicator" description="Research on using the power spectrum as a novel early warning indicator for critical transitions." path="/projects/ps-indicator" />
       <ContentBlock title="A Novel Power Spectrum Indicator for Early Warning Signals" icon={Activity} githubUrl="https://github.com/DrPrettyman/PhD/tree/main/Papers/Paper1_EPL/manuscript" maxWidth='4xl'>
         <div className="text-gray-700 dark:text-white">
 

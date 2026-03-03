@@ -121,21 +121,30 @@ const Tutor = () => {
 
   return (
     <Layout>
-      <ContentBlock title="Maths with Dr.&nbsp;Joshua" maxWidth="4xl" centerTitle={true}>
+      <ContentBlock title="" maxWidth="4xl" centerTitle={true}>
 
-          <div className="flex justify-center mb-4">
-            <h2 className="font-bold text-xl dark:text-white">{t.title}</h2>
+        <div className="relative rounded-lg p-6 mb-8 overflow-hidden">
+          <img src="/images/math-with-dr-joshua/light.png" alt="" className="absolute inset-0 w-full h-full object-cover dark:hidden" />
+          <img src="/images/math-with-dr-joshua/dark.png" alt="" className="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+          <div className="absolute inset-0 bg-white/60 dark:bg-gray-900/60" />
+          
+          <div className="relative z-10 flex justify-center mb-8">
+            <h1 className="font-black text-2xl md:text-5xl dark:text-white">Maths with Dr&nbsp;Joshua</h1>
+          </div>
+
+          <div className="relative z-10 flex justify-center mb-8">
+            <h2 className="font-black text-md md:text-3xl dark:text-white">{t.title}</h2>
           </div>
 
           {/* Language toggle */}
-          <div className="flex justify-center mb-4">
+          <div className="relative z-10 flex justify-center mb-2">
             <div className="inline-flex rounded-lg border border-gray-300 dark:border-gray-600 overflow-hidden">
               <button
                 onClick={() => setLang('en')}
                 className={`px-3 py-1 text-sm transition-colors ${
                   lang === 'en'
                     ? 'bg-blue-600 text-white'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white'
+                    : 'bg-gray-100 dark:bg-gray-700 dark:text-white'
                 }`}
               >
                 English
@@ -145,7 +154,7 @@ const Tutor = () => {
                 className={`px-3 py-1 text-sm transition-colors ${
                   lang === 'es'
                     ? 'bg-blue-600 text-white'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white'
+                    : 'bg-gray-100 dark:bg-gray-700 dark:text-white'
                 }`}
               >
                 Español
@@ -155,13 +164,14 @@ const Tutor = () => {
                 className={`px-3 py-1 text-sm transition-colors ${
                   lang === 'de'
                     ? 'bg-blue-600 text-white'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white'
+                    : 'bg-gray-100 dark:bg-gray-700 dark:text-white'
                 }`}
               >
                 Deutsch
               </button>
             </div>
           </div>
+        </div>
          
 
           {/* Intro + Contact */}

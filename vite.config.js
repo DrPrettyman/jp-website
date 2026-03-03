@@ -1,8 +1,8 @@
+import { reactRouter } from "@react-router/dev/vite";
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import Sitemap from 'vite-plugin-sitemap'
 
-// Static routes from App.jsx (excluding '/' since plugin auto-adds from index.html)
+// Static routes for sitemap generation
 const staticRoutes = [
   '/academic',
   '/professional',
@@ -28,14 +28,13 @@ const staticRoutes = [
   '/tutor',
 ]
 
-// Dynamic blog routes (blog post IDs from Blog.jsx)
+// Dynamic blog routes
 const blogPosts = [
   'getting-started-with-react',
   'tailwind-css-intro',
   'data-visualization-react',
 ]
 
-// Blog tags from the posts
 const blogTags = [
   'react',
   'javascript',
@@ -54,7 +53,7 @@ const dynamicRoutes = [
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
+    reactRouter(),
     Sitemap({
       hostname: 'https://joshua.prettyman.me',
       dynamicRoutes: [...staticRoutes, ...dynamicRoutes],

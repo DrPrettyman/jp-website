@@ -12,312 +12,101 @@ This document catalogues every SEO issue found during the audit and provides a c
 
 ---
 
-## Phase 1 — Quick Wins (1-2 hours)
+## Phase 1 — Quick Wins ✅ DONE
 
-These are trivial fixes with immediate impact.
+### 1.1 ✅ Add `/tutor` to the sitemap
 
-### 1.1 Add `/tutor` to the sitemap
+Added `'/tutor'` to the `staticRoutes` array in `vite.config.js`.
 
-The `/tutor` route exists in `src/App.jsx` but is missing from the sitemap config. This means search engines won't discover it through the sitemap.
+### 1.2 ✅ Fix heading hierarchy — ContentBlock renders `<h1>` for every section
 
-**File:** `vite.config.js`
+Changed both `<h1>` tags to `<h2>` in `src/components/ContentBlock.jsx`.
 
-Add `'/tutor'` to the `staticRoutes` array (after `'/freelance'`).
+### 1.3 ✅ Add an `<h1>` to the Home page
 
----
+Wrapped the "Hi, my name is Joshua" greeting in an `<h1>` in `src/pages/Home.jsx`.
 
-### 1.2 Fix heading hierarchy — ContentBlock renders `<h1>` for every section
+### 1.4 ✅ Convert internal `<a>` tags to React Router `<Link>`
 
-`src/components/ContentBlock.jsx` renders an `<h1>` on lines 13 and 34. Every page that uses ContentBlock (Work, Education, project pages, etc.) ends up with multiple `<h1>` tags. Search engines expect exactly one `<h1>` per page.
+- Converted all three internal `<a>` links in `src/pages/Home.jsx` to `<Link>`.
+- Refactored `src/components/ProjectCard.jsx` with a `LinkWrapper` that uses `<Link>` for internal paths and `<a>` for external URLs.
 
-**File:** `src/components/ContentBlock.jsx`
+### 1.5 ✅ Add a 404 catch-all route
 
-Change both `<h1>` tags to `<h2>`:
-- Line 13: `<h1 className="text-4xl ...">` → `<h2 className="text-4xl ...">`
-- Line 34: `<h1 className="text-4xl ...">` → `<h2 className="text-4xl ...">`
+Created `src/pages/NotFound.jsx` and added `<Route path="*" element={<NotFound />} />` to `src/App.jsx`.
 
-Then, pages that use ContentBlock as a top-level title (like project detail pages that only have one ContentBlock) should add an explicit `<h1>` in the page component itself if they don't already have one. Most project pages pass their title via ContentBlock, so those are covered — the ContentBlock `<h2>` will serve as the visible heading while the page `<title>` (added in Phase 2) handles the SEO title.
+### 1.6 ✅ Fix headshot alt text
 
----
-
-### 1.3 Add an `<h1>` to the Home page
-
-`src/pages/Home.jsx` has no `<h1>` at all. The "Hi, my name is Joshua" text is wrapped in `<span>` tags (lines 24-29).
-
-**File:** `src/pages/Home.jsx`
-
-Wrap the greeting in an `<h1>`:
-```jsx
-<h1 className="text-4xl font-bold">
-  Hi, <span className="text-sm sm:text-lg">my name is Joshua.</span>
-</h1>
-```
-
-Or use a visually-hidden `<h1>` if you don't want it to affect the layout:
-```jsx
-<h1 className="sr-only">Joshua Prettyman — Data Scientist & Mathematician</h1>
-```
+Changed `alt="Your profile"` to `alt="Joshua Prettyman"` in `src/pages/Home.jsx`. Also updated header headshot alt text.
 
 ---
 
-### 1.4 Convert internal `<a>` tags to React Router `<Link>`
+## Phase 2 — Per-Page Titles & Meta Descriptions ✅ DONE
 
-`src/pages/Home.jsx` uses plain `<a href="...">` for internal links on lines 60, 74, and 95. This causes full page reloads instead of client-side navigation, hurting engagement metrics.
+### 2.1 ✅ Install react-helmet-async
 
-**File:** `src/pages/Home.jsx`
+Installed and added `HelmetProvider` to `src/main.jsx`.
 
-1. Add import: `import { Link } from 'react-router-dom'`
-2. Replace:
-   - Line 60: `<a href="/professional" ...>` → `<Link to="/professional" ...>`
-   - Line 74: `<a href="/academic" ...>` → `<Link to="/academic" ...>`
-   - Line 95: `<a href="/professional#tech-stack" ...>` → `<Link to="/professional#tech-stack" ...>`
-3. Change the closing tags to `</Link>` accordingly.
+### 2.2 ✅ Create a reusable SEO component
 
-Also check `src/components/ProjectCard.jsx` — it uses `<a>` for all links. Internal links (those starting with `/`) should use `<Link>` instead.
+Created `src/components/SEO.jsx` with `<title>`, `<meta description>`, `<link rel="canonical">`, Open Graph, and Twitter Card tags.
 
----
+### 2.3 ✅ Add SEO component to every page
 
-### 1.5 Add a 404 catch-all route
+Added `<SEO>` to all pages with the following titles/descriptions:
 
-There is no fallback route. Visiting an invalid URL shows a blank page.
+| Page | title | description |
+|------|-------|-------------|
+| Home | *(just "Joshua Prettyman")* | Data scientist with a Ph.D. in mathematics... |
+| Academic CV | Academic Background | Ph.D. in Mathematics from the University of Reading... |
+| Professional CV | Professional Experience | Data scientist and software developer... |
+| Projects | Projects | Portfolio of data science, machine learning... |
+| Blog | Blog | Articles on data science, React... |
+| Freelance | Freelance Data & Dev Services | Freelance data science and software development... |
+| Tutor | Private Maths Tuition | Private maths tuition in English near Cartama... |
+| Travels | Travels | Travel map and stories from travelling Europe... |
+| BlogPost | *(dynamic: post.title)* | *(dynamic: post.excerpt)* |
+| NotFound | 404 — Page Not Found | This page does not exist. |
 
-**File:** `src/App.jsx`
-
-Add a catch-all route at the end of the `<Routes>` block:
-```jsx
-<Route path="*" element={<NotFound />} />
-```
-
-Create `src/pages/NotFound.jsx`:
-```jsx
-import Layout from '../components/Layout'
-import { Link } from 'react-router-dom'
-
-const NotFound = () => (
-  <Layout>
-    <div className="max-w-4xl mx-auto py-12 px-4 text-center">
-      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">404</h1>
-      <p className="text-gray-600 dark:text-gray-300 mb-6">Page not found.</p>
-      <Link to="/" className="text-blue-600 hover:text-blue-800">Go home</Link>
-    </div>
-  </Layout>
-)
-
-export default NotFound
-```
+All 14 project detail pages also have SEO components with project-specific titles and descriptions.
 
 ---
 
-### 1.6 Fix headshot alt text
+## Phase 3 — Structured Data / JSON-LD ✅ DONE
 
-`src/pages/Home.jsx` line 16 has `alt="Your profile"`. This should be descriptive.
+### 3.1 ✅ Person schema on the Home page
 
-**File:** `src/pages/Home.jsx`
+Added `Person` JSON-LD to `src/pages/Home.jsx` via `<Helmet>`.
 
-Change `alt="Your profile"` to `alt="Joshua Prettyman"`.
+### 3.2 ✅ Article schema on blog posts
 
----
+Added `Article` JSON-LD to `src/pages/BlogPost.jsx` via `<Helmet>`.
 
-## Phase 2 — Per-Page Titles & Meta Descriptions (2-3 hours)
+### 3.3 ✅ Service schema on the Tutor page
 
-This is the highest-impact SEO change after Phase 1. Every page currently shows the same `<title>Joshua Prettyman</title>` in search results with no description.
-
-### 2.1 Install react-helmet-async
-
-```bash
-npm install react-helmet-async
-```
-
-### 2.2 Add HelmetProvider to the app root
-
-**File:** `src/main.jsx`
-
-```jsx
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { HelmetProvider } from 'react-helmet-async'
-import './styles/globals.css'
-import App from './App.jsx'
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
-  </StrictMode>,
-)
-```
-
-### 2.3 Create a reusable SEO component
-
-Create `src/components/SEO.jsx`:
-
-```jsx
-import { Helmet } from 'react-helmet-async'
-
-const SEO = ({
-  title,
-  description,
-  path,
-  type = 'website',
-}) => {
-  const siteTitle = 'Joshua Prettyman'
-  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle
-  const url = path ? `https://joshua.prettyman.me${path}` : 'https://joshua.prettyman.me'
-
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
-
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content={siteTitle} />
-
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-    </Helmet>
-  )
-}
-
-export default SEO
-```
-
-### 2.4 Add SEO component to every page
-
-Add `<SEO>` as the first child inside each page's `<Layout>`. Here are the recommended titles and descriptions for each page:
-
-| Page | File | title | description |
-|------|------|-------|-------------|
-| Home | `Home.jsx` | *(empty — just "Joshua Prettyman")* | "Data scientist with a Ph.D. in mathematics. Software development, machine learning, and data analysis. Based in Malaga, Spain." |
-| Academic CV | `Education.jsx` | "Academic Background" | "Ph.D. in Mathematics from the University of Reading, MRes from Imperial College London, MA from the University of Edinburgh. Publications and research." |
-| Professional CV | `Work.jsx` | "Professional Experience" | "Data scientist and software developer. Experience at Blink SEO, the National Physical Laboratory, and university teaching." |
-| Projects | `Projects.jsx` | "Projects" | "Portfolio of data science, machine learning, and software development projects." |
-| Blog | `Blog.jsx` | "Blog" | "Articles on data science, React, and software development." |
-| Freelance | `Freelance.jsx` | "Freelance Data & Dev Services" | "Freelance data science and software development services. Python, SQL, machine learning, and web development." |
-| Tutor | `Tutor.jsx` | "Private Maths Tuition" | "Private maths tuition in English near Cartama, Malaga. Ph.D. in Mathematics, experienced teacher. GCSEs, A-levels, IB." |
-| Travels | `Travels.jsx` | "Travels" | "Travel map and stories from travelling Europe in a campervan." |
-
-For each project detail page, use the project name as the title and a one-sentence summary as the description.
-
-For blog post pages (`BlogPost.jsx`), use the post title and excerpt dynamically:
-```jsx
-<SEO title={post.title} description={post.excerpt} path={`/blog/${post.id}`} type="article" />
-```
+Added `Service` JSON-LD to `src/pages/Tutor.jsx` via `<Helmet>`.
 
 ---
 
-## Phase 3 — Structured Data / JSON-LD (1-2 hours)
+## Phase 4 — Image Optimisation (partially done)
 
-Structured data helps search engines understand what the site is and display rich results.
+### 4.1 ✅ Add `loading="lazy"` to all images below the fold
 
-### 3.1 Person schema on the Home page
+Added `loading="lazy"` to:
+- `src/components/ProjectCard.jsx`
+- `src/components/CVEntry.jsx`
+- `src/components/BlogPost.jsx` (component)
+- `src/pages/BlogPost.jsx` (page)
+- `src/components/TravelCard.jsx`
+- `src/pages/Tutor.jsx` (banner images)
 
-Add to `src/pages/Home.jsx` inside the `<Helmet>` (or via a script tag):
+Header and Home headshots correctly left without lazy loading.
 
-```jsx
-<Helmet>
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Joshua Prettyman",
-      "jobTitle": "Data Scientist",
-      "url": "https://joshua.prettyman.me",
-      "sameAs": [
-        "https://www.linkedin.com/in/prettyman/",
-        "https://github.com/DrPrettyman"
-      ],
-      "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "University of Reading" },
-        { "@type": "CollegeOrUniversity", "name": "Imperial College London" },
-        { "@type": "CollegeOrUniversity", "name": "University of Edinburgh" }
-      ],
-      "knowsAbout": ["Data Science", "Machine Learning", "Mathematics", "Python", "SQL"]
-    })}
-  </script>
-</Helmet>
-```
+### 4.2 ✅ Add explicit width and height to images
 
-### 3.2 Article schema on blog posts
+Added `width={40} height={40}` to the header headshot in `src/components/Header.jsx`.
 
-Add to `BlogPost.jsx` when a post is loaded:
-
-```jsx
-<script type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": post.title,
-    "datePublished": post.date,
-    "author": {
-      "@type": "Person",
-      "name": "Joshua Prettyman"
-    }
-  })}
-</script>
-```
-
-### 3.3 Service schema on the Tutor page
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Private Maths Tuition",
-  "provider": {
-    "@type": "Person",
-    "name": "Joshua Prettyman"
-  },
-  "areaServed": {
-    "@type": "Place",
-    "name": "Cartama, Malaga, Spain"
-  },
-  "description": "Private maths tuition in English for all levels.",
-  "offers": {
-    "@type": "Offer",
-    "price": "30",
-    "priceCurrency": "EUR"
-  }
-}
-```
-
----
-
-## Phase 4 — Image Optimisation (2-3 hours)
-
-Images account for ~9 MB across 258 files with no optimisation.
-
-### 4.1 Add `loading="lazy"` to all images below the fold
-
-This is the single easiest performance win. Add `loading="lazy"` to every `<img>` tag that isn't visible on initial page load.
-
-**Key files to update:**
-- `src/components/ProjectCard.jsx` — project thumbnail images
-- `src/pages/BlogPost.jsx` — blog cover images
-- `src/components/CVEntry.jsx` — company logo images
-- All project detail pages — screenshot images
-- `src/components/TravelMap.jsx` — travel photo images
-
-**Do NOT lazy-load:**
-- The headshot in `src/components/Header.jsx` (always visible)
-- The headshot in `src/pages/Home.jsx` (above the fold)
-
-### 4.2 Add explicit width and height to images
-
-This prevents Cumulative Layout Shift (CLS). Where images have a known display size, add `width` and `height` attributes. For example, the header headshot is always 40x40:
-
-```jsx
-<img src="/images/headshot.jpeg" alt="Joshua Prettyman" className="h-10 w-10 rounded-full" width={40} height={40} />
-```
-
-### 4.3 Convert key images to WebP
+### 4.3 ⬜ Convert key images to WebP
 
 Convert the most-loaded images to WebP format for smaller file sizes. Priority targets:
 
@@ -327,7 +116,7 @@ Convert the most-loaded images to WebP format for smaller file sizes. Priority t
 
 Use a tool like `cwebp` or an online converter. Keep the JPEG originals as fallbacks if needed, but modern browsers all support WebP.
 
-### 4.4 Consider a Vite image optimisation plugin
+### 4.4 ⬜ Consider a Vite image optimisation plugin
 
 For automated build-time compression, consider adding `vite-plugin-imagemin`:
 
@@ -339,33 +128,27 @@ This will compress all images during `npm run build` without manual conversion.
 
 ---
 
-## Phase 5 — Semantic HTML Improvements (1 hour)
+## Phase 5 — Semantic HTML Improvements ✅ DONE
 
-### 5.1 Add `<section>` elements
+### 5.1 ✅ Add `<section>` elements
 
-Replace generic `<div>` containers with `<section>` where content blocks represent distinct thematic sections. The `ContentBlock` component is a natural candidate:
+Changed the outer `<div>` to `<section>` in `src/components/ContentBlock.jsx`.
 
-**File:** `src/components/ContentBlock.jsx`
+### 5.2 ✅ Add ARIA attributes to interactive elements
 
-Change the outer `<div>` to `<section>`.
+Added to `src/components/Header.jsx`:
+- Mobile menu button: `aria-label="Toggle menu"` and `aria-expanded={mobileMenuOpen}`
+- "More" dropdown button: `aria-label="More pages"`, `aria-expanded={moreMenuOpen}`, `aria-haspopup="true"`
 
-### 5.2 Add ARIA attributes to interactive elements
+**Still TODO:** Add `aria-current="page"` to active navigation links (where `isActive(path)` is true).
 
-**File:** `src/components/Header.jsx`
+### 5.3 ✅ Wrap blog post previews in `<article>`
 
-- Mobile menu button (line 227): Add `aria-label="Toggle menu"` and `aria-expanded={mobileMenuOpen}`
-- "More" dropdown button (line 128): Add `aria-label="More pages"` and `aria-expanded={moreMenuOpen}` and `aria-haspopup="true"`
-- Add `aria-current="page"` to active navigation links (where `isActive(path)` is true)
-
-### 5.3 Wrap blog post previews in `<article>`
-
-**File:** `src/pages/Blog.jsx`
-
-If blog post cards are rendered in a list, wrap each one in an `<article>` element.
+Changed the outer `<div>` to `<article>` in `src/components/BlogPost.jsx`.
 
 ---
 
-## Phase 6 — Prerendering / SSG (half day)
+## Phase 6 — Prerendering / SSG ⬜ TODO
 
 Currently the site is a pure client-side SPA. Googlebot handles this fine (it runs an evergreen Chromium renderer), so your content will be indexed. The main limitations of CSR are: (1) social media scrapers (Facebook, LinkedIn, Slack, etc.) don't execute JS, so link previews will be blank; (2) Bing and DuckDuckGo have less reliable JS rendering; (3) Google's "second wave" indexing adds a small delay. For a ~30-page portfolio site these are minor, but prerendering eliminates them entirely and is the cleanest long-term setup.
 
@@ -553,7 +336,7 @@ After prerendering, `npm run build` will output a full HTML file for every route
 
 ---
 
-## Phase 7 — Code Splitting (30 minutes, after Phase 6)
+## Phase 7 — Code Splitting ⬜ TODO (30 minutes, after Phase 6)
 
 If you go the framework mode route (Phase 6), code splitting happens automatically per route. If you stay with the current SPA setup, add manual code splitting:
 
@@ -585,7 +368,7 @@ This reduces the initial JS bundle size since pages are only loaded when visited
 
 ---
 
-## Phase 8 — Miscellaneous Cleanup
+## Phase 8 — Miscellaneous Cleanup ⬜ TODO
 
 ### 8.1 Remove the `/cv` redirect route
 
@@ -603,17 +386,22 @@ Blog post dates are hardcoded as strings ("June 15, 2023"). If/when the blog sca
 
 ## Summary
 
-| Phase | Description | Effort | Impact |
-|-------|-------------|--------|--------|
-| 1 | Quick wins (sitemap, headings, links, 404) | 1-2 hrs | High |
-| 2 | Per-page titles, descriptions, OG tags | 2-3 hrs | High |
-| 3 | JSON-LD structured data | 1-2 hrs | Medium |
-| 4 | Image optimisation (lazy load, WebP, dimensions) | 2-3 hrs | Medium |
-| 5 | Semantic HTML & ARIA | 1 hr | Low-Medium |
-| 6 | Prerendering via React Router v7 framework mode | 4-6 hrs | Very High |
-| 7 | Code splitting | 30 min | Low |
-| 8 | Miscellaneous cleanup | 30 min | Low |
+| Phase | Description | Status |
+|-------|-------------|--------|
+| 1 | Quick wins (sitemap, headings, links, 404) | ✅ Done |
+| 2 | Per-page titles, descriptions, OG tags | ✅ Done |
+| 3 | JSON-LD structured data | ✅ Done |
+| 4 | Image optimisation (lazy load, dimensions) | ✅ Partially done (WebP conversion remaining) |
+| 5 | Semantic HTML & ARIA | ✅ Done (aria-current remaining) |
+| 6 | Prerendering via React Router v7 framework mode | ⬜ Not started |
+| 7 | Code splitting | ⬜ Not started |
+| 8 | Miscellaneous cleanup | ⬜ Not started |
 
-**Recommended order:** Phase 1 → Phase 2 → Phase 4 (quick image wins) → Phase 6 → everything else.
+### What's left
 
-Phases 1-5 can be done without any architectural changes. Phase 6 is a larger migration but your existing React Router v7 dependency makes it the natural path to prerendered HTML.
+- **4.3** Convert key images to WebP (manual or via build plugin)
+- **4.4** Consider `vite-plugin-imagemin` for build-time compression
+- **5.2** Add `aria-current="page"` to active nav links in Header
+- **Phase 6** Migrate to React Router v7 framework mode for prerendering (largest remaining item)
+- **Phase 7** Code splitting (automatic if Phase 6 is done, manual otherwise)
+- **Phase 8** Miscellaneous cleanup (CVRedirect removal, rel audit, blog dates)

@@ -14,7 +14,9 @@
       "Bash(ls:*)",
       "Bash(pdftoppm:*)",
       "Bash(python3:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(npx eslint src/components/ContentBlock.jsx)",
+      "Bash(cwebp -q 85 images/headshot.jpeg -o images/headshot.webp)"
     ],
     "deny": [],
     "ask": []

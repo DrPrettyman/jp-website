@@ -42,6 +42,7 @@ import SteamMarketGapProject from './pages/projects/SteamMarketGap'
 
 import Vanlife from './pages/travel/Vanlife'
 import Travels from './pages/Travels'
+import NotFound from './pages/NotFound'
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
         <Route path="/cv" element={<CVRedirect />} />
         <Route path="/tutor" element={<Tutor />} />
         <Route path="/freelance" element={<Freelance />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   )

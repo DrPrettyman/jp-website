@@ -1,5 +1,4 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
-import { HelmetProvider } from "react-helmet-async";
 import "./styles/globals.css";
 
 export function Layout({ children }) {
@@ -31,9 +30,5 @@ export function Layout({ children }) {
 }
 
 export default function Root() {
-  return (
-    <HelmetProvider>
-      <Outlet />
-    </HelmetProvider>
-  );
+  return <Outlet />;
 }

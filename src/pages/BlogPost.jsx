@@ -3,8 +3,9 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
 import { ArrowLeft, Calendar, User } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
-import SEO from '../components/SEO'
+import { generateMeta } from '../utils/seo'
+
+export const meta = () => generateMeta({ title: "Blog", description: "Articles on data science, React, and software development.", path: "/blog" });
 
 const BlogPostPage = () => {
   const { id } = useParams()
@@ -107,21 +108,16 @@ const BlogPostPage = () => {
   
   return (
     <Layout>
-      <SEO title={post.title} description={post.excerpt} path={`/blog/${post.id}`} type="article" />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": post.title,
-            "datePublished": post.date,
-            "author": {
-              "@type": "Person",
-              "name": "Joshua Prettyman"
-            }
-          })}
-        </script>
-      </Helmet>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.title,
+        "datePublished": post.date,
+        "author": {
+          "@type": "Person",
+          "name": "Joshua Prettyman"
+        }
+      }) }} />
       <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
           <Link 

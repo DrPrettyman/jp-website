@@ -2,7 +2,9 @@ import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock';
 import { Mail, CheckCircle, Database, Brain, BarChart3, Code, Calendar, LayoutDashboard } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
-import SEO from '../components/SEO';
+import { generateMeta } from '../utils/seo';
+
+export const meta = () => generateMeta({ title: "Freelance Data & Dev Services", description: "Freelance data science and software development services. Python, SQL, machine learning, and web development.", path: "/freelance" });
 
 const services = [
   {
@@ -39,11 +41,6 @@ const highlights = [
 const Freelance = () => {
   return (
     <Layout>
-      <SEO
-        title="Freelance Data & Dev Services"
-        description="Freelance data science and software development services. Python, SQL, machine learning, and web development."
-        path="/freelance"
-      />
       <ContentBlock title="Freelance Data & Dev Services" icon={LayoutDashboard} maxWidth="4xl">
 
         {/* Intro pitch */}

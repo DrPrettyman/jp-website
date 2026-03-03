@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 
 import { Gamepad2 } from 'lucide-react';
 import { LiaGithub } from "react-icons/lia";
-import { AngleEstimationGame, FractionEstimationGame } from 'prettymath-games';
+
+const AngleEstimationGame = lazy(() =>
+  import('prettymath-games').then(mod => ({ default: mod.AngleEstimationGame }))
+);
+const FractionEstimationGame = lazy(() =>
+  import('prettymath-games').then(mod => ({ default: mod.FractionEstimationGame }))
+);
+
+export const meta = () => generateMeta({ title: "PrettyMath Games", description: "Interactive educational maths games for practising angle and fraction estimation.", path: "/projects/prettymath" });
 
 const EducationalGames = () => {
   return (
     <Layout>
-      <SEO title="PrettyMath Games" description="Interactive educational maths games for practising angle and fraction estimation." path="/projects/prettymath" />
       <ContentBlock title="PrettyMath Games" icon={Gamepad2} githubUrl="https://github.com/DrPrettyman/prettymath-games">
           <div className="text-gray-700 dark:text-white">
             <p className="mb-8 text-justify">
@@ -20,12 +27,14 @@ const EducationalGames = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full mb-4 text-gray-700 dark:text-grey-700">
-              <div className="flex flex-col items-center justify-center">
-                <AngleEstimationGame />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <FractionEstimationGame />
-              </div>
+              <Suspense fallback={<div className="flex items-center justify-center p-8">Loading game...</div>}>
+                <div className="flex flex-col items-center justify-center">
+                  <AngleEstimationGame />
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                  <FractionEstimationGame />
+                </div>
+              </Suspense>
             </div>
           </div>
       </ContentBlock>

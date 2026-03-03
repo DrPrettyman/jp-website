@@ -21,7 +21,7 @@ export default [
   route("/projects/steam-market-gap", "./pages/projects/SteamMarketGap.jsx"),
   route("/blog", "./pages/Blog.jsx"),
   route("/blog/:id", "./pages/BlogPost.jsx"),
-  route("/blog/tag/:tag", "./pages/Blog.jsx"),
+  route("/blog/tag/:tag", "./pages/Blog.jsx", { id: "blog-by-tag" }),
   route("/travels", "./pages/Travels.jsx"),
   route("/travel/vanlife", "./pages/travel/Vanlife.jsx"),
   route("/cv", "./pages/CVRedirect.jsx"),

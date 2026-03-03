@@ -1,8 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { ShieldAlert } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Fraud Detection", description: "A machine learning project tackling the IEEE-CIS fraud detection Kaggle competition.", path: "/projects/fraud-detection" });
 
 const CodeBlock = ({ children, title }) => (
   <div className="my-6 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -20,7 +22,6 @@ const CodeBlock = ({ children, title }) => (
 const FraudDetectionProject = () => {
   return (
     <Layout>
-      <SEO title="Fraud Detection" description="A machine learning project tackling the IEEE-CIS fraud detection Kaggle competition." path="/projects/fraud-detection" />
       <ContentBlock title="Fraud Detection" icon={ShieldAlert} githubUrl="https://github.com/DrPrettyman/ieee-fraud-detection" maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">

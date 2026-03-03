@@ -4,7 +4,9 @@ import ProjectCard from '../components/ProjectCard'
 import ContentBlock from '../components/ContentBlock'
 import { FolderGit2 } from 'lucide-react'
 import projectsData from '../assets/projects.json'
-import SEO from '../components/SEO'
+import { generateMeta } from '../utils/seo'
+
+export const meta = () => generateMeta({ title: "Projects", description: "Portfolio of data science, machine learning, and software development projects.", path: "/projects" });
 
 // List specific project IDs to display (in order), or use 'ALL' to show all projects
 const projectIds = 'ALL'
@@ -21,11 +23,6 @@ const Projects = () => {
 
   return (
     <Layout>
-      <SEO
-        title="Projects"
-        description="Portfolio of data science, machine learning, and software development projects."
-        path="/projects"
-      />
       <ContentBlock title="Projects" icon={FolderGit2}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (

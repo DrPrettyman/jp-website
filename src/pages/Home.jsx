@@ -1,39 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import { generateMeta } from '../utils/seo'
 
 import { Briefcase, GraduationCap, FileTerminal, Smile } from 'lucide-react';
+
+export const meta = () => generateMeta({ description: "Data scientist with a Ph.D. in mathematics. Software development, machine learning, and data analysis. Based in Malaga, Spain.", path: "/" });
 
 const Home = () => {
   return (
     <Layout>
-      <SEO
-        description="Data scientist with a Ph.D. in mathematics. Software development, machine learning, and data analysis. Based in Malaga, Spain."
-        path="/"
-      />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Joshua Prettyman",
-            "jobTitle": "Data Scientist",
-            "url": "https://joshua.prettyman.me",
-            "sameAs": [
-              "https://www.linkedin.com/in/prettyman/",
-              "https://github.com/DrPrettyman"
-            ],
-            "alumniOf": [
-              { "@type": "CollegeOrUniversity", "name": "University of Reading" },
-              { "@type": "CollegeOrUniversity", "name": "Imperial College London" },
-              { "@type": "CollegeOrUniversity", "name": "University of Edinburgh" }
-            ],
-            "knowsAbout": ["Data Science", "Machine Learning", "Mathematics", "Python", "SQL"]
-          })}
-        </script>
-      </Helmet>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joshua Prettyman",
+        "jobTitle": "Data Scientist",
+        "url": "https://joshua.prettyman.me",
+        "sameAs": [
+          "https://www.linkedin.com/in/prettyman/",
+          "https://github.com/DrPrettyman"
+        ],
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "University of Reading" },
+          { "@type": "CollegeOrUniversity", "name": "Imperial College London" },
+          { "@type": "CollegeOrUniversity", "name": "University of Edinburgh" }
+        ],
+        "knowsAbout": ["Data Science", "Machine Learning", "Mathematics", "Python", "SQL"]
+      }) }} />
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="bg-gray-200/65 dark:bg-gray-800/80 rounded-lg px-8 py-6 mb-12 mx-2 sm:mx-0">
           <div className="flex flex-col md:flex-row items-center gap-8">

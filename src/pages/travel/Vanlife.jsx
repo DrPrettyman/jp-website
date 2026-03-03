@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import Header from '../../components/Header';
-import TravelMap from '../../components/TravelMap';
+
+const TravelMap = lazy(() => import('../../components/TravelMap'));
 
 const Vanlife = () => {
   const [travelData, setTravelData] = useState([]);
@@ -34,10 +35,12 @@ const Vanlife = () => {
     <div className="h-screen w-screen overflow-hidden relative">
       <Header fullWidth={true}/>
       <div className="w-full h-full">
-        <TravelMap
-          travelData={travelData}
-          imagePath="/travel-images/vanlife/"
-        />
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-lg">Loading map...</div></div>}>
+          <TravelMap
+            travelData={travelData}
+            imagePath="/travel-images/vanlife/"
+          />
+        </Suspense>
       </div>
     </div>
   );

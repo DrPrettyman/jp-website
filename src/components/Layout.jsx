@@ -4,11 +4,17 @@ import { ChevronsDown } from 'lucide-react'
 import React, { useState, useEffect, useRef } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import NodeBackground from 'animated-network-background'
 
 const Layout = ({ children }) => {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+  const [NodeBackground, setNodeBackground] = useState(null);
   const footerRef = useRef(null);
+
+  useEffect(() => {
+    import('animated-network-background').then(mod => {
+      setNodeBackground(() => mod.default);
+    });
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,7 +39,7 @@ const Layout = ({ children }) => {
     <div className="min-h-screen flex flex-col pt-16 relative overflow-hidden">
       {/* Interactive node background - Visible all the time */}
       <div className="fixed top-0 left-0 w-full h-full z-[-1]">
-        <NodeBackground />
+        {NodeBackground && <NodeBackground />}
       </div>
       
       <Header />

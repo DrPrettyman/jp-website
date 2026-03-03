@@ -3,8 +3,9 @@ import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock';
 import { Mail, CheckCircle } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
-import { Helmet } from 'react-helmet-async';
-import SEO from '../components/SEO';
+import { generateMeta } from '../utils/seo';
+
+export const meta = () => generateMeta({ title: "Private Maths Tuition", description: "Private maths tuition in English near Cartama, Malaga. Ph.D. in Mathematics, experienced teacher. GCSEs, A-levels, IB.", path: "/tutor" });
 
 const content = {
   en: {
@@ -123,34 +124,25 @@ const Tutor = () => {
 
   return (
     <Layout>
-      <SEO
-        title="Private Maths Tuition"
-        description="Private maths tuition in English near Cartama, Malaga. Ph.D. in Mathematics, experienced teacher. GCSEs, A-levels, IB."
-        path="/tutor"
-      />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Private Maths Tuition",
-            "provider": {
-              "@type": "Person",
-              "name": "Joshua Prettyman"
-            },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Cartama, Malaga, Spain"
-            },
-            "description": "Private maths tuition in English for all levels.",
-            "offers": {
-              "@type": "Offer",
-              "price": "30",
-              "priceCurrency": "EUR"
-            }
-          })}
-        </script>
-      </Helmet>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Private Maths Tuition",
+        "provider": {
+          "@type": "Person",
+          "name": "Joshua Prettyman"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Cartama, Malaga, Spain"
+        },
+        "description": "Private maths tuition in English for all levels.",
+        "offers": {
+          "@type": "Offer",
+          "price": "30",
+          "priceCurrency": "EUR"
+        }
+      }) }} />
       <ContentBlock title="" maxWidth="4xl" centerTitle={true}>
 
         <div className="relative rounded-lg p-6 mb-8 overflow-hidden">

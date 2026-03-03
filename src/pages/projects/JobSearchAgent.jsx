@@ -1,8 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Briefcase } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "JobSearch Agent", description: "An AI-powered CLI tool that automates job research, opportunity filtering, and cover letter writing using Claude.", path: "/projects/jobsearch-agent" });
 
 const CodeBlock = ({ children, title }) => (
   <div className="my-6 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -20,7 +22,6 @@ const CodeBlock = ({ children, title }) => (
 const JobSearchAgentProject = () => {
   return (
     <Layout>
-      <SEO title="JobSearch Agent" description="An AI-powered CLI tool that automates job research, opportunity filtering, and cover letter writing using Claude." path="/projects/jobsearch-agent" />
       <ContentBlock title="JobSearch Agent" icon={Briefcase} githubUrl="https://github.com/DrPrettyman/JobSearchAgent" maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">

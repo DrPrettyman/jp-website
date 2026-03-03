@@ -1,8 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { TrendingUp } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Early Warning Signals", description: "PhD research on detecting early warning signals of critical transitions in dynamical systems.", path: "/projects/early-warning-signals" });
 
 const Figure = ({ src, caption, alt }) => (
   <figure className="my-6">
@@ -41,7 +43,6 @@ const CodeBlock = ({ children, title }) => (
 const EarlyWarningSignalsProject = () => {
   return (
     <Layout>
-      <SEO title="Early Warning Signals" description="PhD research on detecting early warning signals of critical transitions in dynamical systems." path="/projects/early-warning-signals" />
       <ContentBlock title="Early Warning Signals for Critical Transitions" icon={TrendingUp} githubUrl="https://github.com/DrPrettyman/PhD" maxWidth='4xl'>
         <div className="text-gray-700 dark:text-white">
 

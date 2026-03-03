@@ -2,7 +2,7 @@
 
 **Site:** joshua.prettyman.me
 **Date:** 2026-03-03
-**Stack:** React 18, Vite, React Router v7 (library mode), Tailwind CSS
+**Stack:** React 18, Vite, React Router v7 (framework mode), Tailwind CSS
 
 ---
 
@@ -144,231 +144,73 @@ Changed the outer `<div>` to `<article>` in `src/components/BlogPost.jsx`.
 
 ---
 
-## Phase 6 — Prerendering / SSG ⬜ TODO
+## Phase 6 — Prerendering / SSG ✅ DONE
 
-Currently the site is a pure client-side SPA. Googlebot handles this fine (it runs an evergreen Chromium renderer), so your content will be indexed. The main limitations of CSR are: (1) social media scrapers (Facebook, LinkedIn, Slack, etc.) don't execute JS, so link previews will be blank; (2) Bing and DuckDuckGo have less reliable JS rendering; (3) Google's "second wave" indexing adds a small delay. For a ~30-page portfolio site these are minor, but prerendering eliminates them entirely and is the cleanest long-term setup.
+Migrated from React Router v7 library mode (client-side SPA) to framework mode with static prerendering at build time. All 22 static routes are now prerendered to full HTML at build time.
 
-### Recommended approach: React Router v7 Framework Mode with prerendering
+### 6.1 ✅ Installed framework mode dependencies
 
-You are already on `react-router-dom@^7.1.5`. React Router v7 has a "Framework Mode" that supports static prerendering at build time — no runtime server needed. This is the natural upgrade path.
+Added `@react-router/dev`, `@react-router/node`, upgraded `react-router-dom` to `^7.13.1`.
 
-### 6.1 Install framework mode dependencies
+### 6.2 ✅ Created framework mode files
 
-```bash
-npm install -D @react-router/dev
-npm install @react-router/node
-```
+- `react-router.config.ts` — Framework config with `ssr: false` and 22 prerender routes
+- `src/root.jsx` — HTML shell (migrated from `index.html`), with `<Meta>` and `<Links>` for framework-managed head tags
+- `src/entry.client.jsx` — Client hydration entry with `HydratedRouter`
+- `src/routes.ts` — All route definitions migrated from `App.jsx`
+- `src/pages/CVRedirect.jsx` — Extracted from inline component in `App.jsx`
 
-### 6.2 Update Vite config
+### 6.3 ✅ Updated build config
 
-**File:** `vite.config.js`
+- `vite.config.js`: Replaced `@vitejs/plugin-react` with `reactRouter()` plugin (kept `vite-plugin-sitemap`)
+- `package.json` scripts: `"dev": "react-router dev"`, `"build": "react-router build"`
 
-Replace `@vitejs/plugin-react` with `@react-router/dev/vite`:
+### 6.4 ✅ Fixed SSR compatibility for browser-only packages
 
-```js
-import { reactRouter } from "@react-router/dev/vite";
-import { defineConfig } from "vite";
+Several packages access `window` or `document` at module level, which breaks Node.js prerendering:
 
-export default defineConfig({
-  plugins: [reactRouter()],
-  base: '/'
-});
-```
+- **animated-network-background**: Changed from `React.lazy` to client-only dynamic import via `useEffect` + state in `src/components/Layout.jsx`. This was the root cause of a multi-page prerender 500 error (the module-level `document` access corrupted server state between prerender passes).
+- **Leaflet (react-leaflet)**: Lazy-loaded `TravelMap` in `src/pages/travel/Vanlife.jsx`
+- **prettymath-games**: Lazy-loaded game components in `src/pages/projects/EducationalGames.jsx`
+- **react-katex**: Changed named ESM imports to default import + destructuring in 4 project pages (PSRobustness, MultidimEWS, AdaptiveMesh, PSIndicator)
 
-Note: The sitemap plugin (`vite-plugin-sitemap`) will need to be re-evaluated. React Router's prerender output may make it possible to generate the sitemap differently, or you can keep the plugin.
+### 6.5 ✅ Migrated from react-helmet-async to React Router meta exports
 
-### 6.3 Create React Router config
+Replaced `react-helmet-async` with React Router's native `meta` route exports, which are automatically rendered into the prerendered HTML:
 
-Create `react-router.config.ts`:
+- Created `src/utils/seo.js` with `generateMeta()` helper that produces title, description, canonical, OG, and Twitter meta descriptors
+- Added `export const meta` to all 24 route modules
+- Replaced `<Helmet>` JSON-LD blocks with inline `<script type="application/ld+json" dangerouslySetInnerHTML>` (Home, BlogPost, Tutor)
+- Removed `HelmetProvider` from `src/root.jsx`
+- Uninstalled `react-helmet-async`
 
-```ts
-import type { Config } from "@react-router/dev/config";
+### 6.6 ✅ Removed obsolete files
 
-export default {
-  appDirectory: "src",
-  ssr: false,
-  prerender: [
-    "/",
-    "/academic",
-    "/professional",
-    "/projects",
-    "/projects/digraph-explorer",
-    "/projects/prettymath",
-    "/projects/wine-exports-viz",
-    "/projects/mastermind",
-    "/projects/fraud-detection",
-    "/projects/jobmaster",
-    "/projects/macaroni",
-    "/projects/early-warning-signals",
-    "/projects/ps-indicator",
-    "/projects/multidim-ews",
-    "/projects/ps-robustness",
-    "/projects/adaptive-mesh",
-    "/projects/steam-market-gap",
-    "/projects/jobsearch-agent",
-    "/blog",
-    "/blog/getting-started-with-react",
-    "/blog/tailwind-css-intro",
-    "/blog/data-visualization-react",
-    "/travels",
-    "/travel/vanlife",
-    "/freelance",
-    "/tutor",
-  ],
-} satisfies Config;
-```
+Deleted files superseded by framework mode: `index.html`, `src/App.jsx`, `src/main.jsx`, `src/components/SEO.jsx`
 
-### 6.4 Create root layout
+### 6.7 What this achieves
 
-Move the content of `index.html` into `src/root.tsx`:
+`npm run build` now outputs a full HTML file for every prerendered route. Each file contains:
+- Complete rendered page content (headings, text, images)
+- SEO meta tags (`<title>`, description, canonical, OG, Twitter) baked into `<head>`
+- JSON-LD structured data where applicable
+- Automatic code splitting per route (Phase 7 is now free)
 
-```tsx
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
-
-export function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <Meta />
-        <Links />
-        <script dangerouslySetInnerHTML={{ __html: `
-          const savedMode = localStorage.getItem('darkMode');
-          if (savedMode === 'dark' || (!savedMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-          }
-        `}} />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
-  );
-}
-
-export default function Root() {
-  return <Outlet />;
-}
-```
-
-### 6.5 Create client entry point
-
-Create `src/entry.client.tsx`:
-
-```tsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { HydratedRouter } from "react-router/dom";
-import "./styles/globals.css";
-
-ReactDOM.hydrateRoot(
-  document,
-  <React.StrictMode>
-    <HydratedRouter />
-  </React.StrictMode>
-);
-```
-
-### 6.6 Create routes file
-
-Create `src/routes.ts`:
-
-```ts
-import { type RouteConfig, route } from "@react-router/dev/routes";
-
-export default [
-  route("/", "./pages/Home.jsx"),
-  route("/academic", "./pages/Education.jsx"),
-  route("/professional", "./pages/Work.jsx"),
-  route("/projects", "./pages/Projects.jsx"),
-  route("/projects/digraph-explorer", "./pages/projects/DigraphExplorer.jsx"),
-  route("/projects/prettymath", "./pages/projects/EducationalGames.jsx"),
-  // ... all other project routes
-  route("/blog", "./pages/Blog.jsx"),
-  route("/blog/:id", "./pages/BlogPost.jsx"),
-  route("/blog/tag/:tag", "./pages/Blog.jsx"),
-  route("/travels", "./pages/Travels.jsx"),
-  route("/travel/vanlife", "./pages/travel/Vanlife.jsx"),
-  route("/freelance", "./pages/Freelance.jsx"),
-  route("/tutor", "./pages/Tutor.jsx"),
-  route("*?", "./pages/NotFound.jsx"),
-] satisfies RouteConfig;
-```
-
-### 6.7 Incremental migration strategy
-
-You don't have to migrate all routes at once. Start with a catchall that renders your existing `App` component, then migrate routes one at a time:
-
-1. Create `src/catchall.tsx` that renders your existing `<App />`
-2. Add `route("*?", "./catchall.tsx")` as the only route in `routes.ts`
-3. Verify everything works
-4. Move routes out of `App.jsx` into `routes.ts` one by one
-5. Remove the catchall when all routes are migrated
-
-### 6.8 Update build scripts
-
-**File:** `package.json`
-
-```json
-{
-  "scripts": {
-    "dev": "react-router dev",
-    "build": "react-router build",
-    "preview": "vite preview"
-  }
-}
-```
-
-### 6.9 What this achieves
-
-After prerendering, `npm run build` will output a full HTML file for every route listed in the prerender config. Crawlers will see fully-rendered HTML with all content, headings, meta tags, and structured data — without needing to execute JavaScript.
+Crawlers see fully-rendered HTML without needing to execute JavaScript. Social media scrapers (Facebook, LinkedIn, Slack) will now correctly display link previews.
 
 ---
 
-## Phase 7 — Code Splitting ⬜ TODO (30 minutes, after Phase 6)
+## Phase 7 — Code Splitting ✅ DONE (automatic)
 
-If you go the framework mode route (Phase 6), code splitting happens automatically per route. If you stay with the current SPA setup, add manual code splitting:
-
-**File:** `src/App.jsx`
-
-```jsx
-import { lazy, Suspense } from 'react'
-
-const Education = lazy(() => import('./pages/Education'))
-const Work = lazy(() => import('./pages/Work'))
-// ... etc
-
-function App() {
-  return (
-    <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/academic" element={<Education />} />
-          {/* ... */}
-        </Routes>
-      </Suspense>
-    </Router>
-  )
-}
-```
-
-This reduces the initial JS bundle size since pages are only loaded when visited.
+React Router v7 framework mode automatically code-splits per route. Each page's JS is only loaded when that route is visited. No manual configuration needed.
 
 ---
 
 ## Phase 8 — Miscellaneous Cleanup ⬜ TODO
 
-### 8.1 Remove the `/cv` redirect route
+### 8.1 Consider removing the `/cv` redirect route
 
-`src/App.jsx` lines 4-9 define a `CVRedirect` component that uses `window.location.href` to redirect to the PDF. The Header already links directly to the PDF file (line 85). The redirect route is redundant — remove it unless external links point to `/cv`.
+`src/pages/CVRedirect.jsx` uses `window.location.href` to redirect to the PDF. The Header already links directly to the PDF file. The redirect route may be redundant — remove it unless external links point to `/cv`.
 
 ### 8.2 Add `rel="noopener noreferrer"` audit
 
@@ -389,13 +231,11 @@ Blog post dates are hardcoded as strings ("June 15, 2023"). If/when the blog sca
 | 3 | JSON-LD structured data | ✅ Done |
 | 4 | Image optimisation (lazy load, WebP, dimensions) | ✅ Done |
 | 5 | Semantic HTML & ARIA | ✅ Done |
-| 6 | Prerendering via React Router v7 framework mode | ⬜ Not started |
-| 7 | Code splitting | ⬜ Not started |
+| 6 | Prerendering via React Router v7 framework mode | ✅ Done |
+| 7 | Code splitting (automatic with framework mode) | ✅ Done |
 | 8 | Miscellaneous cleanup | ⬜ Not started |
 
 ### What's left
 
 - **4.4** Optional: `vite-plugin-imagemin` for build-time compression
-- **Phase 6** Migrate to React Router v7 framework mode for prerendering (largest remaining item)
-- **Phase 7** Code splitting (automatic if Phase 6 is done, manual otherwise)
 - **Phase 8** Miscellaneous cleanup (CVRedirect removal, rel audit, blog dates)

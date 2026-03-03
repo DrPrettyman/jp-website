@@ -1,10 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Activity } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Power Spectrum Indicator", description: "Research on using the power spectrum as a novel early warning indicator for critical transitions.", path: "/projects/ps-indicator" });
 import 'katex/dist/katex.min.css';
-import { BlockMath } from 'react-katex';
+import katex from 'react-katex';
+const { BlockMath } = katex;
 
 const Figure = ({ src, caption, alt }) => (
   <figure className="my-6">
@@ -43,7 +46,6 @@ const CodeBlock = ({ children, title }) => (
 const PSIndicatorProject = () => {
   return (
     <Layout>
-      <SEO title="Power Spectrum Indicator" description="Research on using the power spectrum as a novel early warning indicator for critical transitions." path="/projects/ps-indicator" />
       <ContentBlock title="A Novel Power Spectrum Indicator for Early Warning Signals" icon={Activity} githubUrl="https://github.com/DrPrettyman/PhD/tree/main/Papers/Paper1_EPL/manuscript" maxWidth='4xl'>
         <div className="text-gray-700 dark:text-white">
 

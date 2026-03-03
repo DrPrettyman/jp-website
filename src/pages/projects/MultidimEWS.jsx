@@ -1,10 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Grid3X3 } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Multidimensional Early Warning Signals", description: "Research extending early warning signal methods to multivariate dynamical systems.", path: "/projects/multidim-ews" });
 import 'katex/dist/katex.min.css';
-import { BlockMath } from 'react-katex';
+import katex from 'react-katex';
+const { BlockMath } = katex;
 
 const Figure = ({ src, caption, alt }) => (
   <figure className="my-6">
@@ -43,7 +46,6 @@ const CodeBlock = ({ children, title }) => (
 const MultidimEWSProject = () => {
   return (
     <Layout>
-      <SEO title="Multidimensional Early Warning Signals" description="Research extending early warning signal methods to multivariate dynamical systems." path="/projects/multidim-ews" />
       <ContentBlock title="Multivariate Early Warning Signals" icon={Grid3X3} githubUrl="https://github.com/DrPrettyman/PhD/tree/main/Papers/Paper2_Chaos/manuscript" maxWidth='4xl'>
         <div className="text-gray-700 dark:text-white">
 

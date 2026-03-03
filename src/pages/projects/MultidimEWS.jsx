@@ -187,7 +187,7 @@ end`}
           </p>
 
           <Figure
-            src="/images/phd/spiral.png"
+            src="/images/phd/spiral.webp"
             caption="A Hopf bifurcation in the Van der Pol oscillator. The stable equilibrium becomes unstable and gives birth to a limit cycle as the control parameter crosses zero."
           />
 
@@ -200,7 +200,7 @@ end`}
           </p>
 
           <Figure
-            src="/images/phd/one_and_many_timeseries.png"
+            src="/images/phd/one_and_many_timeseries.webp"
             caption="Sea-level pressure time series from multiple weather stations in a region during a hurricane event."
           />
 

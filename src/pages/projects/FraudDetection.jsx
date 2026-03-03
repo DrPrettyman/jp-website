@@ -62,7 +62,7 @@ const FraudDetectionProject = () => {
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/missing_values_distribution.png"
+                src="/images/fraud-detection/missing_values_distribution.webp"
                 alt="Distribution of missing values across columns"
                 className="rounded-lg max-w-xl w-full"
               />
@@ -78,7 +78,7 @@ const FraudDetectionProject = () => {
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/fraud_rate_by_time.png"
+                src="/images/fraud-detection/fraud_rate_by_time.webp"
                 alt="Fraud rate by hour of day and day of week"
                 className="rounded-lg max-w-2xl w-full"
               />
@@ -121,7 +121,7 @@ fraud_by_email = train.groupby('email_match')['isFraud'].mean()
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/identity_column_distributions.png"
+                src="/images/fraud-detection/identity_column_distributions.webp"
                 alt="Identity column distributions showing discrete categorical patterns"
                 className="rounded-lg max-w-2xl w-full"
               />
@@ -148,7 +148,7 @@ fraud_by_email = train.groupby('email_match')['isFraud'].mean()
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/v_features_missing_heatmap.png"
+                src="/images/fraud-detection/v_features_missing_heatmap.webp"
                 alt="V features missing value co-occurrence heatmap showing block structure"
                 className="rounded-lg max-w-xl w-full"
               />
@@ -301,7 +301,7 @@ for fold, (train_idx, val_idx) in enumerate(tscv.split(X_train)):
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/time_series_cv_splits.png"
+                src="/images/fraud-detection/time_series_cv_splits.webp"
                 alt="Time series cross-validation splits visualization"
                 className="rounded-lg max-w-xl w-full"
               />
@@ -337,7 +337,7 @@ for fold, (train_idx, val_idx) in enumerate(tscv.split(X_train)):
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/model_comparison_bar.png"
+                src="/images/fraud-detection/model_comparison_bar.webp"
                 alt="Model comparison showing LightGBM outperforming Logistic Regression"
                 className="rounded-lg max-w-lg w-full"
               />
@@ -411,7 +411,7 @@ for thresh in np.arange(0.01, 0.99, 0.01):
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/cost_analysis.png"
+                src="/images/fraud-detection/cost_analysis.webp"
                 alt="Cost analysis showing optimal threshold differs from F1-optimal"
                 className="rounded-lg max-w-2xl w-full"
               />
@@ -432,7 +432,7 @@ for thresh in np.arange(0.01, 0.99, 0.01):
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/score_distribution.png"
+                src="/images/fraud-detection/score_distribution.webp"
                 alt="Score distribution showing clear separation between fraud and legitimate transactions"
                 className="rounded-lg max-w-lg w-full"
               />
@@ -446,7 +446,7 @@ for thresh in np.arange(0.01, 0.99, 0.01):
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/roc_pr_curves.png"
+                src="/images/fraud-detection/roc_pr_curves.webp"
                 alt="ROC and Precision-Recall curves"
                 className="rounded-lg max-w-2xl w-full"
               />
@@ -462,7 +462,7 @@ for thresh in np.arange(0.01, 0.99, 0.01):
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/fraud-detection/feature_importance_top30.png"
+                src="/images/fraud-detection/feature_importance_top30.webp"
                 alt="Top 30 features by importance"
                 className="rounded-lg max-w-xl w-full"
               />

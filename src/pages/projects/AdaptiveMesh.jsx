@@ -71,7 +71,7 @@ const AdaptiveMeshProject = () => {
           </p>
 
           <Figure
-            src="/images/mres/densityfunction.png"
+            src="/images/mres/densityfunction.webp"
             caption="Centroidal Voronoi Tessellation: random point distribution (left) vs optimised mesh distribution concentrated around a density function (right)."
           />
 

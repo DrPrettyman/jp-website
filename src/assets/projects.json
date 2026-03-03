@@ -7,7 +7,7 @@
       "tags": ["Python", "ML", "Data Pipeline", "Streamlit", "Recommender Systems"],
       "description": "Multi-source data pipeline and hybrid recommendation engine that identifies underserved game niches on Steam, scoring 140,000+ market opportunities with revenue estimates.",
       "link": "projects/steam-market-gap",
-      "image": "/images/steam-market-gap/niche_metrics_heatmap.png"
+      "image": "/images/steam-market-gap/niche_metrics_heatmap.webp"
     },
     {
       "id": "jobsearch-agent",
@@ -16,7 +16,7 @@
       "tags": ["Python", "CLI", "AI", "Claude", "Automation"],
       "description": "AI-powered CLI tool that automates job hunting: searches the web for relevant positions, intelligently filters based on your background, and generates tailored cover letters as professional PDFs.",
       "link": "projects/jobsearch-agent",
-      "image": "/images/jobsearch-cli-screenshot.png"
+      "image": "/images/jobsearch-cli-screenshot.webp"
     },
     {
       "id": "fraud-detection",
@@ -25,7 +25,7 @@
       "tags": ["Python", "ML", "LightGBM", "Kaggle"],
       "description": "Cost-sensitive fraud detection achieving 97.4% AUC and $447K annual savings. Features time-based CV and business-optimized thresholds.",
       "link": "projects/fraud-detection",
-      "image": "/images/fraud-detection/score_distribution.png"
+      "image": "/images/fraud-detection/score_distribution.webp"
     },
     {
       "id": "wine-exports-viz",
@@ -34,7 +34,7 @@
       "tags": ["Plotly", "Tableau", "Python", "DataViz", "WebScraping"],
       "description": "A data viz project to create an interactive world map showing wine imports and exports. Can also map other traded commodities using the UN's Comtrade data.",
       "link": "projects/wine-exports-viz",
-      "image": "/images/comtrade-screenshot.png"
+      "image": "/images/comtrade-screenshot.webp"
     },
     {
       "id": "taorg",
@@ -43,7 +43,7 @@
       "tags": ["JavaScript", "React", "App", "Fun"],
       "description": "The Animal Opposite Rhyming Game is a game I've been playing with my children for years. I decided to make a wordle-style web app based on it. Have a go!",
       "link": "https://taorg.app",
-      "image": "/images/taorg-screenshot.png"
+      "image": "/images/taorg-screenshot.webp"
     },
     {
       "id": "macaroni",
@@ -52,7 +52,7 @@
       "tags": ["Python", "SQL", "ML", "GCP"],
       "description": "SaaS product for SEO productivity incorporating ML features. I developed the backend (Python), database (BigQuery) and prototype frontend (Retool) whilst working at Blink SEO.",
       "link": "/projects/macaroni",
-      "image": "/images/macaroni.jpeg"
+      "image": "/images/macaroni.webp"
     },
     {
       "id": "jobmaster",
@@ -61,7 +61,7 @@
       "tags": ["Python", "SQL", "PostgreSQL", "Workflow"],
       "description": "A job-queue system for triggering backend Python tasks from a web application. Created whilst working at Blink SEO to fill a need for a scalable and reliable system with a flexible API.",
       "link": "/projects/jobmaster",
-      "image": "/images/jobmaster.png"
+      "image": "/images/jobmaster.webp"
     },
     {
       "id": "pygoogalytics",
@@ -79,7 +79,7 @@
       "tags": ["PhD", "MATLAB", "Research", "Climate", "Mathematics", "Time Series"],
       "description": "Analytical foundation for power spectrum indicator. Proves robustness against trends and periodic oscillations. Applied to paleoclimate ice-core data. Published in ERL.",
       "link": "/projects/ps-robustness",
-      "image": "/images/phd/temp_proxy.png"
+      "image": "/images/phd/temp_proxy.webp"
     },
     {
       "id": "early-warning-signals",
@@ -88,7 +88,7 @@
       "tags": ["PhD", "MATLAB", "Python", "Research", "Climate", "Mathematics", "Dynamical Systems", "Time Series"],
       "description": "PhD research on detecting early warning signals for critical transitions. Developed novel methods applied to climate data and tropical cyclones. Published in EPL, Chaos, and ERL.",
       "link": "/projects/early-warning-signals",
-      "image": "/images/phd/potential_bifurcation.png"
+      "image": "/images/phd/potential_bifurcation.webp"
     },
     {
       "id": "multidim-ews",
@@ -97,7 +97,7 @@
       "tags": ["PhD", "MATLAB", "Research", "Mathematics", "Dynamical Systems"],
       "description": "Extending early warning signals to multivariate and gridded data. Developed stochastic hurricane model and spatial analysis methods. Published in Chaos.",
       "link": "/projects/multidim-ews",
-      "image": "/images/phd/one_and_many_timeseries.png"
+      "image": "/images/phd/one_and_many_timeseries.webp"
     },
     {
       "id": "ps-indicator",
@@ -106,7 +106,7 @@
       "tags": ["PhD", "MATLAB", "Research", "Mathematics"],
       "description": "Novel power spectrum scaling indicator for early warning signals. Applied to tropical cyclone prediction where traditional indicators fail. Published in EPL.",
       "link": "/projects/ps-indicator",
-      "image": "/images/phd/PowerSpectrum.png"
+      "image": "/images/phd/PowerSpectrum.webp"
     },
     {
       "id": "adaptive-mesh",
@@ -115,7 +115,7 @@
       "tags": ["MRes", "OpenFOAM", "Python", "Research", "Mathematics", "Numerical Methods"],
       "description": "MRes thesis on adaptive mesh generation using optimal transport and the Monge-Ampère equation. Developed a novel parameter-free linearisation method for numerical weather prediction.",
       "link": "/projects/adaptive-mesh",
-      "image": "/images/mres/densityfunction.png"
+      "image": "/images/mres/densityfunction.webp"
     },
     {
       "id": "prettymath",
@@ -124,7 +124,7 @@
       "tags": ["JavaScript", "React", "Education"],
       "description": "A series of games I made during my time teaching Maths to High School students.",
       "link": "/projects/prettymath",
-      "image": "/images/angle-game-screenshot.png"
+      "image": "/images/angle-game-screenshot.webp"
     },
     {
       "id": "digraph-explorer",
@@ -133,7 +133,7 @@
       "tags": ["JavaScript", "React", "Education", "GraphTheory"],
       "description": "A tool for my undergraduate dissertation. Explore directed graphs and calculate the number of paths through them.",
       "link": "/projects/digraph-explorer",
-      "image": "/images/digraph.png"
+      "image": "/images/digraph.webp"
     }
   ]
 }

@@ -32,7 +32,7 @@ const Travels = () => {
           <TravelCard
             title="Van Life Part I"
             dates="Oct 2019 — June 2020"
-            imagePath="/images/vanlife_wide.jpeg"
+            imagePath="/images/vanlife_wide.webp"
             imageAlt="Van Life Part I"
             tags={["Europe", "Vanlife"]}
             flags="🇬🇧 → 🇫🇷 → 🇧🇪 → 🇩🇪 → 🇱🇺 → 🇫🇷 → 🇦🇩 → 🇪🇸 → 🇵🇹"

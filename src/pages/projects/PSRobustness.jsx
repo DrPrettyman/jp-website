@@ -298,7 +298,7 @@ z3(t) = z1(t) + 2·sin(50t) + 3·sin(7t)`}
           </p>
 
           <Figure
-            src="/images/phd/temp_proxy.png"
+            src="/images/phd/temp_proxy.webp"
             caption="Paleoclimate proxy data showing past abrupt climate transitions. The Bølling warming event (~14.7 kyr BP) represents a dramatic temperature shift."
           />
 

@@ -121,7 +121,7 @@ const PSIndicatorProject = () => {
           </p>
 
           <Figure
-            src="/images/phd/PowerSpectrum.png"
+            src="/images/phd/PowerSpectrum.webp"
             caption="Power spectrum of a time series showing scaling behaviour. The slope on a log-log plot gives the PS exponent β."
           />
 
@@ -184,7 +184,7 @@ end`}
           </p>
 
           <Figure
-            src="/images/phd/changing_potential.png"
+            src="/images/phd/changing_potential.webp"
             caption="The changing shape of a potential well as a system approaches a bifurcation. The stable equilibrium becomes shallower until it disappears at the critical point."
           />
 
@@ -208,7 +208,7 @@ end`}
           </div>
 
           <Figure
-            src="/images/phd/Katrina.png"
+            src="/images/phd/Katrina.webp"
             caption="Sea-level pressure data from weather stations during Hurricane Katrina's approach. The sudden pressure drop is the 'tipping point' we aim to predict."
           />
 

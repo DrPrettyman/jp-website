@@ -9,7 +9,7 @@ const content = {
     title: "Private Maths Tuition in English",
     intro: [
       "Hi, I'm Joshua, an experienced maths teacher and tutor.",
-      "My own children are in Years 7 and 8 at Sunland International School (Estación de Cártama) and we live just up the road (10 minute walk from school)."
+      "My own children are in Years 7 and 8 at Novaschool Sunland International (Estación de Cártama) and we live just up the road (10 minute walk from school)."
     ],
     backgroundTitle: "Background",
     background1: [
@@ -19,22 +19,25 @@ const content = {
     howTitle: "How it works",
     how: [
       "If you live nearby (Cártama, Pizarra, Coín, Alhaurín, Campanillas, etc.) and you have a quiet space to learn, I can come to your home and tutor there. Get in touch and we can arrange a time.",
-      "For Sunlanders: I live only a short walk from Sunland and my children do the walk every day. It would be convenient to arrange an after-school tutoring session at my house, with you picking up your child afterwards. I'd be happy for a parent to come round for a chat before the first session.",
-      "I can also tutor online via Facetime, Zoom, etc.."
+      "For Sunlanders: I live only a short walk from Novaschool Sunland International and my children do the walk every day. It would be convenient to arrange an after-school tutoring session at my house, with you picking up your child afterwards. I'd be happy for a parent to come round for a chat before the first session.",
+      "I can also tutor online via Facetime, Teams, Zoom, etc.."
     ],
     pricingTitle: "Pricing",
     pricing: [
-      "I charge €30 per 1-hour session, but I'm not going to charge extra if we run a bit late. If you actually want a longer session (1.5 hour = €40, 2 hour = €50), that could be arranged.",
-      "I'm looking for clients who want a regular, weekly session at a fixed time, but am happy to do a one-off, pre-exam session."
+      "I charge €30 per 1-hour session, but I'm not going to charge extra if we run a bit late.",
+      "We can also arrange longer sessions: 1.5 hour = €40; 2 hour = €50.",
+      "I'm looking for clients who want a regular, weekly session at a fixed time, but am happy to do one-off, pre-exam sessions."
     ],
     highlightsTitle: "Why Choose Me",
     highlights: [
-      "PhD in Mathematics with Masters-level study in Mathematics Education",
-      "Years of private tuition experience in the UK at all levels",
+      "Former Maths teacher in the UK: secondary schools and university",
+      "PhD in Mathematics",
+      "Masters-level studies in Mathematics Education",
+      "Years of private tuition experience in the UK",
       "Experience teaching for British GCSEs, iGCSEs, A-levels and the IB",
       "Helped high-achievers prepare for Cambridge entrance exams",
       "Experience helping students with dyscalculia develop learning strategies",
-      "Native English speaker, based locally near Sunland",
+      "Native English speaker based in Cártama/Alhaurín/Coín area",
       "Flexible scheduling: regular weekly sessions or one-off exam prep",
     ],
   },
@@ -42,7 +45,7 @@ const content = {
     title: "Clases Particulares de Matemáticas en Inglés",
     intro: [
       "Hola, soy Joshua, un profesor y tutor de matemáticas con experiencia.",
-      "Mis hijos están en Year 7 y Year 8 en el colegio Sunland International School (Estación de Cártama) y vivimos muy cerca (a 10 minutos andando del colegio)."
+      "Mis hijos están en Year 7 y Year 8 en el colegio Novaschool Sunland International (Estación de Cártama) y vivimos muy cerca (a 10 minutos andando del colegio)."
     ],
     backgroundTitle: "Experiencia",
     background1: [
@@ -52,22 +55,25 @@ const content = {
     howTitle: "Cómo funciona",
     how: [
       "Si vive cerca (Cártama, Pizarra, Coín, Alhaurín, Campanillas, etc.) y tiene un espacio tranquilo para aprender, puedo ir a su casa y dar la clase allí. Póngase en contacto y podemos organizar un horario.",
-      "Para familias de Sunland: Vivo a solo unos minutos andando de Sunland y mis hijos hacen el camino todos los días. Sería conveniente organizar una clase particular después del colegio en mi casa, y que usted recoja a su hijo después. Estaría encantado de que un padre venga a charlar antes de la primera sesión.",
-      "También puedo dar clases online por Facetime, Zoom, etc."
+      "Para familias de Sunland: Vivo a solo unos minutos andando de Novaschool Sunland International y mis hijos hacen el camino todos los días. Sería conveniente organizar una clase particular después del colegio en mi casa, y que usted recoja a su hijo después. Estaría encantado de que un padre venga a charlar antes de la primera sesión.",
+      "También puedo dar clases online por Facetime, Teams, Zoom, etc."
     ],
     pricingTitle: "Precios",
     pricing: [
-      "Cobro 30€ por sesión de 1 hora, pero no voy a cobrar extra si la clase se alarga un poco. Si realmente quiere una sesión más larga (1,5 horas = 40€, 2 horas = 50€), se podría organizar.",
-      "Busco clientes que quieran una sesión regular semanal a una hora fija, pero estaré encantado de hacer una sesión puntual antes de un examen."
+      "Cobro 30€ por sesión de 1 hora, pero no voy a cobrar extra si la clase se alarga un poco.",
+      "También podemos organizar sesiones más largas: 1,5 horas = 40€; 2 horas = 50€.",
+      "Busco clientes que quieran una sesión regular semanal a una hora fija, pero estaré encantado de hacer sesiones puntuales antes de un examen."
     ],
     highlightsTitle: "Por qué elegirme",
     highlights: [
-      "Doctorado en Matemáticas con estudios de máster en Educación Matemática",
-      "Años de experiencia en clases particulares en el Reino Unido a todos los niveles",
+      "Ex profesor de Matemáticas en el Reino Unido: colegios de secundaria y universidad",
+      "Doctorado en Matemáticas",
+      "Estudios de máster en Educación Matemática",
+      "Años de experiencia en clases particulares en el Reino Unido",
       "Experiencia enseñando para GCSEs, iGCSEs, A-levels británicos y el IB",
       "He ayudado a estudiantes de alto rendimiento a preparar exámenes de acceso a Cambridge",
       "Experiencia ayudando a estudiantes con discalculia a desarrollar estrategias de aprendizaje",
-      "Hablante nativo de inglés, residente cerca de Sunland",
+      "Hablante nativo de inglés, residente en la zona de Cártama/Alhaurín/Coín",
       "Horarios flexibles: sesiones semanales regulares o sesión puntual antes de exámenes",
     ],
   },
@@ -75,7 +81,7 @@ const content = {
     title: "Private Mathematik-Nachhilfe auf Englisch",
     intro: [
       "Hallo, ich bin Joshua, ein erfahrener Mathematiklehrer und Nachhilfelehrer.",
-      "Meine eigenen Kinder sind in der 7. und 8. Klasse an der Sunland International School (Estación de Cártama) und wir wohnen ganz in der Nähe (10 Minuten zu Fuß von der Schule)."
+      "Meine eigenen Kinder sind in der 7. und 8. Klasse an der Novaschool Sunland International (Estación de Cártama) und wir wohnen ganz in der Nähe (10 Minuten zu Fuß von der Schule)."
     ],
     backgroundTitle: "Hintergrund",
     background1: [
@@ -85,22 +91,25 @@ const content = {
     howTitle: "So funktioniert es",
     how: [
       "Wenn Sie in der Nähe wohnen (Cártama, Pizarra, Coín, Alhaurín, Campanillas usw.) und einen ruhigen Lernort haben, kann ich zu Ihnen nach Hause kommen und dort unterrichten. Nehmen Sie Kontakt auf und wir können einen Termin vereinbaren.",
-      "Für Sunland-Familien: Ich wohne nur einen kurzen Spaziergang von Sunland entfernt und meine Kinder gehen den Weg jeden Tag. Es wäre praktisch, eine Nachhilfestunde nach der Schule bei mir zu Hause zu vereinbaren, wobei Sie Ihr Kind danach abholen. Ich würde mich freuen, wenn ein Elternteil vor der ersten Sitzung auf einen Plausch vorbeikommt.",
-      "Ich kann auch online per Facetime, Zoom usw. unterrichten."
+      "Für Sunland-Familien: Ich wohne nur einen kurzen Spaziergang von Novaschool Sunland International entfernt und meine Kinder gehen den Weg jeden Tag. Es wäre praktisch, eine Nachhilfestunde nach der Schule bei mir zu Hause zu vereinbaren, wobei Sie Ihr Kind danach abholen. Ich würde mich freuen, wenn ein Elternteil vor der ersten Sitzung auf einen Plausch vorbeikommt.",
+      "Ich kann auch online per Facetime, Teams, Zoom usw. unterrichten."
     ],
     pricingTitle: "Preisgestaltung",
     pricing: [
-      "Ich berechne 30€ für eine einstündige Sitzung, aber ich werde keinen Aufpreis verlangen, wenn es etwas länger dauert. Wenn Sie tatsächlich eine längere Sitzung wünschen (1,5 Stunden = 40€, 2 Stunden = 50€), lässt sich das einrichten.",
-      "Ich suche Kunden, die eine regelmäßige wöchentliche Sitzung zu einer festen Zeit wünschen, mache aber auch gerne eine einmalige Sitzung vor einer Prüfung."
+      "Ich berechne 30€ für eine einstündige Sitzung, aber ich werde keinen Aufpreis verlangen, wenn es etwas länger dauert.",
+      "Wir können auch längere Sitzungen vereinbaren: 1,5 Stunden = 40€; 2 Stunden = 50€.",
+      "Ich suche Kunden, die eine regelmäßige wöchentliche Sitzung zu einer festen Zeit wünschen, mache aber auch gerne einmalige Sitzungen vor einer Prüfung."
     ],
     highlightsTitle: "Warum ich",
     highlights: [
-      "Doktortitel in Mathematik mit Masterstudium in Mathematikdidaktik",
-      "Jahrelange Erfahrung in privater Nachhilfe in Großbritannien auf allen Stufen",
+      "Ehemaliger Mathematiklehrer in Großbritannien: weiterführende Schulen und Universität",
+      "Doktortitel in Mathematik",
+      "Masterstudium in Mathematikdidaktik",
+      "Jahrelange Erfahrung in privater Nachhilfe in Großbritannien",
       "Erfahrung im Unterrichten für britische GCSEs, iGCSEs, A-Levels und das IB",
       "Habe leistungsstarke Schüler auf Cambridge-Aufnahmeprüfungen vorbereitet",
       "Erfahrung in der Unterstützung von Schülern mit Dyskalkulie bei Lernstrategien",
-      "Englischer Muttersprachler, wohnhaft in der Nähe von Sunland",
+      "Englischer Muttersprachler, wohnhaft im Gebiet Cártama/Alhaurín/Coín",
       "Flexible Terminplanung: regelmäßige wöchentliche Sitzungen oder einmalige Prüfungsvorbereitung",
     ],
   }

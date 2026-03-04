@@ -42,10 +42,16 @@ const PrivateLabelProject = () => {
               unhealthy the current offerings are and how little private label has done to fill that gap.
             </p>
 
-            <p className="mb-8 text-justify">
+            <p className="mb-4 text-justify">
               The headline finding: 73% of EU food products score Nutri-Score C or worse, while private label penetration
               among healthy (A/B) alternatives sits at about 10%.
             </p>
+
+            <div className="mb-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+              <p className="text-sm">
+                <strong>Interactive dashboard:</strong> Explore the full results in the <a href="https://pl-dashboard-production.up.railway.app" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">live Streamlit app</a>, with filterable category landscapes, nutritional gap quadrants, and opportunity rankings.
+              </p>
+            </div>
 
             <div className="my-6 flex justify-center">
               <img

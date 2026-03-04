@@ -57,7 +57,7 @@ export default defineConfig({
     Sitemap({
       hostname: 'https://joshua.prettyman.me',
       dynamicRoutes: [...staticRoutes, ...dynamicRoutes],
-      outDir: 'dist',
+      outDir: 'build/client',
       generateRobotsTxt: true,
       exclude: [
         '/google380aa23fdeb1fbc1',

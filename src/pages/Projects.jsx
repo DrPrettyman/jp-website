@@ -4,6 +4,9 @@ import ProjectCard from '../components/ProjectCard'
 import ContentBlock from '../components/ContentBlock'
 import { FolderGit2 } from 'lucide-react'
 import projectsData from '../assets/projects.json'
+import { generateMeta } from '../utils/seo'
+
+export const meta = () => generateMeta({ title: "Projects", description: "Portfolio of data science, machine learning, and software development projects.", path: "/projects" });
 
 // List specific project IDs to display (in order), or use 'ALL' to show all projects
 const projectIds = 'ALL'

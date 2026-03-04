@@ -19,6 +19,7 @@ const TravelCard = ({
             <img
               src={imagePath}
               alt={imageAlt || title}
+              loading="lazy"
               className="w-full h-full bg-white object-cover rounded-lg shadow-md"
             />
           </a>

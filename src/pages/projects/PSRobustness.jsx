@@ -1,9 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { ShieldCheck } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Power Spectrum Robustness", description: "Research investigating the robustness of power spectrum scaling as an indicator of critical slowing down.", path: "/projects/ps-robustness" });
 import 'katex/dist/katex.min.css';
-import { BlockMath } from 'react-katex';
+import katex from 'react-katex';
+const { BlockMath } = katex;
 
 const Figure = ({ src, caption, alt }) => (
   <figure className="my-6">
@@ -296,7 +300,7 @@ z3(t) = z1(t) + 2·sin(50t) + 3·sin(7t)`}
           </p>
 
           <Figure
-            src="/images/phd/temp_proxy.png"
+            src="/images/phd/temp_proxy.webp"
             caption="Paleoclimate proxy data showing past abrupt climate transitions. The Bølling warming event (~14.7 kyr BP) represents a dramatic temperature shift."
           />
 

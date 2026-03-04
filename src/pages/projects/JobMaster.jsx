@@ -1,7 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Workflow } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "JobMaster", description: "A Python job queue framework for triggering and tracking long-running tasks from a web frontend.", path: "/projects/jobmaster" });
 
 const CodeBlock = ({ children, title }) => (
   <div className="my-6 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">

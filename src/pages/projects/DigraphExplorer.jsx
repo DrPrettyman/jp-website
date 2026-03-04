@@ -2,7 +2,10 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import GraphBuilder from '../../components/GraphBuilder';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Waypoints } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Digraph Explorer", description: "An interactive graph theory visualization tool for exploring directed graphs and their algebraic properties.", path: "/projects/digraph-explorer" });
 
 import { Circle, Share2 } from 'lucide-react';
 
@@ -42,7 +45,7 @@ const DigraphExplorerProject = () => {
               It looked like this:
             </p>
 
-            <img src="/images/digraph_creata_screenshot.png" alt="Digraph Explorer Console" className="mb-8 px-6 mx-auto block" />
+            <img src="/images/digraph_creata_screenshot.webp" alt="Digraph Explorer Console" className="mb-8 px-6 mx-auto block" />
 
             <p className="mb-4 text-justify">
               In fact, if you have a Windows PC you can have a look at the original program which is just a .exe file [<a href="/documents/digraph_creata.exe" download className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 underline">download</a>].

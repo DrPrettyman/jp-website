@@ -1,7 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { TrendingUp } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Early Warning Signals", description: "PhD research on detecting early warning signals of critical transitions in dynamical systems.", path: "/projects/early-warning-signals" });
 
 const Figure = ({ src, caption, alt }) => (
   <figure className="my-6">
@@ -67,7 +70,7 @@ const EarlyWarningSignalsProject = () => {
           </p>
 
           <Figure
-            src="/images/phd/potential_bifurcation.png"
+            src="/images/phd/potential_bifurcation.webp"
             caption="A system approaching a tipping point. The 'ball' represents the system state, and the landscape is the potential energy. As conditions change, the well becomes shallower until the system tips into a new state."
           />
 
@@ -92,7 +95,7 @@ const EarlyWarningSignalsProject = () => {
           </ul>
 
           <Figure
-            src="/images/phd/changing_potential.png"
+            src="/images/phd/changing_potential.webp"
             caption="The changing shape of a potential well as a system approaches a bifurcation. The stable equilibrium (trough) becomes shallower until it disappears at the critical point."
           />
 
@@ -131,7 +134,7 @@ const EarlyWarningSignalsProject = () => {
           </p>
 
           <Figure
-            src="/images/phd/PowerSpectrum.png"
+            src="/images/phd/PowerSpectrum.webp"
             caption="Power spectrum of a time series showing scaling behaviour. The slope on a log-log plot gives the PS exponent β."
           />
 
@@ -177,7 +180,7 @@ const EarlyWarningSignalsProject = () => {
           </div>
 
           <Figure
-            src="/images/phd/differentbifurcations.png"
+            src="/images/phd/differentbifurcations.webp"
             caption="Different types of bifurcations studied: fold (saddle-node), transcritical, and pitchfork. Each has distinct early warning signatures."
           />
 
@@ -207,7 +210,7 @@ const EarlyWarningSignalsProject = () => {
           </p>
 
           <Figure
-            src="/images/phd/spiral.png"
+            src="/images/phd/spiral.webp"
             caption="A Hopf bifurcation in a two-dimensional system. The stable equilibrium becomes unstable and gives birth to a limit cycle."
           />
 
@@ -221,7 +224,7 @@ const EarlyWarningSignalsProject = () => {
           </p>
 
           <Figure
-            src="/images/phd/Katrina.png"
+            src="/images/phd/Katrina.webp"
             caption="Sea-level pressure data from weather stations during Hurricane Katrina's approach. The sudden pressure drop is the 'tipping point' we aim to predict."
           />
 
@@ -237,7 +240,7 @@ const EarlyWarningSignalsProject = () => {
           </ul>
 
           <Figure
-            src="/images/phd/one_and_many_timeseries.png"
+            src="/images/phd/one_and_many_timeseries.webp"
             caption="Sea-level pressure time series from multiple weather stations in a region during a hurricane event."
           />
 
@@ -262,7 +265,7 @@ const EarlyWarningSignalsProject = () => {
           </ul>
 
           <Figure
-            src="/images/phd/temp_proxy.png"
+            src="/images/phd/temp_proxy.webp"
             caption="Paleoclimate proxy data showing past abrupt climate transitions. Can we detect early warning signals in such records?"
           />
 

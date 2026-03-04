@@ -4,7 +4,7 @@
         "journal": "Environmental Research Letters",
         "link": "https://doi.org/10.1088/1748-9326/ac526f",
         "date": "March 2022",
-        "logo": "/company_logo/erl_logo.png",
+        "logo": "/company_logo/erl_logo.webp",
         "transparent": true,
         "entryId": "erl-paper",
         "authors": [
@@ -19,7 +19,7 @@
         "journal": "Ph.D. Thesis",
         "link": "https://doi.org/10.48683/1926.00098364",
         "date": "November 2020",
-        "logo": "/company_logo/reading.png",
+        "logo": "/company_logo/reading.webp",
         "transparent": true,
         "entryId": "phd-thesis",
         "authors": [
@@ -32,7 +32,7 @@
         "journal": "Chaos",
         "link": "https://doi.org/10.1063/1.5093495",
         "date": "July 2019",
-        "logo": "/company_logo/aip_logo.png",
+        "logo": "/company_logo/aip_logo.webp",
         "transparent": true,
         "entryId": "chaos-paper",
         "authors": [
@@ -47,7 +47,7 @@
         "journal": "Europhysics Letters",
         "link": "https://doi.org/10.1209/0295-5075/121/10002",
         "date": "March 2018",
-        "logo": "/company_logo/epl_logo.png",
+        "logo": "/company_logo/epl_logo.webp",
         "transparent": true,
         "entryId": "epl-paper",
         "authors": [
@@ -62,7 +62,7 @@
         "journal": "MRes. Dissertation",
         "link": "/documents/MResDissertation.pdf",
         "date": "September 2015",
-        "logo": "/company_logo/icl.png",
+        "logo": "/company_logo/icl.webp",
         "transparent": true,
         "entryId": "mres-dissertation",
         "authors": [
@@ -75,7 +75,7 @@
         "journal": "MA Dissertation",
         "link": "/documents/MADissertation.pdf",
         "date": "July 2013",
-        "logo": "/company_logo/edinburgh.png",
+        "logo": "/company_logo/edinburgh.webp",
         "transparent": true,
         "entryId": "ma-dissertation",
         "authors": [

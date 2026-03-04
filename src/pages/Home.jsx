@@ -1,19 +1,40 @@
 import React from 'react'
+import { Link } from 'react-router'
 import Layout from '../components/Layout'
+import { generateMeta } from '../utils/seo'
 
 import { Briefcase, GraduationCap, FileTerminal, Smile } from 'lucide-react';
+
+export const meta = () => generateMeta({ description: "Data scientist with a Ph.D. in mathematics. Software development, machine learning, and data analysis. Based in Malaga, Spain.", path: "/" });
 
 const Home = () => {
   return (
     <Layout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joshua Prettyman",
+        "jobTitle": "Data Scientist",
+        "url": "https://joshua.prettyman.me",
+        "sameAs": [
+          "https://www.linkedin.com/in/prettyman/",
+          "https://github.com/DrPrettyman"
+        ],
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "University of Reading" },
+          { "@type": "CollegeOrUniversity", "name": "Imperial College London" },
+          { "@type": "CollegeOrUniversity", "name": "University of Edinburgh" }
+        ],
+        "knowsAbout": ["Data Science", "Machine Learning", "Mathematics", "Python", "SQL"]
+      }) }} />
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="bg-gray-200/65 dark:bg-gray-800/80 rounded-lg px-8 py-6 mb-12 mx-2 sm:mx-0">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Image container */}
             <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
               <img
-                src="/images/headshot.jpeg"
-                alt="Your profile"
+                src="/images/headshot.webp"
+                alt="Joshua Prettyman"
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />
             </div>
@@ -21,12 +42,12 @@ const Home = () => {
             {/* Text content */}
             <div className="text-gray-600 dark:text-white">
               <div className="mb-8">
-                <span className="text-4xl font-bold">
-                  Hi, 
-                </span>
-                <span className="text-sm sm:text-lg">
-                  {' '} my name is Joshua.
-                </span>
+                <h1 className="text-4xl font-bold inline">
+                  Hi,
+                  <span className="text-sm sm:text-lg font-normal">
+                    {' '} my name is Joshua.
+                  </span>
+                </h1>
               </div>
               <div className='text-sm sm:text-lg text-justify'>
                 <p className="mb-8">
@@ -57,7 +78,7 @@ const Home = () => {
               </p>
               <p>
                 I also have experience as a researcher at <b>The National Physical Laboratory</b> and teaching Mathemetics at all levels of university: tutoring at <b>The University of Reading</b>, and as an Associate Lecturer at <b>Sheffield Hallam University</b>. 
-                Details are found on my <a href="/professional" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</a>.
+                Details are found on my <Link to="/professional" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</Link>.
               </p>
             </div>
           </div>
@@ -71,7 +92,7 @@ const Home = () => {
                 My Ph.D. from <b>The University of Reading</b> focused on predicting tipping points in dynamical systems, with applications to geophysical time series data. I published three papers in respected journals and presented my research at international conferences.
               </p>
               <p>
-                I previously obtained an MRes (Mathematics) from <b>Imperial College London</b> and an MA (Mathematics) from <b>The University of Edinburgh</b>. Details are found on my <a href="/academic" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Academic CV page</a>.
+                I previously obtained an MRes (Mathematics) from <b>Imperial College London</b> and an MA (Mathematics) from <b>The University of Edinburgh</b>. Details are found on my <Link to="/academic" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Academic CV page</Link>.
               </p>
             </div>
           </div>
@@ -92,7 +113,7 @@ const Home = () => {
               <p>
                 I have used Shell Scripting for command line interfaces and automating tasks on cloud servers. I have built full-stack software solutions running on GCP Compute Engine. 
                 In the past I have also used C++, Matlab and Java for various projects. 
-                Details are found on my <a href="/professional#tech-stack" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</a>.
+                Details are found on my <Link to="/professional#tech-stack" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</Link>.
               </p>
             </div>
           </div>

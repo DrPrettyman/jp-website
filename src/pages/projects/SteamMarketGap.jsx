@@ -1,7 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Gamepad2 } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Steam Market Gap Analysis", description: "A data-driven analysis of the Steam games marketplace to identify underserved genres and market opportunities.", path: "/projects/steam-market-gap" });
 
 const CodeBlock = ({ children, title }) => (
   <div className="my-6 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -97,7 +100,7 @@ const SteamMarketGapProject = () => {
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/steam-market-gap/genre_cooccurrence_heatmap.png"
+                src="/images/steam-market-gap/genre_cooccurrence_heatmap.webp"
                 alt="Genre co-occurrence matrix showing which genre pairs appear together most frequently"
                 className="rounded-lg max-w-2xl w-full"
               />
@@ -141,7 +144,7 @@ hybrid_score = alpha * cf_score + (1 - alpha) * cb_score`}
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/steam-market-gap/playtime_vs_owners_scatter.png"
+                src="/images/steam-market-gap/playtime_vs_owners_scatter.webp"
                 alt="Playtime vs ownership scatter plot coloured by genre"
                 className="rounded-lg max-w-2xl w-full"
               />
@@ -191,7 +194,7 @@ opportunity_score = (demand_norm * engagement_norm * satisfaction_norm) / supply
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/steam-market-gap/niche_metrics_heatmap.png"
+                src="/images/steam-market-gap/niche_metrics_heatmap.webp"
                 alt="Niche quality scorecard heatmap showing normalised scores for top market niches"
                 className="rounded-lg max-w-2xl w-full"
               />
@@ -214,7 +217,7 @@ opportunity_score = (demand_norm * engagement_norm * satisfaction_norm) / supply
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/steam-market-gap/revenue_range_comparison.png"
+                src="/images/steam-market-gap/revenue_range_comparison.webp"
                 alt="Revenue potential by market niche showing median and interquartile range"
                 className="rounded-lg max-w-2xl w-full"
               />
@@ -246,7 +249,7 @@ log(owners_mid) ~ price_dollars + genre + review_score + platform_count`}
 
             <div className="my-6 flex justify-center">
               <img
-                src="/images/steam-market-gap/revenue_by_genre_violin.png"
+                src="/images/steam-market-gap/revenue_by_genre_violin.webp"
                 alt="Revenue distribution by genre shown as violin plots on a log scale"
                 className="rounded-lg max-w-xl w-full"
               />

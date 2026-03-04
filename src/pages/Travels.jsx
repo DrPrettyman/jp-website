@@ -3,6 +3,9 @@ import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock'
 import TravelCard from '../components/TravelCard'
 import { Map } from 'lucide-react'
+import { generateMeta } from '../utils/seo'
+
+export const meta = () => generateMeta({ title: "Travels", description: "Travel map and stories from travelling Europe in a campervan.", path: "/travels" });
 
 const Travels = () => {
   return (
@@ -26,7 +29,7 @@ const Travels = () => {
           <TravelCard
             title="Van Life Part I"
             dates="Oct 2019 — June 2020"
-            imagePath="/images/vanlife_wide.jpeg"
+            imagePath="/images/vanlife_wide.webp"
             imageAlt="Van Life Part I"
             tags={["Europe", "Vanlife"]}
             flags="🇬🇧 → 🇫🇷 → 🇧🇪 → 🇩🇪 → 🇱🇺 → 🇫🇷 → 🇦🇩 → 🇪🇸 → 🇵🇹"

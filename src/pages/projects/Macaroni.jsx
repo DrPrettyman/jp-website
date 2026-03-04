@@ -1,7 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { ChefHat } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Macaroni", description: "An SEO software platform built from scratch, automating data pipelines and adding ML-powered features for an SEO agency.", path: "/projects/macaroni" });
 
 const MacaroniProject = () => {
   return (

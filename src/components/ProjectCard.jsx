@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router'
 import { Calendar } from 'lucide-react'
 
-const ProjectCard = ({ 
+const ProjectCard = ({
     title,
     description,
     link,
@@ -10,36 +11,38 @@ const ProjectCard = ({
     image,
     transparent = false
 }) => {
-    const linkTarget = link?.startsWith('http') ? '_blank' : undefined;
-    const linkRel = link?.startsWith('http') ? 'noopener noreferrer' : undefined;
+    const isExternal = link?.startsWith('http');
+    const linkTarget = isExternal ? '_blank' : undefined;
+    const linkRel = isExternal ? 'noopener noreferrer' : undefined;
+
+    const LinkWrapper = ({ children, className }) => {
+        if (isExternal) {
+            return <a href={link} target={linkTarget} rel={linkRel} className={className}>{children}</a>;
+        }
+        return <Link to={link} className={className}>{children}</Link>;
+    };
+
     return (
         <div className="bg-blue-50 dark:bg-gray-600 shadow rounded-lg p-4 flex flex-col justify-between h-full">
             <div>
                 <div className="flex items-center mb-4">
                     {/* Logo */}
                     <div className="w-20 h-20 flex-shrink-0 mr-4">
-                        <a 
-                            href={link} 
-                            target={linkTarget}
-                            rel={linkRel}
-                        >
-                            <img 
-                                src={image} 
+                        <LinkWrapper>
+                            <img
+                                src={image}
                                 alt={title}
-                                className={`w-full h-full bg-white ${transparent ? '' : 'object-contain rounded-lg shadow-md'}`} 
+                                loading="lazy"
+                                className={`w-full h-full bg-white ${transparent ? '' : 'object-contain rounded-lg shadow-md'}`}
                             />
-                        </a>
+                        </LinkWrapper>
                     </div>
                     <div>
-                        <a 
-                            href={link} 
-                            target={linkTarget}
-                            rel={linkRel}
-                        >
+                        <LinkWrapper>
                             <h2 className="text-xl font-bold text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-300 hover:underline mb-1">
                                 {title}
                             </h2>
-                        </a>
+                        </LinkWrapper>
                         { date && (
                             <div className="flex items-center text-gray-700 dark:text-white mb-2">
                                 <Calendar className="h-4 w-4 mr-1" />

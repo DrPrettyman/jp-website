@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
 import { Search, BookOpen } from 'lucide-react'
+import { generateMeta } from '../utils/seo'
+
+export const meta = () => generateMeta({ title: "Blog", description: "Articles on data science, React, and software development.", path: "/blog" });
 
 const Blog = () => {
   const [posts, setPosts] = useState([])

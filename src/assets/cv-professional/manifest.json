@@ -5,7 +5,7 @@
       "duration": "Jan 2025 — Present",
       "headline": "Freelance data science, ML deployment, and full-stack development",
       "address": "/freelance",
-      "logo": "/company_logo/freelance.png",
+      "logo": "/company_logo/freelance.webp",
       "details": "freelance",
       "entryId": "freelance"
     },
@@ -15,7 +15,7 @@
       "address": "https://www.macaroni.works",
       "duration": "Nov 2023 — Dec 2024 (1 year)",
       "headline": "Building innovative data science solutions for SEO productivity",
-      "logo": "/company_logo/macaroni.jpeg",
+      "logo": "/company_logo/macaroni.webp",
       "entryId": "macaroni"
     },
     {
@@ -24,7 +24,7 @@
       "duration": "Nov 2021 — Dec 2024 (3 years)",
       "headline": "Revolutionizing SEO data engineering with innovative software",
       "address": "https://blinkseo.co.uk",
-      "logo": "/company_logo/blink.jpeg",
+      "logo": "/company_logo/blink.webp",
       "entryId": "blink"
     },
     {
@@ -33,7 +33,7 @@
       "duration": "Sep 2015 — Feb 2021 (5½ years)",
       "headline": "Ph.D. research industrial collaboration: Tipping points in dynamical systems",
       "address": "https://www.npl.co.uk",
-      "logo": "/company_logo/npl.jpeg",
+      "logo": "/company_logo/npl.webp",
       "entryId": "npl"
     },
     {
@@ -42,7 +42,7 @@
       "duration": "Sep 2017 — Jul 2019 (2 years)",
       "address": "https://www.shu.ac.uk",
       "headline": "Teaching Mathematics and Computer Science at Undergraduate and Masters level",
-      "logo": "/company_logo/shu.jpeg",
+      "logo": "/company_logo/shu.webp",
       "entryId": "shu"
     },
     {
@@ -51,7 +51,7 @@
       "duration": "Jun — Aug 2017 (3 month internship)",
       "address": "https://www.metoffice.gov.uk/research/foundation/informatics-lab/index",
       "headline": "Creating a solution for the integration of amateur weather data",
-      "logo": "/company_logo/met_office.jpeg",
+      "logo": "/company_logo/met_office.webp",
       "entryId": "met-office"
     },
     {
@@ -61,7 +61,7 @@
       "address": "https://www.reading.ac.uk",
       "headline": "Supporting undergraduate mathematics and computing courses during MRes",
       "details": "reading",
-      "logo": "/company_logo/reading_square.png",
+      "logo": "/company_logo/reading_square.webp",
       "entryId": "reading"
     },
     {
@@ -71,7 +71,7 @@
       "address": "https://www.bristol.ac.uk",
       "headline": "PGCE in Secondary Mathematics with placements in state and private schools.",
       "details": "bristol",
-      "logo": "/company_logo/bristol.png",
+      "logo": "/company_logo/bristol.webp",
       "entryId": "bristol"
     }
 ]

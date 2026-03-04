@@ -89,10 +89,11 @@ const CVEntry = ({
                                 rel="noopener noreferrer" 
                                 className="text-black dark:text-white font-bold hover:underline w-full h-full flex items-center justify-center"
                             >
-                                <img 
-                                    src={logo} 
-                                    alt={`${company} Logo`} 
-                                    className={`${transparent ? 'w-[90%] h-[90%]' : 'w-full h-full object-contain rounded-lg shadow-md'}`} 
+                                <img
+                                    src={logo}
+                                    alt={`${company} Logo`}
+                                    loading="lazy"
+                                    className={`${transparent ? 'w-[90%] h-[90%]' : 'w-full h-full object-contain rounded-lg shadow-md'}`}
                                 />
                             </a>
                         </div>

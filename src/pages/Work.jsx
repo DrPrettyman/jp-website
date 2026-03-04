@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import Layout from '../components/Layout';
 import CVEntry from '../components/CVEntry';
 import ContentBlock from '../components/ContentBlock';
@@ -14,6 +14,9 @@ import { BsDatabaseCheck } from "react-icons/bs";
 import { TbChartScatter3D } from "react-icons/tb";
 import introExperienceHtml from '../assets/cv-professional/intro-experience.html?raw';
 import introTechStackHtml from '../assets/cv-professional/intro-tech-stack.html?raw';
+import { generateMeta } from '../utils/seo';
+
+export const meta = () => generateMeta({ title: "Professional Experience", description: "Data scientist and software developer. Experience at Blink SEO, the National Physical Laboratory, and university teaching.", path: "/professional" });
 
 // Project IDs to display in the Portfolio section
 const portfolioProjectIds = [

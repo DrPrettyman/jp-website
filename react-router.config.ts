@@ -1,0 +1,30 @@
+import type { Config } from "@react-router/dev/config";
+
+export default {
+  appDirectory: "src",
+  ssr: false,
+  prerender: [
+    "/",
+    "/academic",
+    "/professional",
+    "/projects",
+    "/projects/digraph-explorer",
+    "/projects/prettymath",
+    "/projects/wine-exports-viz",
+    "/projects/mastermind",
+    "/projects/fraud-detection",
+    "/projects/jobmaster",
+    "/projects/macaroni",
+    "/projects/early-warning-signals",
+    "/projects/ps-indicator",
+    "/projects/multidim-ews",
+    "/projects/ps-robustness",
+    "/projects/adaptive-mesh",
+    "/projects/steam-market-gap",
+    "/projects/jobsearch-agent",
+    "/blog",
+    "/travels",
+    "/tutor",
+    "/freelance",
+  ],
+} satisfies Config;

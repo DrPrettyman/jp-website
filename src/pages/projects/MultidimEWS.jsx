@@ -1,9 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Grid3X3 } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Multidimensional Early Warning Signals", description: "Research extending early warning signal methods to multivariate dynamical systems.", path: "/projects/multidim-ews" });
 import 'katex/dist/katex.min.css';
-import { BlockMath } from 'react-katex';
+import katex from 'react-katex';
+const { BlockMath } = katex;
 
 const Figure = ({ src, caption, alt }) => (
   <figure className="my-6">
@@ -185,7 +189,7 @@ end`}
           </p>
 
           <Figure
-            src="/images/phd/spiral.png"
+            src="/images/phd/spiral.webp"
             caption="A Hopf bifurcation in the Van der Pol oscillator. The stable equilibrium becomes unstable and gives birth to a limit cycle as the control parameter crosses zero."
           />
 
@@ -198,7 +202,7 @@ end`}
           </p>
 
           <Figure
-            src="/images/phd/one_and_many_timeseries.png"
+            src="/images/phd/one_and_many_timeseries.webp"
             caption="Sea-level pressure time series from multiple weather stations in a region during a hurricane event."
           />
 

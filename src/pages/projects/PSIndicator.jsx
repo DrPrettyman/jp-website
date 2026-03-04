@@ -1,9 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Activity } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Power Spectrum Indicator", description: "Research on using the power spectrum as a novel early warning indicator for critical transitions.", path: "/projects/ps-indicator" });
 import 'katex/dist/katex.min.css';
-import { BlockMath } from 'react-katex';
+import katex from 'react-katex';
+const { BlockMath } = katex;
 
 const Figure = ({ src, caption, alt }) => (
   <figure className="my-6">
@@ -119,7 +123,7 @@ const PSIndicatorProject = () => {
           </p>
 
           <Figure
-            src="/images/phd/PowerSpectrum.png"
+            src="/images/phd/PowerSpectrum.webp"
             caption="Power spectrum of a time series showing scaling behaviour. The slope on a log-log plot gives the PS exponent β."
           />
 
@@ -182,7 +186,7 @@ end`}
           </p>
 
           <Figure
-            src="/images/phd/changing_potential.png"
+            src="/images/phd/changing_potential.webp"
             caption="The changing shape of a potential well as a system approaches a bifurcation. The stable equilibrium becomes shallower until it disappears at the critical point."
           />
 
@@ -206,7 +210,7 @@ end`}
           </div>
 
           <Figure
-            src="/images/phd/Katrina.png"
+            src="/images/phd/Katrina.webp"
             caption="Sea-level pressure data from weather stations during Hurricane Katrina's approach. The sudden pressure drop is the 'tipping point' we aim to predict."
           />
 

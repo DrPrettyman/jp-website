@@ -1,7 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Wine } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Wine Trade Data", description: "An interactive data visualization of global wine export routes using UN Comtrade data.", path: "/projects/wine-exports-viz" });
 import { LiaGithub } from "react-icons/lia";
 
 const ComtradeProject = () => {

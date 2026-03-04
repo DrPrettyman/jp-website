@@ -1,9 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ContentBlock from '../../components/ContentBlock';
+import { generateMeta } from '../../utils/seo';
 import { Grid2X2 } from 'lucide-react';
+
+export const meta = () => generateMeta({ title: "Adaptive Mesh Refinement", description: "MRes research on adaptive mesh generation methods using optimal transport for numerical PDEs.", path: "/projects/adaptive-mesh" });
 import 'katex/dist/katex.min.css';
-import { BlockMath } from 'react-katex';
+import katex from 'react-katex';
+const { BlockMath } = katex;
 
 const Figure = ({ src, caption, alt }) => (
   <figure className="my-6">
@@ -69,7 +73,7 @@ const AdaptiveMeshProject = () => {
           </p>
 
           <Figure
-            src="/images/mres/densityfunction.png"
+            src="/images/mres/densityfunction.webp"
             caption="Centroidal Voronoi Tessellation: random point distribution (left) vs optimised mesh distribution concentrated around a density function (right)."
           />
 

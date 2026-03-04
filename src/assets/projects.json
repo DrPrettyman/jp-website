@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "id": "private-label",
+      "title": "Private Label Opportunity Engine",
+      "date": "2026",
+      "tags": ["Python", "Data Pipeline", "ML", "Web Scraping", "Streamlit"],
+      "description": "Analyses 2.57M EU food products to identify where retailers can launch health-positioned private label products into underserved nutritional gaps.",
+      "link": "/projects/private-label",
+      "image": "/images/private-label/opportunity_scores_breakdown.webp"
+    },
+    {
       "id": "steam-market-gap",
       "title": "Steam Market Gap Analysis",
       "date": "2026",

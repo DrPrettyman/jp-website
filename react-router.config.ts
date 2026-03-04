@@ -22,6 +22,7 @@ export default {
     "/projects/adaptive-mesh",
     "/projects/steam-market-gap",
     "/projects/jobsearch-agent",
+    "/projects/private-label",
     "/blog",
     "/travels",
     "/tutor",

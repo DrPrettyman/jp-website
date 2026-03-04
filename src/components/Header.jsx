@@ -6,7 +6,7 @@ import { PiMathOperationsBold } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router'
 import DarkModeToggle from './DarkModeToggle'
 
 const Header = ({ fullWidth = false }) => {

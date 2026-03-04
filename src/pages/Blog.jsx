@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
 import { Search, BookOpen } from 'lucide-react'

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router'
 import Layout from '../components/Layout'
 import BlogPost from '../components/BlogPost'
 import { ArrowLeft, Calendar, User } from 'lucide-react'

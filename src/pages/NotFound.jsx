@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { generateMeta } from '../utils/seo'
 
 export const meta = () => generateMeta({ title: "404 — Page Not Found", description: "This page does not exist." });

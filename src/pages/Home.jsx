@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import Layout from '../components/Layout'
 import { generateMeta } from '../utils/seo'
 

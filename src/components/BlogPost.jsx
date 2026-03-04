@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { Calendar } from 'lucide-react'
 
 const BlogPost = ({ post, isPreview = false }) => {

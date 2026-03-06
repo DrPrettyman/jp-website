@@ -118,7 +118,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="bg-gray-300/70 dark:bg-gray-800 rounded-lg px-8 py-6 mx-2 sm:mx-0">
+          {/* <div className="bg-gray-300/70 dark:bg-gray-800 rounded-lg px-8 py-6 mx-2 sm:mx-0">
             <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
               <Smile className="h-6 w-6 mr-2" />Bio
             </div>
@@ -131,7 +131,21 @@ const Home = () => {
                 We might also head off in our campervan (Uncle Vanya) to explore Andalucía and beyond. 
               </p>
               <p>
-                Before settling in Spain I travelled the world with my family in the campervan whilst working remotely.
+                Before settling in Spain I traveled the world with my family in the campervan whilst working remotely.
+              </p>
+            </div>
+          </div> */}
+
+          <div className="bg-gray-300/70 dark:bg-gray-800 rounded-lg px-8 py-6 mx-2 sm:mx-0">
+            <div className="text-lg font-bold text-gray-600 dark:text-white mb-4 flex items-center">
+              <Smile className="h-6 w-6 mr-2" />Bio
+            </div>
+            <div className="text-xs sm:text-base text-gray-600 dark:text-white text-justify">
+              <p className='mb-2'>
+                I spend most of my time writing code, doing DIY projects and playing old Nintendo games with my children.
+              </p>
+              <p>
+                Between 2019 and 2023 I traveled the world with my family in our campervan whilst working remotely.
               </p>
             </div>
           </div>

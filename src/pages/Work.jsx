@@ -20,6 +20,9 @@ export const meta = () => generateMeta({ title: "Professional Experience", descr
 
 // Project IDs to display in the Portfolio section
 const portfolioProjectIds = [
+  'eu-food-regulation',
+  'private-label',
+  'steam-market-gap',
   'jobsearch-agent',
   'fraud-detection',
   'wine-exports-viz',

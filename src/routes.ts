@@ -22,7 +22,7 @@ export default [
   route("/projects/private-label", "./pages/projects/PrivateLabel.jsx"),
   route("/projects/eu-food-regulation", "./pages/projects/EUFoodRegulation.jsx"),
   route("/projects/pl-dashboard", "./pages/redirects/PLDashboardRedirect.jsx"),
-  route("/eu-food-regulation-intelligence", "./pages/redirects/EUFoodRegRedirect.jsx"),
+  route("/eu-food-regulation-app", "./pages/redirects/EUFoodRegRedirect.jsx"),
   route("/blog", "./pages/Blog.jsx"),
   route("/blog/:id", "./pages/BlogPost.jsx"),
   route("/blog/tag/:tag", "./pages/Blog.jsx", { id: "blog-by-tag" }),

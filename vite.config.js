@@ -22,6 +22,7 @@ const staticRoutes = [
   '/projects/steam-market-gap',
   '/projects/jobsearch-agent',
   '/projects/private-label',
+  '/projects/eu-food-regulation',
   '/blog',
   '/travels',
   '/travel/vanlife',

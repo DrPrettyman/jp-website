@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "id": "eu-food-regulation",
+      "title": "EU Food Regulation Intelligence",
+      "date": "2026",
+      "tags": ["Python", "RAG", "LLM", "NLP", "FastAPI", "Streamlit"],
+      "description": "RAG pipeline that parses 243 EU food regulations, routes products to applicable laws deterministically, and extracts compliance checklists with zero hallucinations.",
+      "link": "/projects/eu-food-regulation",
+      "image": "/images/eu-food-regulation/crossref_network.webp"
+    },
+    {
       "id": "private-label",
       "title": "Private Label Opportunity Engine",
       "date": "2026",

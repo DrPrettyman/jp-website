@@ -23,6 +23,7 @@ export default {
     "/projects/steam-market-gap",
     "/projects/jobsearch-agent",
     "/projects/private-label",
+    "/projects/eu-food-regulation",
     "/blog",
     "/travels",
     "/tutor",

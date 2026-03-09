@@ -31,7 +31,7 @@ I am currently taking on freelance projects but am seeking a permanent remote da
 
 ## Professional Experience
 
-### Data Freelancer — [joshuaprettyman.com/freelance](https://joshuaprettyman.com/freelance)
+### Data Freelancer — [joshuaprettyman.com/freelance](
 *Jan. 2025 to Present*
 
 Delivered projects including: Model Deployment, Dashboard Creation (Tableau), Pipeline Automation (dbt, Databricks), Database Setup (AWS), Data Engineering and Data Analysis.

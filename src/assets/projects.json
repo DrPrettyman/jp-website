@@ -51,7 +51,7 @@
       "date": "2025",
       "tags": ["Plotly", "Tableau", "Python", "DataViz", "WebScraping"],
       "description": "A data viz project to create an interactive world map showing wine imports and exports. Can also map other traded commodities using the UN's Comtrade data.",
-      "link": "projects/wine-exports-viz",
+      "link": "/projects/wine-exports-viz",
       "image": "/images/comtrade-screenshot.webp"
     },
     {

@@ -31,5 +31,5 @@ export default [
   route("/cv", "./pages/redirects/CVRedirect.jsx"),
   route("/tutor", "./pages/Tutor.jsx"),
   route("/freelance", "./pages/Freelance.jsx"),
-  route("*?", "./pages/NotFound.jsx"),
+  route("*", "./pages/NotFound.jsx"),
 ] satisfies RouteConfig;

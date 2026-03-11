@@ -24,6 +24,7 @@ export default {
     "/projects/jobsearch-agent",
     "/projects/private-label",
     "/projects/eu-food-regulation",
+    "/projects/private-scottish-tours",
     "/blog",
     "/travels",
     "/tutor",

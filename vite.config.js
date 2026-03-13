@@ -23,6 +23,7 @@ const staticRoutes = [
   '/projects/jobsearch-agent',
   '/projects/private-label',
   '/projects/eu-food-regulation',
+  '/projects/private-scottish-tours',
   '/blog',
   '/travels',
   '/travel/vanlife',

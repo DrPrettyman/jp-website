@@ -21,6 +21,7 @@ export default [
   route("/projects/steam-market-gap", "./pages/projects/SteamMarketGap.jsx"),
   route("/projects/private-label", "./pages/projects/PrivateLabel.jsx"),
   route("/projects/eu-food-regulation", "./pages/projects/EUFoodRegulation.jsx"),
+  route("/projects/private-scottish-tour", "./pages/projects/PrivateScottishTour.jsx"),
   route("/projects/pl-dashboard", "./pages/redirects/PLDashboardRedirect.jsx"),
   route("/eu-food-regulation-app", "./pages/redirects/EUFoodRegRedirect.jsx"),
   route("/blog", "./pages/Blog.jsx"),

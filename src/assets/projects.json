@@ -1,12 +1,12 @@
 {
   "projects": [
     {
-      "id": "private-scottish-tours",
-      "title": "Private Scottish Tours Website",
+      "id": "private-scottish-tour",
+      "title": "Private Scottish Tour Website",
       "date": "2025",
       "tags": ["Next.js", "TypeScript", "Sanity", "SEO", "Resend"],
       "description": "A content-managed tour website for a friend's private guiding business. Built with Next.js and Sanity, with structured data SEO, location-based content strategy, and Resend email booking.",
-      "link": "/projects/private-scottish-tours",
+      "link": "/projects/private-scottish-tour",
       "image": "/images/scottish-tour-homepage.webp"
     },
     {

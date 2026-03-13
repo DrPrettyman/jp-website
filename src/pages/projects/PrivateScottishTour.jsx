@@ -4,7 +4,7 @@ import ContentBlock from '../../components/ContentBlock';
 import { generateMeta } from '../../utils/seo';
 import { Globe } from 'lucide-react';
 
-export const meta = () => generateMeta({ title: "Private Scottish Tours Website", description: "A content-managed tour website built with Next.js and Sanity, with structured data SEO, location-based content strategy, and Resend email booking.", path: "/projects/private-scottish-tours" });
+export const meta = () => generateMeta({ title: "Private Scottish Tour Website", description: "A content-managed tour website built with Next.js and Sanity, with structured data SEO, location-based content strategy, and Resend email booking.", path: "/projects/private-scottish-tour" });
 
 const CodeBlock = ({ children, title }) => (
   <div className="my-6 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -19,10 +19,10 @@ const CodeBlock = ({ children, title }) => (
   </div>
 );
 
-const PrivateScottishToursProject = () => {
+const PrivateScottishTourProject = () => {
   return (
     <Layout>
-      <ContentBlock title="Private Scottish Tours" icon={Globe} maxWidth='4xl'>
+      <ContentBlock title="Private Scottish Tour" icon={Globe} maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">
 
@@ -36,7 +36,7 @@ const PrivateScottishToursProject = () => {
             </p>
 
             <p className="mb-8 text-justify">
-              The harder problem was discoverability. People searching for private Scottish tours search in a lot of
+              The harder problem was discoverability. People searching for a private Scottish tour search in a lot of
               different ways: by region, by landmark, by experience type. A site with a single "destinations" page
               wasn't going to cut it. The content strategy needed to match how people actually search.
             </p>
@@ -44,7 +44,7 @@ const PrivateScottishToursProject = () => {
             <div className="my-6 flex justify-center">
               <img
                 src="/images/scottish-tour-homepage.webp"
-                alt="Private Scottish Tours homepage"
+                alt="Private Scottish Tour homepage"
                 className="rounded-lg max-w-2xl w-full"
               />
             </div>
@@ -287,4 +287,4 @@ const PrivateScottishToursProject = () => {
   )
 }
 
-export default PrivateScottishToursProject
+export default PrivateScottishTourProject

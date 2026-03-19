@@ -57,6 +57,8 @@ Read the following to get an idea of my professional and academic background:
 - Lead with INDUSTRY experience. Academic background supports but doesn't lead, unless the research is directly relevant to the role.
 - Do not list academic publications. GOOD: "During my PhD I researched novel methods for detecting..." BAD: "During my PhD I researched novel methods for detecting... which was published in Journal Of Science and Science Letters"
 - Customize each letter for the specific role. Reference the company, role, and recent news or challenges. Don't just swap out the company name.
+- Pick 3 strong connections between my background and the job requirements and concentrate on these. 
+- Do not ignore my most recent experience (freelancing data work). If talking about past experience at Blink SEO / Macaroni, this looks like a career gap. Mention freelancing to fill the gap.It could just be a token mention: "Over the past year I've completed a number of projects as a freelancer: Pipeline automation; LLM integration; Database set-up and Dashboards".
 
 ### Tone
 - Sound natural and friendly, like you're talking to a colleague. Not corporate, not salesy, not like a LinkedIn post.

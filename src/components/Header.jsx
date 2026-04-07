@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Menu, GraduationCap, Briefcase, Home, FolderGit2, BookOpen, Map, LayoutDashboard, ChevronDown } from 'lucide-react'
 
 import { TbMail, TbFileSmile, TbCalendarMonthFilled } from "react-icons/tb";
-import { PiMathOperationsBold } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 
@@ -133,7 +132,7 @@ const Header = ({ fullWidth = false }) => {
                 aria-expanded={moreMenuOpen}
                 aria-haspopup="true"
                 className={`px-4 py-2 rounded-lg ${
-                  ['/projects', '/freelance', '/tutor', '/travels'].some(p => isActive(p))
+                  ['/projects', '/freelance', '/travels'].some(p => isActive(p))
                     ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
                     : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
                 }`}
@@ -175,21 +174,6 @@ const Header = ({ fullWidth = false }) => {
                       <div className="flex items-center justify-end space-x-1">
                         <LayoutDashboard className="h-4 w-4" />
                         <span className="whitespace-nowrap">Freelance</span>
-                      </div>
-                    </Link>
-                    <Link
-                      to="/tutor"
-                      className={`text-right px-4 py-2 rounded-lg ${
-                        isActive('/tutor')
-                          ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                      }`}
-                      aria-current={isActive('/tutor') ? 'page' : undefined}
-                      onClick={() => setMoreMenuOpen(false)}
-                    >
-                      <div className="flex items-center justify-end space-x-1">
-                        <PiMathOperationsBold className="h-4 w-4" />
-                        <span className="whitespace-nowrap">Private Tuition</span>
                       </div>
                     </Link>
                     <Link
@@ -307,22 +291,6 @@ const Header = ({ fullWidth = false }) => {
                   <div className="flex items-center justify-end space-x-1">
                     <LayoutDashboard className="h-4 w-4" />
                     <span className="whitespace-nowrap">Freelance</span>
-                  </div>
-                </Link>
-
-                <Link
-                  to="/tutor"
-                  className={`text-right px-4 py-2 rounded-lg ${
-                    isActive('/tutor')
-                      ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                  }`}
-                  aria-current={isActive('/tutor') ? 'page' : undefined}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <div className="flex items-center justify-end space-x-1">
-                    <PiMathOperationsBold className="h-4 w-4" />
-                    <span>Private Tuition</span>
                   </div>
                 </Link>
 

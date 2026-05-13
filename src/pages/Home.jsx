@@ -75,7 +75,7 @@ const Home = () => {
               <p className='mb-2'>
                 I do data and dev freelance work for global clients. I've worked with SME owners and startups to create data pipelines, ML models, LLM integrations, dashboards and websites. 
               </p>
-              <p>
+              <p className='mb-2'>
                 At <b>Blink SEO</b> I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
                 This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: <i>Macaroni Software</i>.
               </p>

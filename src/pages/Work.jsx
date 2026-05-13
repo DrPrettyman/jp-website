@@ -13,6 +13,7 @@ import { PiGitPullRequest, PiPresentationChart } from "react-icons/pi";
 import { BsDatabaseCheck } from "react-icons/bs";
 import { TbChartScatter3D } from "react-icons/tb";
 import introExperienceHtml from '../assets/cv-professional/intro-experience.html?raw';
+import workPhilosophyHtml from '../assets/cv-professional/work-philosophy.html?raw';
 import introTechStackHtml from '../assets/cv-professional/intro-tech-stack.html?raw';
 import { generateMeta } from '../utils/seo';
 
@@ -134,6 +135,11 @@ const Work = () => {
               />
             ))}
           </div>
+      </ContentBlock>
+
+      {/* Tech Stack */}
+      <ContentBlock title="Notes" icon={FileTerminal} id="tech-stack">
+          <div dangerouslySetInnerHTML={{ __html: workPhilosophyHtml }} />
       </ContentBlock>
     </Layout>
   )

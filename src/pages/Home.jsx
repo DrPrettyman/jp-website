@@ -56,7 +56,7 @@ const Home = () => {
                 </p>
                 <p>
                   I am a data scientist with software development experience and a Ph.D. in mathematics. 
-                  Please have a look around and feel free to reach out to me if you're interested in working together.
+                  Please have a look around and feel free to <Link to="/freelance" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">reach out to me</Link> if you're interested in working together.
                 </p>
               </div>
             </div>
@@ -73,11 +73,14 @@ const Home = () => {
             </div>
             <div className="text-xs sm:text-base text-gray-600 dark:text-white text-justify">
               <p className='mb-2'>
-                In my most recent role at <b>Blink SEO</b> I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
+                I do data and dev freelance work for global clients. I've worked with SME owners and startups to create data pipelines, ML models, LLM integrations, dashboards and websites. 
+              </p>
+              <p>
+                At <b>Blink SEO</b> I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
                 This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: <i>Macaroni Software</i>.
               </p>
               <p>
-                I also have experience as a researcher at <b>The National Physical Laboratory</b> and teaching Mathemetics at all levels of university: tutoring at <b>The University of Reading</b>, and as an Associate Lecturer at <b>Sheffield Hallam University</b>. 
+                I also have experience as a researcher at <b>The National Physical Laboratory</b> and teaching Mathematics at all levels of university: tutoring at <b>The University of Reading</b>, and as an Associate Lecturer at <b>Sheffield Hallam University</b>. 
                 Details are found on my <Link to="/professional" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">Professional CV page</Link>.
               </p>
             </div>

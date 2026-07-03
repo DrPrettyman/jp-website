@@ -7,13 +7,14 @@ import TechSkill from '../components/TechSkill';
 import ProjectCard from '../components/ProjectCard';
 import professionalData from '../assets/cv-professional/manifest.json';
 import techSkillsData from '../assets/techSkills.json';
+import workPhilosophyData from '../assets/workPhilosophy.json';
 import projectsData from '../assets/projects.json';
 import { Briefcase, FileTerminal, FolderGit2 } from 'lucide-react';
 import { PiGitPullRequest, PiPresentationChart } from "react-icons/pi";
-import { BsDatabaseCheck } from "react-icons/bs";
+import { BsKeyboard, BsListCheck, BsDatabaseCheck } from "react-icons/bs";
 import { TbChartScatter3D } from "react-icons/tb";
 import introExperienceHtml from '../assets/cv-professional/intro-experience.html?raw';
-import workPhilosophyHtml from '../assets/cv-professional/work-philosophy.html?raw';
+import introWorkPhilosophyHtml from '../assets/cv-professional/intro-work-philosophy.html?raw';
 import introTechStackHtml from '../assets/cv-professional/intro-tech-stack.html?raw';
 import { generateMeta } from '../utils/seo';
 
@@ -117,7 +118,7 @@ const Work = () => {
       </ContentBlock>
 
       {/* Tech Stack */}
-      <ContentBlock title="Technologies and Skills" icon={FileTerminal} id="tech-stack">
+      <ContentBlock title="Technologies and Skills" icon={BsKeyboard} id="tech-stack">
 
           {/* Intro text */}
           <div dangerouslySetInnerHTML={{ __html: introTechStackHtml }} />
@@ -137,9 +138,25 @@ const Work = () => {
           </div>
       </ContentBlock>
 
-      {/* Tech Stack */}
-      <ContentBlock title="Notes" icon={FileTerminal} id="tech-stack">
-          <div dangerouslySetInnerHTML={{ __html: workPhilosophyHtml }} />
+      {/* Work Philosophy */}
+      <ContentBlock title="Notes" icon={BsListCheck} id="tech-stack">
+
+        {/* Intro text */}
+          <div dangerouslySetInnerHTML={{ __html: introWorkPhilosophyHtml }} />
+
+          {/* Grid of tech skills */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {workPhilosophyData.map((skill, index) => (
+              <TechSkill
+                key={index}
+                title={skill.title}
+                icon={iconComponents[skill.icon]}
+                techIcons={skill.techIcons}
+                firstParagraph={skill.firstParagraph}
+                text={skill.text}
+              />
+            ))}
+          </div>
       </ContentBlock>
     </Layout>
   )

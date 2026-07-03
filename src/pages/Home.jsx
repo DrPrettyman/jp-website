@@ -77,7 +77,7 @@ const Home = () => {
               </p>
               <p className='mb-2'>
                 At <b>Blink SEO</b> I built the company's internal software from scratch, increasing productivity by 20× by automating all data processing and generating data-lead recommendations through machine learning. 
-                This software improved the SEO process so much that we marketed it as a SaaS app to other agencies: <i>Macaroni Software</i>.
+                This software improved the SEO process so much that we span it out as a SaaS product.
               </p>
               <p>
                 I also have experience as a researcher at <b>The National Physical Laboratory</b> and teaching Mathematics at all levels of university: tutoring at <b>The University of Reading</b>, and as an Associate Lecturer at <b>Sheffield Hallam University</b>. 

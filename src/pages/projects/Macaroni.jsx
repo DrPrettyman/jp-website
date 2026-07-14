@@ -4,12 +4,12 @@ import ContentBlock from '../../components/ContentBlock';
 import { generateMeta } from '../../utils/seo';
 import { ChefHat } from 'lucide-react';
 
-export const meta = () => generateMeta({ title: "Macaroni", description: "An SEO software platform built from scratch, automating data pipelines and adding ML-powered features for an SEO agency.", path: "/projects/macaroni" });
+export const meta = () => generateMeta({ title: "Macalytics", description: "An SEO software platform built from scratch, automating data pipelines and adding ML-powered features for an SEO agency.", path: "/projects/macaroni" });
 
 const MacaroniProject = () => {
   return (
     <Layout>
-      <ContentBlock title="Macaroni" icon={ChefHat} maxWidth='4xl'>
+      <ContentBlock title="Macalytics" icon={ChefHat} maxWidth='4xl'>
 
           <div className="text-gray-700 dark:text-white">
 
@@ -38,7 +38,7 @@ const MacaroniProject = () => {
             <p className="mb-8 text-justify">
               The result was a <strong>20x productivity increase</strong>. Campaigns that used to take a year
               could now be <a href="https://www.linkedin.com/posts/sam-wright-17b6ab6_shopify-seo-activity-7170336529146441729-JGDn" className="text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-500">delivered in weeks</a>.
-              Management saw the potential and decided to spin it out as a SaaS product: Macaroni Software.
+              Management saw the potential and decided to spin out Macalytics as a SaaS product, generating funding for a new startup: Macaroni Software.
             </p>
 
             <h2 className="text-2xl mb-4 font-bold">The Stack</h2>
@@ -114,7 +114,7 @@ const MacaroniProject = () => {
             <h2 className="text-2xl mb-4 font-bold">Scaling Up</h2>
 
             <p className="mb-4 text-justify">
-              When Macaroni became a product, we hired a data engineer, frontend developer, and product manager.
+              When Macalytics became a product, we hired a data engineer, frontend developer, and product manager.
               I onboarded the new team and handed over parts of the codebase, freeing up time to focus on the
               ML features. We narrowed the product scope to Shopify stores, which let us integrate directly
               with the Shopify GraphQL API for better data quality and real-time catalogue updates.

@@ -26,7 +26,7 @@
     "title": "Software Development",
     "icon": "PiGitPullRequest",
     "techIcons": ["Python", "Bash", "JavaScript", "Linux", "GoogleCloud", "GCP-ComputeEngine", "GCP-Endpoints", "PostgresSQL"],
-    "firstParagraph": "I built the <i>Macaroni Software</i> backend in <b>Python</b> running on a <b>GCP Compute Engine</b> virtual machine. This connected to client data sources via APIs, handled Data Cleaning and ML tasks, integrated with <b>BigQuery</b> and communicated with the front-end.",
+    "firstParagraph": "I built the <i>Macalytics</i> backend in <b>Python</b> running on a <b>GCP Compute Engine</b> virtual machine. This connected to client data sources via APIs, handled Data Cleaning and ML tasks, integrated with <b>BigQuery</b> and communicated with the front-end.",
     "text": [
       { "content": "Set up <b>Slack</b> notifications from the backend system to alert devs (me) of tech problems and agency staff of clients' statuses." },
       { "content": "Created a job-queue system (<b>PostgreSQL</b>) for running back-end processes on demand and on schedules." },
@@ -43,7 +43,7 @@
       { "content": "Visualisations created with <b>Matplotlib</b> and <b>Plotly</b>: from academic papers to investor reports." },
       { "content": "<b>Looker Studio</b> dashboards as prototypes for quick feedback and integration." },
       {
-        "content": "I created the <i>Macaroni Software</i> frontend in <b>Retool</b> (<b>JavaScript</b>) incorporating multiple dashboards:",
+        "content": "I created the <i>Macalytics</i> frontend in <b>Retool</b> (<b>JavaScript</b>) incorporating multiple dashboards:",
         "children": [
           "Client-facing dashboards to replace time-consuming monthly PDF reports, saving hours per client per month,",
           "Agency-facing dashboards for data exploration and the ability to implement business descisions with a click, dramatically increasing productivity."

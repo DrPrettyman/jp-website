@@ -74,7 +74,7 @@
     },
     {
       "id": "macaroni",
-      "title": "Macaroni",
+      "title": "Macalytics",
       "date": "2023",
       "tags": ["Python", "SQL", "ML", "GCP"],
       "description": "SaaS product for SEO productivity incorporating ML features. I developed the backend (Python), database (BigQuery) and prototype frontend (Retool) whilst working at Blink SEO.",

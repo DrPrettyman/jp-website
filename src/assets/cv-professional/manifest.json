@@ -1,9 +1,9 @@
 [
     {
-      "title": "Data Freelancer",
-      "company": "Self-employed",
+      "title": "Data Consultant & Architect",
+      "company": "freelance",
       "duration": "Jan 2025 — Present",
-      "headline": "Freelance data science, ML deployment, and full-stack development",
+      "headline": "architecting scalable pipelines and ML infrastructure to drive business goals",
       "address": "/freelance",
       "logo": "/company_logo/freelance.webp",
       "details": "freelance",
@@ -28,7 +28,7 @@
       "entryId": "blink"
     },
     {
-      "title": "Data Science Researcher",
+      "title": "Researcher Scientist",
       "company": "National Physical Laboratory",
       "duration": "Sep 2015 — Feb 2021 (5½ years)",
       "headline": "Ph.D. research industrial collaboration: Tipping points in dynamical systems",

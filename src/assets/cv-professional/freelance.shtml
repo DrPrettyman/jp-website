@@ -8,20 +8,20 @@
 <body>
 
     <div style="margin-bottom: 20px" class="justified">
-        <p>
+        <p style="margin-bottom: 15px"> 
             I build production ML systems, data pipelines, and full-stack applications
             that solve real business problems. Whether you need a machine learning model
             deployed, a data pipeline automated, or a dashboard that actually gets used,
             I can help.
         </p>
-        <p>
+        <p style="margin-bottom: 15px">
             I work closely with clients to unpick their requirements and learn their processes 
             so I can present a prioritised plan of action, which I then implement with a continuous 
             feedback cycle. I always provide documentation and test suites for the work I do. 
             There is no point building something great if it can't be updated 
             or debugged in the future.
         </p>
-        <p>
+        <p style="margin-bottom: 15px">
             I know that different clients prefer different levels of communication. 
             Some like it short and snappy with a couple of bullet points addressing "how will this help
             my business". Others want lots of technical detail. Some just want an update at the end of 

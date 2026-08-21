@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "id": "eclipse",
+      "title": "EclipsePy",
+      "date": "2026",
+      "tags": ["Python", "Plotly", "Dashboard", "Data Viz", "Science", "Astronomy"],
+      "description": "A nice, simple data-viz project for finding forthcoming solar eclipses (and their intensities) at a given global location.",
+      "link": "/projects/eclipse",
+      "image": "/images/scottish-tour-homepage.webp"
+    },
+    {
       "id": "private-scottish-tour",
       "title": "Private Scottish Tour Website",
       "date": "2025",

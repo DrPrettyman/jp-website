@@ -11,6 +11,7 @@ export default {
     "/projects/digraph-explorer",
     "/projects/prettymath",
     "/projects/wine-exports-viz",
+    "/projects/eclipse",
     "/projects/mastermind",
     "/projects/fraud-detection",
     "/projects/jobmaster",

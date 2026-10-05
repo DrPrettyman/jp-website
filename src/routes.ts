@@ -8,6 +8,7 @@ export default [
   route("/projects/digraph-explorer", "./pages/projects/DigraphExplorer.jsx"),
   route("/projects/prettymath", "./pages/projects/EducationalGames.jsx"),
   route("/projects/wine-exports-viz", "./pages/projects/Comtrade.jsx"),
+  route("/projects/eclipse", "./pages/projects/Eclipse.jsx"),
   route("/projects/mastermind", "./pages/projects/MastermindGame.jsx"),
   route("/projects/fraud-detection", "./pages/projects/FraudDetection.jsx"),
   route("/projects/jobmaster", "./pages/projects/JobMaster.jsx"),

@@ -69,7 +69,7 @@ const ComtradeProject = () => {
             <h3 className="text-lg mb-4 font-bold">Tableau</h3>
 
             <p className="mb-4 text-justify">
-              Tableau looks great and promisses a lot, but I found it really difficult to get exactly what I wanted. I created a "sheet" with a map of countries coloured according to total exports, and 
+              Tableau looks great and promises a lot, but I found it really difficult to get exactly what I wanted. I created a "sheet" with a map of countries coloured according to total exports, and 
               some buttons to switch to imports. So far so good. Now for the trade routes. After a lot of youtube, google and AI queries, I worked out that these could not be displayed on the same "sheet" as 
               the choropleth (coloured countries) map. So I created another sheet for the trade routes. Another (plain) world map, with just a load of lines. Dropping the two sheets into the same dashboard 
               I was able to set it up so that when I clicked on a country in Map 1, the associated trade routes would display on Map 2. Great. But I want them displayed on the same map! The obvious solution
@@ -131,11 +131,11 @@ const ComtradeProject = () => {
 
             <p className="mb-4 text-justify">
               Once I'd got what I wanted using Plotly I tried asking Claude AI to do it, just to see what it would come up with. Actually very good! I even stole some ideas to go back and improve my own
-              implementation. I just told Claude what data I had and what I wanted to acheive, and it did it. So that left me wondering: what's the point of Tableau in the age of AI?
+              implementation. I just told Claude what data I had and what I wanted to achieve, and it did it. So that left me wondering: what's the point of Tableau in the age of AI?
             </p>
 
             <p className="mb-4 text-justify">
-              I'm never a huge fan of low- and no-code solutions: there is always something you can't acheive and you end up thinking "I could do this myself in Python or JavaScript." But that's because I can, 
+              I'm never a huge fan of low- and no-code solutions: there is always something you can't achieve and you end up thinking "I could do this myself in Python or JavaScript." But that's because I can, 
               and I know what's possible. For non-coders who just have a csv file, things like Looker or Tableau are lifesavers (I presume) and the lack of control is just the price you pay. You can always make 
               suggestions for new features in the next release and hope they listen.
             </p>

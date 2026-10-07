@@ -144,7 +144,7 @@ def resize_image_to_target_size(input_path, output_path, target_size_mb=1.0, qua
         input_path: Path to input image
         output_path: Path to save resized image
         target_size_mb: Target file size in MB (default 1.0)
-        quality: Initial JPEG quality (default 85)
+        quality: Initial WebP quality (default 85)
     """
     
     metadata = get_metadata(input_path)
@@ -169,7 +169,7 @@ def resize_image_to_target_size(input_path, output_path, target_size_mb=1.0, qua
         width, height = img.size
         
         # Save with initial quality and check size
-        img.save(output_path, 'JPEG', quality=quality, optimize=True)
+        img.save(output_path, 'WEBP', quality=quality, method=6)
         current_size = os.path.getsize(output_path)
         
         # If still too large, reduce dimensions
@@ -181,11 +181,11 @@ def resize_image_to_target_size(input_path, output_path, target_size_mb=1.0, qua
                 width = int(width * 0.9)
                 height = int(height * 0.9)
                 img_resized = img.resize((width, height), Image.Resampling.LANCZOS)
-                img_resized.save(output_path, 'JPEG', quality=quality, optimize=True)
+                img_resized.save(output_path, 'WEBP', quality=quality, method=6)
                 current_size = os.path.getsize(output_path)
                 continue
             
-            img.save(output_path, 'JPEG', quality=quality, optimize=True)
+            img.save(output_path, 'WEBP', quality=quality, method=6)
             current_size = os.path.getsize(output_path)
             
         metadata["AspectRatio"] = width / height
@@ -272,7 +272,7 @@ def process_images(folder_name: str):
                 
                 # print(f"found '{_file_name}' in {_d.name}, chapter \"{chapter_data['Title']}")
                 
-                image_output_file = image_path_out.joinpath(f"{chapter_num:0>2}-{photo_num:0>2}-{_file_name}.jpg")
+                image_output_file = image_path_out.joinpath(f"{chapter_num:0>2}-{photo_num:0>2}-{_file_name}.webp")
                 
                 original_size = os.path.getsize(image_file)
                 final_size, metadata = resize_image_to_target_size(

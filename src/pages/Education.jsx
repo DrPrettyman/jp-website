@@ -5,9 +5,11 @@ import Publication from '../components/Publication';
 import ContentBlock from '../components/ContentBlock';
 import educationData from '../assets/cv-academic/manifest.json';
 import publicationsData from '../assets/cv-academic/publications.json';
-import { GraduationCap, BookOpen } from 'lucide-react';
+import presentationsData from '../assets/cv-academic/presentations.json';
+import { GraduationCap, BookOpen, Presentation } from 'lucide-react';
 import introAcademicHtml from '../assets/cv-academic/intro-academic.html?raw';
 import introPublicationsHtml from '../assets/cv-academic/intro-publications.html?raw';
+import introPresentationsHtml from '../assets/cv-academic/intro-presentations.html?raw';
 import { generateMeta } from '../utils/seo';
 
 export const meta = () => generateMeta({ title: "Academic Background", description: "Ph.D. in Mathematics from the University of Reading, MRes from Imperial College London, MA from the University of Edinburgh. Publications and research.", path: "/academic" });
@@ -71,6 +73,37 @@ const Education = () => {
                 data-entry-id={pub.entryId}
                 authors={pub.authors}
                 abstract={pub.abstract}
+              />
+            ))}
+          </div>
+
+      </ContentBlock>
+
+      {/* Conference and seminar presentations */}
+      <ContentBlock title="Conference and seminar presentations" icon={Presentation}>
+
+          {/* Intro text */}
+          <div dangerouslySetInnerHTML={{ __html: introPresentationsHtml }} />
+
+          {/* Presentations section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {presentationsData.map((pres) => (
+              <Publication
+                key={pres.entryId}
+                title={pres.title}
+                journal={pres.journal}
+                link={pres.link}
+                linkLabel={pres.linkLabel}
+                date={pres.date}
+                kind={pres.kind}
+                location={pres.location}
+                poster={pres.poster}
+                abstractLabel={pres.abstractLabel}
+                logo={pres.logo}
+                transparent={pres.transparent}
+                data-entry-id={pres.entryId}
+                authors={pres.authors}
+                abstract={pres.abstract}
               />
             ))}
           </div>

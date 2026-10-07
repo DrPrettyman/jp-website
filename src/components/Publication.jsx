@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import DOMPurify from 'dompurify'
 import PublicationModal from './PublicationModal'
-import { Calendar } from 'lucide-react'
+import { Calendar, MapPin } from 'lucide-react'
 // Import all txt files from the publications directory
 const publications = import.meta.glob('../assets/publications/*.txt');
 
@@ -13,6 +13,11 @@ const Publication = ({
     logo,
     authors,
     abstract,
+    kind,
+    location,
+    poster,
+    abstractLabel = "Read Abstract",
+    linkLabel = "Link to full paper",
     transparent = false,
     'data-entry-id': entryId
 }) => {
@@ -36,35 +41,54 @@ const Publication = ({
                 <div className="flex items-center mb-2">
                     {/* Logo */}
                     <div className="w-20 h-20 flex-shrink-0 dark:bg-gray-100 dark:rounded-lg mr-4 flex items-center justify-center">
-                        <a 
-                            href={link} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="group relative text-black dark:text-white font-bold hover:underline w-full h-full flex items-center justify-center"
-                            >
-                                <img 
-                                    src={logo} 
-                                    alt={`${journal} Logo`} 
-                                    className={`w-[90%] h-[90%] ${transparent ? '' : 'object-contain rounded-lg shadow-md'}`} 
-                                />
-                                <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Link to full paper</span>
-                            </a>
+                        {link ? (
+                            <a 
+                                href={link} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="group relative text-black dark:text-white font-bold hover:underline w-full h-full flex items-center justify-center"
+                                >
+                                    <img 
+                                        src={logo} 
+                                        alt={`${journal} Logo`} 
+                                        className={`w-[90%] h-[90%] ${transparent ? '' : 'object-contain rounded-lg shadow-md'}`} 
+                                    />
+                                    <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden group-hover:block bg-gray-800 dark:bg-gray-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">{linkLabel}</span>
+                                </a>
+                        ) : (
+                            <img 
+                                src={logo} 
+                                alt={`${journal} Logo`} 
+                                className={`w-[90%] h-[90%] ${transparent ? '' : 'object-contain rounded-lg shadow-md'}`} 
+                            />
+                        )}
                     </div>
                     <div>
                         <div className="flex items-center text-gray-900 dark:text-white mb-1">
-                            <a 
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative text-xl font-bold hover:underline">
-                                {journal}
-                                <span className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-gray-800 dark:bg-gray-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">Link to full paper</span>
-                            </a>
+                            {link ? (
+                                <a 
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative text-xl font-bold hover:underline">
+                                    {journal}
+                                    <span className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-gray-800 dark:bg-gray-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">{linkLabel}</span>
+                                </a>
+                            ) : (
+                                <span className="text-xl font-bold">{journal}</span>
+                            )}
                         </div>
-                        <div className="flex items-center text-gray-600 dark:text-white mb-4">
+                        <div className="flex items-center text-gray-600 dark:text-white mb-1">
                             <Calendar className="h-4 w-4 mr-1" />
-                            <span className="text-sm">{date}</span>
+                            <span className="text-sm">{kind ? `${kind}, ${date}` : date}</span>
                         </div>
+                        {location && (
+                            <div className="flex items-center text-gray-600 dark:text-white mb-1">
+                                <MapPin className="h-4 w-4 mr-1" />
+                                <span className="text-sm">{location}</span>
+                            </div>
+                        )}
+                        <div className="mb-3" />
                     </div>
                 </div>
                 <p className="text-gray-800 dark:text-white italic mb-2">
@@ -72,11 +96,20 @@ const Publication = ({
                 </p>
             </div>
             
-            <div className="flex justify-center">
-                <button onClick={handleReadMoreClick} className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 font-semibold">
-                    Read Abstract
-                </button>
-            </div>
+            {(abstract || poster) && (
+                <div className="flex justify-center gap-6">
+                    {abstract && (
+                        <button onClick={handleReadMoreClick} className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 font-semibold">
+                            {abstractLabel}
+                        </button>
+                    )}
+                    {poster && (
+                        <a href={poster} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-500 font-semibold">
+                            View Poster
+                        </a>
+                    )}
+                </div>
+            )}
 
             {isModalOpen && (
                 <PublicationModal 

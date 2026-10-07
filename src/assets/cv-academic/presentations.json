@@ -1,0 +1,99 @@
+[
+    {
+        "title": "A novel scaling indicator of early warning signals helps anticipate tropical cyclones",
+        "journal": "SIAM Conference on Mathematics of Planet Earth",
+        "kind": "Talk",
+        "date": "September 2018",
+        "location": "Philadelphia, USA",
+        "link": "https://meetings.siam.org/sess/dsp_talk.cfm?p=94450",
+        "linkLabel": "Link to abstract",
+        "logo": "/company_logo/siam-logo.webp",
+        "transparent": true,
+        "entryId": "siam-mpe18",
+        "authors": [
+            "J. Prettyman"
+        ],
+        "abstract": "Tipping events have been studied in many climatological and ecological contexts, often modelled by the decay of stable equilibria, or critical modes. It is possible to detect the presence of a critical mode by estimating its decay rate, and indicators of changes in these properties may therefore be used to provide an early warning signal for an impending tipping event. The lag-1 autocorrelation function (ACF(1)) indicator and the detrended fluctuation analysis (DFA) indicator have previously been used in such a way.\n\nWe shall discuss a novel scaling indicator based on the decay rate of the power spectrum, introduced in a recent paper*, and compare this with existing indicators. Besides considering artificial and model data, we shall also demonstrate the possible use of this new method to anticipate impending tropical cyclones using sea-level pressure data. In this case, we see that the new method appears to offer an improvement over the ACF(1) and DFA indicators.\n\n* J. Prettyman, et al., submitted to Europhysics Letters."
+    },
+    {
+        "title": "A novel scaling indicator of early warning signals helps anticipate tropical cyclones",
+        "journal": "EGU General Assembly",
+        "kind": "Poster",
+        "date": "April 2018",
+        "location": "Vienna, Austria",
+        "link": "https://meetingorganizer.copernicus.org/EGU2018/EGU2018-212.pdf",
+        "linkLabel": "Link to abstract",
+        "logo": "/company_logo/egu.webp",
+        "transparent": true,
+        "entryId": "egu-2018",
+        "authors": [
+            "J. Prettyman",
+            "T. Kuna",
+            "V. Livina"
+        ],
+        "poster": "/documents/poster_EGU.pdf"
+    },
+    {
+        "title": "Mathematics of Planet Earth CDT third annual Jamboree",
+        "journal": "MPE CDT third annual Jamboree",
+        "kind": "Talk",
+        "date": "March 2017",
+        "location": "Imperial College London",
+        "logo": "/company_logo/icl.webp",
+        "transparent": true,
+        "entryId": "mpe-jamboree-2017",
+        "authors": [
+            "J. Prettyman"
+        ],
+        "abstract": "Many physical systems are governed by dynamics that permit more than one state, and a bifurcation in the dynamics may cause a sudden shift between them, known as a tipping point. It is proposed that a tipping point visible in a time series will be anticipated by a rise in the series' autocorrelation as a forcing pushes the system towards it.\n\nUsing a stochastic potential-well model, we compare three indicators of autocorrelation calculated in a sliding window: the lag-1 autocorrelation function, the detrended fluctuation analysis coefficient and the power spectrum scaling exponent. Averaged over many model runs all three give a clear early warning signal, but for a single time series, the situation for any geophysical event, the signal is much less clear, and it is worth considering all indicators.\n\nWe also discuss the challenges of multidimensional data, testing when dimension reduction by empirical orthogonal functions may fail, and potential analysis for detecting tipping points. Finally, we show preliminary results suggesting that the approach of a tropical storm may be anticipated from sea-level pressure data, and propose a stochastic storm model to understand when this works.",
+        "abstractLabel": "Read Summary"
+    },
+    {
+        "title": "Early Warning Signals for Tipping-Points in Dynamical Systems",
+        "journal": "Time series analysis in environmental science",
+        "kind": "Poster",
+        "date": "November 2016",
+        "location": "UiT Tromsø, Norway",
+        "link": "https://www.jerico-ri.eu/events/time-series-analysis-in-environmental-science-and-applications-to-climate-change/",
+        "linkLabel": "Link to conference",
+        "logo": "/company_logo/uit.webp",
+        "transparent": true,
+        "entryId": "tromso-2016",
+        "authors": [
+            "J. Prettyman",
+            "T. Kuna",
+            "V. Livina"
+        ],
+        "poster": "/documents/poster_tromso.pdf"
+    },
+    {
+        "title": "Bifurcations in multi-dimensional dynamical systems",
+        "journal": "NPL Doctoral Research Seminar",
+        "kind": "Seminar",
+        "date": "October 2016",
+        "location": "Teddington, London",
+        "logo": "/company_logo/npl.webp",
+        "transparent": false,
+        "entryId": "npl-seminar-2016",
+        "authors": [
+            "J. Prettyman"
+        ],
+        "abstract": "A tipping point is a sudden shift in a dynamical system from one state to another, often caused by a bifurcation in the underlying dynamics. Examples are found in the palaeoclimate record and in ecology, and a reliable early warning of such events would be valuable in many areas of geophysics.\n\nWe review methods for detecting and anticipating tipping points in time series data. Fingerprinting techniques look for a rise in autocorrelation as a system approaches a bifurcation, measured by the lag-1 autocorrelation function, detrended fluctuation analysis or the scaling exponent of the power spectrum. Potential analysis instead fits a multi-well potential to a window of the data in order to detect changes in the number of system states. We compare these indicators on a simple stochastic model, and discuss how dimension reduction by empirical orthogonal functions, or genuinely multidimensional indicators, may be used for data with many variables.\n\nFinally, we propose applying tipping point analysis to the sea-level pressure time series of approaching tropical storms, and outline a stochastic model of a storm that includes tidal oscillations and unrelated weather noise.",
+        "abstractLabel": "Read Summary"
+    },
+    {
+        "title": "Mathematics of Planet Earth CDT second annual Jamboree",
+        "journal": "MPE CDT second annual Jamboree",
+        "kind": "Talk",
+        "date": "March 2016",
+        "location": "University of Reading",
+        "logo": "/company_logo/reading.webp",
+        "transparent": true,
+        "entryId": "mpe-jamboree-2016",
+        "authors": [
+            "J. Prettyman"
+        ],
+        "abstract": "Many physical systems are governed by dynamics that permit more than one state, such as the glacial/interglacial cycle of our climate. A dramatic and relatively sudden shift from one state to another is known as a tipping point, and it is hoped that the time series from a measurement of the system will reveal an approaching tipping point before it happens.\n\nThis PhD project, in partnership with the National Physical Laboratory, aims to develop tools for both detecting and predicting tipping points in physical systems. We introduce the idea of 'fingerprinting': a system approaching a bifurcation recovers more slowly from perturbations, which can be seen as a rise in the autocorrelation of its time series.\n\nWe illustrate this with a simple stochastic model, a potential well with added noise whose shape changes over time until the stable state disappears, and outline how indicators such as the lag-1 autocorrelation function and detrended fluctuation analysis might provide an early warning signal.",
+        "abstractLabel": "Read Summary"
+    }
+]

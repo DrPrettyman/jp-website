@@ -47,10 +47,12 @@ function PublicationModal({ children, onClose, header, transparent = false }) {
                                     <Calendar className="h-4 w-4 mr-2" />
                                     <span className="text-sm">{date}</span>
                                 </div>
-                                <div className="flex items-center mb-2">
-                                    <Link className="h-4 w-4 mr-2" />
-                                    <span className="text-sm"><a href={link} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-500">{link}</a></span>
-                                </div>
+                                {link && (
+                                    <div className="flex items-center mb-2">
+                                        <Link className="h-4 w-4 mr-2" />
+                                        <span className="text-sm"><a href={link} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-500">{link}</a></span>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

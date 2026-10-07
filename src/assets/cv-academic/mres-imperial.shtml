@@ -32,10 +32,10 @@
 
     <div class="row">
         <div class="column">
-            <img src="images/ring_monitor_function.pdf" alt="Adaptive mesh concentrated around a ring-shaped monitor function, shown as a heat map" style="width:100%">
+            <img src="images/ring_monitor_function.webp" alt="Adaptive mesh concentrated around a ring-shaped monitor function, shown as a heat map" style="width:100%">
         </div>
         <div class="column">
-            <img src="images/ring_phi.pdf" alt="Solution of the Monge-Ampère equation used to generate the ring-adapted mesh" style="width:100%">
+            <img src="images/ring_phi.webp" alt="Solution of the Monge-Ampère equation used to generate the ring-adapted mesh" style="width:100%">
         </div>
         <div class="caption">
             <p>

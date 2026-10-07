@@ -63,7 +63,7 @@ python process_photos.py vanlife
 2. **Extracts** GPS coordinates and DateTime from EXIF metadata
 3. **Resizes** images to ~0.5MB (configurable via `TARGET_SIZE_MB`)
 4. **Rotates** images based on EXIF orientation
-5. **Renames** files with chapter and photo numbers: `01-01-filename.jpg`
+5. **Renames** files with chapter and photo numbers: `01-01-filename.webp`
 6. **Saves** processed images to `/public/travel-images/<folder_name>/`
 7. **Generates** `metadata-<folder_name>.json` in `/src/assets/map_data/`
 

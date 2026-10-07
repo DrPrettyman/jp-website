@@ -95,5 +95,20 @@
         ],
         "abstract": "Many physical systems are governed by dynamics that permit more than one state, such as the glacial/interglacial cycle of our climate. A dramatic and relatively sudden shift from one state to another is known as a tipping point, and it is hoped that the time series from a measurement of the system will reveal an approaching tipping point before it happens.\n\nThis PhD project, in partnership with the National Physical Laboratory, aims to develop tools for both detecting and predicting tipping points in physical systems. We introduce the idea of 'fingerprinting': a system approaching a bifurcation recovers more slowly from perturbations, which can be seen as a rise in the autocorrelation of its time series.\n\nWe illustrate this with a simple stochastic model, a potential well with added noise whose shape changes over time until the stable state disappears, and outline how indicators such as the lag-1 autocorrelation function and detrended fluctuation analysis might provide an early warning signal.",
         "abstractLabel": "Read Summary"
+    },
+    {
+        "title": "Mesh Generation Using Numerical Solutions of an Optimal Transport Problem",
+        "journal": "MPE CDT first annual Jamboree",
+        "kind": "Talk",
+        "date": "October 2015",
+        "location": "University of Reading",
+        "logo": "/company_logo/reading.webp",
+        "transparent": true,
+        "entryId": "mpe-jamboree-2015",
+        "authors": [
+            "J. Prettyman"
+        ],
+        "abstract": "Fixed meshes, such as a latitude-longitude grid, fail to resolve small-scale features and waste computation where high resolution is not needed. Adaptive mesh generation instead concentrates resolution where it is required, for example where ice moves fastest in an ice sheet model.\n\nWe consider r-adaptivity: moving the points of a fixed mesh so that it is equidistributed with respect to a monitor function, while moving the points as little as possible. This is an optimal transport problem, and by Brenier's theorem the map is the gradient of a convex potential, which leads to a Monge-Ampère equation.\n\nWe compare two existing iterative methods for solving it, the parabolic Monge-Ampère (PMA) method and a fixed-point (FP) method, on bell- and ring-shaped monitor functions, and show how the choice of the parameter γ controls convergence. We then test several new variants, including an alternative linearisation (AL) that replaces the Laplacian with a matrix operator built from the Hessian of the potential. The AL method and a variant of FP with a 1/d power converge in markedly fewer iterations than either existing method.\n\nFuture work includes three-dimensional meshes, meshes on the surface of a sphere, and combining the method with Lloyd's algorithm.",
+        "abstractLabel": "Read Summary"
     }
 ]

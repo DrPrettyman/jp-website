@@ -2,6 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build/client",
   "routes": [
+    { "src": "/firered(?:/.*)?", "status": 308, "headers": { "Location": "https://firered.joshuaprettyman.com/" } },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/__spa-fallback.html" }
   ]
